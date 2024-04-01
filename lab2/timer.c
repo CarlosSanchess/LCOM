@@ -132,7 +132,7 @@ int (timer_display_conf)(uint8_t timer, uint8_t st, // MAnter os st?
   case tsf_mode:  // 3 2 1     000000111 
         st =  COUNT_MODE(st) >> 1;
         if(st == 6 || st == 7){
-          st = st >> 1;
+          st &= 0xF7;
         }
         configData.count_mode = st;      
     break;
