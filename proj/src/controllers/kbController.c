@@ -14,7 +14,7 @@ int handleInterruptKBC(State *gameState, Menu *menu) {
         menu->selected = ((menu->selected + 1) % 2);
     }
     
-    if(scanCode == BREAK_CODE(ENTER_KEY)){
+    if(scanCode == BREAK_CODE(A_KEY)){
         if(!menu->selected){
             *gameState = inGame;
         }

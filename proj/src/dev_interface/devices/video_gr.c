@@ -2,7 +2,14 @@
 #include "video_gr.h"
 
 // vg_exit() sai do graphics mode
-        
+
+
+int (restore_videoBuffer)(){
+    // memset(video_mem, 0, vbe_mode_info.XResolution * vbe_mode_info.YResolution * ((vbe_mode_info.BitsPerPixel + 7) >> 3));
+    //free(video_mem);
+
+    return 0;
+}       
 int (video_init)(uint16_t mode){
 
     reg86_t reg86;

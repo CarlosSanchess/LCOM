@@ -1,7 +1,10 @@
 #ifndef MOUSE__H 
 #define MOUSE__H
+#include <lcom/lcf.h>
 #include "i8042.h"
 
+
+struct packet mouse_byte_packet;
 
 
 int (write_mouse)(uint8_t command_byte);

@@ -1,7 +1,7 @@
 #include <lcom/lcf.h>
 #include "dev_interface/devices/video_gr.h"
-#include "dev_interface/devices/timer_kbc_mouse/mouse.h"
 
+#include "controllers/mouseController.h"
 #include "controllers/kbController.h" 
 
 #include "xpm/mapa1.xpm"
@@ -54,6 +54,9 @@ int run(){
                   }
                 }
                 if(msg.m_notify.interrupts & irq_timer){ //timer interrupt
+                  // if(restore_videoBuffer() != 0){ //todo add error handling rVB
+                  //   return 1;
+                  // }
                   switch (currentState)
                   {
                   case inMenu:

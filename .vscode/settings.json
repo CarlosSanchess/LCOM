@@ -3,7 +3,8 @@
         "*.xpm": "c",
         "state.h": "c",
         "kbcontroller.h": "c",
-        "kbc.h": "c"
+        "kbc.h": "c",
+        "i8042.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
