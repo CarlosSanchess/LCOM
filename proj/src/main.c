@@ -5,6 +5,8 @@
 #include "controllers/kbController.h" 
 
 #include "xpm/menu.xpm"
+#include "xpm/mapa1.xpm"
+
 #include "Models/state.h"
 #include "dev_interface/sprites/sprite.h"
 
@@ -45,8 +47,10 @@ int run(){
             case HARDWARE: 			
                  if (msg.m_notify.interrupts & irq_kbc){  //kb interrup
                   if(handleInterruptKBC(currentState) == 0){
-                    safeExit();
-                    return 0;
+                    xpm_draw(mapa, 0, 0);
+                    buffer_to_video_mem();
+                   // safeExit();
+                   // return 0;
                   }
                 }
                 break;

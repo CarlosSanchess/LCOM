@@ -1,5 +1,5 @@
 /* XPM */
-static char *_a7b10f456ff44e9b5d04fe2dd4ae4c0[] = {
+static xpm_row_t const mapa[] = {
 /* columns rows colors chars-per-pixel */
 "1152 864 256 2 ",
 "   c #150F0D",
