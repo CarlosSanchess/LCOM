@@ -1,34 +1,40 @@
 #include <lcom/lcf.h>
 #include "dev_interface/devices/video_gr.h"
 #include "dev_interface/devices/timer_kbc_mouse/mouse.h"
-#include "dev_interface/devices/timer_kbc_mouse/kbc.h"
 
-#include "xpm/cursor.xpm"
+#include "controllers/kbController.h" 
+
 #include "xpm/menu.xpm"
+#include "Models/state.h"
 #include "dev_interface/sprites/sprite.h"
 
-//kbc
-extern uint8_t scanCode;
 
+
+
+//game 
+state currentState;
+
+//kbc
 uint8_t irq_kbc;
+
+//mouse
+
+//timer
 
 
 int safeExit();
+int setUp();
 
-int test(){
-  video_init(0x14C);
+int run(){
+
 
   xpm_draw(menu, 0, 0);
-
-  xpm_draw(handCursor_xpm, 50, 50);
-
   buffer_to_video_mem();
   
     message msg;
     int ipc_status;
     uint8_t r;
 
-      kbc_subscribe_int(&irq_kbc);
     while(1) { 
       if ((r = driver_receive(ANY, &msg, &ipc_status)) != OK) { 
           printf("driver_receive failed with: %d", r);
@@ -38,15 +44,14 @@ int test(){
         switch (_ENDPOINT_P(msg.m_source)) {
             case HARDWARE: 			
                  if (msg.m_notify.interrupts & irq_kbc){  //kb interrup
-                  kbc_ih();
-                  if(scanCode == BREAK_CODE(0x01))
-                  {
+                  if(handleInterruptKBC(currentState) == 0){
                     safeExit();
                     return 0;
                   }
                 }
                 break;
-            default:
+            default:  
+
                 break; 	
         }
       }
@@ -66,6 +71,18 @@ int safeExit(){
   }
   return 0;
 }
+
+int setUp(){
+  currentState = inMenu;
+
+  if(video_init(0x14C) != 0){
+    return 1;
+  }
+  if(kbc_subscribe_int(&irq_kbc) != 0){
+    return 1;
+  }
+  return 0;
+}
 int main(int argc, char *argv[]) {
 
   lcf_set_language("EN-US");
@@ -76,9 +93,9 @@ int main(int argc, char *argv[]) {
 }
 
 int(proj_main_loop)(int argc, char *argv[]) {
-    
-
-  test();  
+  
+  setUp();
+  run();  
 
   return 0;
 }

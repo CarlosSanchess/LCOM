@@ -1,5 +1,8 @@
 {
     "files.associations": {
-        "*.xpm": "c"
+        "*.xpm": "c",
+        "state.h": "c",
+        "kbcontroller.h": "c",
+        "kbc.h": "c"
     }
 }

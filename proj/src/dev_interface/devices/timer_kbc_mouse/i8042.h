@@ -45,7 +45,14 @@
 #define DISABLE_DATA_REPORT 0xF5
 #define ENABLE_DATA_REPORT  0xF4
 
-
+/*KEYS Make Code*/
+#define ESC_KEY 0X01
+#define A_KEY 0x1e
+#define S_KEY 0x1f
+#define W_KEY 0x11
+#define D_KEY 0x20
+#define ENTER_KEY 0X1c
+#define SPACE_KEY 0x39
 int (kbc_subscribe_int)(uint8_t *bit_no);
 
 int (kbc_unsubscribe_int)();
