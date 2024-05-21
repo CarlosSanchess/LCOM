@@ -6,6 +6,7 @@
 
 #include "xpm/menu.xpm"
 #include "xpm/mapa1.xpm"
+#include "xpm/cursor.xpm"
 
 #include "Models/state.h"
 #include "dev_interface/sprites/sprite.h"
@@ -48,9 +49,10 @@ int run(){
                  if (msg.m_notify.interrupts & irq_kbc){  //kb interrup
                   if(handleInterruptKBC(currentState) == 0){
                     xpm_draw(mapa, 0, 0);
+                    xpm_draw_test(cursor, 50, 50);
                     buffer_to_video_mem();
-                   // safeExit();
-                   // return 0;
+                    //safeExit();
+                    //return 0;
                   }
                 }
                 break;

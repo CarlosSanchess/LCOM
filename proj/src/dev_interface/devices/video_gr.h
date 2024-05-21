@@ -25,6 +25,7 @@ uint32_t (calculate_green)(uint32_t first, uint16_t row, uint8_t step);
 uint32_t (calculate_blue)(uint32_t first, uint16_t row, uint16_t col, uint8_t step);
 int (xpm_draw_loaded)(uint8_t * pixmap, xpm_image_t img, uint16_t x, uint16_t y);
 int (xpm_draw)(xpm_map_t xpm, uint16_t x, uint16_t y);
+int (xpm_draw_ignore)(xpm_map_t xpm, uint16_t x, uint16_t y, unsigned int ignoredColor);
 int (vg_exit_graphics)();
 
 #endif /* VIDEO_GR_H_ */
