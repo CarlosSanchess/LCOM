@@ -2,11 +2,11 @@
 #include "mouse.h"
 #include "kbc.h"
 
-uint8_t mouse_bytes[3];
-int mouse_index = 0;
-struct packet mouse_byte_packet;
+
 int mouse_errorHandling = 0;
 int mouse_hook_id = 2;
+uint8_t mouse_bytes[3];
+int mouse_index = 0;
 
 
 int (write_mouse)(uint8_t command_byte){
