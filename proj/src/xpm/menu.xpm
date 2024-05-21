@@ -1,5 +1,5 @@
 /* XPM */
-static xpm_row_t const menu[] = {
+static xpm_row_t const menuXPM[] = {
 /* columns rows colors chars-per-pixel */
 "1152 864 256 2 ",
 "   c #0D241D",

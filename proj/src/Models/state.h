@@ -4,7 +4,7 @@
 typedef enum{
   inMenu,
   inGame
-}state;
+}State;
 
 
 #endif

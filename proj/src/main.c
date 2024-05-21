@@ -4,25 +4,24 @@
 
 #include "controllers/kbController.h" 
 
-#include "xpm/menu.xpm"
 #include "xpm/mapa1.xpm"
-#include "xpm/wrench_white.xpm"
 
 #include "Models/state.h"
+#include "Models/menu.h"
 #include "dev_interface/sprites/sprite.h"
 
 
 
-
 //game 
-state currentState;
+State currentState;
+Menu menu = {0, false, {{835, 596}, {660, 722}}}; 
 
 //kbc
 uint8_t irq_kbc;
-
 //mouse
 uint8_t irq_mouse;
 //timer
+uint8_t irq_timer;
 
 
 int safeExit();
@@ -31,10 +30,10 @@ int setUp();
 int run(){
 
 
-xpm_draw(menu, 0, 0);
-xpm_draw_ignore(wrench_white, 50, 50, 0x0047bb);  
-buffer_to_video_mem();
-  
+    xpm_draw(menuXPM, 0, 0);
+    xpm_draw_ignore(granade, menu.coord[0][0], menu.coord[0][1], 0x4ee44e);  
+    buffer_to_video_mem();
+    
     message msg;
     int ipc_status;
     uint8_t r;
@@ -46,17 +45,30 @@ buffer_to_video_mem();
       }
     if (is_ipc_notify(ipc_status)) { 
         switch (_ENDPOINT_P(msg.m_source)) {
-            case HARDWARE: 			
+            case HARDWARE: 
+
                  if (msg.m_notify.interrupts & irq_kbc){  //kb interrupt
-                  if(handleInterruptKBC(currentState) == 0){
+                  if(handleInterruptKBC(&currentState, &menu) == 1){
                     safeExit();
                     return 0;
                   }
                 }
-                if(msg.m_notify.interrupts & irq_mouse){ //mouse interrupt
-                  
+                if(msg.m_notify.interrupts & irq_timer){ //timer interrupt
+                  switch (currentState)
+                  {
+                  case inMenu:
+                      drawMenu(menu);
+                    break;
+                  case inGame:
+                      xpm_draw(mapa, 0, 0);
+                      buffer_to_video_mem();
+                      //drawGame()
+                    break;
+                  default:
+                    break;
+                  }
                 }
-                break;
+                 break;
             default:  
 
                 break; 	
@@ -78,11 +90,17 @@ int safeExit(){
     fprintf(stderr, "Failed to exit graphics.");
     return 1;
   }
-  if (mouse_unsubscribe_int() != 0 || write_mouse(DISABLE_DATA_REPORT)){
-      fprintf(stderr, "Failed to unsub mouse interrupts/ disable data report.");
 
-    return 1;
-  } 
+  if(timer_unsubscribe_int() != 0){
+    fprintf(stderr, "Failed to unsub timer interrrupts.");
+    return 1;  
+  }
+
+  // if (mouse_unsubscribe_int() != 0 || write_mouse(DISABLE_DATA_REPORT)){
+  //     fprintf(stderr, "Failed to unsub mouse interrupts/ disable data report.");
+
+  //   return 1;
+  // } 
   
   return 0;
 }
@@ -96,9 +114,17 @@ int setUp(){
   if(kbc_subscribe_int(&irq_kbc) != 0){
     return 1;
   }
-  if(mouse_subscribe_int(&irq_mouse) != 0 || write_mouse(ENABLE_DATA_REPORT) != 0){ 
+
+  //Set UP timer
+  if(timer_subscribe_int(&irq_timer) != 0){
     return 1;
   }
+
+  timer_set_frequency(0, 10);
+
+  // if(mouse_subscribe_int(&irq_mouse) != 0 || write_mouse(ENABLE_DATA_REPORT) != 0){ 
+  //   return 1;
+  // }
   return 0;
 }
 int main(int argc, char *argv[]) {
