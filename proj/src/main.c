@@ -6,7 +6,7 @@
 
 #include "xpm/menu.xpm"
 #include "xpm/mapa1.xpm"
-#include "xpm/cursor.xpm"
+#include "xpm/wrench_white.xpm"
 
 #include "Models/state.h"
 #include "dev_interface/sprites/sprite.h"
@@ -21,7 +21,7 @@ state currentState;
 uint8_t irq_kbc;
 
 //mouse
-
+uint8_t irq_mouse;
 //timer
 
 
@@ -31,8 +31,9 @@ int setUp();
 int run(){
 
 
-  xpm_draw(menu, 0, 0);
-  buffer_to_video_mem();
+xpm_draw(menu, 0, 0);
+xpm_draw_ignore(wrench_white, 50, 50, 0x0047bb);  
+buffer_to_video_mem();
   
     message msg;
     int ipc_status;
@@ -46,14 +47,14 @@ int run(){
     if (is_ipc_notify(ipc_status)) { 
         switch (_ENDPOINT_P(msg.m_source)) {
             case HARDWARE: 			
-                 if (msg.m_notify.interrupts & irq_kbc){  //kb interrup
+                 if (msg.m_notify.interrupts & irq_kbc){  //kb interrupt
                   if(handleInterruptKBC(currentState) == 0){
-                    xpm_draw(mapa, 0, 0);
-                    xpm_draw_test(cursor, 50, 50);
-                    buffer_to_video_mem();
-                    //safeExit();
-                    //return 0;
+                    safeExit();
+                    return 0;
                   }
+                }
+                if(msg.m_notify.interrupts & irq_mouse){ //mouse interrupt
+                  
                 }
                 break;
             default:  
@@ -70,11 +71,19 @@ int run(){
 }
 int safeExit(){
   if(kbc_unsubscribe_int() != 0){
+    fprintf(stderr, "Failed to unsub kbc interrupts.");
     return 1;
   }
   if(vg_exit_graphics() != 0){
+    fprintf(stderr, "Failed to exit graphics.");
     return 1;
   }
+  if (mouse_unsubscribe_int() != 0 || write_mouse(DISABLE_DATA_REPORT)){
+      fprintf(stderr, "Failed to unsub mouse interrupts/ disable data report.");
+
+    return 1;
+  } 
+  
   return 0;
 }
 
@@ -85,6 +94,9 @@ int setUp(){
     return 1;
   }
   if(kbc_subscribe_int(&irq_kbc) != 0){
+    return 1;
+  }
+  if(mouse_subscribe_int(&irq_mouse) != 0 || write_mouse(ENABLE_DATA_REPORT) != 0){ 
     return 1;
   }
   return 0;
