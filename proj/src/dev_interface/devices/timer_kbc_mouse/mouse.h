@@ -1,5 +1,5 @@
-#ifndef MOUSE__H 
-#define MOUSE__H
+#ifndef MOUSEH 
+#define MOUSEH
 #include <lcom/lcf.h>
 #include "i8042.h"
 

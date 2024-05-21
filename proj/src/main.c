@@ -48,11 +48,18 @@ int run(){
             case HARDWARE: 
 
                  if (msg.m_notify.interrupts & irq_kbc){  //kb interrupt
-                  if(handleInterruptKBC(&currentState, &menu) == 1){
+                  if(handleInterruptKBC(&currentState, &menu)){
                     safeExit();
                     return 0;
                   }
                 }
+                if (msg.m_notify.interrupts & irq_mouse){ //mouse interrupt
+                  if(handleInterruptMouse(&currentState, &menu)){
+                    safeExit();
+                    return 0;
+                  }
+                }
+
                 if(msg.m_notify.interrupts & irq_timer){ //timer interrupt
                   // if(restore_videoBuffer() != 0){ //todo add error handling rVB
                   //   return 1;
@@ -99,11 +106,11 @@ int safeExit(){
     return 1;  
   }
 
-  // if (mouse_unsubscribe_int() != 0 || write_mouse(DISABLE_DATA_REPORT)){
-  //     fprintf(stderr, "Failed to unsub mouse interrupts/ disable data report.");
+  if (mouse_unsubscribe_int() != 0){
+       fprintf(stderr, "Failed to unsub mouse interrupts/ disable data report.");
 
-  //   return 1;
-  // } 
+     return 1;
+   } 
   
   return 0;
 }
@@ -125,9 +132,9 @@ int setUp(){
 
   timer_set_frequency(0, 10);
 
-  // if(mouse_subscribe_int(&irq_mouse) != 0 || write_mouse(ENABLE_DATA_REPORT) != 0){ 
-  //   return 1;
-  // }
+  if(mouse_subscribe_int(&irq_mouse) != 0){ 
+     return 1;
+  }
   return 0;
 }
 int main(int argc, char *argv[]) {
