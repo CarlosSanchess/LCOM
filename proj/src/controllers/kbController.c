@@ -8,10 +8,10 @@ int handleInterruptKBC(State *gameState, Menu *menu) {
         return 1;
     }
     if(scanCode == BREAK_CODE(S_KEY)){
-        menu->selected = (menu->selected + 1) % 2;
+        menu->selected = ((menu->selected + 1) % 2);
     }
     if(scanCode == BREAK_CODE(W_KEY)){
-        menu->selected = (menu->selected - 1) % 2;
+        menu->selected = ((menu->selected + 1) % 2);
     }
     
     if(scanCode == BREAK_CODE(ENTER_KEY)){
