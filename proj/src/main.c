@@ -8,6 +8,7 @@
 
 #include "Models/state.h"
 #include "Models/menu.h"
+#include "Models/mouse.h"
 #include "dev_interface/sprites/sprite.h"
 
 
@@ -15,6 +16,7 @@
 //game 
 State currentState;
 Menu menu = {0, false, {{835, 596}, {660, 722}}}; 
+MouseInfo mouseInfo = {.mousePosition = { -1, -1 }};
 
 //kbc
 uint8_t irq_kbc;
@@ -46,7 +48,6 @@ int run(){
     if (is_ipc_notify(ipc_status)) { 
         switch (_ENDPOINT_P(msg.m_source)) {
             case HARDWARE: 
-
                  if (msg.m_notify.interrupts & irq_kbc){  //kb interrupt
                   if(handleInterruptKBC(&currentState, &menu)){
                     safeExit();
@@ -54,13 +55,14 @@ int run(){
                   }
                 }
                 if (msg.m_notify.interrupts & irq_mouse){ //mouse interrupt
-                  if(handleInterruptMouse(&currentState, &menu)){
+                  if(handleInterruptMouse(&currentState, &menu, &mouseInfo)){
                     safeExit();
                     return 0;
                   }
                 }
 
                 if(msg.m_notify.interrupts & irq_timer){ //timer interrupt
+                  drawMouse(mouseInfo);
                   // if(restore_videoBuffer() != 0){ //todo add error handling rVB
                   //   return 1;
                   // }
@@ -80,7 +82,6 @@ int run(){
                 }
                  break;
             default:  
-
                 break; 	
         }
       }

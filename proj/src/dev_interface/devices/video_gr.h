@@ -4,6 +4,8 @@
 #include <lcom/lcf.h>
 #include "graphics_const.h"
 
+#define GREEN_SCREEN 0X4ee44e
+
 vbe_mode_info_t vbe_mode_info;
 unsigned char *video_mem;
 static uint8_t *background_buffer;
