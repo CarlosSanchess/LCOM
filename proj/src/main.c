@@ -16,7 +16,7 @@
 //game 
 State currentState;
 Menu menu = {0, false, {{835, 596}, {660, 722}}}; 
-MouseInfo mouseInfo = {.mousePosition = { -1, -1 }};
+MouseInfo mouseInfo = {.mousePosition = { 50, 50 }};
 
 //kbc
 uint8_t irq_kbc;
@@ -30,11 +30,6 @@ int safeExit();
 int setUp();
 
 int run(){
-
-
-    xpm_draw_Background(menuXPM, 0, 0);
-    xpm_draw_ignore(granade, menu.coord[0][0], menu.coord[0][1], 0x4ee44e);  
-    buffer_to_video_mem();
     
     message msg;
     int ipc_status;
@@ -63,6 +58,7 @@ int run(){
 
                 if(msg.m_notify.interrupts & irq_timer){ //timer interrupt
                   // drawMouse(mouseInfo);
+                  drawMouse(mouseInfo);
                   switch (currentState)
                   {
                   case inMenu:
@@ -77,7 +73,6 @@ int run(){
                     break;
                   
                   }
-                  drawMouse(mouseInfo);
                   restore_videoBuffer(); // current buffer = triple buffer 
                 }
                  break;
@@ -111,7 +106,11 @@ int safeExit(){
        fprintf(stderr, "Failed to unsub mouse interrupts/ disable data report.");
 
      return 1;
-   } 
+   }
+
+   if(write_mouse(DISABLE_DATA_REPORT) != 0){
+    return 1;
+   }
   
   return 0;
 }
@@ -122,20 +121,26 @@ int setUp(){
   if(video_init(0x14C) != 0){
     return 1;
   }
-  if(kbc_subscribe_int(&irq_kbc) != 0){
+
+  xpm_draw_Background(menuXPM, 0, 0);
+  xpm_draw_ignore(granade, menu.coord[0][0], menu.coord[0][1], 0x4ee44e);  
+  buffer_to_video_mem();
+
+  
+  if(write_mouse(ENABLE_DATA_REPORT) != 0){
     return 1;
   }
-
-  if(timer_subscribe_int(&irq_timer) != 0){
-    return 1;
-  }
-
+  
   if(timer_set_frequency(0,60) != 0){
     fprintf(stderr, "set F");
     return 1;
   }
 
-  if(write_mouse(ENABLE_DATA_REPORT != 0)){
+  if(kbc_subscribe_int(&irq_kbc) != 0){
+    return 1;
+  }
+
+  if(timer_subscribe_int(&irq_timer) != 0){
     return 1;
   }
 

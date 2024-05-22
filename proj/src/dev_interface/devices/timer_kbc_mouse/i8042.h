@@ -44,6 +44,7 @@
 #define MOUSE_LEFT_BUTTON BIT(0) 
 #define DISABLE_DATA_REPORT 0xF5
 #define ENABLE_DATA_REPORT  0xF4
+#define SET_STREAM_MODE 0xEA
 
 /*KEYS Make Code*/
 #define ESC_KEY 0X01
