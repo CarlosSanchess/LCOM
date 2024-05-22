@@ -39,9 +39,6 @@ void (mouse_ih)(){
   else if(mouse_index < 3){
     mouse_index++;
   } 
-  else{
-    mouse_index = 0;
-  }
 }
 
 int16_t extend_binary(uint8_t byte) {
