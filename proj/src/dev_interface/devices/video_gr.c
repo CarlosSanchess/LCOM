@@ -5,9 +5,7 @@
 
 
 int (restore_videoBuffer)(){
-    // memset(video_mem, 0, vbe_mode_info.XResolution * vbe_mode_info.YResolution * ((vbe_mode_info.BitsPerPixel + 7) >> 3));
-    //free(video_mem);
-
+    memcpy(current_buffer, triple_buffer, vram_size);
     return 0;
 }       
 int (video_init)(uint16_t mode){
@@ -33,7 +31,7 @@ int (video_init)(uint16_t mode){
     unsigned int vram_base = vbe_mode_info.PhysBasePtr;  
     unsigned int bits_per_pixel = vbe_mode_info.BitsPerPixel;
     unsigned int bytes_per_pixel = (bits_per_pixel + 7) >> 3; // mudar para >>arredonda para o bit mais próximo
-    unsigned int vram_size = vbe_mode_info.XResolution * vbe_mode_info.YResolution * bytes_per_pixel;
+    vram_size = vbe_mode_info.XResolution * vbe_mode_info.YResolution * bytes_per_pixel;
     buffer_size = vram_size;
     int r;
 
@@ -62,6 +60,7 @@ int (video_init)(uint16_t mode){
 
     background_buffer = malloc(vram_size);
     current_buffer = malloc(vram_size);
+    triple_buffer = malloc(vram_size);
     if (background_buffer == NULL | current_buffer == NULL) {
         return ERROR;
     }
@@ -77,10 +76,11 @@ int get_height() {
     return vbe_mode_info.YResolution;
 }
 
-int (vg_draw_pixel)(uint16_t x, uint16_t y, uint32_t color) {
-    uintptr_t pixel_address = (uintptr_t)current_buffer + (y * get_width() + x) * ((vbe_mode_info.BitsPerPixel + 7) >> 3);
+int (vg_draw_pixel)(uint16_t x, uint16_t y, uint32_t color, uint8_t *buffer) {
+    uintptr_t pixel_address = (uintptr_t)buffer + (y * get_width() + x) * ((vbe_mode_info.BitsPerPixel + 7) >> 3);
     *((uint32_t *)pixel_address) = color;
     return OK;
+    
 }
 
 void (buffer_to_video_mem)() {
@@ -96,7 +96,7 @@ void buffer_swap() {
 int (vg_draw_rectangle)(uint16_t x, uint16_t y, uint16_t width, uint16_t height, uint32_t color) {
     for (unsigned i = 0; i < height; ++i) {
         for (unsigned j = 0; j < width; ++j) {
-            vg_draw_pixel(x + j, y + i, color);
+            vg_draw_pixel(x + j, y + i, color, current_buffer);
         }
     }
     return OK;
@@ -167,6 +167,30 @@ uint32_t (calculate_blue)(uint32_t first, uint16_t row, uint16_t col, uint8_t st
   return (B(first) + (col + row) * step) % (1 << vbe_mode_info.BlueMaskSize);
 }
 
+
+int (xpm_draw_Background)(xpm_map_t xpm, uint16_t x, uint16_t y){
+    xpm_image_t img;
+    uint8_t *pixmap = xpm_load(xpm, XPM_8_8_8, &img);
+    if (!pixmap) {
+        return 1; 
+    }
+
+    for (int i = 0; i < img.height; i++) {
+        for (int j = 0; j < img.width; j++) {
+            int pixel_index = (i * img.width + j) * 3;
+
+            uint8_t blue = pixmap[pixel_index];
+            uint8_t green = pixmap[pixel_index + 1];
+            uint8_t red = pixmap[pixel_index + 2];
+
+            unsigned int color = (red << 16) | (green << 8) | blue;
+
+            vg_draw_pixel(x + j, y + i, color, triple_buffer);
+        }
+    }
+    memcpy(current_buffer, triple_buffer, vram_size);
+    return 0;
+}
 int (xpm_draw)(xpm_map_t xpm, uint16_t x, uint16_t y) {
     xpm_image_t img;
     uint8_t *pixmap = xpm_load(xpm, XPM_8_8_8, &img);
@@ -184,7 +208,7 @@ int (xpm_draw)(xpm_map_t xpm, uint16_t x, uint16_t y) {
 
             unsigned int color = (red << 16) | (green << 8) | blue;
 
-            vg_draw_pixel(x + j, y + i, color);
+            vg_draw_pixel(x + j, y + i, color, current_buffer);
         }
     }
 
@@ -209,7 +233,7 @@ int (xpm_draw_ignore)(xpm_map_t xpm, uint16_t x, uint16_t y, unsigned int ignore
 
             unsigned int color = (red << 16) | (green << 8) | blue;
             if(color != ignoredColor){
-            vg_draw_pixel(x + j, y + i, color);
+            vg_draw_pixel(x + j, y + i, color, current_buffer);
             }
         }
     }

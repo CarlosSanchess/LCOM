@@ -32,7 +32,7 @@ int setUp();
 int run(){
 
 
-    xpm_draw(menuXPM, 0, 0);
+    xpm_draw_Background(menuXPM, 0, 0);
     xpm_draw_ignore(granade, menu.coord[0][0], menu.coord[0][1], 0x4ee44e);  
     buffer_to_video_mem();
     
@@ -62,23 +62,23 @@ int run(){
                 }
 
                 if(msg.m_notify.interrupts & irq_timer){ //timer interrupt
-                  drawMouse(mouseInfo);
-                  // if(restore_videoBuffer() != 0){ //todo add error handling rVB
-                  //   return 1;
-                  // }
+                  // drawMouse(mouseInfo);
                   switch (currentState)
                   {
                   case inMenu:
                       drawMenu(menu);
                     break;
                   case inGame:
-                      xpm_draw(mapa, 0, 0);
+                      xpm_draw_Background(mapa, 0, 0);
                       buffer_to_video_mem();
                       //drawGame()
                     break;
                   default:
                     break;
+                  
                   }
+                  drawMouse(mouseInfo);
+                  restore_videoBuffer(); // current buffer = triple buffer 
                 }
                  break;
             default:  
@@ -126,12 +126,18 @@ int setUp(){
     return 1;
   }
 
-  //Set UP timer
   if(timer_subscribe_int(&irq_timer) != 0){
     return 1;
   }
 
-  timer_set_frequency(0, 10);
+  if(timer_set_frequency(0,60) != 0){
+    fprintf(stderr, "set F");
+    return 1;
+  }
+
+  if(write_mouse(ENABLE_DATA_REPORT != 0)){
+    return 1;
+  }
 
   if(mouse_subscribe_int(&irq_mouse) != 0){ 
      return 1;

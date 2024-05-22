@@ -10,10 +10,13 @@ vbe_mode_info_t vbe_mode_info;
 unsigned char *video_mem;
 static uint8_t *background_buffer;
 static uint8_t *current_buffer;
+static uint8_t *triple_buffer;
 static uint32_t buffer_size = 0;
 
+static uint32_t vram_size;
+
 int (video_init)(uint16_t mode);
-int (vg_draw_pixel)(uint16_t x, uint16_t y, uint32_t color);
+int (vg_draw_pixel)(uint16_t x, uint16_t y, uint32_t color, uint8_t *buffer);
 void buffer_swap();
 void (buffer_to_video_mem)();
 int get_width();
@@ -27,6 +30,7 @@ uint32_t (calculate_green)(uint32_t first, uint16_t row, uint8_t step);
 uint32_t (calculate_blue)(uint32_t first, uint16_t row, uint16_t col, uint8_t step);
 int (xpm_draw_loaded)(uint8_t * pixmap, xpm_image_t img, uint16_t x, uint16_t y);
 int (xpm_draw)(xpm_map_t xpm, uint16_t x, uint16_t y);
+int (xpm_draw_Background)(xpm_map_t xpm, uint16_t x, uint16_t y);
 int (xpm_draw_ignore)(xpm_map_t xpm, uint16_t x, uint16_t y, unsigned int ignoredColor);
 int (vg_exit_graphics)();
 int (restore_videoBuffer)();

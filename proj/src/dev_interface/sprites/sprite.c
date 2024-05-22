@@ -46,7 +46,7 @@ int draw_sprite(Sprite *fig, char *base) {
             if (base_x >= 0 && base_x < get_width() && base_y >= 0 && base_y < get_height()) {
                 uint32_t color = fig->map[y * fig->width + x];
                 
-                vg_draw_pixel(base_x, base_y, color);
+                vg_draw_pixel(base_x, base_y, color, current_buffer);
             }
         }
     }

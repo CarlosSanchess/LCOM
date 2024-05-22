@@ -8,6 +8,7 @@
 
 typedef struct{
     position mousePosition;
+    //bool crossHair;
 }MouseInfo;
 
 #include "mouse.c"
