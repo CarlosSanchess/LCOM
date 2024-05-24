@@ -130,7 +130,7 @@ int setUp(){
     return 1;
   }
   
-  if(timer_set_frequency(0,60) != 0){
+  if(timer_set_frequency(0,20) != 0){
     fprintf(stderr, "set F");
     return 1;
   }
