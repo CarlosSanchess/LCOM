@@ -18,6 +18,9 @@ int handleInterruptKBC(State *gameState, Menu *menu) {
         if(!menu->selected){
             *gameState = inGame;
         }
+        if(menu->selected){
+            return 1;
+        }
     }
     return 0;
 }

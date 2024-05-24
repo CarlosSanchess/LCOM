@@ -19,7 +19,7 @@ int (write_mouse)(uint8_t command_byte){
     if(byte == MOUSE_ACK){
       return 0;
     }
-    if((byte == MOUSE_ERROR) || (byte == 0xFC)){
+    if((byte == MOUSE_ERROR) || (byte == 0xFA)){
       tickdelay(micros_to_ticks(20000));
     }
     attempts--;

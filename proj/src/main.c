@@ -12,7 +12,6 @@
 #include "dev_interface/sprites/sprite.h"
 
 
-
 //game 
 State currentState;
 Menu menu = {0, false, {{835, 596}, {660, 722}}}; 
@@ -57,7 +56,6 @@ int run(){
                 }
 
                 if(msg.m_notify.interrupts & irq_timer){ //timer interrupt
-                  // drawMouse(mouseInfo);
                   drawMouse(mouseInfo);
                   switch (currentState)
                   {
@@ -73,6 +71,7 @@ int run(){
                     break;
                   
                   }
+                  // buffer_to_video_mem();
                   restore_videoBuffer(); // current buffer = triple buffer 
                 }
                  break;
@@ -147,6 +146,7 @@ int setUp(){
   if(mouse_subscribe_int(&irq_mouse) != 0){ 
      return 1;
   }
+
   return 0;
 }
 int main(int argc, char *argv[]) {

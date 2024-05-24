@@ -3,10 +3,11 @@
 #include "kbc.h"
 
 
-int mouse_errorHandling = 0;
 int mouse_hook_id = 2;
 uint8_t mouse_bytes[3];
 int mouse_index = 0;
+int mouse_errorHandling;
+
 
 
 int (write_mouse)(uint8_t command_byte){
@@ -31,14 +32,17 @@ int (write_mouse)(uint8_t command_byte){
 
 void (mouse_ih)(){
   uint8_t status;
-  if(read_stat_reg(&status) != OK){mouse_errorHandling = 1;}
-  if(read_output_buffer(status, mouse_bytes + mouse_index) != OK){mouse_errorHandling = 1;}
-  if((mouse_index == 0) && (mouse_bytes[0] & BIT(3))){
-    mouse_index++;
+   
+  if(read_stat_reg(&status) != OK){mouse_errorHandling = 1;}    
+  if(read_output_buffer(status, &mouse_bytes[mouse_index]) != OK){mouse_errorHandling = 1;}
+   if((mouse_index == 0) && (mouse_bytes[0] & BIT(3))){
+      mouse_index = (mouse_index + 1) % 3;
+    }else{
+      if(mouse_index > 0){
+        mouse_index = (mouse_index + 1) % 3;
+      }
   }
-  else if(mouse_index < 3){
-    mouse_index++;
-  } 
+  
 }
 
 int16_t extend_binary(uint8_t byte) {
@@ -46,7 +50,6 @@ int16_t extend_binary(uint8_t byte) {
 }
 
 void (mouse_packet)(){
-  
   for(int i = 0; i < 3; i++){
     mouse_byte_packet.bytes[i] = mouse_bytes[i];
   }
@@ -59,12 +62,11 @@ void (mouse_packet)(){
   }else{
       mouse_byte_packet.delta_x = mouse_bytes[1];
   }
-  
   if(mouse_bytes[0] & MOUSE_MSB_Y_DELTA){
       mouse_byte_packet.delta_y = extend_binary(mouse_bytes[2]);
   }else{
       mouse_byte_packet.delta_y = mouse_bytes[2];
-  }
+  }    
 
   if(!(mouse_bytes[0] & MOUSE_X_OVFL)){
     mouse_byte_packet.x_ov = false;

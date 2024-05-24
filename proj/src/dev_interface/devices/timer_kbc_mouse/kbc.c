@@ -31,18 +31,21 @@ int (read_stat_reg)(uint8_t *status){
     return 0;
 }
 int (read_output_buffer)(uint8_t status, uint8_t *buffer){
-    if((status & BIT(0)) != 0){
-        if(util_sys_inb(OUT_BUF, buffer) != OK) {return ERROR;}
-        if(STAT_ERROR_HANDLE(status) != OK){
-        *buffer = 0;
-        fprintf(stderr, "Problem in Parity or TimeOut");
-        return ERROR;
-        }
+    int attemps = 10;
+    while(attemps > 0){
+        if((status & BIT(0)) != 0){
+            if(util_sys_inb(OUT_BUF, buffer) != OK) {return ERROR;}
+                if(STAT_ERROR_HANDLE(status) != OK){
+                    *buffer = 0;
+                    fprintf(stderr, "Problem in Parity or TimeOut");
+                    return ERROR;
+                }                
+            return 0;  
+            }    
+        attemps--;
+        tickdelay(micros_to_ticks(20000));
     }
-    else{
-        return 1;
-    }
-    return 0;
+    return 1;
 }
 
 void (kbc_ih)() {

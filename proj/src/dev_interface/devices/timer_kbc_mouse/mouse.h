@@ -5,6 +5,7 @@
 
 
 struct packet mouse_byte_packet;
+int mouse_errorHandling;
 
 
 int (write_mouse)(uint8_t command_byte);
