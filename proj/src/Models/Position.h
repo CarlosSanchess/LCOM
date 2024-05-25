@@ -5,6 +5,7 @@
 typedef struct{
     int x;
     int y;
+    uint16_t deg;
 }position;
 
 

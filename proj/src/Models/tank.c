@@ -1,6 +1,6 @@
 #include "Tank.h"
 
-tank* createTank(int x, int y, int hp, int speed) {
+tank* createTank(int x, int y,uint16_t deg, int hp, int speed) {
     tank *newTank = (tank*)malloc(sizeof(tank));
     if (newTank == NULL) {
         fprintf(stderr, "Failed to allocate memory for tank.\n");
@@ -8,6 +8,7 @@ tank* createTank(int x, int y, int hp, int speed) {
     }
     newTank->position.x = x;
     newTank->position.y = y;
+    newTank->position.deg = deg;
     newTank->hp = hp;
     newTank->speed = speed;
     newTank->wantToMove = 0;
@@ -36,7 +37,7 @@ int moveUP(tank *tank){
 }
 int moveRight(tank *tank) {
     if (canMove(tank->position.x + 1, tank->position.y)) {
-        tank->wantToMove += tank->speed * 10;
+        tank->wantToRotate += 10;
         tank->direction = RIGHT;
         return 0;
     }
@@ -45,7 +46,7 @@ int moveRight(tank *tank) {
 
 int moveLeft(tank *tank) {
     if (canMove(tank->position.x - 1, tank->position.y)) {
-        tank->wantToMove += tank->speed * 10;
+        tank->wantToRotate -= 10;
         tank->direction = LEFT;
         return 0;
     }
@@ -63,25 +64,28 @@ int moveDown(tank *tank) {
 }
 
 void drawTank(tank *tank) {
-    if(tank->wantToMove >= tank->speed){
+    if(tank->wantToMove >= tank->speed || tank->wantToRotate >= 10){
         tank->wantToMove -= 2;
         switch (tank->direction)
         {
         case LEFT:
-            tank->position.x -= 2;
+            tank->position.deg -= 10;
             break;
         case RIGHT:
-            tank->position.x += 2;
+            tank->position.deg += 10;
             break;
         case UP:
             tank->position.y -= 2;
+            tank->wantToMove -= 2;
+
             break;
         case DOWN:
             tank->position.y += 2;
+            tank->wantToMove -= 2;
             break;        
         default:
             break;
         }
     }
-    xpm_draw_ignore(tank_green, tank->position.x, tank->position.y, GREEN_SCREEN);  
+    xpm_draw_tank_ignore_rot(tank_green, tank->position.x, tank->position.y, tank->position->deg, GREEN_SCREEN);  
 }

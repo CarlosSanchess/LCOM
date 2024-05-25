@@ -15,13 +15,15 @@ typedef struct{
     int hp;
     int speed;
     int wantToMove;
+    uint16_t wantToRotate;
+
     int direction; // 1 UP -1 DOWN 2 RIGHT -2 LEFT
 }tank;
 
 #include "tank.c"
 
 void destroyTank(tank *tank);
-tank* createTank(int x, int y, int hp, int speed);
+tank* createTank(int x, int y,uint16_t deg, int hp, int speed);
 void drawTank();
 bool canMove(int x, int y);
 int moveUP(tank *tank);

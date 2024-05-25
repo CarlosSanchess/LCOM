@@ -16,7 +16,7 @@
 //game 
 State currentState;
 Menu menu = {0, false, {{835, 596}, {660, 722}}}; 
-MouseInfo mouseInfo = {.mousePosition = { 50, 50 }, 0};
+MouseInfo mouseInfo = {.mousePosition = { 50, 50, 0}, 0};
 
 //kbc
 uint8_t irq_kbc;
