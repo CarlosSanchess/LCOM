@@ -7,7 +7,7 @@ Arena* createArena(int width, int height, MouseInfo *mouseInfo) {
         fprintf(stderr, "Failed to allocate memory for arena.\n");
         return NULL;
     }
-    newArena->tank = createTank(10,10,3,1);
+    newArena->tank = createTank(10,10,3,2);
 
 
     newArena->width = width;

@@ -28,15 +28,16 @@ bool canMove(int x, int y){ //TODO
 }
 int moveUP(tank *tank){
     if(canMove(tank->position.x, tank->position.y + 1)){
-        tank->position.y -= tank->speed * 5;
-
+        tank->wantToMove += tank->speed * 10;
+        tank->direction = UP;
         return 0;
     }
     return 1;
 }
 int moveRight(tank *tank) {
     if (canMove(tank->position.x + 1, tank->position.y)) {
-        tank->position.x += tank->speed * 5;
+        tank->wantToMove += tank->speed * 10;
+        tank->direction = RIGHT;
         return 0;
     }
     return 1;
@@ -44,7 +45,8 @@ int moveRight(tank *tank) {
 
 int moveLeft(tank *tank) {
     if (canMove(tank->position.x - 1, tank->position.y)) {
-        tank->position.x -= tank->speed * 5;
+        tank->wantToMove += tank->speed * 10;
+        tank->direction = LEFT;
         return 0;
     }
     return 1;
@@ -53,16 +55,33 @@ int moveLeft(tank *tank) {
 
 int moveDown(tank *tank) {
     if (canMove(tank->position.x, tank->position.y - 1)) {
-        tank->wantToMove += tank->speed * 20;
+        tank->wantToMove += tank->speed * 10;
+        tank->direction = DOWN;
         return 0;
     }
     return 1;
 }
 
 void drawTank(tank *tank) {
-    if(tank->wantToMove > 2){
+    if(tank->wantToMove >= tank->speed){
         tank->wantToMove -= 2;
-        tank->position.y += 2;
+        switch (tank->direction)
+        {
+        case LEFT:
+            tank->position.x -= 2;
+            break;
+        case RIGHT:
+            tank->position.x += 2;
+            break;
+        case UP:
+            tank->position.y -= 2;
+            break;
+        case DOWN:
+            tank->position.y += 2;
+            break;        
+        default:
+            break;
+        }
     }
     xpm_draw_ignore(tank_green, tank->position.x, tank->position.y, GREEN_SCREEN);  
 }
