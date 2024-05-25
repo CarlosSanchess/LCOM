@@ -15,7 +15,7 @@ Obstacle obstacles[NUM_OBSTACLES] = {
     {830, 887, 517, 634}
 };
 
-tank* createTank(int x, int y,uint16_t deg, int hp, int speed) {
+tank* createTank(int x, int y, uint16_t deg, int hp, int speed) {
     tank *newTank = (tank*)malloc(sizeof(tank));
     if (newTank == NULL) {
         fprintf(stderr, "Failed to allocate memory for tank.\n");
@@ -37,7 +37,6 @@ void freeTank(tank *tank) {
     }
 }
 
-
 bool canMove(int x, int y) {
     if ((x < 0 || x + TANK_WIDTH > 1000) || (y < 0 || y + TANK_HEIGHT > 1000)) {
         return false;
@@ -53,20 +52,28 @@ bool canMove(int x, int y) {
     return true;
 }
 
-int moveUP(tank *tank) {
-    int newY = tank->wantToMove + tank->speed * 5;
-    if (canMove(tank->position.x, tank->position.y - newY)) {
-        tank->wantToMove += tank->speed * 5;
-        tank->direction = UP;   
+int moveDown(tank *tank) {
+    double radians = (tank->position.deg - 90) * (M_PI / 180.0);
+    int newX = tank->position.x + (int)(tank->speed * 5 * cos(radians));
+    int newY = tank->position.y + (int)(tank->speed * 5 * sin(radians));
+
+    if (canMove(newX, newY)) {
+        tank->position.x = newX;
+        tank->position.y = newY;
+        tank->direction = UP;
         return 0;
     }
     return 1;
 }
-int moveDown(tank *tank) {
-    int newY = tank->wantToMove + tank->speed * 5;
 
-    if (canMove(tank->position.x, tank->position.y + newY)) {
-        tank->wantToMove += tank->speed * 5;
+int moveUP(tank *tank) {
+    double radians = (tank->position.deg - 90) * (M_PI / 180.0);
+    int newX = tank->position.x - (int)(tank->speed * 5 * cos(radians));
+    int newY = tank->position.y - (int)(tank->speed * 5 * sin(radians));
+
+    if (canMove(newX, newY)) {
+        tank->position.x = newX;
+        tank->position.y = newY;
         tank->direction = DOWN;
         return 0;
     }
@@ -74,50 +81,23 @@ int moveDown(tank *tank) {
 }
 
 int moveRight(tank *tank) {
-    tank->wantToRotate += 10;
+    tank->position.deg += 10;
+    if (tank->position.deg >= 360) {
+        tank->position.deg -= 360;
+    }
     tank->direction = RIGHT;
     return 0;
 }
 
 int moveLeft(tank *tank) {
-        tank->wantToRotate -= 10;
-        tank->direction = LEFT;
-        return 0;
+    tank->position.deg -= 10;
+    if (tank->position.deg < 0) {
+        tank->position.deg += 360;
+    }
+    tank->direction = LEFT;
+    return 0;
 }
 
-
 void drawTank(tank *tank) {
-    if(tank->wantToMove >= tank->speed){
-        switch (tank->direction)
-        {
-        case UP:
-            tank->position.y -= tank->speed;
-            tank->wantToMove -= tank->speed;
-
-            break;
-        case DOWN:
-            tank->position.y += tank->speed;
-            tank->wantToMove -= tank->speed;
-            break;        
-        default:
-            break;
-        }
-    }
-    if(tank->wantToRotate >= 5){
-        switch (tank->direction)
-        {
-         case LEFT:
-            tank->position.deg -= 5;
-            tank->wantToRotate += 5;
-            break;
-        case RIGHT:
-            tank->position.deg += 5;
-            tank->wantToRotate -= 5;
-            break;
-        
-        default:
-            break;
-        }
-    }
-    xpm_draw_tank_ignore_rot(tank_green, tank->position.x, tank->position.y, tank->position.deg, GREEN_SCREEN);  
+    xpm_draw_tank_ignore_rot(tank_green, tank->position.x, tank->position.y, tank->position.deg, GREEN_SCREEN);
 }
