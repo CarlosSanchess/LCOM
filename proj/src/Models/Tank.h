@@ -10,22 +10,36 @@
 #define UP 1
 #define DOWN -1
 
+#define TANK_WIDTH 42
+#define TANK_HEIGHT 46
+
+#define NUM_OBSTACLES 12
+
 typedef struct{
     position position;
     int hp;
     int speed;
     int wantToMove;
     int direction; // 1 UP -1 DOWN 2 RIGHT -2 LEFT
-}tank;
+} tank;
+
+typedef struct {
+    int x1, x2;
+    int y1, y2;
+} Obstacle;
+
+extern Obstacle obstacles[NUM_OBSTACLES];
 
 #include "tank.c"
 
-void destroyTank(tank *tank);
 tank* createTank(int x, int y, int hp, int speed);
-void drawTank();
+void destroyTank(tank *tank);
+void freeTank(tank *tank);
+void drawTank(tank *tank);
 bool canMove(int x, int y);
 int moveUP(tank *tank);
-
-
+int moveDown(tank *tank);
+int moveLeft(tank *tank);
+int moveRight(tank *tank);
 
 #endif
