@@ -240,6 +240,7 @@ int (xpm_draw_ignore)(xpm_map_t xpm, uint16_t x, uint16_t y, unsigned int ignore
 
     return 0;
 }
+
 int (xpm_draw_tank_ignore_rot)(xpm_map_t xpm, uint16_t x, uint16_t y, uint16_t deg, unsigned int ignoredColor) {
     xpm_image_t img;
     uint8_t *pixmap = xpm_load(xpm, XPM_8_8_8, &img);
@@ -249,33 +250,48 @@ int (xpm_draw_tank_ignore_rot)(xpm_map_t xpm, uint16_t x, uint16_t y, uint16_t d
 
     double radians = deg * (M_PI / 180.0);
 
-    int cx = img.width / 2;
-    int cy = img.height / 2;
+    int width = img.width;
+    int height = img.height;
+
+    double abs_cos_angle = fabs(cos(radians));
+    double abs_sin_angle = fabs(sin(radians));
+
+    int new_width = (int)(width * abs_cos_angle + height * abs_sin_angle);
+    int new_height = (int)(width * abs_sin_angle + height * abs_cos_angle);
+
+    int cx = width / 2;
+    int cy = height / 2;
+
+    int new_cx = new_width / 2;
+    int new_cy = new_height / 2;
 
     double cos_angle = cos(radians);
     double sin_angle = sin(radians);
 
-    for (int i = 0; i < img.height; i++) {
-        for (int j = 0; j < img.width; j++) {
-            int pixel_index = (i * img.width + j) * 3;
-            uint8_t blue = pixmap[pixel_index];
-            uint8_t green = pixmap[pixel_index + 1];
-            uint8_t red = pixmap[pixel_index + 2];
-            unsigned int color = (red << 16) | (green << 8) | blue;
+    for (int i = 0; i < new_height; i++) {
+        for (int j = 0; j < new_width; j++) {
+            int original_x = (int)((j - new_cx) * cos_angle + (i - new_cy) * sin_angle + cx);
+            int original_y = (int)(-(j - new_cx) * sin_angle + (i - new_cy) * cos_angle + cy);
 
-            if (color == ignoredColor) {
-                continue;
+            if (original_x >= 0 && original_x < width && original_y >= 0 && original_y < height) {
+                int pixel_index = (original_y * width + original_x) * 3;
+                uint8_t blue = pixmap[pixel_index];
+                uint8_t green = pixmap[pixel_index + 1];
+                uint8_t red = pixmap[pixel_index + 2];
+                unsigned int color = (red << 16) | (green << 8) | blue;
+
+                if (color == ignoredColor) {
+                    continue;
+                }
+
+                vg_draw_pixel(x + j - new_cx + cx, y + i - new_cy + cy, color, current_buffer);
             }
-
-            int new_x = (int)((j - cx) * cos_angle - (i - cy) * sin_angle + cx);
-            int new_y = (int)((j - cx) * sin_angle + (i - cy) * cos_angle + cy);
-
-            vg_draw_pixel(x + new_x, y + new_y, color, current_buffer);
         }
     }
 
     return 0;
 }
+
 
 int is_direct_color() {
   return vbe_mode_info.MemoryModel == 0x06;
