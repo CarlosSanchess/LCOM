@@ -23,10 +23,14 @@ tank* createTank(int x, int y, uint16_t deg, int hp, int speed) {
     }
     newTank->position.x = x;
     newTank->position.y = y;
+
     newTank->position.deg = deg;
     newTank->hp = hp;
     newTank->speed = speed;
+
     newTank->wantToMove = 0;
+    newTank->wantToRotate = 0;
+    
     newTank->direction = 0;
     return newTank;
 }
@@ -58,9 +62,8 @@ int moveDown(tank *tank) {
     int newY = tank->position.y + (int)(tank->speed * 5 * sin(radians));
 
     if (canMove(newX, newY)) {
-        tank->position.x = newX;
-        tank->position.y = newY;
-        tank->direction = UP;
+        tank->wantToMove = 5;
+        tank->direction = DOWN;
         return 0;
     }
     return 1;
@@ -72,32 +75,79 @@ int moveUP(tank *tank) {
     int newY = tank->position.y - (int)(tank->speed * 5 * sin(radians));
 
     if (canMove(newX, newY)) {
-        tank->position.x = newX;
-        tank->position.y = newY;
-        tank->direction = DOWN;
+        tank->wantToMove = 5;
+        tank->direction = UP;
         return 0;
     }
     return 1;
 }
 
 int moveRight(tank *tank) {
-    tank->position.deg += 10;
-    if (tank->position.deg >= 360) {
-        tank->position.deg -= 360;
-    }
+    tank->wantToRotate += 10;
     tank->direction = RIGHT;
     return 0;
 }
 
 int moveLeft(tank *tank) {
-    tank->position.deg -= 10;
-    if (tank->position.deg < 0) {
-        tank->position.deg += 360;
-    }
+    tank->wantToRotate += 10;
     tank->direction = LEFT;
     return 0;
 }
 
 void drawTank(tank *tank) {
+    int newY, newX;
+    double radians;
+
+    if(tank->wantToRotate >= 5){
+        switch (tank->direction)
+        {
+         case LEFT:
+            tank->position.deg -= 5;
+            tank->wantToRotate -= 5;
+            
+            if (tank->position.deg < 0) {
+                tank->position.deg += 360;
+            }
+            break;
+        case RIGHT:
+            tank->position.deg += 5;
+            tank->wantToRotate -= 5;
+
+            if (tank->position.deg >= 360) {
+                tank->position.deg -= 360;
+            }
+            break;
+        default:
+            break;
+        }
+    }
+
+    if(tank->wantToMove > 0){
+        switch (tank->direction)
+        {
+         case UP:
+            radians = (tank->position.deg - 90) * (M_PI / 180.0);
+
+            newX = tank->position.x - (int)(tank->speed * cos(radians));
+            newY = tank->position.y - (int)(tank->speed * sin(radians));
+
+            tank->position.x = newX;
+            tank->position.y = newY;
+            tank->wantToMove--;
+            break;
+        case DOWN:
+            radians = (tank->position.deg - 90) * (M_PI / 180.0);
+
+            newX = tank->position.x + (int)(tank->speed * cos(radians));
+            newY = tank->position.y + (int)(tank->speed * sin(radians));
+
+            tank->position.x = newX;
+            tank->position.y = newY;
+            tank->wantToMove--;
+            break;
+        default:
+            break;
+        }
+    }
     xpm_draw_tank_ignore_rot(tank_green, tank->position.x, tank->position.y, tank->position.deg, GREEN_SCREEN);
 }

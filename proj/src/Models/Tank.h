@@ -23,8 +23,8 @@ typedef struct{
     int hp;
     int speed;
     int wantToMove;
-    uint16_t wantToRotate;
-
+    uint16_t wantToRotate;   
+     
     int direction; // 1 UP -1 DOWN 2 RIGHT -2 LEFT
 } tank;
 
