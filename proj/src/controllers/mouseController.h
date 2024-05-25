@@ -11,5 +11,6 @@ extern struct packet mouse_byte_packet;
 extern int mouse_errorHandling;
 
 int handleInterruptMouse(State *gameState, Menu *menu, MouseInfo *mouseInfo);
+void getPositionMouse(MouseInfo *mouseInfo);
 
 #endif

@@ -52,15 +52,23 @@ void mouse_packet() {
         mouse_byte_packet.bytes[i] = mouse_bytes[i];
     }
 
-    mouse_byte_packet.rb = mouse_bytes[0] & BIT(1);
-    mouse_byte_packet.lb = mouse_bytes[0] & BIT(0);
-    mouse_byte_packet.mb = mouse_bytes[0] & BIT(2);
+    mouse_byte_packet.rb = mouse_bytes[0] & MOUSE_RIGHT_BUTTON;
+    mouse_byte_packet.lb = mouse_bytes[0] & MOUSE_LEFT_BUTTON;
+    mouse_byte_packet.mb = mouse_bytes[0] & MOUSE_MIDDLE_BUTTON;
 
-    mouse_byte_packet.delta_x = (mouse_bytes[0] & BIT(4)) ? (mouse_bytes[1] | 0xFF00) : mouse_bytes[1];
-    mouse_byte_packet.delta_y = (mouse_bytes[0] & BIT(5)) ? (mouse_bytes[2] | 0xFF00) : mouse_bytes[2];
+    mouse_byte_packet.delta_x = (mouse_bytes[0] & MOUSE_MSB_X_DELTA) ? (mouse_bytes[1] | 0xFF00) : mouse_bytes[1];
+    mouse_byte_packet.delta_y = (mouse_bytes[0] & MOUSE_MSB_Y_DELTA) ? (mouse_bytes[2] | 0xFF00) : mouse_bytes[2];
 
-    mouse_byte_packet.x_ov = mouse_bytes[0] & BIT(6);
-    mouse_byte_packet.y_ov = mouse_bytes[0] & BIT(7);
+      if(!(mouse_bytes[0] & MOUSE_X_OVFL)){
+        mouse_byte_packet.x_ov = false;
+      }else{
+      mouse_byte_packet.x_ov = true;
+      }
+      if(!(mouse_bytes[0] & MOUSE_Y_OVFL)){
+        mouse_byte_packet.y_ov = false;
+      }else{
+        mouse_byte_packet.y_ov = true;
+      }
 }
 
 int (mouse_subscribe_int)(uint8_t *bit_no) { 
