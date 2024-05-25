@@ -10,6 +10,8 @@ tank* createTank(int x, int y, int hp, int speed) {
     newTank->position.y = y;
     newTank->hp = hp;
     newTank->speed = speed;
+    newTank->wantToMove = 0;
+    newTank->direction = 0;
     return newTank;
 }
 
@@ -27,6 +29,7 @@ bool canMove(int x, int y){ //TODO
 int moveUP(tank *tank){
     if(canMove(tank->position.x, tank->position.y + 1)){
         tank->position.y -= tank->speed * 5;
+
         return 0;
     }
     return 1;
@@ -50,12 +53,16 @@ int moveLeft(tank *tank) {
 
 int moveDown(tank *tank) {
     if (canMove(tank->position.x, tank->position.y - 1)) {
-        tank->position.y += tank->speed * 5;
+        tank->wantToMove += tank->speed * 20;
         return 0;
     }
     return 1;
 }
 
 void drawTank(tank *tank) {
+    if(tank->wantToMove > 2){
+        tank->wantToMove -= 2;
+        tank->position.y += 2;
+    }
     xpm_draw_ignore(tank_green, tank->position.x, tank->position.y, GREEN_SCREEN);  
 }
