@@ -8,6 +8,5 @@ int drawMenu(Menu menu){ //todo criar pasta view
     if(menu.selected == 1){
         xpm_draw_ignore(granade, menu.coord[1][0], menu.coord[1][1], GREEN_SCREEN);  
     }
-    buffer_to_video_mem();
     return 0;
 }

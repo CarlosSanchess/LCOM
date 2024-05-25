@@ -4,11 +4,15 @@
 #include "../dev_interface/devices/timer_kbc_mouse/kbc.h"
 #include "Models/state.h"
 #include "Models/menu.h"
-#include "kbController.c"
+#include "Models/arena.h"
 
 extern uint8_t scanCode;
 
-int handleInterruptKBC(State *gameState, Menu *menu);
+int handleInterruptKBC(State *gameState, Menu *menu, Arena *arena);
+int handleMenu(State *gameState ,Menu *menu, Arena* arena);
+int handleTank(tank* tank);
+
+#include "kbController.c"
 
 
 #endif 

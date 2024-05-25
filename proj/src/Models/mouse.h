@@ -4,11 +4,12 @@
 #include "Models/Position.h"
 #include "dev_interface/devices/video_gr.h"
 #include "xpm/cursor.xpm"
+#include"xpm/crosshair.xpm"
 
 
 typedef struct{
     position mousePosition;
-    //bool crossHair;
+    uint8_t crossHair;
 }MouseInfo;
 
 #include "mouse.c"

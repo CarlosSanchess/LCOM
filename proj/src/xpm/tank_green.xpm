@@ -1,5 +1,5 @@
 /* XPM */
-static char *tank_green[] = {
+static xpm_row_t const tank_green[] = {
 /* columns rows colors chars-per-pixel */
 "42 46 26 1 ",
 "  c #2D2B22",

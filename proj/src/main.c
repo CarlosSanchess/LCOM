@@ -8,6 +8,7 @@
 
 #include "Models/state.h"
 #include "Models/menu.h"
+#include "Models/arena.h"
 #include "Models/mouse.h"
 #include "dev_interface/sprites/sprite.h"
 
@@ -15,7 +16,7 @@
 //game 
 State currentState;
 Menu menu = {0, false, {{835, 596}, {660, 722}}}; 
-MouseInfo mouseInfo = {.mousePosition = { 50, 50 }};
+MouseInfo mouseInfo = {.mousePosition = { 50, 50 }, 0};
 
 //kbc
 uint8_t irq_kbc;
@@ -24,15 +25,17 @@ uint8_t irq_mouse;
 //timer
 uint8_t irq_timer;
 
-
 int safeExit();
 int setUp();
 
 int run(){
-    
+    Arena *arena = createArena(400,400,&mouseInfo);
+
     message msg;
     int ipc_status;
     uint8_t r;
+
+    int aux = 0;
 
     while(1) { 
       if ((r = driver_receive(ANY, &msg, &ipc_status)) != OK) { 
@@ -43,7 +46,7 @@ int run(){
         switch (_ENDPOINT_P(msg.m_source)) {
             case HARDWARE: 
                  if (msg.m_notify.interrupts & irq_kbc){  //kb interrupt
-                  if(handleInterruptKBC(&currentState, &menu)){
+                  if(handleInterruptKBC(&currentState, &menu, arena)){
                     safeExit();
                     return 0;
                   }
@@ -63,15 +66,17 @@ int run(){
                       drawMenu(menu);
                     break;
                   case inGame:
-                      xpm_draw_Background(mapa, 0, 0);
-                      buffer_to_video_mem();
-                      //drawGame()
+                    if(!aux){
+                     xpm_draw_Background(mapa, 0, 0);
+                    }
+                    aux = 1;
+                    drawArena(*arena);                  
                     break;
                   default:
                     break;
                   
                   }
-                  // buffer_to_video_mem();
+                  buffer_to_video_mem();
                   restore_videoBuffer(); // current buffer = triple buffer 
                 }
                  break;

@@ -5,12 +5,14 @@
 #include "Models/state.h"
 #include "Models/menu.h"
 #include "Models/mouse.h"
-#include "mouseController.c"
 
 extern struct packet mouse_byte_packet;
 extern int mouse_errorHandling;
 
 int handleInterruptMouse(State *gameState, Menu *menu, MouseInfo *mouseInfo);
 void getPositionMouse(MouseInfo *mouseInfo);
+void processMenu(State *gameState, Menu *menu, MouseInfo *mouseInfo);
+
+#include "mouseController.c"
 
 #endif

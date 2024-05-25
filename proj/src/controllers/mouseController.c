@@ -15,6 +15,7 @@ void print_double(double n, bool x) {
 }
 
 //TODO ERROR HANDLING
+//No need to pass mouse info
 int handleInterruptMouse(State *gameState, Menu *menu, MouseInfo *mouseInfo){
     
     getPositionMouse(mouseInfo);
@@ -60,6 +61,7 @@ void processMenu(State *gameState, Menu *menu, MouseInfo *mouseInfo){
         if(mouse_byte_packet.lb){
             if(menu->selected == 0){
                 *gameState = inGame;
+                mouseInfo->crossHair = 1;
             }
         }
      }
