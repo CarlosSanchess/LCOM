@@ -34,16 +34,9 @@ extern Obstacle obstacles[NUM_OBSTACLES];
 
 #include "tank.c"
 
-<<<<<<< HEAD
-void destroyTank(tank *tank);
 tank* createTank(int x, int y,uint16_t deg, int hp, int speed);
-void drawTank();
-=======
-tank* createTank(int x, int y, int hp, int speed);
-void destroyTank(tank *tank);
 void freeTank(tank *tank);
 void drawTank(tank *tank);
->>>>>>> 579e33ca665290381744c229251a839beb878933
 bool canMove(int x, int y);
 int moveUP(tank *tank);
 int moveDown(tank *tank);

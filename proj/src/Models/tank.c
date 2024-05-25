@@ -37,11 +37,6 @@ void freeTank(tank *tank) {
     }
 }
 
-void destroyTank(tank *tank) {
-    if (tank != NULL) {
-        free(tank);
-    }
-}
 
 bool canMove(int x, int y) {
     if ((x < 0 || x + TANK_WIDTH > 1000) || (y < 0 || y + TANK_HEIGHT > 1000)) {
@@ -67,6 +62,17 @@ int moveUP(tank *tank) {
     }
     return 1;
 }
+int moveDown(tank *tank) {
+    int newY = tank->wantToMove + tank->speed * 5;
+
+    if (canMove(tank->position.x, tank->position.y + newY)) {
+        tank->wantToMove += tank->speed * 5;
+        tank->direction = DOWN;
+        return 0;
+    }
+    return 1;
+}
+
 int moveRight(tank *tank) {
     tank->wantToRotate += 10;
     tank->direction = RIGHT;
@@ -80,34 +86,10 @@ int moveLeft(tank *tank) {
 }
 
 
-int moveDown(tank *tank) {
-    int newY = tank->wantToMove + tank->speed * 5;
-
-    if (canMove(tank->position.x, tank->position.y + newY)) {
-        tank->wantToMove += tank->speed * 5;
-        tank->direction = DOWN;
-        return 0;
-    }
-    return 1;
-}
-int moveRight(tank *tank) {
-        tank->wantToRotate += 10;
-        tank->direction = RIGHT;
-        return 0;
-}
-
 void drawTank(tank *tank) {
-    if(tank->wantToMove >= tank->speed || tank->wantToRotate >= 5){
-        tank->wantToMove -= tank->speed;
-
+    if(tank->wantToMove >= tank->speed){
         switch (tank->direction)
         {
-        case LEFT:
-            tank->position.deg -= 5;
-            break;
-        case RIGHT:
-            tank->position.deg += 5;
-            break;
         case UP:
             tank->position.y -= tank->speed;
             tank->wantToMove -= tank->speed;
@@ -121,5 +103,21 @@ void drawTank(tank *tank) {
             break;
         }
     }
-    xpm_draw_tank_ignore_rot(tank_green, tank->position.x, tank->position.y, tank->position->deg, GREEN_SCREEN);  
+    if(tank->wantToRotate >= 5){
+        switch (tank->direction)
+        {
+         case LEFT:
+            tank->position.deg -= 5;
+            tank->wantToRotate += 5;
+            break;
+        case RIGHT:
+            tank->position.deg += 5;
+            tank->wantToRotate -= 5;
+            break;
+        
+        default:
+            break;
+        }
+    }
+    xpm_draw_tank_ignore_rot(tank_green, tank->position.x, tank->position.y, tank->position.deg, GREEN_SCREEN);  
 }

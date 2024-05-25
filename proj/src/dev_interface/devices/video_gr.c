@@ -240,6 +240,42 @@ int (xpm_draw_ignore)(xpm_map_t xpm, uint16_t x, uint16_t y, unsigned int ignore
 
     return 0;
 }
+int (xpm_draw_tank_ignore_rot)(xpm_map_t xpm, uint16_t x, uint16_t y, uint16_t deg, unsigned int ignoredColor) {
+    xpm_image_t img;
+    uint8_t *pixmap = xpm_load(xpm, XPM_8_8_8, &img);
+    if (pixmap == NULL) {
+        return 1; 
+    }
+
+    double radians = deg * (M_PI / 180.0);
+
+    int cx = img.width / 2;
+    int cy = img.height / 2;
+
+    double cos_angle = cos(radians);
+    double sin_angle = sin(radians);
+
+    for (int i = 0; i < img.height; i++) {
+        for (int j = 0; j < img.width; j++) {
+            int pixel_index = (i * img.width + j) * 3;
+            uint8_t blue = pixmap[pixel_index];
+            uint8_t green = pixmap[pixel_index + 1];
+            uint8_t red = pixmap[pixel_index + 2];
+            unsigned int color = (red << 16) | (green << 8) | blue;
+
+            if (color == ignoredColor) {
+                continue;
+            }
+
+            int new_x = (int)((j - cx) * cos_angle - (i - cy) * sin_angle + cx);
+            int new_y = (int)((j - cx) * sin_angle + (i - cy) * cos_angle + cy);
+
+            vg_draw_pixel(x + new_x, y + new_y, color, current_buffer);
+        }
+    }
+
+    return 0;
+}
 
 int is_direct_color() {
   return vbe_mode_info.MemoryModel == 0x06;
