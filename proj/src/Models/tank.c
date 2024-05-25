@@ -38,7 +38,7 @@ void freeTank(tank *tank) {
 }
 
 bool canMove(int x, int y) {
-    if ((x < 0 || x + TANK_WIDTH > 1000) || (y < 0 || y + TANK_HEIGHT > 1000)) {
+    if ((x < 0 || x + TANK_WIDTH > MAP_WIDTH) || (y < 0 || y + TANK_HEIGHT > MAP_HEIGHT)) {
         return false;
     }
 

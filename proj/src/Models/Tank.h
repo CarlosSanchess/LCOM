@@ -13,6 +13,9 @@
 #define TANK_WIDTH 42
 #define TANK_HEIGHT 46
 
+#define MAP_WIDTH 1152
+#define MAP_HEIGHT 864
+
 #define NUM_OBSTACLES 12
 
 typedef struct{
