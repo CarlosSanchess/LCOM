@@ -102,7 +102,6 @@ int processTank(tank* tank){
         switch (tank->direction)
         {
          case UP:
-            print_double(radians);
             newX = tank->position.x - (int)(tank->speed * 2 * cos(radians));
             newY = tank->position.y - (int)(tank->speed * 2 * sin(radians));
 

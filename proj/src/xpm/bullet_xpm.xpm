@@ -1,8 +1,8 @@
 /* XPM */
-static  xpm_row_t const tank_red [] = {
+static  xpm_row_t const bullet_xpm [] = {
 /* columns rows colors chars-per-pixel */
 "40 40 68 1 ",
-"  c None",
+"  c #4ee44e",
 ". c #3F3735",
 "X c #413B37",
 "o c #423A37",

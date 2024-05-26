@@ -10,6 +10,8 @@ typedef struct{
     MouseInfo* crosshair;
     int width;
     int height;
+    bullet** bullets;
+    size_t numBullets;
 
 
 }Arena;

@@ -13,10 +13,16 @@ int handleInterruptKBC(State *gameState, Menu *menu, Arena *arena){
     }
     if(*gameState == inGame){
         handleTank(arena->tank);
+        handleArena(arena);
     }
     return 0;
 }
-
+int handleArena(Arena* arena){
+    if(scanCode == BREAK_CODE(SPACE_KEY)){
+        if(addBulletToArena(arena) != 0 ){return 1;}
+    }
+    return 0;
+}
 int handleTank(tank* tank){
     if(scanCode == BREAK_CODE(W_KEY)){
         moveUP(tank);

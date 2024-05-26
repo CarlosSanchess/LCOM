@@ -11,7 +11,8 @@
         "sprite.h": "c",
         "views.c": "cpp",
         "arena.h": "c",
-        "arenacontroller.h": "c"
+        "arenacontroller.h": "c",
+        "tankcontroller.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }

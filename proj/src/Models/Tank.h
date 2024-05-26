@@ -3,8 +3,8 @@
 
 #include <lcom/lcf.h>
 #include "Position.h"
-#include "xpm/tank_green.xpm"
 #include "utils/utilsFunctions.h"
+#include "Models/bullet.h"
 
 #define LEFT -2
 #define RIGHT 2

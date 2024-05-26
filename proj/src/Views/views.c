@@ -2,6 +2,7 @@
 
 int drawArena(Arena arena){
     drawTank(arena.tank);
+    drawBullets(arena);
 
     return 0;
 }
@@ -35,3 +36,14 @@ int drawMouse(MouseInfo mouse){
     }
     return 0;
 }
+int drawBullets(Arena arena){
+    for(size_t i = 0; i < arena.numBullets; i++){
+        drawBullet(*(arena.bullets[i]));
+    }
+    return 0;
+}
+int drawBullet(bullet b){
+    xpm_draw_ignore(bullet_xpm, b.position.x, b.position.y, GREEN_SCREEN);
+    return 0;
+}
+
