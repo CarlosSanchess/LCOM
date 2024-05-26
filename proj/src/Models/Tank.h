@@ -1,6 +1,7 @@
 #ifndef __TANK_H__
 #define __TANK_H__
 
+#include <lcom/lcf.h>
 #include "Position.h"
 #include "xpm/tank_green.xpm"
 

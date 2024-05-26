@@ -12,7 +12,4 @@ typedef struct{
     uint8_t crossHair;
 }MouseInfo;
 
-
-int drawMouse(MouseInfo mouse);
-
 #endif

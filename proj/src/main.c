@@ -3,14 +3,13 @@
 
 #include "controllers/mouseController.h"
 #include "controllers/kbController.h" 
+#include "controllers/arenaController.h"
 
 #include "xpm/mapa1.xpm"
 
 #include "Models/state.h"
 #include "Models/menu.h"
 #include "Models/mouse.h"
-
-#include "controllers/arenaController.h"
 
 #include "Views/views.h"
 
