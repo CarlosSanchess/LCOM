@@ -1,9 +1,10 @@
 #ifndef __TANK_H__
 #define __TANK_H__
 
+#include <lcom/lcf.h>
 #include "Position.h"
-#include "dev_interface/devices/video_gr.h"
 #include "xpm/tank_green.xpm"
+#include "utils/utilsFunctions.h"
 
 #define LEFT -2
 #define RIGHT 2
@@ -35,15 +36,8 @@ typedef struct {
 
 extern Obstacle obstacles[NUM_OBSTACLES];
 
-#include "tank.c"
 
 tank* createTank(int x, int y,uint16_t deg, int hp, int speed);
 void freeTank(tank *tank);
-void drawTank(tank *tank);
-bool canMove(int x, int y);
-int moveUP(tank *tank);
-int moveDown(tank *tank);
-int moveLeft(tank *tank);
-int moveRight(tank *tank);
 
 #endif

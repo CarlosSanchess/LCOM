@@ -3,14 +3,15 @@
 
 #include "controllers/mouseController.h"
 #include "controllers/kbController.h" 
+#include "controllers/arenaController.h"
 
 #include "xpm/mapa1.xpm"
 
 #include "Models/state.h"
 #include "Models/menu.h"
-#include "Models/arena.h"
 #include "Models/mouse.h"
-#include "dev_interface/sprites/sprite.h"
+
+#include "Views/views.h"
 
 
 //game 
@@ -66,10 +67,13 @@ int run(){
                       drawMenu(menu);
                     break;
                   case inGame:
+                    processArena(arena);
+
                     if(!aux){
                      xpm_draw_Background(mapa, 0, 0);
                     }
                     aux = 1;
+
                     drawArena(*arena);                  
                     break;
                   default:
