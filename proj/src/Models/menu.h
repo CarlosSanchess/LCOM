@@ -11,8 +11,7 @@ typedef struct{
     int coord[2][2]; //Coodenadas para desenhar a granada
 }Menu;
 
-#include "menu.c"
 
-int drawMenu(Menu menu);
 
 #endif
+

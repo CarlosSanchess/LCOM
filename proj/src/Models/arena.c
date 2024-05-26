@@ -22,7 +22,3 @@ void destroyArena(Arena *arena) {
     }
 }
 
-int drawArena(Arena arena){
-    drawTank(arena.tank);
-    return 0;
-}

@@ -14,6 +14,7 @@ typedef struct{
 
 }Arena;
 
-#include "arena.c"
+Arena* createArena(int width, int height, MouseInfo *mouseInfo);
+void destroyArena(Arena *arena);
 
 #endif

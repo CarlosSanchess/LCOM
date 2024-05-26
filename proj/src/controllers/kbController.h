@@ -5,6 +5,7 @@
 #include "Models/state.h"
 #include "Models/menu.h"
 #include "Models/arena.h"
+#include "controllers/tankController.c"
 
 extern uint8_t scanCode;
 

@@ -1,5 +1,4 @@
 #include "kbController.h"
-
 extern uint8_t scanCode;
 
 int handleInterruptKBC(State *gameState, Menu *menu, Arena *arena){
