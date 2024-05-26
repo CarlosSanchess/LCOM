@@ -67,7 +67,7 @@ int run(){
                       drawMenu(menu);
                     break;
                   case inGame:
-                    processArena( arena);
+                    processArena(arena);
 
                     if(!aux){
                      xpm_draw_Background(mapa, 0, 0);

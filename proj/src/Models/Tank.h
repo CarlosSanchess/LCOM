@@ -4,6 +4,7 @@
 #include <lcom/lcf.h>
 #include "Position.h"
 #include "xpm/tank_green.xpm"
+#include "utils/utilsFunctions.h"
 
 #define LEFT -2
 #define RIGHT 2

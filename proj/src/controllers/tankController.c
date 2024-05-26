@@ -32,11 +32,11 @@ bool canMove(int x, int y) {
 
 int moveDown(tank *tank) {
     double radians = (tank->position.deg - 90) * (M_PI / 180.0);
-    int newX = tank->position.x + (int)(tank->speed * 5 * cos(radians));
-    int newY = tank->position.y + (int)(tank->speed * 5 * sin(radians));
+    int newX = tank->position.x + (int)(tank->speed * 6 * cos(radians));
+    int newY = tank->position.y + (int)(tank->speed * 6 * sin(radians));
 
     if (canMove(newX, newY)) {
-        tank->wantToMove = 5;
+        tank->wantToMove = 6;
         tank->direction = DOWN;
         return 0;
     }
@@ -45,11 +45,11 @@ int moveDown(tank *tank) {
 
 int moveUP(tank *tank) {
     double radians = (tank->position.deg - 90) * (M_PI / 180.0);
-    int newX = tank->position.x - (int)(tank->speed * 5 * cos(radians));
-    int newY = tank->position.y - (int)(tank->speed * 5 * sin(radians));
+    int newX = tank->position.x - (int)(tank->speed * 6 * cos(radians));
+    int newY = tank->position.y - (int)(tank->speed * 6 * sin(radians));
 
     if (canMove(newX, newY)) {
-        tank->wantToMove = 5;
+        tank->wantToMove = 6;
         tank->direction = UP;
         return 0;
     }
@@ -69,14 +69,14 @@ int moveLeft(tank *tank) {
 }
 
 int processTank(tank* tank){
-     int newY, newX;
+    int newY, newX;
     double radians;
 
     if(tank->wantToRotate >= 5){
         switch (tank->direction)
         {
          case LEFT:
-            tank->position.deg -= 5;
+            tank->position.deg -= 10;
             tank->wantToRotate -= 5;
 
             if (tank->position.deg < 0) {
@@ -84,7 +84,7 @@ int processTank(tank* tank){
             }
             break;
         case RIGHT:
-            tank->position.deg += 5;
+            tank->position.deg += 10;
             tank->wantToRotate -= 5;
 
             if (tank->position.deg >= 360) {
@@ -96,32 +96,34 @@ int processTank(tank* tank){
         }
     }
 
-    if(tank->wantToMove > 0){
+    if(tank->wantToMove >= 2){
         radians = (tank->position.deg - 90) * (M_PI / 180.0);
 
         switch (tank->direction)
         {
          case UP:
-            newX = tank->position.x - (int)(tank->speed * cos(radians));
-            newY = tank->position.y - (int)(tank->speed * sin(radians));
+            print_double(radians);
+            newX = tank->position.x - (int)(tank->speed * 2 * cos(radians));
+            newY = tank->position.y - (int)(tank->speed * 2 * sin(radians));
 
             tank->position.x = newX;
             tank->position.y = newY;
-            tank->wantToMove--;
+            tank->wantToMove -= 2;
             break;
         case DOWN:
 
-            newX = tank->position.x + (int)(tank->speed * cos(radians));
-            newY = tank->position.y + (int)(tank->speed * sin(radians));
+            newX = tank->position.x + (int)(tank->speed * 2 * cos(radians));
+            newY = tank->position.y + (int)(tank->speed * 2 * sin(radians));
 
             tank->position.x = newX;
             tank->position.y = newY;
-            tank->wantToMove--;
+            tank->wantToMove -= 2;
             break;
         default:
             break;
         }
     }
+    print_double(tank->position.deg);
     return 0;
 
 }

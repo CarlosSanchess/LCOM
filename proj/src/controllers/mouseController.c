@@ -1,17 +1,13 @@
 #include "mouseController.h"
 
 
-void print_double(double n, bool x) {
+void print_double(double n) {
 
   char str[100];
-  if(x){
     sprintf(str, "EM X:%f\n", n);
     printf("EM X:%s ", str);
-  }else{
     sprintf(str, "EM Y:%f\n", n);
     printf("EM Y:%s\n ========================================= \n ", str);
-  }
-
 }
 
 //TODO ERROR HANDLING

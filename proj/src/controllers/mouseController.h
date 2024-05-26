@@ -19,6 +19,5 @@ int handleInterruptMouse(State *gameState, Menu *menu, MouseInfo *mouseInfo);
 void getPositionMouse(MouseInfo *mouseInfo);
 void processMenu(State *gameState, Menu *menu, MouseInfo *mouseInfo);
 
-#include "mouseController.c"
 
 #endif
