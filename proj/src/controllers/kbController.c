@@ -20,6 +20,7 @@ int handleInterruptKBC(State *gameState, Menu *menu, Arena *arena){
 int handleArena(Arena* arena){
     if(scanCode == BREAK_CODE(SPACE_KEY) && arena->tank->canShoot){
         if(addBulletToArena(arena) != 0 ){return 1;}
+        arena->tank->canShoot = false;
     }
     return 0;
 }

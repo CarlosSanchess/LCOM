@@ -28,11 +28,9 @@ int bulletMove(bullet* bullet){
 int processBullets(Arena* arena){
     size_t aux = arena->numBullets;
     for(size_t i = 0; i < aux; i++){
-        print_double(arena->bullets[i]->position.x);
-        print_double(arena->bullets[i]->position.y);
         if(arena->bullets[i]->position.x < 0 || arena->bullets[i]->position.x > arena->width || arena->bullets[i]->position.y < 0 || arena->bullets[i]->position.y > arena->height){
             //arena->bullets = removeBulletFromBullets(arena->bullets, arena->numBullets, i);
-            arena->numBullets--;
+            //arena->numBullets--;
         }
         bulletMove(arena->bullets[i]);
     }

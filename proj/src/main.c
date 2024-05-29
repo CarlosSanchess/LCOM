@@ -4,6 +4,7 @@
 #include "controllers/mouseController.h"
 #include "controllers/kbController.h" 
 #include "controllers/arenaController.h"
+#include "controllers/timerController.h"
 
 #include "xpm/mapa1.xpm"
 
@@ -60,6 +61,7 @@ int run(){
                 }
 
                 if(msg.m_notify.interrupts & irq_timer){ //timer interrupt
+                  handleDelayedEvents(arena->tank);
                   drawMouse(mouseInfo);
                   switch (currentState)
                   {

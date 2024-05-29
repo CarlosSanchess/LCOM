@@ -16,7 +16,7 @@
 #define ERROR 1
 
 
-
+unsigned int timer_counter = 0; 
 int hook_id = 0;
 
 
