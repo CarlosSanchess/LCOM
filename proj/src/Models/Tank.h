@@ -4,6 +4,7 @@
 #include <lcom/lcf.h>
 #include "Position.h"
 #include "xpm/tank_green.xpm"
+#include "xpm/tank_red.xpm"
 #include "utils/utilsFunctions.h"
 
 #define LEFT -2
@@ -17,8 +18,6 @@
 #define MAP_WIDTH 1152
 #define MAP_HEIGHT 864
 
-#define NUM_OBSTACLES 12
-
 typedef struct{
     position position;
     int hp;
@@ -29,15 +28,9 @@ typedef struct{
     int direction; // 1 UP -1 DOWN 2 RIGHT -2 LEFT
 } tank;
 
-typedef struct {
-    int x1, x2;
-    int y1, y2;
-} Obstacle;
-
-extern Obstacle obstacles[NUM_OBSTACLES];
-
-
 tank* createTank(int x, int y,uint16_t deg, int hp, int speed);
 void freeTank(tank *tank);
+tank* createEnemyTank(int x, int y, uint16_t deg, int hp, int speed);
+void freeEnemyTank(tank *enemyTank);
 
 #endif

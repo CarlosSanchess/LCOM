@@ -3,6 +3,7 @@
 
 #include "Models/arena.h"
 #include "tankController.h"
+#include "enemyController.h"
 
 
 int processArena(Arena* arena);
