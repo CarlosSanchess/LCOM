@@ -112,9 +112,8 @@ void shootAtPlayer(EnemyTank *enemy, tank *player) {
     updateDirection(enemy, player->position.x, player->position.y);
 }
 
-void generateRandomWaypoints(Waypoint waypoints[], int numWaypoints) {
+void generateWaypoints(Waypoint waypoints[], int numWaypoints) {
     srand(time(NULL));
-
     for (int i = 0; i < numWaypoints; i++) {
         waypoints[i].x = rand() % MAP_WIDTH;
         waypoints[i].y = rand() % MAP_HEIGHT;
@@ -156,6 +155,8 @@ void updateEnemyTank(EnemyTank *enemy, tank *player, Waypoint waypoints[], int n
     static int stuckCounter = 0;
     static int prevX = 0, prevY = 0;
 
+    printf("Enemy position: (%d, %d)\n", enemy->position.x, enemy->position.y);
+
     double distanceToPlayer = calculateDistance(enemy->position.x, enemy->position.y, player->position.x, player->position.y);
     bool followingPlayer = (distanceToPlayer <= FOLLOW_THRESHOLD);
 
@@ -178,48 +179,20 @@ void updateEnemyTank(EnemyTank *enemy, tank *player, Waypoint waypoints[], int n
             }
         }
 
-        if (closestWaypointIndex == -1) {
-            for (int i = 0; i < numWaypoints; i++) {
-                visitedWaypoints[i] = false;
-            }
-            visitedCount = 0;
-
-            for (int i = 0; i < numWaypoints; i++) {
-                double distance = calculateDistance(enemy->position.x, enemy->position.y, waypoints[i].x, waypoints[i].y);
-                if (distance < minDistance) {
-                    minDistance = distance;
-                    closestWaypointIndex = i;
-                }
-            }
-        }
-
         Waypoint targetWaypoint = waypoints[closestWaypointIndex];
-
+        
         moveTowardsWaypointWithDeviation(enemy, targetWaypoint, obstacles, numObstacles);
 
         if (hasReachedWaypoint(enemy, targetWaypoint)) {
             visitedWaypoints[closestWaypointIndex] = true;
             visitedCount++;
 
+            printf("New chosen waypoint: (%d, %d)\n", targetWaypoint.x, targetWaypoint.y);
+
             minDistance = DBL_MAX;
             closestWaypointIndex = -1;
             for (int i = 0; i < numWaypoints; i++) {
                 if (!visitedWaypoints[i]) {
-                    double distance = calculateDistance(enemy->position.x, enemy->position.y, waypoints[i].x, waypoints[i].y);
-                    if (distance < minDistance) {
-                        minDistance = distance;
-                        closestWaypointIndex = i;
-                    }
-                }
-            }
-
-            if (closestWaypointIndex == -1) {
-                for (int i = 0; i < numWaypoints; i++) {
-                    visitedWaypoints[i] = false;
-                }
-                visitedCount = 0;
-
-                for (int i = 0; i < numWaypoints; i++) {
                     double distance = calculateDistance(enemy->position.x, enemy->position.y, waypoints[i].x, waypoints[i].y);
                     if (distance < minDistance) {
                         minDistance = distance;
@@ -248,3 +221,5 @@ void updateEnemyTank(EnemyTank *enemy, tank *player, Waypoint waypoints[], int n
         stuckCounter = 0;
     }
 }
+
+

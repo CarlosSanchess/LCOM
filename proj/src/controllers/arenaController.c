@@ -1,6 +1,5 @@
 #include "arenaController.h"
 
-
 Waypoint waypoints[NUM_WAYPOINTS] = {
     {1063, 105}, {1089, 774}, {840, 439}, {691, 16}, {388, 101},
     {300, 431}, {80, 558}, {421, 780}, {700, 200}, {100, 300},
@@ -11,13 +10,23 @@ Waypoint waypoints[NUM_WAYPOINTS] = {
 };
 
 bool waypointsGenerated = false;
+Waypoint combinedWaypoints[NEW_NUM_WAYPOINTS];
 
 int processArena(Arena* arena) {
+    if (!waypointsGenerated){
+        Waypoint newWaypoints[10];
+        generateWaypoints(newWaypoints, 10);
+
+        memcpy(combinedWaypoints, waypoints, sizeof(waypoints));
+        memcpy(combinedWaypoints + NUM_WAYPOINTS, newWaypoints, sizeof(newWaypoints));
+        waypointsGenerated = true;
+    }
+
     if (processTank(arena->tank, arena->obstacles, NUM_OBSTACLES) != 0) {
         return 1;
     }
 
-    updateEnemyTank(arena->enemyTank, arena->tank, waypoints, NUM_WAYPOINTS, arena->obstacles, NUM_OBSTACLES);
+    updateEnemyTank(arena->enemyTank, arena->tank, combinedWaypoints, NEW_NUM_WAYPOINTS, arena->obstacles, NUM_OBSTACLES);
 
     return 0;
 }

@@ -34,7 +34,7 @@ bool attemptMove(EnemyTank *enemy, int speed, int targetX, int targetY, Obstacle
 bool attemptUnstuckMove(EnemyTank *enemy, int speed, Obstacle obstacles[], int numObstacles, bool withinThreshold);
 void followPlayer(EnemyTank *enemy, tank *player, Obstacle obstacles[], int numObstacles);
 void shootAtPlayer(EnemyTank *enemy, tank *player);
-void generateRandomWaypoints(Waypoint waypoints[], int numWaypoints);
+void generateWaypoints(Waypoint waypoints[], int numWaypoints);
 void moveTowardsWaypointWithDeviation(EnemyTank *enemy, Waypoint targetWaypoint, Obstacle obstacles[], int numObstacles);
 bool hasReachedWaypoint(EnemyTank *enemy, Waypoint waypoint);
 void updateEnemyTank(EnemyTank *enemy, tank *player, Waypoint waypoints[], int numWaypoints, Obstacle obstacles[], int numObstacles);
