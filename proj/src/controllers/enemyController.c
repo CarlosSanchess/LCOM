@@ -40,7 +40,27 @@ void updateDirection(EnemyTank *enemy, int targetX, int targetY) {
     }
 }
 
-bool attemptMove(EnemyTank *enemy, int speed, int targetX, int targetY, Obstacle obstacles[], int numObstacles) {
+void updateTankDirection(EnemyTank *enemy, double angle) {
+    double newAngle = angle * 180 / M_PI;
+    newAngle += 270;
+    if (newAngle < 0) {
+        newAngle += 360;
+    }
+    newAngle = fmod(newAngle, 360);
+
+    enemy->position.deg = (int)newAngle;
+    if (enemy->position.deg >= 45 && enemy->position.deg < 135) {
+        enemy->direction = 0; 
+    } else if (enemy->position.deg >= 135 && enemy->position.deg < 225) {
+        enemy->direction = 1; 
+    } else if (enemy->position.deg >= 225 && enemy->position.deg < 315) {
+        enemy->direction = 2; 
+    } else {
+        enemy->direction = 3; 
+    }
+}
+
+bool attemptMove(EnemyTank *enemy, int speed, int targetX, int targetY, Obstacle obstacles[], int numObstacles, bool withinThreshold) {
     double angle = atan2(targetY - enemy->position.y, targetX - enemy->position.x);
     int newX = enemy->position.x + (int)(speed * cos(angle));
     int newY = enemy->position.y + (int)(speed * sin(angle));
@@ -48,12 +68,17 @@ bool attemptMove(EnemyTank *enemy, int speed, int targetX, int targetY, Obstacle
     if (canMoveEnemy(newX, newY, obstacles, numObstacles)) {
         enemy->position.x = newX;
         enemy->position.y = newY;
+        
+        if (!withinThreshold) {
+            updateTankDirection(enemy, angle);
+        }
+        
         return true;
     }
     return false;
 }
 
-bool attemptUnstuckMove(EnemyTank *enemy, int speed, Obstacle obstacles[], int numObstacles) {
+bool attemptUnstuckMove(EnemyTank *enemy, int speed, Obstacle obstacles[], int numObstacles, bool withinThreshold) {
     static const int directions[4][2] = {
         {1, 0}, {0, 1}, {-1, 0}, {0, -1}
     };
@@ -65,6 +90,12 @@ bool attemptUnstuckMove(EnemyTank *enemy, int speed, Obstacle obstacles[], int n
         if (canMoveEnemy(newX, newY, obstacles, numObstacles)) {
             enemy->position.x = newX;
             enemy->position.y = newY;
+            
+            double angle = atan2(newY - enemy->position.y, newX - enemy->position.x);
+            if (!withinThreshold) {
+                updateTankDirection(enemy, angle);
+            }
+            
             return true;
         }
     }
@@ -72,9 +103,8 @@ bool attemptUnstuckMove(EnemyTank *enemy, int speed, Obstacle obstacles[], int n
 }
 
 void followPlayer(EnemyTank *enemy, tank *player, Obstacle obstacles[], int numObstacles) {
-    updateDirection(enemy, player->position.x, player->position.y);
-    if (!attemptMove(enemy, FOLLOW_SPEED, player->position.x, player->position.y, obstacles, numObstacles)) {
-        attemptUnstuckMove(enemy, FOLLOW_SPEED, obstacles, numObstacles);
+    if (!attemptMove(enemy, FOLLOW_SPEED, player->position.x, player->position.y, obstacles, numObstacles, true)) {
+        attemptUnstuckMove(enemy, FOLLOW_SPEED, obstacles, numObstacles,true);
     }
 }
 
@@ -97,7 +127,7 @@ void moveTowardsWaypointWithDeviation(EnemyTank *enemy, Waypoint targetWaypoint,
     int newY = enemy->position.y + (int)(2 * sin(angleToWaypoint));
 
     if (!canMoveEnemy(newX, newY, obstacles, numObstacles)) {
-        if (!attemptUnstuckMove(enemy, 2, obstacles, numObstacles)) {
+        if (!attemptUnstuckMove(enemy, 2, obstacles, numObstacles, false)) {
             double minDistance = DBL_MAX;
             int closestWaypointIndex = 0;
             for (int i = 0; i < NUM_WAYPOINTS; i++) {
@@ -112,7 +142,7 @@ void moveTowardsWaypointWithDeviation(EnemyTank *enemy, Waypoint targetWaypoint,
         }
     }
 
-    attemptMove(enemy, 2, targetWaypoint.x, targetWaypoint.y, obstacles, numObstacles);
+    attemptMove(enemy, 2, targetWaypoint.x, targetWaypoint.y, obstacles, numObstacles,false);
 }
 
 bool hasReachedWaypoint(EnemyTank *enemy, Waypoint waypoint) {
@@ -214,7 +244,7 @@ void updateEnemyTank(EnemyTank *enemy, tank *player, Waypoint waypoints[], int n
     prevY = enemy->position.y;
 
     if (stuckCounter > STUCK_THRESHOLD) {
-        attemptUnstuckMove(enemy, MOVE_DEVIATION, obstacles, numObstacles);
+        attemptUnstuckMove(enemy, MOVE_DEVIATION, obstacles, numObstacles, true);
         stuckCounter = 0;
     }
 }
