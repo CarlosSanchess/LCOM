@@ -41,7 +41,7 @@ void getPositionMouse(MouseInfo *mouseInfo) {
             mouseInfo->mousePosition.x = cursor_size - 15; 
         } 
         else if (mouseInfo->mousePosition.x > SCREEN_WIDTH - cursor_size) {
-            mouseInfo->mousePosition.x = SCREEN_WIDTH - cursor_size; 
+            mouseInfo->mousePosition.x = (SCREEN_WIDTH - cursor_size) % SCREEN_WIDTH; 
         }
     } else {
         mouseInfo->mousePosition.x = cursor_size; 
@@ -54,7 +54,7 @@ void getPositionMouse(MouseInfo *mouseInfo) {
             mouseInfo->mousePosition.y = cursor_size - 15; 
         } 
         else if (mouseInfo->mousePosition.y > SCREEN_HEIGHT - cursor_size) {
-            mouseInfo->mousePosition.y = SCREEN_HEIGHT - cursor_size; 
+            mouseInfo->mousePosition.y = (SCREEN_HEIGHT - cursor_size) % SCREEN_HEIGHT; 
         }
     } else {
         mouseInfo->mousePosition.y = cursor_size; 
