@@ -11,8 +11,8 @@
 int drawMenu(Menu menu);
 int drawArena(Arena arena);
 int drawTank(tank *tank);
+int drawEnemyTank(EnemyTank *tank);
 int drawMouse(MouseInfo mouse);
-
 
 #endif
 

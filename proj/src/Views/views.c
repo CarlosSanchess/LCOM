@@ -2,12 +2,18 @@
 
 int drawArena(Arena arena){
     drawTank(arena.tank);
+    drawEnemyTank(arena.enemyTank);
 
     return 0;
 }
 
 int drawTank(tank *tank) {
     xpm_draw_tank_ignore_rot(tank_green, tank->position.x, tank->position.y, tank->position.deg, GREEN_SCREEN);
+    return 0;
+}
+
+int drawEnemyTank(EnemyTank *tank) {
+    xpm_draw_tank_ignore_rot(tank_red, tank->position.x, tank->position.y, tank->position.deg, GREEN_SCREEN);
     return 0;
 }
 

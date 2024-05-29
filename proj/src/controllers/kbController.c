@@ -12,20 +12,20 @@ int handleInterruptKBC(State *gameState, Menu *menu, Arena *arena){
         }
     }
     if(*gameState == inGame){
-        handleTank(arena->tank);
+        handleTank(arena->tank, arena->obstacles, NUM_OBSTACLES);
     }
     return 0;
 }
 
-int handleTank(tank* tank){
+int handleTank(tank* tank, Obstacle Obstacles[], int numObstacles){
     if(scanCode == BREAK_CODE(W_KEY)){
-        moveUP(tank);
+        moveUP(tank,Obstacles, numObstacles);
     }
     if(scanCode == BREAK_CODE(A_KEY)){
         moveLeft(tank);
     }
     if(scanCode == BREAK_CODE(S_KEY)){
-        moveDown(tank);
+        moveDown(tank,Obstacles, numObstacles);
     }
     if(scanCode == BREAK_CODE(D_KEY)){
         moveRight(tank);

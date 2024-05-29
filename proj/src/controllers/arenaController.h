@@ -3,7 +3,9 @@
 
 #include "Models/arena.h"
 #include "tankController.h"
+#include "enemyController.h"
 
+#define NEW_NUM_WAYPOINTS (NUM_WAYPOINTS + 10)
 
 int processArena(Arena* arena);
 

@@ -3,6 +3,7 @@
 
 #include "controllers/mouseController.h"
 #include "controllers/kbController.h" 
+#include "controllers/tankController.h"
 #include "controllers/arenaController.h"
 
 #include "xpm/mapa1.xpm"

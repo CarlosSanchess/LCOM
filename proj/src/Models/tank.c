@@ -26,3 +26,26 @@ void freeTank(tank *tank) {
         free(tank);
     }
 }
+
+EnemyTank* createEnemyTank(int x, int y, uint16_t deg, int hp, int speed) {
+    EnemyTank *newEnemyTank = (EnemyTank*)malloc(sizeof(EnemyTank));
+    if (newEnemyTank == NULL) {
+        fprintf(stderr, "Failed to allocate memory for enemy tank.\n");
+        return NULL;
+    }
+    newEnemyTank->position.x = x;
+    newEnemyTank->position.y = y;
+    newEnemyTank->position.deg = deg;
+    newEnemyTank->speed = speed;
+    newEnemyTank->direction = 0;
+    newEnemyTank->currentWaypoint = 0;
+    newEnemyTank->followingPlayer = false;
+    return newEnemyTank;
+}
+
+
+void freeEnemyTank(EnemyTank *enemyTank) {
+    if (enemyTank != NULL) {
+        free(enemyTank);
+    }
+}
