@@ -7,7 +7,9 @@ int addBulletToArena(Arena* arena){
     arena->bullets = (bullet**) realloc(arena->bullets, (arena->numBullets + 1) * sizeof(bullet*));
     if(!arena->bullets) return 1;
 
-    position pos = {arena->tank->position.x + 10, arena->tank->position.y + 10, arena->tank->position.deg};
+    double radians = (arena->tank->position.deg - 90) * (M_PI / 180.0);
+
+    position pos = {arena->tank->position.x - 5 * cos(radians), arena->tank->position.y - 5 * sin(radians), arena->tank->position.deg};
 
     arena->bullets[arena->numBullets] = createBullet(pos, 5, PLAYER);
     arena->numBullets++;

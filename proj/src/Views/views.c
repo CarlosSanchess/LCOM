@@ -1,8 +1,8 @@
 #include "views.h"
 
 int drawArena(Arena arena){
-    drawTank(arena.tank);
     drawBullets(arena);
+    drawTank(arena.tank);
 
     return 0;
 }
