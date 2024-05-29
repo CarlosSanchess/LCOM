@@ -5,22 +5,22 @@ void timer_increment(){
     timerCounter++;
 }
 int handleDelayedEvents(tank *tank){
-    timer_increment();
+    // timer_increment();
     handleDelayedShooting(tank);
     
     return 0;
 }
 
 int handleDelayedShooting(tank *tank) {
-    static int delayCounter = 0;
+    static int delayShooting = 0;
     if (!tank->canShoot) {
-        delayCounter++;
-        if (delayCounter >= SHOOTD) {
+        delayShooting++;
+        if (delayShooting >= SHOOTD) {
             tank->canShoot = true;
-            delayCounter = 0; 
+            delayShooting = 0; 
         }
     } else {
-        delayCounter = 0; 
+        delayShooting = 0; 
     }
 
     return 0;

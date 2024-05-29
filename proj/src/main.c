@@ -141,11 +141,6 @@ int setUp(){
     return 1;
   }
   
-  if(timer_set_frequency(0,20) != 0){
-    fprintf(stderr, "set F");
-    return 1;
-  }
-
   if(kbc_subscribe_int(&irq_kbc) != 0){
     return 1;
   }
