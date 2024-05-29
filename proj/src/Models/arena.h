@@ -4,7 +4,7 @@
 #include "Tank.h"
 #include "mouse.h"
 
-
+#define ARENA_BORDER 50
 typedef struct{
     tank* tank;
     MouseInfo* crosshair;
