@@ -28,9 +28,17 @@ typedef struct{
     int direction; // 1 UP -1 DOWN 2 RIGHT -2 LEFT
 } tank;
 
+typedef struct {
+    position position;
+    int speed;
+    int direction; // 0: UP, 1: RIGHT, 2: DOWN, 3: LEFT
+    int currentWaypoint;
+    bool followingPlayer;
+} EnemyTank;
+
 tank* createTank(int x, int y,uint16_t deg, int hp, int speed);
 void freeTank(tank *tank);
-tank* createEnemyTank(int x, int y, uint16_t deg, int hp, int speed);
-void freeEnemyTank(tank *enemyTank);
+EnemyTank* createEnemyTank(int x, int y, uint16_t deg, int hp, int speed);
+void freeEnemyTank(EnemyTank *enemyTank);
 
 #endif

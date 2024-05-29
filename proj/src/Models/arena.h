@@ -13,7 +13,7 @@ typedef struct {
 
 typedef struct{
     tank* tank;
-    tank* enemyTank;
+    EnemyTank* enemyTank;
     MouseInfo* crosshair;
     int width;
     int height;
