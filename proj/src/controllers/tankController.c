@@ -122,7 +122,6 @@ int processTank(tank* tank){
             break;
         }
     }
-    print_double(tank->position.deg);
     return 0;
 
 }

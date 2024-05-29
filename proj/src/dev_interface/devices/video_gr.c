@@ -241,7 +241,7 @@ int (xpm_draw_ignore)(xpm_map_t xpm, uint16_t x, uint16_t y, unsigned int ignore
     return 0;
 }
 
-int xpm_draw_tank_ignore_rot(xpm_map_t xpm, uint16_t x, uint16_t y, uint16_t deg, unsigned int ignoredColor) {
+int xpm_draw_ignore_rot(xpm_map_t xpm, uint16_t x, uint16_t y, uint16_t deg, unsigned int ignoredColor) {
     xpm_image_t img;
     uint8_t *pixmap = xpm_load(xpm, XPM_8_8_8, &img);
     if (pixmap == NULL) {

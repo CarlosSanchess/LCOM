@@ -13,7 +13,6 @@ typedef struct{
     bullet** bullets;
     size_t numBullets;
 
-
 }Arena;
 
 Arena* createArena(int width, int height, MouseInfo *mouseInfo);

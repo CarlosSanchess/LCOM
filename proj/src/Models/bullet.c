@@ -12,5 +12,6 @@ bullet* createBullet(position pos, int speed, uint8_t origin){
 void freebullet(bullet* b){
     if(!b) return;
     free(b);
+    b = NULL;
 }
 

@@ -33,7 +33,7 @@ int (xpm_draw_loaded)(uint8_t * pixmap, xpm_image_t img, uint16_t x, uint16_t y)
 int (xpm_draw)(xpm_map_t xpm, uint16_t x, uint16_t y);
 int (xpm_draw_Background)(xpm_map_t xpm, uint16_t x, uint16_t y);
 int (xpm_draw_ignore)(xpm_map_t xpm, uint16_t x, uint16_t y, unsigned int ignoredColor);
-int (xpm_draw_tank_ignore_rot)(xpm_map_t xpm, uint16_t x, uint16_t y, uint16_t deg, unsigned int ignoredColor);
+int (xpm_draw_ignore_rot)(xpm_map_t xpm, uint16_t x, uint16_t y, uint16_t deg, unsigned int ignoredColor);
 int (vg_exit_graphics)();
 int (restore_videoBuffer)();
 
