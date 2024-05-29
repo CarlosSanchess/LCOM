@@ -17,6 +17,8 @@ tank* createTank(int x, int y, uint16_t deg, int hp, int speed) {
     newTank->wantToMove = 0;
     newTank->wantToRotate = 0;
     
+    newTank->canShoot = true;
+    
     newTank->direction = 0;
     return newTank;
 }

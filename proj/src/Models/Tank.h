@@ -3,9 +3,13 @@
 
 #include <lcom/lcf.h>
 #include "Position.h"
+<<<<<<< HEAD
 #include "xpm/tank_green.xpm"
 #include "xpm/tank_red.xpm"
+=======
+>>>>>>> bullet
 #include "utils/utilsFunctions.h"
+#include "Models/bullet.h"
 
 #define LEFT -2
 #define RIGHT 2
@@ -24,7 +28,7 @@ typedef struct{
     int speed;
     int wantToMove;
     uint16_t wantToRotate;   
-     
+    bool canShoot;
     int direction; // 1 UP -1 DOWN 2 RIGHT -2 LEFT
 } tank;
 
@@ -42,3 +46,4 @@ EnemyTank* createEnemyTank(int x, int y, uint16_t deg, int hp, int speed);
 void freeEnemyTank(EnemyTank *enemyTank);
 
 #endif
+

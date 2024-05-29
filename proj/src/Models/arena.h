@@ -5,6 +5,8 @@
 #include "mouse.h"
 
 #define NUM_OBSTACLES 12
+#define ARENA_BORDER 50
+
 
 typedef struct {
     int x1, x2;
@@ -19,6 +21,8 @@ typedef struct{
     int height;
     Obstacle obstacles[NUM_OBSTACLES];
 
+    bullet** bullets;
+    size_t numBullets;
 
 }Arena;
 

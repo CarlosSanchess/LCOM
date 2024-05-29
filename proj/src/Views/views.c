@@ -1,6 +1,7 @@
 #include "views.h"
 
 int drawArena(Arena arena){
+    drawBullets(arena);
     drawTank(arena.tank);
     drawEnemyTank(arena.enemyTank);
 
@@ -8,7 +9,7 @@ int drawArena(Arena arena){
 }
 
 int drawTank(tank *tank) {
-    xpm_draw_tank_ignore_rot(tank_green, tank->position.x, tank->position.y, tank->position.deg, GREEN_SCREEN);
+    xpm_draw_ignore_rot(tank_green, tank->position.x, tank->position.y, tank->position.deg, GREEN_SCREEN);
     return 0;
 }
 
@@ -41,3 +42,14 @@ int drawMouse(MouseInfo mouse){
     }
     return 0;
 }
+int drawBullets(Arena arena){
+    for(size_t i = 0; i < arena.numBullets; i++){
+        drawBullet(*(arena.bullets[i]));
+    }
+    return 0;
+}
+int drawBullet(bullet b){
+    xpm_draw_ignore_rot(bullet_xpm, b.position.x, b.position.y, b.position.deg, GREEN_SCREEN);
+    return 0;
+}
+

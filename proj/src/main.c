@@ -5,6 +5,7 @@
 #include "controllers/kbController.h" 
 #include "controllers/tankController.h"
 #include "controllers/arenaController.h"
+#include "controllers/timerController.h"
 
 #include "xpm/mapa1.xpm"
 
@@ -31,7 +32,7 @@ int safeExit();
 int setUp();
 
 int run(){
-    Arena *arena = createArena(400,400,&mouseInfo);
+    Arena *arena = createArena(1152,864,&mouseInfo);
 
     message msg;
     int ipc_status;
@@ -61,6 +62,7 @@ int run(){
                 }
 
                 if(msg.m_notify.interrupts & irq_timer){ //timer interrupt
+                  handleDelayedEvents(arena->tank);
                   drawMouse(mouseInfo);
                   switch (currentState)
                   {
@@ -140,11 +142,6 @@ int setUp(){
     return 1;
   }
   
-  if(timer_set_frequency(0,20) != 0){
-    fprintf(stderr, "set F");
-    return 1;
-  }
-
   if(kbc_subscribe_int(&irq_kbc) != 0){
     return 1;
   }

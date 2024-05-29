@@ -6,7 +6,7 @@
 #include "Models/menu.h"
 #include "Models/mouse.h"
 
-#define MOUSE_SCALING_FACTOR 0.92
+#define MOUSE_SCALING_FACTOR 0.5
 #define SCREEN_WIDTH 1152
 #define SCREEN_HEIGHT 864
 #define CURSOR_WIDTH 50

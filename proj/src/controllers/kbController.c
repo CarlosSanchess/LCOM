@@ -13,11 +13,19 @@ int handleInterruptKBC(State *gameState, Menu *menu, Arena *arena){
     }
     if(*gameState == inGame){
         handleTank(arena->tank, arena->obstacles, NUM_OBSTACLES);
+        handleArena(arena);
     }
     return 0;
 }
 
-int handleTank(tank* tank, Obstacle Obstacles[], int numObstacles){
+int handleArena(Arena* arena){
+    if(scanCode == BREAK_CODE(SPACE_KEY) && arena->tank->canShoot){
+        if(addBulletToArena(arena) != 0 ){return 1;}
+        arena->tank->canShoot = false;
+    }
+    return 0;
+}
+int handleTank(tank* tank){
     if(scanCode == BREAK_CODE(W_KEY)){
         moveUP(tank,Obstacles, numObstacles);
     }

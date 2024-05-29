@@ -26,6 +26,9 @@ int processArena(Arena* arena) {
         return 1;
     }
 
+    if(processBullets(arena)){return 1;}
+
+
     updateEnemyTank(arena->enemyTank, arena->tank, combinedWaypoints, NEW_NUM_WAYPOINTS, arena->obstacles, NUM_OBSTACLES);
 
     return 0;

@@ -4,7 +4,7 @@
 #include <stdint.h>
 #include <stdio.h>
 
-#include "i8254.h"
+#include "timer.h"
 
 
 
@@ -16,8 +16,7 @@
 #define ERROR 1
 
 
-
-unsigned int timer_counter = 0;
+unsigned int timer_counter = 0; 
 int hook_id = 0;
 
 
