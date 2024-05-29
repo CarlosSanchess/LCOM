@@ -19,6 +19,7 @@ typedef struct{
 
 
 bullet* createBullet(position pos, int speed, uint8_t origin);
+bullet** removeBulletFromBullets(bullet** bullets, size_t numBullets, size_t index);
 void freebullet(bullet* b);
 
 #endif

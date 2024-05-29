@@ -30,7 +30,7 @@ int safeExit();
 int setUp();
 
 int run(){
-    Arena *arena = createArena(400,400,&mouseInfo);
+    Arena *arena = createArena(1152,864,&mouseInfo);
 
     message msg;
     int ipc_status;
