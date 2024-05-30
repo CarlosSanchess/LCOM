@@ -3,15 +3,11 @@
 
 #include "Tank.h"
 #include "mouse.h"
+#include "obstacle.h"
 
 #define NUM_OBSTACLES 12
 #define ARENA_BORDER 50
 
-
-typedef struct {
-    int x1, x2;
-    int y1, y2;
-} Obstacle;
 
 typedef struct{
     tank* tank;
@@ -20,6 +16,9 @@ typedef struct{
     int width;
     int height;
     Obstacle obstacles[NUM_OBSTACLES];
+
+    Obstacle** builts;
+    size_t numBuilts;
 
     bullet** bullets;
     size_t numBullets;
