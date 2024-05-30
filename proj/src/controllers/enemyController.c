@@ -153,7 +153,8 @@ void updateEnemyTank(EnemyTank *enemy, tank *player, Waypoint waypoints[], int n
     static bool visitedWaypoints[MAX_WAYPOINTS] = { false };
     static int visitedCount = 0;
     static int stuckCounter = 0;
-    static int prevX = 0, prevY = 0;
+    static int positionHistory[10][2] = { {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0} };
+    static int historyIndex = 0;
 
     double distanceToPlayer = calculateDistance(enemy->position.x, enemy->position.y, player->position.x, player->position.y);
     bool followingPlayer = (distanceToPlayer <= FOLLOW_THRESHOLD);
@@ -177,45 +178,82 @@ void updateEnemyTank(EnemyTank *enemy, tank *player, Waypoint waypoints[], int n
             }
         }
 
-        Waypoint targetWaypoint = waypoints[closestWaypointIndex];
-        
-        moveTowardsWaypointWithDeviation(enemy, targetWaypoint, obstacles, numObstacles);
+        if (closestWaypointIndex != -1) {
+            Waypoint targetWaypoint = waypoints[closestWaypointIndex];
+            moveTowardsWaypointWithDeviation(enemy, targetWaypoint, obstacles, numObstacles);
 
-        if (hasReachedWaypoint(enemy, targetWaypoint)) {
-            visitedWaypoints[closestWaypointIndex] = true;
-            visitedCount++;
+            if (hasReachedWaypoint(enemy, targetWaypoint)) {
+                visitedWaypoints[closestWaypointIndex] = true;
+                visitedCount++;
 
-            minDistance = DBL_MAX;
-            closestWaypointIndex = -1;
-            for (int i = 0; i < numWaypoints; i++) {
-                if (!visitedWaypoints[i]) {
-                    double distance = calculateDistance(enemy->position.x, enemy->position.y, waypoints[i].x, waypoints[i].y);
-                    if (distance < minDistance) {
-                        minDistance = distance;
-                        closestWaypointIndex = i;
+
+                if (visitedCount >= numWaypoints) {
+                    for (int i = 0; i < numWaypoints; i++) {
+                        visitedWaypoints[i] = false;
+                    }
+                    visitedCount = 0;
+                }
+
+                minDistance = DBL_MAX;
+                closestWaypointIndex = -1;
+                for (int i = 0; i < numWaypoints; i++) {
+                    if (!visitedWaypoints[i]) {
+                        double distance = calculateDistance(enemy->position.x, enemy->position.y, waypoints[i].x, waypoints[i].y);
+                        if (distance < minDistance) {
+                            minDistance = distance;
+                            closestWaypointIndex = i;
+                        }
                     }
                 }
+
+                if (closestWaypointIndex != -1) {
+                    targetWaypoint = waypoints[closestWaypointIndex];
+                    moveTowardsWaypointWithDeviation(enemy, targetWaypoint, obstacles, numObstacles);
+                }
             }
-
-            targetWaypoint = waypoints[closestWaypointIndex];
         }
-
-        moveTowardsWaypointWithDeviation(enemy, targetWaypoint, obstacles, numObstacles);
     }
 
-    if (abs(enemy->position.x - prevX) < 2 && abs(enemy->position.y - prevY) < 2) {
+    positionHistory[historyIndex][0] = enemy->position.x;
+    positionHistory[historyIndex][1] = enemy->position.y;
+    historyIndex = (historyIndex + 1) % 10;
+
+    if (abs(enemy->position.x - positionHistory[historyIndex][0]) <= 2 && abs(enemy->position.y - positionHistory[historyIndex][1]) <= 2) {
         stuckCounter++;
     } else {
         stuckCounter = 0;
     }
 
-    prevX = enemy->position.x;
-    prevY = enemy->position.y;
-
     if (stuckCounter > STUCK_THRESHOLD) {
-        attemptUnstuckMove(enemy, MOVE_DEVIATION, obstacles, numObstacles, true);
         stuckCounter = 0;
+        visitedWaypoints[enemy->currentWaypoint] = true;
+        visitedCount++;
+
+        if (visitedCount >= numWaypoints) {
+            for (int i = 0; i < numWaypoints; i++) {
+                visitedWaypoints[i] = false;
+            }
+            visitedCount = 0;
+        }
+
+        double minDistance = DBL_MAX;
+        int closestWaypointIndex = -1;
+        for (int i = 0; i < numWaypoints; i++) {
+            if (!visitedWaypoints[i]) {
+                double distance = calculateDistance(enemy->position.x, enemy->position.y, waypoints[i].x, waypoints[i].y);
+                if (distance < minDistance) {
+                    minDistance = distance;
+                    closestWaypointIndex = i;
+                }
+            }
+        }
+
+        if (closestWaypointIndex != -1) {
+            enemy->currentWaypoint = closestWaypointIndex;
+            Waypoint targetWaypoint = waypoints[closestWaypointIndex];
+
+            moveTowardsWaypointWithDeviation(enemy, targetWaypoint, obstacles, numObstacles);
+        }
     }
 }
-
 
