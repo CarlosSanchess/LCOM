@@ -7,6 +7,7 @@
 #include "Models/mouse.h"
 #include "Models/obstacle.h"
 #include "Models/arena.h"
+#include "controllers/builderController.h"
 
 #define MOUSE_SCALING_FACTOR 0.5
 #define SCREEN_WIDTH 1152

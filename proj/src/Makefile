@@ -10,7 +10,7 @@ PROG=proj
 .PATH: ${.CURDIR}/Models
 
 # source code files to be compiled
-SRCS = main.c utils.c kbc.c mouse.c rtc.c timer.c video_gr.c sprite.c views.c arena.c tank.c obstacle.c bullet.c arenaController.c mouseController.c enemyController.c tankController.c bulletController.c kbController.c timerController.c
+SRCS = main.c utils.c kbc.c mouse.c rtc.c timer.c video_gr.c sprite.c views.c arena.c tank.c obstacle.c bullet.c arenaController.c mouseController.c enemyController.c tankController.c bulletController.c kbController.c timerController.c builderController.c 
 
 # additional compilation flags
 # "-Wall -Wextra -Werror -I . -std=c11 -Wno-unused-parameter" are already set

@@ -10,6 +10,7 @@
 typedef struct{
     position mousePosition;
     uint8_t crossHair;
+    bool canBuild;
 }MouseInfo;
 
 #endif

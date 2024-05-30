@@ -20,7 +20,7 @@ int handleInterruptMouse(State *gameState, Menu *menu, Arena* arena, MouseInfo *
       processMenu(gameState, menu, mouseInfo);
     }
     if(*gameState == inGame){
-      processBuild(arena,mouseInfo);
+        if(mouseInfo->canBuild){processBuild(arena,mouseInfo);}
     }
     return 0;
 }
@@ -78,8 +78,9 @@ void processMenu(State *gameState, Menu *menu, MouseInfo *mouseInfo){
 
 int processBuild(Arena* arena, MouseInfo* mouseInfo){
     if((mouseInfo->mousePosition.x > 0 && mouseInfo->mousePosition.x < MAP_WIDTH) && (mouseInfo->mousePosition.y > 0 && mouseInfo->mousePosition.y < MAP_HEIGHT)){
-        if(mouse_byte_packet.lb){
-            // add_obstacle(arena->builts,&(arena->numBuilts), mouseInfo->mousePosition.x, 10, mouseInfo->mousePosition.y, 10);
+        if(mouse_byte_packet.rb){
+            add_obstacleToArena(arena, mouseInfo->mousePosition.x,  mouseInfo->mousePosition.x + 50,  mouseInfo->mousePosition.y, mouseInfo->mousePosition.y + 50);
+            mouseInfo->canBuild = false;
         }
     }
     return 0;

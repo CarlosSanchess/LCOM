@@ -19,7 +19,7 @@
 //game 
 State currentState;
 Menu menu = {0, false, {{835, 596}, {660, 722}}}; 
-MouseInfo mouseInfo = {.mousePosition = { 50, 50, 0}, 0};
+MouseInfo mouseInfo = {.mousePosition = { 50, 50, 0}, 0, true};
 
 //kbc
 uint8_t irq_kbc;
@@ -62,7 +62,7 @@ int run(){
                 }
 
                 if(msg.m_notify.interrupts & irq_timer){ //timer interrupt
-                  handleDelayedEvents(arena->tank);
+                  handleDelayedEvents(arena->tank, &mouseInfo);
                   drawMouse(mouseInfo);
                   switch (currentState)
                   {

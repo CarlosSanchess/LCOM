@@ -4,9 +4,10 @@
 void timer_increment(){
     timerCounter++;
 }
-int handleDelayedEvents(tank *tank){
+int handleDelayedEvents(tank *tank, MouseInfo* mouseInfo){
     // timer_increment();
     handleDelayedShooting(tank);
+    handleDelayedMouse(mouseInfo);
     
     return 0;
 }
@@ -24,5 +25,13 @@ int handleDelayedShooting(tank *tank) {
     }
 
     return 0;
+}
+void handleDelayedMouse(MouseInfo* mouseInfo){
+    static int delayMouse = 0;
+    delayMouse++;
+    if(delayMouse >= DRAWD){
+        mouseInfo->canBuild = true;
+        delayMouse = 0;
+    }
 }
 
