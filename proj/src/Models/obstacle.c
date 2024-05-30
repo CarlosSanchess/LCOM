@@ -11,6 +11,7 @@ Obstacle* createObstacle(int x1, int x2, int y1, int y2){
     obs->y1 = y1;
     obs->y2 = y2;
     obs->time = 10;
+    obs->draw= true;
     return obs;
 }
 

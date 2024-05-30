@@ -25,7 +25,6 @@ int handleInterruptMouse(State *gameState, Menu *menu, Arena* arena, MouseInfo *
     return 0;
 }
 
-
 void getPositionMouse(MouseInfo *mouseInfo) {
     mouse_ih();
     mouse_packet();
@@ -50,9 +49,9 @@ void getPositionMouse(MouseInfo *mouseInfo) {
 
     if (!mouse_byte_packet.y_ov) {
         mouseInfo->mousePosition.y -= smooth_dy;
-        
+
         if (mouseInfo->mousePosition.y < cursor_size) {
-            mouseInfo->mousePosition.y = cursor_size - 15; 
+            mouseInfo->mousePosition.y = cursor_size - 30; 
         } 
         else if (mouseInfo->mousePosition.y > SCREEN_HEIGHT - cursor_size) {
             mouseInfo->mousePosition.y = (SCREEN_HEIGHT - cursor_size) % SCREEN_HEIGHT; 

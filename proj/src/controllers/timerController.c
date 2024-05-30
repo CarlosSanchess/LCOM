@@ -42,6 +42,7 @@ void handleDelayedBuildings(Obstacle** obstacles, size_t numObstacles){
     if(delayBuildings >= BUILDD){
         for(size_t i = 0; i < numObstacles; i++){
             obstacles[i]->time--;
+            obstacles[i]->draw = true;
         }
         delayBuildings = 0;
     }

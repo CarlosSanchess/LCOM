@@ -6,8 +6,8 @@
 #include "Models/obstacle.h"
 #include "Models/mouse.h"
 
-#define SHOOTD 120 //3 seg between shoot
-#define DRAWD 180 //4 seg between draw
+#define SHOOTD 120 //2 seg between shoot
+#define DRAWD 600//3 seg between draw
 #define BUILDD 60 //1 seg 
 
 static unsigned int timerCounter = 0; 

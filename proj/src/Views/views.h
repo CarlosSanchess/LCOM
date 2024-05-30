@@ -10,7 +10,16 @@
 #include "../xpm/bullet_xpm.xpm"
 #include "../xpm/tank_green.xpm"
 #include "../xpm/tank_red.xpm"
-#include "../xpm/block.xpm"
+#include "../xpm/blocks/block1.xpm"
+#include "../xpm/blocks/block2.xpm"
+#include "../xpm/blocks/block3.xpm"
+#include "../xpm/blocks/block4.xpm"
+#include "../xpm/blocks/block5.xpm"
+#include "../xpm/blocks/block6.xpm"
+#include "../xpm/blocks/block7.xpm"
+#include "../xpm/blocks/block8.xpm"
+#include "../xpm/blocks/block9.xpm"
+#include "../xpm/blocks/block10.xpm"
 #include "../xpm/martelo.xpm"
 
 
