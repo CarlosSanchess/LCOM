@@ -42,7 +42,7 @@ int bulletMove(bullet* bullet){
 int processBullets(Arena* arena) {
     size_t i = 0;
     while (i < arena->numBullets) {
-        if (arena->bullets[i]->position.x < 0 || arena->bullets[i]->position.x > arena->width - ARENA_BORDER || arena->bullets[i]->position.y < 0 || arena->bullets[i]->position.y > arena->height - ARENA_BORDER) {
+        if (arena->bullets[i]->position.x < 0 || arena->bullets[i]->position.x > arena->width - ARENA_BORDER || equalPosition(arena->bullets[i]->position, arena->enemyTank->position)){
             arena->bullets = removeBulletFromBullets(arena->bullets, arena->numBullets, i);
             arena->numBullets--;
         } else {

@@ -15,7 +15,8 @@
         "tankcontroller.h": "c",
         "bullet.h": "c",
         "timer.h": "c",
-        "utilsfunctions.h": "c"
+        "utilsfunctions.h": "c",
+        "collisioncontroller.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }

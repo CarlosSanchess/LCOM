@@ -6,6 +6,7 @@
 #include "Models/arena.h"
 #include "Models/bullet.h"
 #include "controllers/bulletController.h"
+#include "controllers/collisionController.h"
 
 #define GREEN_TANK 1
 #define RED_TANK 2
