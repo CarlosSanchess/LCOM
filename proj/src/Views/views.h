@@ -11,6 +11,7 @@
 #include "../xpm/tank_green.xpm"
 #include "../xpm/tank_red.xpm"
 #include "../xpm/block.xpm"
+#include "../xpm/martelo.xpm"
 
 
 

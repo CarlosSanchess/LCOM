@@ -10,6 +10,7 @@ Obstacle* createObstacle(int x1, int x2, int y1, int y2){
     obs->x2 = x2;
     obs->y1 = y1;
     obs->y2 = y2;
+    obs->time = 10;
     return obs;
 }
 
@@ -21,3 +22,23 @@ Obstacle** create_obstacle_array() {
     }
     return obsArray;
 }
+
+Obstacle** popObstacle(Obstacle** array, size_t numObstacles) {
+    if (numObstacles <= 0) {
+        return NULL;
+    }
+    Obstacle** temp = (Obstacle**)malloc((numObstacles - 1) * sizeof(Obstacle*));
+    if (!temp) {
+        return NULL; 
+    }
+
+    memcpy(temp, array, (numObstacles - 1) * sizeof(Obstacle*));
+    
+
+    free(array[numObstacles - 1]); 
+    free(array);
+    array = NULL;
+
+    return temp;
+}
+

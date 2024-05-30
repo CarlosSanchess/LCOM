@@ -36,7 +36,7 @@ int drawMouse(MouseInfo mouse){
                 return 1;
             }
         }else{
-             if(xpm_draw_ignore(crosshair, mouse.mousePosition.x, mouse.mousePosition.y, GREEN_SCREEN) != 0){
+             if(xpm_draw_ignore(martelo, mouse.mousePosition.x, mouse.mousePosition.y, GREEN_SCREEN) != 0){
                 return 1;
             }
         }
@@ -59,7 +59,7 @@ int drawBuilds(Obstacle** builds, size_t numBuilts){
         //xpm_draw_ignore(block,50, 50, GREEN_SCREEN);
     // }
     for(size_t i = 0; i < numBuilts; i++){ // TODO
-        xpm_draw_ignore(block, builds[i]->x1, builds[i]->y1, GREEN_SCREEN);
+        xpm_draw_ignore_Block(block, builds[i]->x1, builds[i]->y1, GREEN_SCREEN, builds[i]->time);
     }
     return 0;
 }

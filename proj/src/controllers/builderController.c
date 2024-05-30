@@ -18,3 +18,14 @@ int add_obstacleToArena(Arena* arena, int x1, int x2, int y1, int y2) {
     return 0;
 }
 
+int processBuilts(Arena *arena){
+    for(size_t i = 0; i < arena->numBuilts; i++){
+        if(arena->builts[i]->time <= 0){
+            arena->builts = popObstacle(arena->builts, arena->numBuilts);
+            arena->numBuilts--;
+        } 
+    }
+    return 0;
+}
+
+

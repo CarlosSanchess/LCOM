@@ -6,6 +6,7 @@
 
 
 int add_obstacleToArena(Arena* arena, int x1, int x2, int y1, int y2);
+int processBuilts(Arena *arena);
 
 #endif
 
