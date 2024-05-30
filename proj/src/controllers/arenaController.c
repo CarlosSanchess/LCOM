@@ -1,7 +1,7 @@
 #include "arenaController.h"
 
 Waypoint waypoints[NUM_WAYPOINTS] = {
-    {1063, 105}, {1089, 774}, {840, 439}, {691, 16}, {388, 101},
+    {890, 170}, {1089, 774}, {840, 439}, {691, 16}, {388, 101},
     {300, 431}, {80, 558}, {421, 780}, {700, 200}, {100, 300},
     {900, 500}, {600, 700}, {500, 50}, {200, 600}, {800, 100},
     {400, 400}, {1000, 800}, {300, 200}, {50, 750}, {500, 350},
@@ -29,7 +29,7 @@ int processArena(Arena* arena) {
     if(processBullets(arena)){return 1;}
 
 
-    updateEnemyTank(arena,arena->enemyTank, arena->tank, combinedWaypoints, NEW_NUM_WAYPOINTS, arena->obstacles, NUM_OBSTACLES);
+    updateEnemyTank(arena,arena->enemyTank, arena->tank, combinedWaypoints, 40, arena->obstacles, NUM_OBSTACLES);
 
     return 0;
 }

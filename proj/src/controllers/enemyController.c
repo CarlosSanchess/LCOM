@@ -1,7 +1,7 @@
 #include "enemyController.h"
  
 double calculateDistance(int x1, int y1, int x2, int y2) {
-    return sqrt((x2 - x1) * (x2 - y2) + (y2 - y1) * (y2 - y1));
+    return sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
 }
 
 bool canMoveEnemy(int newX, int newY, Obstacle obstacles[], int numObstacles) {
@@ -78,40 +78,16 @@ bool attemptMove(EnemyTank *enemy, int speed, int targetX, int targetY, Obstacle
     return false;
 }
 
-bool attemptUnstuckMove(EnemyTank *enemy, int speed, Obstacle obstacles[], int numObstacles, bool withinThreshold) {
-    static const int directions[4][2] = {
-        {1, 0}, {0, 1}, {-1, 0}, {0, -1}
-    };
-
-    for (int i = 0; i < 4; i++) {
-        int newX = enemy->position.x + directions[i][0] * speed;
-        int newY = enemy->position.y + directions[i][1] * speed;
-
-        if (canMoveEnemy(newX, newY, obstacles, numObstacles)) {
-            enemy->position.x = newX;
-            enemy->position.y = newY;
-            
-            double angle = atan2(newY - enemy->position.y, newX - enemy->position.x);
-            if (!withinThreshold) {
-                updateTankDirection(enemy, angle);
-            }
-            
-            return true;
-        }
-    }
-    return false;
-}
-
 void followPlayer(EnemyTank *enemy, tank *player, Obstacle obstacles[], int numObstacles) {
-    if (!attemptMove(enemy, FOLLOW_SPEED, player->position.x, player->position.y, obstacles, numObstacles, true)) {
-        attemptUnstuckMove(enemy, FOLLOW_SPEED, obstacles, numObstacles,true);
-    }
+    attemptMove(enemy, FOLLOW_SPEED, player->position.x, player->position.y, obstacles, numObstacles, true); 
 }
 
 void shootAtPlayer(Arena *arena) {
     updateDirection(arena->enemyTank, arena->tank->position.x, arena->tank->position.y);
-    addBulletToArena(arena,RED_TANK);
-    arena->enemyTank->canShoot = false;
+    if(arena->enemyTank->canShoot){
+        addBulletToArena(arena,RED_TANK);
+        arena->enemyTank->canShoot = false;
+    }
 }
 
 void generateWaypoints(Waypoint waypoints[], int numWaypoints) {
@@ -128,8 +104,7 @@ void moveTowardsWaypointWithDeviation(EnemyTank *enemy, Waypoint targetWaypoint,
     int newY = enemy->position.y + (int)(2 * sin(angleToWaypoint));
 
     if (!canMoveEnemy(newX, newY, obstacles, numObstacles)) {
-        if (!attemptUnstuckMove(enemy, 2, obstacles, numObstacles, false)) {
-            double minDistance = DBL_MAX;
+            double minDistance = 1e6;
             int closestWaypointIndex = 0;
             for (int i = 0; i < NUM_WAYPOINTS; i++) {
                 double distance = calculateDistance(enemy->position.x, enemy->position.y, waypoints[i].x, waypoints[i].y);
@@ -140,9 +115,7 @@ void moveTowardsWaypointWithDeviation(EnemyTank *enemy, Waypoint targetWaypoint,
             }
             enemy->currentWaypoint = closestWaypointIndex;
             targetWaypoint = waypoints[closestWaypointIndex];
-        }
     }
-
     attemptMove(enemy, 2, targetWaypoint.x, targetWaypoint.y, obstacles, numObstacles,false);
 }
 
@@ -152,42 +125,51 @@ bool hasReachedWaypoint(EnemyTank *enemy, Waypoint waypoint) {
 }
 
 void updateEnemyTank(Arena *arena, EnemyTank *enemy, tank *player, Waypoint waypoints[], int numWaypoints, Obstacle obstacles[], int numObstacles) {
-    static bool visitedWaypoints[MAX_WAYPOINTS] = { false };
+    static bool visitedWaypoints[40] = { false };
     static int visitedCount = 0;
     static int stuckCounter = 0;
     static int positionHistory[10][2] = { {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0} };
     static int historyIndex = 0;
+    static int closestWaypointIndex = -1;
 
     double distanceToPlayer = calculateDistance(enemy->position.x, enemy->position.y, player->position.x, player->position.y);
     bool followingPlayer = (distanceToPlayer <= FOLLOW_THRESHOLD);
 
     if (followingPlayer) {
+        stuckCounter = 0;
         if (distanceToPlayer <= FOLLOW_THRESHOLD - 10) {
+            printf("Shooting at player\n");
             shootAtPlayer(arena);
         } else {
+            printf("Following player\n");
             followPlayer(enemy, player, obstacles, numObstacles);
         }
     } else {
-        double minDistance = DBL_MAX;
-        int closestWaypointIndex = -1;
-        for (int i = 0; i < numWaypoints; i++) {
-            if (!visitedWaypoints[i]) {
-                double distance = calculateDistance(enemy->position.x, enemy->position.y, waypoints[i].x, waypoints[i].y);
-                if (distance < minDistance) {
-                    minDistance = distance;
-                    closestWaypointIndex = i;
+        if (closestWaypointIndex == -1 && !visitedWaypoints[enemy->currentWaypoint]) {
+            double minDistance = 1e6;
+            closestWaypointIndex = -1;
+            for (int i = 0; i < numWaypoints; i++) {
+                if (!visitedWaypoints[i]) {
+                    double distance = calculateDistance(enemy->position.x, enemy->position.y, waypoints[i].x, waypoints[i].y);
+                    if (distance < minDistance) {
+                        minDistance = distance;
+                        closestWaypointIndex = i;
+                        enemy->currentWaypoint = i;
+                    }
                 }
             }
+            printf("Closest waypoint index: %d\n", closestWaypointIndex);
         }
 
-        if (closestWaypointIndex != -1) {
-            Waypoint targetWaypoint = waypoints[closestWaypointIndex];
-            moveTowardsWaypointWithDeviation(enemy, targetWaypoint, obstacles, numObstacles);
+        printf("%d\n",visitedCount);
 
-            if (hasReachedWaypoint(enemy, targetWaypoint)) {
+        if (closestWaypointIndex != -1 && !visitedWaypoints[closestWaypointIndex]) {
+            printf("Moving towards waypoint %d\n", closestWaypointIndex);
+            moveTowardsWaypointWithDeviation(enemy, waypoints[closestWaypointIndex], obstacles, numObstacles);
+            if (hasReachedWaypoint(enemy, waypoints[closestWaypointIndex])) {
+                printf("Reached waypoint %d\n", closestWaypointIndex);
                 visitedWaypoints[closestWaypointIndex] = true;
                 visitedCount++;
-
 
                 if (visitedCount >= numWaypoints) {
                     for (int i = 0; i < numWaypoints; i++) {
@@ -195,66 +177,50 @@ void updateEnemyTank(Arena *arena, EnemyTank *enemy, tank *player, Waypoint wayp
                     }
                     visitedCount = 0;
                 }
+            }
+        }
 
-                minDistance = DBL_MAX;
-                closestWaypointIndex = -1;
+        printf("%d\n",visitedCount);
+
+        positionHistory[historyIndex][0] = enemy->position.x;
+        positionHistory[historyIndex][1] = enemy->position.y;
+        historyIndex = (historyIndex + 1) % 10;
+
+        if ((abs(enemy->position.x - positionHistory[historyIndex][0]) <= 2) && (abs(enemy->position.y - positionHistory[historyIndex][1]) <= 2)) {
+            stuckCounter++;
+        } else {
+            stuckCounter = 0;
+        }
+
+        if (stuckCounter >= 2) {
+            printf("Stuck, finding new waypoint\n");
+            stuckCounter = 0;
+            printf("Current waypoint: %d\n", closestWaypointIndex);
+            visitedWaypoints[closestWaypointIndex] = true;
+            printf("Visited waypoint %d\n", visitedWaypoints[closestWaypointIndex]);
+            visitedCount++;
+
+            if (visitedCount >= numWaypoints) {
                 for (int i = 0; i < numWaypoints; i++) {
-                    if (!visitedWaypoints[i]) {
-                        double distance = calculateDistance(enemy->position.x, enemy->position.y, waypoints[i].x, waypoints[i].y);
-                        if (distance < minDistance) {
-                            minDistance = distance;
-                            closestWaypointIndex = i;
-                        }
+                    visitedWaypoints[i] = false;
+                }
+                visitedCount = 0;
+            }
+
+            double minDistance = 1e6;
+            closestWaypointIndex = -1;
+            for (int i = 0; i < numWaypoints; i++) {
+                if (!visitedWaypoints[i]) {
+                    double distance = calculateDistance(enemy->position.x, enemy->position.y, waypoints[i].x, waypoints[i].y);
+                    if (distance < minDistance) {
+                        minDistance = distance;
+                        closestWaypointIndex = i;
                     }
                 }
-
-                if (closestWaypointIndex != -1) {
-                    targetWaypoint = waypoints[closestWaypointIndex];
-                    moveTowardsWaypointWithDeviation(enemy, targetWaypoint, obstacles, numObstacles);
-                }
             }
-        }
-    }
-
-    positionHistory[historyIndex][0] = enemy->position.x;
-    positionHistory[historyIndex][1] = enemy->position.y;
-    historyIndex = (historyIndex + 1) % 10;
-
-    if (abs(enemy->position.x - positionHistory[historyIndex][0]) <= 2 && abs(enemy->position.y - positionHistory[historyIndex][1]) <= 2) {
-        stuckCounter++;
-    } else {
-        stuckCounter = 0;
-    }
-
-    if (stuckCounter > STUCK_THRESHOLD) {
-        stuckCounter = 0;
-        visitedWaypoints[enemy->currentWaypoint] = true;
-        visitedCount++;
-
-        if (visitedCount >= numWaypoints) {
-            for (int i = 0; i < numWaypoints; i++) {
-                visitedWaypoints[i] = false;
-            }
-            visitedCount = 0;
-        }
-
-        double minDistance = DBL_MAX;
-        int closestWaypointIndex = -1;
-        for (int i = 0; i < numWaypoints; i++) {
-            if (!visitedWaypoints[i]) {
-                double distance = calculateDistance(enemy->position.x, enemy->position.y, waypoints[i].x, waypoints[i].y);
-                if (distance < minDistance) {
-                    minDistance = distance;
-                    closestWaypointIndex = i;
-                }
-            }
-        }
-
-        if (closestWaypointIndex != -1) {
+            printf("Moving towards new waypoint %d\n", closestWaypointIndex);
             enemy->currentWaypoint = closestWaypointIndex;
-            Waypoint targetWaypoint = waypoints[closestWaypointIndex];
-
-            moveTowardsWaypointWithDeviation(enemy, targetWaypoint, obstacles, numObstacles);
+            moveTowardsWaypointWithDeviation(enemy, waypoints[closestWaypointIndex], obstacles, numObstacles);
         }
     }
 }
