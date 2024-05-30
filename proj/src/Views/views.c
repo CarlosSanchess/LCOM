@@ -4,6 +4,7 @@ int drawArena(Arena arena){
     drawBullets(arena);
     drawTank(arena.tank);
     drawEnemyTank(arena.enemyTank);
+    drawBuilds(arena.builts, arena.numBuilts);
 
     return 0;
 }
@@ -53,3 +54,12 @@ int drawBullet(bullet b){
     return 0;
 }
 
+int drawBuilds(Obstacle** builds, size_t numBuilts){
+    // for(size_t i = 0; i < numBuilts; i++){
+        //xpm_draw_ignore(block,50, 50, GREEN_SCREEN);
+    // }
+    for(size_t i = 0; i < numBuilts; i++){ // TODO
+        xpm_draw_ignore(block, builds[i]->x1, builds[i]->y1, GREEN_SCREEN);
+    }
+    return 0;
+}

@@ -12,7 +12,7 @@ void print_double(double n) {
 
 //TODO ERROR HANDLING
 //No need to pass mouse info
-int handleInterruptMouse(State *gameState, Menu *menu, MouseInfo *mouseInfo){
+int handleInterruptMouse(State *gameState, Menu *menu, Arena* arena, MouseInfo *mouseInfo){
     
     getPositionMouse(mouseInfo);
 
@@ -20,10 +20,11 @@ int handleInterruptMouse(State *gameState, Menu *menu, MouseInfo *mouseInfo){
       processMenu(gameState, menu, mouseInfo);
     }
     if(*gameState == inGame){
-
+      processBuild(arena,mouseInfo);
     }
     return 0;
 }
+
 
 void getPositionMouse(MouseInfo *mouseInfo) {
     mouse_ih();
@@ -73,4 +74,13 @@ void processMenu(State *gameState, Menu *menu, MouseInfo *mouseInfo){
         }
      }
 
+}
+
+int processBuild(Arena* arena, MouseInfo* mouseInfo){
+    if((mouseInfo->mousePosition.x > 0 && mouseInfo->mousePosition.x < MAP_WIDTH) && (mouseInfo->mousePosition.y > 0 && mouseInfo->mousePosition.y < MAP_HEIGHT)){
+        if(mouse_byte_packet.lb){
+            // add_obstacle(arena->builts,&(arena->numBuilts), mouseInfo->mousePosition.x, 10, mouseInfo->mousePosition.y, 10);
+        }
+    }
+    return 0;
 }

@@ -55,7 +55,7 @@ int run(){
                   }
                 }
                 if (msg.m_notify.interrupts & irq_mouse){ //mouse interrupt
-                  if(handleInterruptMouse(&currentState, &menu, &mouseInfo)){
+                  if(handleInterruptMouse(&currentState, &menu, arena, &mouseInfo)){
                     safeExit();
                     return 0;
                   }

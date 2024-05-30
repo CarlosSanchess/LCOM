@@ -3,7 +3,6 @@
 
 int addBulletToArena(Arena* arena){
     if(!arena) return 1;
-
     arena->bullets = (bullet**) realloc(arena->bullets, (arena->numBullets + 1) * sizeof(bullet*));
     if(!arena->bullets) return 1;
 

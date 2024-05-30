@@ -13,10 +13,17 @@ Arena* createArena(int width, int height, MouseInfo *mouseInfo) {
     newArena->crosshair = mouseInfo;
     newArena->width = width;
     newArena->height = height;
-    
     newArena->builts = create_obstacle_array();
     newArena->numBuilts = 0;
 
+    add_obstacle(newArena->builts, &newArena->numBuilts , 0, 50, 0, 50);
+    add_obstacle(newArena->builts, &newArena->numBuilts , 20, 50, 30, 50);
+    add_obstacle(newArena->builts, &newArena->numBuilts , 50, 50, 10, 50);
+    add_obstacle(newArena->builts, &newArena->numBuilts , 100, 50, 50, 50);
+    add_obstacle(newArena->builts, &newArena->numBuilts , 300, 50, 100, 50);
+
+
+    
     Obstacle initialObstacles[NUM_OBSTACLES] = {
         {108, 320, 165, 227},
         {265, 320, 227, 345},

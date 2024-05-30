@@ -11,6 +11,6 @@ typedef struct {
 
 Obstacle* createObstacle(int x1, int x2, int y1, int y2);
 Obstacle** create_obstacle_array();
-int add_obstacle(Obstacle** obstacleArray, size_t index, int x1, int x2, int y1, int y2);
+int add_obstacle(Obstacle** obstacleArray, size_t *numBuilts, int x1, int x2, int y1, int y2);
 
 #endif
