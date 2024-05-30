@@ -42,6 +42,7 @@ EnemyTank* createEnemyTank(int x, int y, uint16_t deg, int hp, int speed) {
     newEnemyTank->direction = 0;
     newEnemyTank->currentWaypoint = 0;
     newEnemyTank->followingPlayer = false;
+    newEnemyTank->canShoot = true;
     return newEnemyTank;
 }
 
