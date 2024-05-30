@@ -25,7 +25,7 @@ int handleArena(Arena* arena){
     }
     return 0;
 }
-int handleTank(tank* tank){
+int handleTank(tank* tank, Obstacle* Obstacles, int numObstacles){
     if(scanCode == BREAK_CODE(W_KEY)){
         moveUP(tank,Obstacles, numObstacles);
     }

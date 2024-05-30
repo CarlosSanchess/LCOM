@@ -14,7 +14,8 @@
         "arenacontroller.h": "c",
         "tankcontroller.h": "c",
         "bullet.h": "c",
-        "timer.h": "c"
+        "timer.h": "c",
+        "utilsfunctions.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }

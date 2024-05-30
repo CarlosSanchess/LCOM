@@ -3,11 +3,8 @@
 
 #include "Models/arena.h"
 #include "tankController.h"
-<<<<<<< HEAD
 #include "enemyController.h"
-=======
 #include "bulletController.h"
->>>>>>> bullet
 
 #define NEW_NUM_WAYPOINTS (NUM_WAYPOINTS + 10)
 

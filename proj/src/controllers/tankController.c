@@ -83,14 +83,9 @@ int processTank(tank* tank, Obstacle obstacles[], int numObstacles) {
     if (tank->wantToMove >= 2) {
         radians = (tank->position.deg - 90) * (M_PI / 180.0);
 
-<<<<<<< HEAD
-        switch (tank->direction) {
-        case UP:
-=======
         switch (tank->direction)
         {
          case UP:
->>>>>>> bullet
             newX = tank->position.x - (int)(tank->speed * 2 * cos(radians));
             newY = tank->position.y - (int)(tank->speed * 2 * sin(radians));
 

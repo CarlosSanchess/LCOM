@@ -3,11 +3,6 @@
 
 #include <lcom/lcf.h>
 #include "Position.h"
-<<<<<<< HEAD
-#include "xpm/tank_green.xpm"
-#include "xpm/tank_red.xpm"
-=======
->>>>>>> bullet
 #include "utils/utilsFunctions.h"
 #include "Models/bullet.h"
 

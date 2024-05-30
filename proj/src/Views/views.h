@@ -9,6 +9,8 @@
 #include "dev_interface/devices/video_gr.h"
 #include "../xpm/bullet_xpm.xpm"
 #include "../xpm/tank_green.xpm"
+#include "../xpm/tank_red.xpm"
+
 
 
 int drawMenu(Menu menu);

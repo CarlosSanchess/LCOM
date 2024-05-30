@@ -14,7 +14,7 @@ int drawTank(tank *tank) {
 }
 
 int drawEnemyTank(EnemyTank *tank) {
-    xpm_draw_tank_ignore_rot(tank_red, tank->position.x, tank->position.y, tank->position.deg, GREEN_SCREEN);
+    xpm_draw_ignore_rot(tank_red, tank->position.x, tank->position.y, tank->position.deg, GREEN_SCREEN);
     return 0;
 }
 

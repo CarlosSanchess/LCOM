@@ -155,8 +155,6 @@ void updateEnemyTank(EnemyTank *enemy, tank *player, Waypoint waypoints[], int n
     static int stuckCounter = 0;
     static int prevX = 0, prevY = 0;
 
-    printf("Enemy position: (%d, %d)\n", enemy->position.x, enemy->position.y);
-
     double distanceToPlayer = calculateDistance(enemy->position.x, enemy->position.y, player->position.x, player->position.y);
     bool followingPlayer = (distanceToPlayer <= FOLLOW_THRESHOLD);
 
@@ -186,8 +184,6 @@ void updateEnemyTank(EnemyTank *enemy, tank *player, Waypoint waypoints[], int n
         if (hasReachedWaypoint(enemy, targetWaypoint)) {
             visitedWaypoints[closestWaypointIndex] = true;
             visitedCount++;
-
-            printf("New chosen waypoint: (%d, %d)\n", targetWaypoint.x, targetWaypoint.y);
 
             minDistance = DBL_MAX;
             closestWaypointIndex = -1;
