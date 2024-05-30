@@ -7,7 +7,10 @@
 #include "Models/bullet.h"
 #include "controllers/bulletController.h"
 
-int addBulletToArena(Arena* arena);
+#define GREEN_TANK 1
+#define RED_TANK 2
+
+int addBulletToArena(Arena* arena, int tankColor);
 int bulletMove(bullet* bullet);
 int processBullets(Arena* arena);
 

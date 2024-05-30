@@ -9,7 +9,8 @@
 static unsigned int timerCounter = 0; 
 
 void timer_increment();
-int handleDelayedEvents(tank *tank);
+int handleDelayedEvents(tank *tank,EnemyTank *enemyTank);
 int handleDelayedShooting(tank *tank);
+int handleDelayedEnemyShooting(EnemyTank *enemyTank);
 
 #endif

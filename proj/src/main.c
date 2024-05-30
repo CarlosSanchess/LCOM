@@ -62,7 +62,7 @@ int run(){
                 }
 
                 if(msg.m_notify.interrupts & irq_timer){ //timer interrupt
-                  handleDelayedEvents(arena->tank);
+                  handleDelayedEvents(arena->tank,arena->enemyTank);
                   drawMouse(mouseInfo);
                   switch (currentState)
                   {

@@ -2,6 +2,7 @@
 #define ENEMY_CONTROLLER_H
 
 #include "tankController.h"
+#include "bulletController.h"
 #include "Models/Tank.h"
 #include "Models/arena.h"
 #include "Models/Position.h"
@@ -33,10 +34,10 @@ void updateTankDirection(EnemyTank *enemy, double angle);
 bool attemptMove(EnemyTank *enemy, int speed, int targetX, int targetY, Obstacle obstacles[], int numObstacles, bool withinThreshold);
 bool attemptUnstuckMove(EnemyTank *enemy, int speed, Obstacle obstacles[], int numObstacles, bool withinThreshold);
 void followPlayer(EnemyTank *enemy, tank *player, Obstacle obstacles[], int numObstacles);
-void shootAtPlayer(EnemyTank *enemy, tank *player);
+void shootAtPlayer(Arena *arena);
 void generateWaypoints(Waypoint waypoints[], int numWaypoints);
 void moveTowardsWaypointWithDeviation(EnemyTank *enemy, Waypoint targetWaypoint, Obstacle obstacles[], int numObstacles);
 bool hasReachedWaypoint(EnemyTank *enemy, Waypoint waypoint);
-void updateEnemyTank(EnemyTank *enemy, tank *player, Waypoint waypoints[], int numWaypoints, Obstacle obstacles[], int numObstacles);
+void updateEnemyTank(Arena *arena, EnemyTank *enemy, tank *player, Waypoint waypoints[], int numWaypoints, Obstacle obstacles[], int numObstacles);
 
 #endif

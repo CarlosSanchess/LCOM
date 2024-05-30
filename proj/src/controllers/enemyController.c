@@ -108,8 +108,10 @@ void followPlayer(EnemyTank *enemy, tank *player, Obstacle obstacles[], int numO
     }
 }
 
-void shootAtPlayer(EnemyTank *enemy, tank *player) {
-    updateDirection(enemy, player->position.x, player->position.y);
+void shootAtPlayer(Arena *arena) {
+    updateDirection(arena->enemyTank, arena->tank->position.x, arena->tank->position.y);
+    addBulletToArena(arena,RED_TANK);
+    arena->enemyTank->canShoot = false;
 }
 
 void generateWaypoints(Waypoint waypoints[], int numWaypoints) {
@@ -149,7 +151,7 @@ bool hasReachedWaypoint(EnemyTank *enemy, Waypoint waypoint) {
     return distance <= WAYPOINT_TOLERANCE;
 }
 
-void updateEnemyTank(EnemyTank *enemy, tank *player, Waypoint waypoints[], int numWaypoints, Obstacle obstacles[], int numObstacles) {
+void updateEnemyTank(Arena *arena, EnemyTank *enemy, tank *player, Waypoint waypoints[], int numWaypoints, Obstacle obstacles[], int numObstacles) {
     static bool visitedWaypoints[MAX_WAYPOINTS] = { false };
     static int visitedCount = 0;
     static int stuckCounter = 0;
@@ -161,7 +163,7 @@ void updateEnemyTank(EnemyTank *enemy, tank *player, Waypoint waypoints[], int n
 
     if (followingPlayer) {
         if (distanceToPlayer <= FOLLOW_THRESHOLD - 10) {
-            shootAtPlayer(enemy, player);
+            shootAtPlayer(arena);
         } else {
             followPlayer(enemy, player, obstacles, numObstacles);
         }
