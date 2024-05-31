@@ -2,6 +2,9 @@
 
 #include "rtc.h"
 
+bool rtc_binary;
+int rtc_hook_id = 5;
+
 int (rtc_subscribe_int)(uint8_t *bit_no) {
     *bit_no = rtc_hook_id;
     if (sys_irqsetpolicy(RTC_IRQ, IRQ_REENABLE, &rtc_hook_id) != OK) {
@@ -72,7 +75,6 @@ int (bcd_to_binary)(uint32_t *bcd) {
 void (update_rtc_time)(uint8_t *seconds, uint8_t *minutes, uint8_t *hours) {
     uint32_t seconds_reg, minutes_reg, hours_reg;
     if (rtc_update_in_progress() != OK) {
-        fprintf(stderr, "Error: RTC update in progress\n");
         return;
     }
     rtc_read_reg(RTC_SECONDS, &seconds_reg);

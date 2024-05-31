@@ -13,6 +13,7 @@ Arena* createArena(int width, int height, MouseInfo *mouseInfo) {
     newArena->crosshair = mouseInfo;
     newArena->width = width;
     newArena->height = height;
+    newArena->curr_score = 0;
 
     
     Obstacle initialObstacles[NUM_OBSTACLES] = {
