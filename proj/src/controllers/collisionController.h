@@ -6,8 +6,13 @@
 #include "Models/arena.h"
 #include "Models/Position.h"
 
+typedef struct {
+    int x;
+    int y;
+    int width;
+    int height;
+} Hitbox;
 
-
-bool equalPosition(position pos1, position pos2);
+bool checkCollision(Hitbox *a, Hitbox *b);
 
 #endif

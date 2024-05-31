@@ -41,14 +41,30 @@ int bulletMove(bullet* bullet){
 int processBullets(Arena* arena) {
     size_t i = 0;
     while (i < arena->numBullets) {
+        bullet *bullet = arena->bullets[i];
+        bool bulletRemoved = false;
+
         if (arena->bullets[i]->position.x < 0 || arena->bullets[i]->position.x > arena->width - ARENA_BORDER || arena->bullets[i]->position.y < 0 || arena->bullets[i]->position.y > arena->height - ARENA_BORDER){
             arena->bullets = removeBulletFromBullets(arena->bullets, arena->numBullets, i);
             arena->numBullets--;
-        } else {
-            bulletMove(arena->bullets[i]);
+        }
+        else if (!bulletRemoved) {
+            for (size_t j = 0; j < NUM_OBSTACLES; j++) {
+                Obstacle *obstacle = &arena->obstacles[j];
+                if (bullet->position.x >= obstacle->x1 && bullet->position.x <= obstacle->x2 &&
+                    bullet->position.y >= obstacle->y1 - 30 && bullet->position.y <= obstacle->y2 + 30) {
+                    arena->bullets = removeBulletFromBullets(arena->bullets, arena->numBullets, i);
+                    arena->numBullets--;
+                    bulletRemoved = true;
+                    break;
+                }
+            }
+        }
+
+        if (!bulletRemoved) {
+            bulletMove(bullet);
             i++;
         }
     }
     return 0;
 }
-

@@ -1,8 +1,6 @@
 #include "collisionController.h"
 
-bool equalPosition(position pos1, position pos2){
-    if(pos1.x == pos2.x && pos1.y == pos2.y){
-        return true;
-    }
-    return false;
+bool checkCollision(Hitbox *a, Hitbox *b) {
+    return (a->x < b->x + b->width && a->x + a->width > b->x &&
+            a->y < b->y + b->height && a->y + a->height > b->y);
 }
