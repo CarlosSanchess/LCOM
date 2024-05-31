@@ -33,6 +33,7 @@ typedef struct {
     int direction; // 0: UP, 1: RIGHT, 2: DOWN, 3: LEFT
     int currentWaypoint;
     bool followingPlayer;
+    bool canShoot;
 } EnemyTank;
 
 tank* createTank(int x, int y,uint16_t deg, int hp, int speed);

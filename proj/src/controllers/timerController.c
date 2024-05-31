@@ -4,12 +4,12 @@
 void timer_increment(){
     timerCounter++;
 }
-int handleDelayedEvents(tank *tank, MouseInfo* mouseInfo, Obstacle** obstacles, size_t numObstacles){
+int handleDelayedEvents(tank *tank,EnemyTank *enemyTank MouseInfo* mouseInfo, Obstacle** obstacles, size_t numObstacles){
     // timer_increment();
     handleDelayedShooting(tank);
     if(!mouseInfo->canBuild){handleDelayedMouse(mouseInfo);}
     handleDelayedBuildings(obstacles, numObstacles);
-    
+    handleDelayedEnemyShooting(enemyTank);
     return 0;
 }
 
@@ -48,3 +48,17 @@ void handleDelayedBuildings(Obstacle** obstacles, size_t numObstacles){
     }
 }
 
+int handleDelayedEnemyShooting(EnemyTank *enemyTank) {
+    static int delayShootingEnemy = 0;
+    if (!enemyTank->canShoot) {
+        delayShootingEnemy++;
+        if (delayShootingEnemy >= SHOOTD) {
+            enemyTank->canShoot = true;
+            delayShootingEnemy = 0; 
+        }
+    } else {
+        delayShootingEnemy = 0; 
+    }
+
+    return 0;
+}

@@ -2,6 +2,7 @@
 #define ENEMY_CONTROLLER_H
 
 #include "tankController.h"
+#include "bulletController.h"
 #include "Models/Tank.h"
 #include "Models/arena.h"
 #include "Models/Position.h"
@@ -10,12 +11,12 @@
 #define PATROL_SPEED 4
 #define FOLLOW_SPEED 3
 #define FOLLOW_THRESHOLD 200
-#define MIN_DISTANCE_TO_OBSTACLE 10
+#define MIN_DISTANCE_TO_OBSTACLE 5
 #define NUM_WAYPOINTS 30
 #define NUM_ATTEMPTS 10
-#define WAYPOINT_TOLERANCE 5
+#define WAYPOINT_TOLERANCE 0
 #define MAX_WAYPOINTS 30
-#define STUCK_THRESHOLD 3 
+#define STUCK_THRESHOLD 5
 #define MOVE_DEVIATION 3
 
 typedef struct {
@@ -33,10 +34,10 @@ void updateTankDirection(EnemyTank *enemy, double angle);
 bool attemptMove(EnemyTank *enemy, int speed, int targetX, int targetY, Obstacle obstacles[], int numObstacles, bool withinThreshold);
 bool attemptUnstuckMove(EnemyTank *enemy, int speed, Obstacle obstacles[], int numObstacles, bool withinThreshold);
 void followPlayer(EnemyTank *enemy, tank *player, Obstacle obstacles[], int numObstacles);
-void shootAtPlayer(EnemyTank *enemy, tank *player);
+void shootAtPlayer(Arena *arena);
 void generateWaypoints(Waypoint waypoints[], int numWaypoints);
 void moveTowardsWaypointWithDeviation(EnemyTank *enemy, Waypoint targetWaypoint, Obstacle obstacles[], int numObstacles);
 bool hasReachedWaypoint(EnemyTank *enemy, Waypoint waypoint);
-void updateEnemyTank(EnemyTank *enemy, tank *player, Waypoint waypoints[], int numWaypoints, Obstacle obstacles[], int numObstacles);
+void updateEnemyTank(Arena *arena, EnemyTank *enemy, tank *player, Waypoint waypoints[], int numWaypoints, Obstacle obstacles[], int numObstacles);
 
 #endif
