@@ -292,6 +292,38 @@ int xpm_draw_ignore_rot(xpm_map_t xpm, uint16_t x, uint16_t y, uint16_t deg, uns
     return 0;
 }
 
+int (xpm_draw_ignore_Hammer)(xpm_map_t xpm, uint16_t x, uint16_t y, unsigned int ignoredColor, bool canBuild) {
+    xpm_image_t img;
+    uint8_t *pixmap = xpm_load(xpm, XPM_8_8_8, &img);
+    if (pixmap == NULL) {
+        return 1; 
+    }
+
+    for (int i = 0; i < img.height; i++) {
+        for (int j = 0; j < img.width; j++) {
+            int pixel_index = (i * img.width + j) * 3;
+
+            uint8_t blue = pixmap[pixel_index];
+            uint8_t green = pixmap[pixel_index + 1];
+            uint8_t red = pixmap[pixel_index + 2];
+
+            unsigned int color = (red << 16) | (green << 8) | blue;
+            if(color != ignoredColor ){
+                if(canBuild){vg_draw_pixel(x + j, y + i, color, current_buffer);}
+                if(!canBuild){
+                    if(color == 0x3dfe01){
+                        color = 0xff0000;
+                    }
+                    vg_draw_pixel(x + j, y + i, color, current_buffer);
+                }
+            }
+        }
+    }
+
+    return 0;
+}
+
+
 
 int is_direct_color() {
   return vbe_mode_info.MemoryModel == 0x06;

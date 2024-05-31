@@ -14,19 +14,20 @@ Arena* createArena(int width, int height, MouseInfo *mouseInfo) {
     newArena->width = width;
     newArena->height = height;
 
+    
     Obstacle initialObstacles[NUM_OBSTACLES] = {
-        {108, 320, 165, 227},
-        {265, 320, 227, 345},
-        {108, 320, 633, 694},
-        {265, 320, 519, 633},
-        {422, 634, 280, 342},
-        {422, 478, 341, 460},
-        {517, 727, 521, 581},
-        {673, 727, 404, 521},
-        {830, 1043, 166, 227},
-        {830, 887, 227, 342},
-        {830, 1042, 634, 694},
-        {830, 887, 517, 634}
+        {108, 320, 165, 227, -1, false},
+        {265, 320, 227, 345, -1, false},
+        {108, 320, 633, 694, -1, false},
+        {265, 320, 519, 633, -1, false},
+        {422, 634, 280, 342, -1, false},
+        {422, 478, 341, 460, -1, false},
+        {517, 727, 521, 581, -1, false},
+        {673, 727, 404, 521, -1, false},
+        {830, 1043, 166, 227, -1, false},
+        {830, 887, 227, 342, -1, false},
+        {830, 1042, 634, 694, -1, false},
+        {830, 887, 517, 634, -1, false}
     };
     memcpy(newArena->obstacles, initialObstacles, sizeof(initialObstacles));
 

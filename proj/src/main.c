@@ -19,7 +19,7 @@
 //game 
 State currentState;
 Menu menu = {0, false, {{835, 596}, {660, 722}}}; 
-MouseInfo mouseInfo = {.mousePosition = { 50, 50, 0}, 0};
+MouseInfo mouseInfo = {.mousePosition = { 50, 50, 0}, 0, true};
 
 //kbc
 uint8_t irq_kbc;
@@ -55,14 +55,14 @@ int run(){
                   }
                 }
                 if (msg.m_notify.interrupts & irq_mouse){ //mouse interrupt
-                  if(handleInterruptMouse(&currentState, &menu, &mouseInfo)){
+                  if(handleInterruptMouse(&currentState, &menu, arena, &mouseInfo)){
                     safeExit();
                     return 0;
                   }
                 }
 
                 if(msg.m_notify.interrupts & irq_timer){ //timer interrupt
-                  handleDelayedEvents(arena->tank,arena->enemyTank);
+                  handleDelayedEvents(arena->tank,arena->enemyTank, &mouseInfo, arena->builts, arena->numBuilts);
                   drawMouse(mouseInfo);
                   switch (currentState)
                   {

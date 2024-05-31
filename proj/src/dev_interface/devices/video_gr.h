@@ -34,6 +34,8 @@ int (xpm_draw)(xpm_map_t xpm, uint16_t x, uint16_t y);
 int (xpm_draw_Background)(xpm_map_t xpm, uint16_t x, uint16_t y);
 int (xpm_draw_ignore)(xpm_map_t xpm, uint16_t x, uint16_t y, unsigned int ignoredColor);
 int (xpm_draw_ignore_rot)(xpm_map_t xpm, uint16_t x, uint16_t y, uint16_t deg, unsigned int ignoredColor);
+int (xpm_draw_ignore_Block)(xpm_map_t xpm, uint16_t x, uint16_t y, unsigned int ignoredColor, int number);
+int (xpm_draw_ignore_Hammer)(xpm_map_t xpm, uint16_t x, uint16_t y, unsigned int ignoredColor, bool canBuild);
 int (vg_exit_graphics)();
 int (restore_videoBuffer)();
 

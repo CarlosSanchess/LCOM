@@ -12,7 +12,7 @@ void print_double(double n) {
 
 //TODO ERROR HANDLING
 //No need to pass mouse info
-int handleInterruptMouse(State *gameState, Menu *menu, MouseInfo *mouseInfo){
+int handleInterruptMouse(State *gameState, Menu *menu, Arena* arena, MouseInfo *mouseInfo){
     
     getPositionMouse(mouseInfo);
 
@@ -20,7 +20,7 @@ int handleInterruptMouse(State *gameState, Menu *menu, MouseInfo *mouseInfo){
       processMenu(gameState, menu, mouseInfo);
     }
     if(*gameState == inGame){
-
+        if(mouseInfo->canBuild){processBuild(arena,mouseInfo);}
     }
     return 0;
 }
@@ -32,32 +32,43 @@ void getPositionMouse(MouseInfo *mouseInfo) {
     int smooth_dx = (int)(mouse_byte_packet.delta_x * MOUSE_SCALING_FACTOR);
     int smooth_dy = (int)(mouse_byte_packet.delta_y * MOUSE_SCALING_FACTOR);
 
-    int cursor_size = 20; 
 
     if (!mouse_byte_packet.x_ov) {
-        mouseInfo->mousePosition.x += smooth_dx;
-        
-        if (mouseInfo->mousePosition.x < cursor_size) {
-            mouseInfo->mousePosition.x = cursor_size - 15; 
-        } 
-        else if (mouseInfo->mousePosition.x > SCREEN_WIDTH - cursor_size) {
-            mouseInfo->mousePosition.x = (SCREEN_WIDTH - cursor_size) % SCREEN_WIDTH; 
-        }
+        // if(mouseInfo->crossHair == 1){
+            if(mouseInfo->mousePosition.x + smooth_dx > HAMMER_RIGHT){
+            mouseInfo->mousePosition.x = HAMMER_RIGHT;
+            return;
+            }
+            if(mouseInfo->mousePosition.x + smooth_dx < HAMMER_LEFT ){
+                mouseInfo->mousePosition.x = HAMMER_LEFT;
+            }else{
+                mouseInfo->mousePosition.x += smooth_dx;
+            }
+        // }else{
+        //     //Mouse For Menu
+        // }   
     } else {
-        mouseInfo->mousePosition.x = cursor_size; 
+        mouseInfo->mousePosition.x = 50; 
     }
 
+
     if (!mouse_byte_packet.y_ov) {
-        mouseInfo->mousePosition.y -= smooth_dy;
-        
-        if (mouseInfo->mousePosition.y < cursor_size) {
-            mouseInfo->mousePosition.y = cursor_size - 15; 
-        } 
-        else if (mouseInfo->mousePosition.y > SCREEN_HEIGHT - cursor_size) {
-            mouseInfo->mousePosition.y = (SCREEN_HEIGHT - cursor_size) % SCREEN_HEIGHT; 
-        }
+        // if(mouseInfo->crossHair == 1){
+            if(mouseInfo->mousePosition.y - smooth_dy > HAMMER_LOW){
+                    mouseInfo->mousePosition.y = HAMMER_LOW;
+                    return;
+            }
+            if(mouseInfo->mousePosition.y - smooth_dy < HAMMER_TOP){
+                mouseInfo->mousePosition.y = HAMMER_TOP;
+            }else{
+                mouseInfo->mousePosition.y -= smooth_dy;
+            }
+        // }else{
+        //     //MOUSE FOR MENU
+        // }
+
     } else {
-        mouseInfo->mousePosition.y = cursor_size; 
+        mouseInfo->mousePosition.y = 50; 
     }
 }
 
@@ -73,4 +84,14 @@ void processMenu(State *gameState, Menu *menu, MouseInfo *mouseInfo){
         }
      }
 
+}
+
+int processBuild(Arena* arena, MouseInfo* mouseInfo){
+    if((mouseInfo->mousePosition.x > 0 && mouseInfo->mousePosition.x < MAP_WIDTH) && (mouseInfo->mousePosition.y > 0 && mouseInfo->mousePosition.y < MAP_HEIGHT)){
+        if(mouse_byte_packet.rb){
+            add_obstacleToArena(arena, mouseInfo->mousePosition.x,  mouseInfo->mousePosition.x + 50,  mouseInfo->mousePosition.y, mouseInfo->mousePosition.y + 50);
+            mouseInfo->canBuild = false;
+        }
+    }
+    return 0;
 }

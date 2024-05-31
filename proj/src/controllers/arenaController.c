@@ -27,6 +27,7 @@ int processArena(Arena* arena) {
     }
 
     if(processBullets(arena)){return 1;}
+    if(processBuilts(arena)){return 1;}
 
 
     updateEnemyTank(arena,arena->enemyTank, arena->tank, combinedWaypoints, 40, arena->obstacles, NUM_OBSTACLES);
