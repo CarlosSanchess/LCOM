@@ -5,9 +5,9 @@
 #include "Models/Tank.h"
 #include "Models/arena.h"
 #include "Models/Position.h"
+#include "Models/Hitbox.h"
 
 
 
-bool equalPosition(position pos1, position pos2);
 
 #endif

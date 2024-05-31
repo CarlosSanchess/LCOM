@@ -5,6 +5,7 @@
 #include "Position.h"
 #include "utils/utilsFunctions.h"
 #include "Models/bullet.h"
+#include "Hitbox.h"
 
 #define LEFT -2
 #define RIGHT 2
@@ -40,6 +41,7 @@ tank* createTank(int x, int y,uint16_t deg, int hp, int speed);
 void freeTank(tank *tank);
 EnemyTank* createEnemyTank(int x, int y, uint16_t deg, int hp, int speed);
 void freeEnemyTank(EnemyTank *enemyTank);
+void getTankHitBox(tank* tank, Hitbox *hitbox);
 
 #endif
 

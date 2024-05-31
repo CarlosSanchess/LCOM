@@ -1,8 +1,23 @@
 #include "collisionController.h"
 
-bool equalPosition(position pos1, position pos2){
-    if(pos1.x == pos2.x && pos1.y == pos2.y){
-        return true;
+bool checkCollision(Hitbox a, Hitbox b) {
+    return (a->x < b->x + b->width && a->x + a->width > b->x &&
+            a->y < b->y + b->height && a->y + a->height > b->y);
+}
+
+void processCollisions(bullet *bullet, Hitbox tankHB, Hitbox enemyTankHB,Hitbox bulletHB) {
+   
+    createBulletHitbox(bullet, &bulletHB);
+
+    if (checkCollision(bulletHB, tankHB)) {
+        arena->bullets = removeBulletFromBullets(arena->bullets, arena->numBullets, i);
+        arena->numBullets--;
+        continue;
     }
-    return false;
+
+    if (checkCollision(bulletHB, enemyTankHB)) {
+        arena->bullets = removeBulletFromBullets(arena->bullets, arena->numBullets, i);
+        arena->numBullets--;
+        continue;
+    }
 }

@@ -52,3 +52,11 @@ void freeEnemyTank(EnemyTank *enemyTank) {
         free(enemyTank);
     }
 }
+
+void getTankHitBox(tank* tank, Hitbox *hitbox){
+
+   hitbox->x1 = tank->position.x - TANK_WIDTH / 2;
+   hitbox->x2 = tank->position.x + TANK_WIDTH / 2;
+   hitbox->y1 = tank->position.y - TANK_HEIGHT / 2;
+   hitbox->y2 = tank->position.y + TANK_HEIGHT / 2;
+}
