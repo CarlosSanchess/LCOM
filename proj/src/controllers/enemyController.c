@@ -174,7 +174,6 @@ void updateEnemyTank(Arena *arena, EnemyTank *enemy, tank *player, Waypoint wayp
             }
         }
 
-
         positionHistory[historyIndex][0] = enemy->position.x;
         positionHistory[historyIndex][1] = enemy->position.y;
         historyIndex = (historyIndex + 1) % 10;

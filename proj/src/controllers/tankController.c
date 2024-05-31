@@ -1,6 +1,6 @@
 #include "tankController.h"
 
-bool canMove(int x, int y, Obstacle obstacles[], int numObstacles) {
+bool canMove(int x, int y, Obstacle obstacles[], int numObstacles, Obstacle** builds, size_t numBuilds){
     if ((x < 0 || x + TANK_WIDTH > MAP_WIDTH) || (y < 0 || y + TANK_HEIGHT > MAP_HEIGHT)) {
         return false;
     }
@@ -11,16 +11,22 @@ bool canMove(int x, int y, Obstacle obstacles[], int numObstacles) {
             return false;
         }
     }
+    for(size_t i = 0; i < numBuilds; i++){
+        if ((x < builds[i]->x2 && x + TANK_WIDTH > builds[i]->x1) &&
+            (y < builds[i]->y2 && y + TANK_HEIGHT > builds[i]->y1)) {
+            return false;
+        }
+    }
 
     return true;
 }
 
-int moveDown(tank *tank, Obstacle obstacles[], int numObstacles) {
+int moveDown(tank *tank, Obstacle obstacles[], int numObstacles, Obstacle** builds, size_t numBuilds){
     double radians = (tank->position.deg - 90) * (M_PI / 180.0);
     int newX = tank->position.x + (int)(tank->speed * 6 * cos(radians));
     int newY = tank->position.y + (int)(tank->speed * 6 * sin(radians));
 
-    if (canMove(newX, newY, obstacles, numObstacles)) {
+    if (canMove(newX, newY, obstacles, numObstacles, builds, numBuilds)) {
         tank->wantToMove = 6;
         tank->direction = DOWN;
         return 0;
@@ -28,12 +34,12 @@ int moveDown(tank *tank, Obstacle obstacles[], int numObstacles) {
     return 1;
 }
 
-int moveUP(tank *tank, Obstacle obstacles[], int numObstacles) {
+int moveUP(tank *tank, Obstacle obstacles[], int numObstacles, Obstacle** builds, size_t numBuilds){
     double radians = (tank->position.deg - 90) * (M_PI / 180.0);
     int newX = tank->position.x - (int)(tank->speed * 6 * cos(radians));
     int newY = tank->position.y - (int)(tank->speed * 6 * sin(radians));
 
-    if (canMove(newX, newY, obstacles, numObstacles)) {
+    if (canMove(newX, newY, obstacles, numObstacles, builds, numBuilds)) {
         tank->wantToMove = 6;
         tank->direction = UP;
         return 0;

@@ -14,14 +14,14 @@ int addBulletToArena(Arena *arena, int tankColor){
         pos.x = arena->tank->position.x - 5 * cos(radians);
         pos.y = arena->tank->position.y - 5 * sin(radians);
         pos.deg = arena->tank->position.deg;
+        arena->bullets[arena->numBullets] = createBullet(pos, 5, PLAYER);
     } else if (tankColor == RED_TANK) {
         radians = (arena->enemyTank->position.deg - 90) * (M_PI / 180.0);
         pos.x = arena->enemyTank->position.x - 5 * cos(radians);
         pos.y = arena->enemyTank->position.y - 5 * sin(radians);
         pos.deg = arena->enemyTank->position.deg;
+        arena->bullets[arena->numBullets] = createBullet(pos, 5, ENEMY);
     }
-
-    arena->bullets[arena->numBullets] = createBullet(pos, 5, PLAYER);
     arena->numBullets++;
 
     return 0;
@@ -41,7 +41,7 @@ int bulletMove(bullet* bullet){
 int processBullets(Arena* arena) {
     size_t i = 0;
     while (i < arena->numBullets) {
-        if (arena->bullets[i]->position.x < 0 || arena->bullets[i]->position.x > arena->width - ARENA_BORDER || equalPosition(arena->bullets[i]->position, arena->enemyTank->position)){
+        if (arena->bullets[i]->position.x < 0 || arena->bullets[i]->position.x > arena->width - ARENA_BORDER){
             arena->bullets = removeBulletFromBullets(arena->bullets, arena->numBullets, i);
             arena->numBullets--;
         } else {
