@@ -12,8 +12,8 @@ int processCollisions(Arena* arena,size_t index, Hitbox tankHB, Hitbox enemyTank
     
     for (size_t j = 0; j < NUM_OBSTACLES; j++) {
         Obstacle *obstacle = &arena->obstacles[j];
-        if (arena->bullets[index]->position.x >= obstacle->x1 &&  arena->bullets[index]->position.x <= obstacle->x2 &&
-            arena->bullets[index]->position.y >= obstacle->y1 - 30 &&  arena->bullets[index]->position.y <= obstacle->y2 + 30) 
+        if (arena->bullets[index]->position.x >= obstacle->x1 - 10 &&  arena->bullets[index]->position.x <= obstacle->x2 + 5 &&
+            arena->bullets[index]->position.y >= obstacle->y1 &&  arena->bullets[index]->position.y <= obstacle->y2) 
         {
             arena->bullets = removeBulletFromBullets(arena->bullets, arena->numBullets, index);
             arena->numBullets--;
