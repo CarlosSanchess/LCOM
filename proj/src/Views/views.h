@@ -22,8 +22,7 @@
 #include "../xpm/blocks/block9.xpm"
 #include "../xpm/blocks/block10.xpm"
 #include "../xpm/martelo.xpm"
-
-
+#include "../xpm/menu.xpm"
 
 int drawMenu(Menu menu);
 int drawArena(Arena arena);
@@ -34,6 +33,7 @@ int drawBullet(bullet b);
 int drawBullets(Arena arena);
 int drawBuilds(Obstacle** builds, size_t numBuilts);
 int drawBomb(int x, int y);
+int drawMenuBackGround();
 
 #endif
 

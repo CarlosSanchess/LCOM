@@ -1,19 +1,20 @@
 #include "kbController.h"
 extern uint8_t scanCode;
 
-int handleInterruptKBC(State *gameState, Menu *menu, Arena *arena){
+int handleInterruptKBC(State *gameState, Menu *menuInfo, Arena *arena){
     kbc_ih(); 
     if (scanCode == BREAK_CODE(ESC_KEY)) {
         if (*gameState == inGame) {
             *gameState = inMenu;
             resetGame(arena);
+            drawMenuBackGround();
             return 0;
         } else if (*gameState == inMenu) {
             return 1;
         }
     }
     if(*gameState == inMenu){
-        if(handleMenu(gameState, menu, arena)){
+        if(handleMenu(gameState, menuInfo, arena)){
         return 1;
         }
     }

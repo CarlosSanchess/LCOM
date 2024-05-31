@@ -1,7 +1,6 @@
 #ifndef __MENU__
 #define __MENU__
 
-#include "xpm/menu.xpm"
 #include "xpm/grenade.xpm"
 #include "dev_interface/devices/video_gr.h"
 

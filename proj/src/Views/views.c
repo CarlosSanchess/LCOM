@@ -33,6 +33,10 @@ int drawMenu(Menu menu){
     }
     return 0;
 }
+int drawMenuBackGround(){
+    xpm_draw_Background(menuXPM, 0, 0);
+    return 0;
+}
 
 int drawMouse(MouseInfo mouse){
     if((mouse.mousePosition.x > 0 && mouse.mousePosition.x < 1152) && (mouse.mousePosition.y > 0 && mouse.mousePosition.y < 864)){
