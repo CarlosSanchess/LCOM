@@ -5,14 +5,10 @@
 #include "Models/Tank.h"
 #include "Models/arena.h"
 #include "Models/Position.h"
+#include "Models/Hitbox.h"
 
-typedef struct {
-    int x;
-    int y;
-    int width;
-    int height;
-} Hitbox;
-
-bool checkCollision(Hitbox *a, Hitbox *b);
+bool checkCollision(Hitbox a, Hitbox b);
+int processCollisions(Arena* arena,size_t index, Hitbox tankHB, Hitbox enemyTankHB,Hitbox bulletHB);
 
 #endif
+

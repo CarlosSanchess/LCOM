@@ -2,6 +2,7 @@
 #define __BULLET__
 
 #include "Position.h"
+#include "Hitbox.h"
 #include "dev_interface/devices/video_gr.h"
 
 #define BULLET_SPEED 5
@@ -21,6 +22,7 @@ typedef struct{
 bullet* createBullet(position pos, int speed, uint8_t origin);
 bullet** removeBulletFromBullets(bullet** bullets, size_t numBullets, size_t index);
 void freebullet(bullet* b);
+void createBulletHitbox(bullet* b, Hitbox* Hitbox);
 
 #endif
 
