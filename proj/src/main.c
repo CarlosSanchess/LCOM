@@ -22,6 +22,7 @@ State currentState;
 Menu menu = {0, false, {{835, 596}, {660, 722}}}; 
 MouseInfo mouseInfo = {.mousePosition = { 50, 50, 0}, 0, true};
 const char *highscoreFile = "highscore.txt";
+HighScore highScore;
 
 //kbc
 uint8_t irq_kbc;
@@ -41,14 +42,8 @@ int run(){
     uint8_t r;
 
     int aux = 0;
-    int highScore;
-    uint8_t highScoreSeconds, highScoreMinutes, highScoreHours;
 
-    highScore = readHighScore(highscoreFile,&highScore, &highScoreHours, &highScoreMinutes, &highScoreSeconds);
-    if (readHighScore(highscoreFile, &highScore, &highScoreHours, &highScoreMinutes, &highScoreSeconds) == -1) {
-        highScore = 0;
-        highScoreHours = highScoreMinutes = highScoreSeconds = 0; 
-    }
+    initHighScore(&highScore);
 
     while(1) { 
       if ((r = driver_receive(ANY, &msg, &ipc_status)) != OK) { 
@@ -79,7 +74,7 @@ int run(){
                   {
                   case inMenu:
                       drawMenu(menu);
-                      checkAndUpdateHighScore(arena, &highScore, &highScoreHours, &highScoreMinutes, &highScoreSeconds, highscoreFile);
+                      checkAndUpdateHighScore(arena,&highScore);
                     break;
                   case inGame:
                       processArena(arena);
