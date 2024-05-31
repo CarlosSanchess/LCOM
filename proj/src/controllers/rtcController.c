@@ -10,6 +10,6 @@ void initHighScore(HighScore *highScore) {
 void checkAndUpdateHighScore(Arena *arena, HighScore *highScore) {
     if (arena->curr_score > highScore->score) {
         highScore->score = arena->curr_score;
-        update_rtc_time(&highScore->hours, &highScore->minutes, &highScore->seconds);
+        update_rtc_time(&highScore->seconds, &highScore->minutes, &highScore->hours);
     }
 }

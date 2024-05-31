@@ -73,7 +73,7 @@ int run(){
                   switch (currentState)
                   {
                   case inMenu:
-                      drawMenu(menu);
+                      drawMenu(menu, highScore);
                       checkAndUpdateHighScore(arena,&highScore);
                     break;
                   case inGame:

@@ -24,13 +24,47 @@ int drawBomb(int x, int y){
     return 0;
 }
 
-int drawMenu(Menu menu){ 
+int drawMenu(Menu menu, HighScore score){
+    drawHighScore(score); 
     if(menu.selected == 0){
         xpm_draw_ignore(granade, menu.coord[0][0], menu.coord[0][1], GREEN_SCREEN);  
     }
     if(menu.selected == 1){
         xpm_draw_ignore(granade, menu.coord[1][0], menu.coord[1][1], GREEN_SCREEN);  
     }
+    return 0;
+}
+
+int drawHighScore(HighScore score){
+    xpm_draw_ignore(highscore, 679, 94, GREEN_SCREEN);
+    xpm_draw_ignore(colon, 689, 94, GREEN_SCREEN);
+
+    char scoreString[20]; 
+    sprintf(scoreString, "%d", score.score);
+
+    int digitWidth = 75;
+
+    int startX = 699;
+    int startY = 94; ;
+
+    for (size_t i = 0; i < strlen(scoreString); ++i) {
+        int digit = scoreString[i] - '0';
+
+        int xPos = startX + i * digitWidth;
+
+        switch (digit) {
+            case 0: xpm_draw_ignore(number0, xPos, startY, GREEN_SCREEN); break;
+            case 1: xpm_draw_ignore(number1, xPos, startY, GREEN_SCREEN); break;
+            case 2: xpm_draw_ignore(number2, xPos, startY, GREEN_SCREEN); break;
+            case 3: xpm_draw_ignore(number3, xPos, startY, GREEN_SCREEN); break;
+            case 4: xpm_draw_ignore(number4, xPos, startY, GREEN_SCREEN); break;
+            case 5: xpm_draw_ignore(number5, xPos, startY, GREEN_SCREEN); break;
+            case 7: xpm_draw_ignore(number7, xPos, startY, GREEN_SCREEN); break;
+            case 8: xpm_draw_ignore(number8, xPos, startY, GREEN_SCREEN); break;
+            case 9: xpm_draw_ignore(number9, xPos, startY, GREEN_SCREEN); break;
+        }
+    }
+
     return 0;
 }
 
@@ -48,18 +82,20 @@ int drawMouse(MouseInfo mouse){
     }
     return 0;
 }
+
 int drawBullets(Arena arena){
     for(size_t i = 0; i < arena.numBullets; i++){
         drawBullet(*(arena.bullets[i]));
     }
     return 0;
 }
+
 int drawBullet(bullet b){
     xpm_draw_ignore_rot(bullet_xpm, b.position.x, b.position.y, b.position.deg, GREEN_SCREEN);
     return 0;
 }
 
-int drawBuilds(Obstacle** builds, size_t numBuilts){ //TODO char* to xpm_row_t
+int drawBuilds(Obstacle** builds, size_t numBuilts){
     for(size_t i = 0; i < numBuilts; i++){ 
         if(builds[i]->draw && builds[i]->time == 10){xpm_draw_ignore(block10, builds[i]->x1, builds[i]->y1, GREEN_SCREEN);}
         if(builds[i]->draw && builds[i]->time == 9) {xpm_draw_ignore(block9, builds[i]->x1, builds[i]->y1, GREEN_SCREEN);}
