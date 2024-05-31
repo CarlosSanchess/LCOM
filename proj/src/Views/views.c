@@ -19,6 +19,11 @@ int drawEnemyTank(EnemyTank *tank) {
     return 0;
 }
 
+int drawBomb(int x, int y){
+    xpm_draw_ignore(bomb, x, y, GREEN_SCREEN);
+    return 0;
+}
+
 int drawMenu(Menu menu){ 
     if(menu.selected == 0){
         xpm_draw_ignore(granade, menu.coord[0][0], menu.coord[0][1], GREEN_SCREEN);  

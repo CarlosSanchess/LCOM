@@ -4,7 +4,13 @@ extern uint8_t scanCode;
 int handleInterruptKBC(State *gameState, Menu *menu, Arena *arena){
     kbc_ih(); 
     if (scanCode == BREAK_CODE(ESC_KEY)) {
-        return 1;
+        if (*gameState == inGame) {
+            *gameState = inMenu;
+            resetGame(arena);
+            return 0;
+        } else if (*gameState == inMenu) {
+            return 1;
+        }
     }
     if(*gameState == inMenu){
         if(handleMenu(gameState, menu, arena)){

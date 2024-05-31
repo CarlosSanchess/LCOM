@@ -10,6 +10,7 @@
 #include "../xpm/bullet_xpm.xpm"
 #include "../xpm/tank_green.xpm"
 #include "../xpm/tank_red.xpm"
+#include "../xpm/bomb.xpm"
 #include "../xpm/blocks/block1.xpm"
 #include "../xpm/blocks/block2.xpm"
 #include "../xpm/blocks/block3.xpm"
@@ -32,6 +33,7 @@ int drawMouse(MouseInfo mouse);
 int drawBullet(bullet b);
 int drawBullets(Arena arena);
 int drawBuilds(Obstacle** builds, size_t numBuilts);
+int drawBomb(int x, int y);
 
 #endif
 
