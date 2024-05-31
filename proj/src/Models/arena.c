@@ -9,7 +9,7 @@ Arena* createArena(int width, int height, MouseInfo *mouseInfo) {
     }
 
     newArena->tank = createTank(10, 10, 0, 1, 3);
-    newArena->enemyTank = createEnemyTank(100, 100, 0, 1, 3);
+    newArena->enemyTank = createEnemyTank(985, 428, 0, 1, 3);
     newArena->crosshair = mouseInfo;
     newArena->width = width;
     newArena->height = height;

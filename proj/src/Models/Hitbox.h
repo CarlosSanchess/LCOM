@@ -5,6 +5,7 @@
 typedef struct{
     int x1, x2;
     int y1, y2;
+    uint8_t origin;
 }Hitbox;
 
 #endif

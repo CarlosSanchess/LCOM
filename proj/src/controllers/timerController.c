@@ -53,7 +53,7 @@ int handleDelayedEnemyShooting(EnemyTank *enemyTank) {
     if (!enemyTank->canShoot) {
         delayShootingEnemy++;
         if (delayShootingEnemy >= SHOOTD) {
-            // enemyTank->canShoot = true;
+            enemyTank->canShoot = true;
             delayShootingEnemy = 0; 
         }
     } else {

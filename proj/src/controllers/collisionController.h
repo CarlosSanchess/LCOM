@@ -7,7 +7,8 @@
 #include "Models/Position.h"
 #include "Models/Hitbox.h"
 
-
-
+bool checkCollision(Hitbox a, Hitbox b);
+int processCollisions(Arena* arena,size_t index, Hitbox tankHB, Hitbox enemyTankHB,Hitbox bulletHB);
 
 #endif
+

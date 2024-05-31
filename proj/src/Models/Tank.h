@@ -18,6 +18,7 @@
 #define MAP_WIDTH 1152
 #define MAP_HEIGHT 864
 
+
 typedef struct{
     position position;
     int hp;
@@ -42,6 +43,7 @@ void freeTank(tank *tank);
 EnemyTank* createEnemyTank(int x, int y, uint16_t deg, int hp, int speed);
 void freeEnemyTank(EnemyTank *enemyTank);
 void getTankHitBox(tank* tank, Hitbox *hitbox);
+void getEnemyTankHitBox(EnemyTank* tank, Hitbox *hitbox);
 
 #endif
 
