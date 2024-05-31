@@ -77,10 +77,10 @@ int run(){
                       checkAndUpdateHighScore(arena,&highScore);
                     break;
                   case inGame:
-                    processArena(arena);
+                      processArena(arena);
 
                     if(!aux){
-                     xpm_draw_Background(mapa, 0, 0);
+                      xpm_draw_Background(mapa, 0, 0);
                     }
                     aux = 1;
 
@@ -140,8 +140,8 @@ int setUp(){
     return 1;
   }
 
-  xpm_draw_Background(menuXPM, 0, 0);
-  xpm_draw_ignore(granade, menu.coord[0][0], menu.coord[0][1], 0x4ee44e);  
+  drawMenuBackGround();
+  drawMenu(menu,highScore);
   buffer_to_video_mem();
 
   

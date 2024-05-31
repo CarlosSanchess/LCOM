@@ -7,6 +7,8 @@
 #include "Models/arena.h"
 #include "controllers/tankController.h"
 #include "controllers/bulletController.h"
+#include "controllers/gameController.h"
+
 
 extern uint8_t scanCode;
 

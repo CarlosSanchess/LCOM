@@ -29,6 +29,5 @@ typedef struct{
 
 Arena* createArena(int width, int height, MouseInfo *mouseInfo);
 void destroyArena(Arena *arena);
-void resetGame(Arena *arena);
 
 #endif

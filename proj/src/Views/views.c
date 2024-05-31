@@ -25,13 +25,17 @@ int drawBomb(int x, int y){
 }
 
 int drawMenu(Menu menu, HighScore score){
-    drawHighScore(score); 
+    // drawHighScore(score); 
     if(menu.selected == 0){
         xpm_draw_ignore(granade, menu.coord[0][0], menu.coord[0][1], GREEN_SCREEN);  
     }
     if(menu.selected == 1){
         xpm_draw_ignore(granade, menu.coord[1][0], menu.coord[1][1], GREEN_SCREEN);  
     }
+    return 0;
+}
+int drawMenuBackGround(){
+    xpm_draw_Background(menuXPM, 0, 0);
     return 0;
 }
 
