@@ -7,7 +7,7 @@ void timer_increment(){
 int handleDelayedEvents(tank *tank, MouseInfo* mouseInfo, Obstacle** obstacles, size_t numObstacles){
     // timer_increment();
     handleDelayedShooting(tank);
-    handleDelayedMouse(mouseInfo);
+    if(!mouseInfo->canBuild){handleDelayedMouse(mouseInfo);}
     handleDelayedBuildings(obstacles, numObstacles);
     
     return 0;

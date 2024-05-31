@@ -34,7 +34,7 @@ void getPositionMouse(MouseInfo *mouseInfo) {
 
 
     if (!mouse_byte_packet.x_ov) {
-        if(mouseInfo->crossHair == 1){
+        // if(mouseInfo->crossHair == 1){
             if(mouseInfo->mousePosition.x + smooth_dx > HAMMER_RIGHT){
             mouseInfo->mousePosition.x = HAMMER_RIGHT;
             return;
@@ -44,16 +44,16 @@ void getPositionMouse(MouseInfo *mouseInfo) {
             }else{
                 mouseInfo->mousePosition.x += smooth_dx;
             }
-        }else{
-            //Mouse For Menu
-        }   
+        // }else{
+        //     //Mouse For Menu
+        // }   
     } else {
         mouseInfo->mousePosition.x = 50; 
     }
 
 
     if (!mouse_byte_packet.y_ov) {
-        if(mouseInfo->crossHair == 1){
+        // if(mouseInfo->crossHair == 1){
             if(mouseInfo->mousePosition.y - smooth_dy > HAMMER_LOW){
                     mouseInfo->mousePosition.y = HAMMER_LOW;
                     return;
@@ -63,9 +63,9 @@ void getPositionMouse(MouseInfo *mouseInfo) {
             }else{
                 mouseInfo->mousePosition.y -= smooth_dy;
             }
-        }else{
-            //MOUSE FOR MENU
-        }
+        // }else{
+        //     //MOUSE FOR MENU
+        // }
 
     } else {
         mouseInfo->mousePosition.y = 50; 
