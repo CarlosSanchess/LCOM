@@ -21,6 +21,14 @@ int processCollisions(Arena* arena,size_t index, Hitbox tankHB, Hitbox enemyTank
         }
     }
 
+    for(size_t k = 0; k < arena->numBuilts; k++){
+        if (arena->bullets[index]->position.x >= arena->builts[k]->x1 &&  arena->bullets[index]->position.x <= arena->builts[k]->x2 &&
+        arena->bullets[index]->position.y >= arena->builts[k]->y1 &&  arena->bullets[index]->position.y <= arena->builts[k]->y2){
+            arena->bullets = removeBulletFromBullets(arena->bullets, arena->numBullets, index);
+            arena->numBullets--;
+            return 2;
+        }
+    }
 
     if (checkCollision(bulletHB, tankHB)) {
         arena->bullets = removeBulletFromBullets(arena->bullets, arena->numBullets, index);
