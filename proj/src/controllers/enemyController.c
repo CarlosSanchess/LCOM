@@ -138,10 +138,8 @@ void updateEnemyTank(Arena *arena, EnemyTank *enemy, tank *player, Waypoint wayp
     if (followingPlayer) {
         stuckCounter = 0;
         if (distanceToPlayer <= FOLLOW_THRESHOLD - 10) {
-            printf("Shooting at player\n");
             shootAtPlayer(arena);
         } else {
-            printf("Following player\n");
             followPlayer(enemy, player, obstacles, numObstacles);
         }
     } else {
@@ -158,16 +156,12 @@ void updateEnemyTank(Arena *arena, EnemyTank *enemy, tank *player, Waypoint wayp
                     }
                 }
             }
-            printf("Closest waypoint index: %d\n", closestWaypointIndex);
         }
 
-        printf("%d\n",visitedCount);
 
         if (closestWaypointIndex != -1 && !visitedWaypoints[closestWaypointIndex]) {
-            printf("Moving towards waypoint %d\n", closestWaypointIndex);
             moveTowardsWaypointWithDeviation(enemy, waypoints[closestWaypointIndex], obstacles, numObstacles);
             if (hasReachedWaypoint(enemy, waypoints[closestWaypointIndex])) {
-                printf("Reached waypoint %d\n", closestWaypointIndex);
                 visitedWaypoints[closestWaypointIndex] = true;
                 visitedCount++;
 
@@ -180,8 +174,6 @@ void updateEnemyTank(Arena *arena, EnemyTank *enemy, tank *player, Waypoint wayp
             }
         }
 
-        printf("%d\n",visitedCount);
-
         positionHistory[historyIndex][0] = enemy->position.x;
         positionHistory[historyIndex][1] = enemy->position.y;
         historyIndex = (historyIndex + 1) % 10;
@@ -193,11 +185,8 @@ void updateEnemyTank(Arena *arena, EnemyTank *enemy, tank *player, Waypoint wayp
         }
 
         if (stuckCounter >= 2) {
-            printf("Stuck, finding new waypoint\n");
             stuckCounter = 0;
-            printf("Current waypoint: %d\n", closestWaypointIndex);
             visitedWaypoints[closestWaypointIndex] = true;
-            printf("Visited waypoint %d\n", visitedWaypoints[closestWaypointIndex]);
             visitedCount++;
 
             if (visitedCount >= numWaypoints) {
@@ -218,7 +207,6 @@ void updateEnemyTank(Arena *arena, EnemyTank *enemy, tank *player, Waypoint wayp
                     }
                 }
             }
-            printf("Moving towards new waypoint %d\n", closestWaypointIndex);
             enemy->currentWaypoint = closestWaypointIndex;
             moveTowardsWaypointWithDeviation(enemy, waypoints[closestWaypointIndex], obstacles, numObstacles);
         }

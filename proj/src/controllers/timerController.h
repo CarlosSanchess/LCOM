@@ -14,7 +14,7 @@ static unsigned int timerCounter = 0;
 
 void timer_increment();
 
-int handleDelayedEvents(tank *tank,EnemyTank *enemyTank MouseInfo* mouseInfo, Obstacle** obstacles, size_t numObstacles);
+int handleDelayedEvents(tank *tank,EnemyTank *enemyTank, MouseInfo* mouseInfo, Obstacle** obstacles, size_t numObstacles);
 int handleDelayedShooting(tank *tank);
 void handleDelayedMouse(MouseInfo* mouseInfo);
 void handleDelayedBuildings(Obstacle** obstacles, size_t numObstacles);

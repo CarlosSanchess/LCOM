@@ -12,7 +12,7 @@ int handleInterruptKBC(State *gameState, Menu *menu, Arena *arena){
         }
     }
     if(*gameState == inGame){
-        handleTank(arena->tank, arena->obstacles, NUM_OBSTACLES);
+        handleTank(arena);
         handleArena(arena);
     }
     return 0;
@@ -25,18 +25,18 @@ int handleArena(Arena* arena){
     }
     return 0;
 }
-int handleTank(tank* tank, Obstacle* Obstacles, int numObstacles){
+int handleTank(Arena* arena){
     if(scanCode == BREAK_CODE(W_KEY)){
-        moveUP(tank,Obstacles, numObstacles);
+        moveUP(arena->tank,arena->obstacles, NUM_OBSTACLES, arena->builts, arena->numBuilts);
     }
     if(scanCode == BREAK_CODE(A_KEY)){
-        moveLeft(tank);
+        moveLeft(arena->tank);
     }
     if(scanCode == BREAK_CODE(S_KEY)){
-        moveDown(tank,Obstacles, numObstacles);
+        moveDown(arena->tank,arena->obstacles, NUM_OBSTACLES, arena->builts, arena->numBuilts);
     }
     if(scanCode == BREAK_CODE(D_KEY)){
-        moveRight(tank);
+        moveRight(arena->tank);
     }
     return 0;
 }

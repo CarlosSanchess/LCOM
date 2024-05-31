@@ -13,6 +13,7 @@ bool waypointsGenerated = false;
 Waypoint combinedWaypoints[NEW_NUM_WAYPOINTS];
 
 int processArena(Arena* arena) {
+    printf("%d", arena->numBullets);
     if (!waypointsGenerated){
         Waypoint newWaypoints[10];
         generateWaypoints(newWaypoints, 10);

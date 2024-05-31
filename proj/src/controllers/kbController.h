@@ -12,7 +12,7 @@ extern uint8_t scanCode;
 
 int handleInterruptKBC(State *gameState, Menu *menu, Arena *arena);
 int handleMenu(State *gameState ,Menu *menu, Arena* arena);
-int handleTank(tank* tank, Obstacle Obstacles[], int numObstacles);
+int handleTank(Arena* arena);
 int handleArena(Arena* arena);
 
 
