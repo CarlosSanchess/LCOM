@@ -13,9 +13,6 @@
 #define RTC_MINUTES 0x02
 #define RTC_HOURS 0x04
 
-bool rtc_binary;
-int rtc_hook_id = 5;
-
 int (rtc_subscribe_int)(uint8_t *bit_no);
 int (rtc_unsubscribe_int)();
 int (rtc_read_reg)(uint32_t reg, uint32_t *data);
