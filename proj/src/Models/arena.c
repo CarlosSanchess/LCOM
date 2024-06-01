@@ -15,7 +15,7 @@ Arena* createArena(int width, int height, MouseInfo *mouseInfo) {
     newArena->height = height;
     newArena->curr_score = 0;
     newArena->endGame = false;
-
+    newArena->bomba = (bomb){{-1, -1, 0}, false};
 
     
     Obstacle initialObstacles[NUM_OBSTACLES] = {
