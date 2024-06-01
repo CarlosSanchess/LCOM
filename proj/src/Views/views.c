@@ -62,16 +62,16 @@ int drawScore(HighScore score){
         int xPos = startX + i * digitWidth;
 
         switch (digit) {
-            case 0: xpm_draw_ignore(number0, xPos, startY, GREEN_SCREEN); break;
-            case 1: xpm_draw_ignore(number1, xPos, startY, GREEN_SCREEN); break;
-            case 2: xpm_draw_ignore(number2, xPos, startY, GREEN_SCREEN); break;
-            case 3: xpm_draw_ignore(number3, xPos, startY, GREEN_SCREEN); break;
-            case 4: xpm_draw_ignore(number4, xPos, startY, GREEN_SCREEN); break;
-            case 5: xpm_draw_ignore(number5, xPos, startY, GREEN_SCREEN); break;
-            case 6: xpm_draw_ignore(number6, xPos, startY, GREEN_SCREEN); break;
-            case 7: xpm_draw_ignore(number7, xPos, startY, GREEN_SCREEN); break;
-            case 8: xpm_draw_ignore(number8, xPos, startY, GREEN_SCREEN); break;
-            case 9: xpm_draw_ignore(number9, xPos, startY, GREEN_SCREEN); break;
+            case 0: xpm_draw_ignore(number0resize, xPos, startY, GREEN_SCREEN); break;
+            case 1: xpm_draw_ignore(number1resize, xPos, startY, GREEN_SCREEN); break;
+            case 2: xpm_draw_ignore(number2resize, xPos, startY, GREEN_SCREEN); break;
+            case 3: xpm_draw_ignore(number3resize, xPos, startY, GREEN_SCREEN); break;
+            case 4: xpm_draw_ignore(number4resize, xPos, startY, GREEN_SCREEN); break;
+            case 5: xpm_draw_ignore(number5resize, xPos, startY, GREEN_SCREEN); break;
+            case 6: xpm_draw_ignore(number6resize, xPos, startY, GREEN_SCREEN); break;
+            case 7: xpm_draw_ignore(number7resize, xPos, startY, GREEN_SCREEN); break;
+            case 8: xpm_draw_ignore(number8resize, xPos, startY, GREEN_SCREEN); break;
+            case 9: xpm_draw_ignore(number9resize, xPos, startY, GREEN_SCREEN); break;
         }
     }
 
@@ -83,16 +83,14 @@ int drawChrono(HighScore score){
     char timeString[9]; 
     sprintf(timeString, "%02d%02d%02d", score.hours, score.minutes, score.seconds);
 
-    // int digitWidth = 15;
-
     int startX[] = {498, 523, 600, 625, 704, 729};
-    int startY[] = {379, 380, 383, 383, 383, 383};
+    int startY = 383;
 
     for (size_t i = 0; i < strlen(timeString); ++i) {
         int digit = timeString[i] - '0';
         
         int xPos = startX[i];
-        int yPos = startY[i];
+        int yPos = startY;
 
         switch (digit) {
             case 0: xpm_draw_ignore(number0, xPos, yPos, GREEN_SCREEN); break;
