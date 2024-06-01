@@ -18,7 +18,7 @@
 #include "../xpm/numbers/8.xpm"
 #include "../xpm/numbers/9.xpm"
 #include "../xpm/numbers/:.xpm"
-#include "../xpm/numbers/highscore.xpm"
+#include "../xpm/highscore.xpm"
 #include "../xpm/bullet.xpm"
 #include "../xpm/tank_green.xpm"
 #include "../xpm/tank_red.xpm"

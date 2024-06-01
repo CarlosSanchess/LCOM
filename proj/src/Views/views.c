@@ -25,7 +25,7 @@ int drawBomb(int x, int y){
 }
 
 int drawMenu(Menu menu, HighScore score){
-    // drawHighScore(score); 
+    drawHighScore(score); 
     if(menu.selected == 0){
         xpm_draw_ignore(granade, menu.coord[0][0], menu.coord[0][1], GREEN_SCREEN);  
     }
@@ -43,35 +43,9 @@ int drawMenuBackGround(){
 }
 
 int drawHighScore(HighScore score){
-    xpm_draw_ignore(highscore, 679, 94, GREEN_SCREEN);
-    xpm_draw_ignore(colon, 689, 94, GREEN_SCREEN);
-
-    char scoreString[20]; 
-    sprintf(scoreString, "%d", score.score);
-
-    int digitWidth = 75;
-
-    int startX = 699;
-    int startY = 94; ;
-
-    for (size_t i = 0; i < strlen(scoreString); ++i) {
-        int digit = scoreString[i] - '0';
-
-        int xPos = startX + i * digitWidth;
-
-        switch (digit) {
-            case 0: xpm_draw_ignore(number0, xPos, startY, GREEN_SCREEN); break;
-            case 1: xpm_draw_ignore(number1, xPos, startY, GREEN_SCREEN); break;
-            case 2: xpm_draw_ignore(number2, xPos, startY, GREEN_SCREEN); break;
-            case 3: xpm_draw_ignore(number3, xPos, startY, GREEN_SCREEN); break;
-            case 4: xpm_draw_ignore(number4, xPos, startY, GREEN_SCREEN); break;
-            case 5: xpm_draw_ignore(number5, xPos, startY, GREEN_SCREEN); break;
-            case 7: xpm_draw_ignore(number7, xPos, startY, GREEN_SCREEN); break;
-            case 8: xpm_draw_ignore(number8, xPos, startY, GREEN_SCREEN); break;
-            case 9: xpm_draw_ignore(number9, xPos, startY, GREEN_SCREEN); break;
-        }
+    if(score.score > 0){
+      xpm_draw_ignore(highscore,730, 35, GREEN_SCREEN);
     }
-
     return 0;
 }
 
