@@ -17,7 +17,9 @@ int handleInterruptMouse(State *gameState, Menu *menu, Arena* arena, MouseInfo *
     getPositionMouse(mouseInfo);
 
     if(*gameState == inMenu){
-      processMenu(gameState, menu, mouseInfo);
+      if(processMenu(gameState, menu, mouseInfo) != 0){
+        return 1;
+    }
     }
     if(*gameState == inGame){
         if(mouseInfo->canBuild){processBuild(arena,mouseInfo);}
@@ -72,9 +74,9 @@ void getPositionMouse(MouseInfo *mouseInfo) {
     }
 }
 
-void processMenu(State *gameState, Menu *menu, MouseInfo *mouseInfo){
+int processMenu(State *gameState, Menu *menu, MouseInfo *mouseInfo){
 
-    if((mouseInfo->mousePosition.x > 327 && mouseInfo->mousePosition.x < 823) && (mouseInfo->mousePosition.y > 590 && mouseInfo->mousePosition.y < 673)){
+    if((mouseInfo->mousePosition.x > 318 && mouseInfo->mousePosition.x < 830) && (mouseInfo->mousePosition.y > 561 && mouseInfo->mousePosition.y < 639)){
         menu->selected = 0;
         if(mouse_byte_packet.lb){
             if(menu->selected == 0){
@@ -82,8 +84,21 @@ void processMenu(State *gameState, Menu *menu, MouseInfo *mouseInfo){
                 mouseInfo->crossHair = 1;
             }
         }
-     }
-
+    }else if((mouseInfo->mousePosition.x > 355 && mouseInfo->mousePosition.x < 795) && (mouseInfo->mousePosition.y > 665 && mouseInfo->mousePosition.y < 737)){
+        menu->selected = 1;
+        if(mouse_byte_packet.lb){
+            if(menu->selected == 1){
+                *gameState = Multi;
+                mouseInfo->crossHair = 1;
+            }
+        }
+    } else if((mouseInfo->mousePosition.x > 511 && mouseInfo->mousePosition.x < 639) && (mouseInfo->mousePosition.y > 762 && mouseInfo->mousePosition.y < 824)){
+        if(mouse_byte_packet.lb){
+            return 2;
+        }
+    }
+    
+    return 0;
 }
 
 int processBuild(Arena* arena, MouseInfo* mouseInfo){

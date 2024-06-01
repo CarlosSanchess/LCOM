@@ -25,7 +25,7 @@ extern int mouse_errorHandling;
 
 int handleInterruptMouse(State *gameState, Menu *menu, Arena* arena, MouseInfo *mouseInfo);
 void getPositionMouse(MouseInfo *mouseInfo);
-void processMenu(State *gameState, Menu *menu, MouseInfo *mouseInfo);
+int processMenu(State *gameState, Menu *menu, MouseInfo *mouseInfo);
 int processBuild(Arena* arena, MouseInfo* mouseInfo);
 
 

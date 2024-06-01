@@ -3,7 +3,8 @@
 
 typedef enum{
   inMenu,
-  inGame
+  inGame,
+  Multi
 }State;
 
 

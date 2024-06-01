@@ -32,8 +32,6 @@ int changeBackground(){
     if(backgroundFlag == 0){
         drawGameBackGround();
         backgroundFlag = 1;
-            printf("desenhou jogo");
-
     }
     return 0;
 }

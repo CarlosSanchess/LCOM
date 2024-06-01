@@ -7,7 +7,7 @@
 typedef struct{
     int selected;
     bool InGame;
-    int coord[2][2]; //Coodenadas para desenhar a granada
+    int coord[3][2]; //Coodenadas para desenhar a granada
 }Menu;
 
 

@@ -18,7 +18,7 @@
 
 //game 
 State currentState;
-Menu menu = {0, false, {{835, 596}, {660, 722}}}; 
+Menu menu = {0, false, {{840, 557}, {800, 660},{645,755}}}; 
 MouseInfo mouseInfo = {.mousePosition = { 50, 50, 0}, 0, true};
 const char *highscoreFile = "highscore.txt";
 HighScore highScore;
