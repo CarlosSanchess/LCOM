@@ -49,6 +49,11 @@ int drawHighScore(HighScore score){
     return 0;
 }
 
+int drawScoreBackGround(){
+    xpm_draw_Background(scoreXPM, 0, 0);
+    return 0;
+}
+
 int drawMouse(MouseInfo mouse){
     if((mouse.mousePosition.x > 0 && mouse.mousePosition.x < 1152) && (mouse.mousePosition.y > 0 && mouse.mousePosition.y < 864)){
         if(mouse.crossHair == 0){
