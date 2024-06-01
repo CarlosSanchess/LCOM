@@ -46,6 +46,38 @@ int drawHighScore(HighScore score){
     return 0;
 }
 
+int drawScore(HighScore score){
+    
+    char scoreString[20]; 
+    sprintf(scoreString, "%d", score.score);
+
+    int digitWidth = 20;
+
+    int startX = 610;
+    int startY = 275;
+
+    for (size_t i = 0; i < strlen(scoreString); ++i) {
+        int digit = scoreString[i] - '0';
+
+        int xPos = startX + i * digitWidth;
+
+        switch (digit) {
+            case 0: xpm_draw_ignore(number0, xPos, startY, GREEN_SCREEN); break;
+            case 1: xpm_draw_ignore(number1, xPos, startY, GREEN_SCREEN); break;
+            case 2: xpm_draw_ignore(number2, xPos, startY, GREEN_SCREEN); break;
+            case 3: xpm_draw_ignore(number3, xPos, startY, GREEN_SCREEN); break;
+            case 4: xpm_draw_ignore(number4, xPos, startY, GREEN_SCREEN); break;
+            case 5: xpm_draw_ignore(number5, xPos, startY, GREEN_SCREEN); break;
+            case 6: xpm_draw_ignore(number6, xPos, startY, GREEN_SCREEN); break;
+            case 7: xpm_draw_ignore(number7, xPos, startY, GREEN_SCREEN); break;
+            case 8: xpm_draw_ignore(number8, xPos, startY, GREEN_SCREEN); break;
+            case 9: xpm_draw_ignore(number9, xPos, startY, GREEN_SCREEN); break;
+        }
+    }
+
+    return 0;
+}
+
 int drawChrono(HighScore score){
     
     char timeString[9]; 
