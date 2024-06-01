@@ -11,6 +11,14 @@ void resetGame(Arena *arena) {
     arena->crosshair->canBuild = true;
     arena->numBuilts = 0;
     arena->numBullets = 0;
+    arena->endGame = false;
+
+    for(size_t i = 0; i < arena->numBullets; i++){
+        removeBulletFromBullets(arena->bullets, arena->numBullets, i);
+    }
+    for(size_t i = 0; i < arena->numBuilts; i++){
+        popObstacle(arena->builts, arena->numBuilts);
+    }
 }
 
 int changeToMenu(State* gameState, Arena* arena){

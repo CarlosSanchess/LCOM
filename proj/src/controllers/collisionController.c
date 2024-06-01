@@ -1,12 +1,15 @@
 #include "collisionController.h"
 
 bool checkCollision(Hitbox a, Hitbox b) {
-    if(a.origin == b.origin){return false;}
+    if (a.origin == b.origin) {
+        return false;
+    }
 
-    return (a.x1 < b.x1 + b.x2 && a.x1 + a.x2 > b.x1 &&
-            a.y1 < b.y1 + b.y2 && a.y1 + a.y2 > b.y1);
+    bool collisionX = (a.x1 < b.x2 && a.x2 > b.x1);
+    bool collisionY = (a.y1 < b.y2 && a.y2 > b.y1);
+
+    return collisionX && collisionY;
 }
-
 
 int processCollisions(Arena* arena,size_t index, Hitbox tankHB, Hitbox enemyTankHB,Hitbox bulletHB) {
     

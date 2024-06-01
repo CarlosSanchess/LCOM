@@ -33,7 +33,7 @@ static  xpm_row_t const bullet_xpm[] = {
 "0  c #4EE34E",
 "q  c #4EE34F",
 "w  c #4DE44E",
-"e  c #4EE44E",
+"e  c #4ee44e",
 "r  c #4EE44F",
 "t  c #4EE051",
 "y  c #4EE150",

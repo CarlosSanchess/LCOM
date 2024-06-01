@@ -51,7 +51,6 @@ int processBullets(Arena* arena) {
         getTankHitBox(arena->tank, &tankHB);
         getEnemyTankHitBox(arena->enemyTank, &enemyTankHB);
 
-
         if (arena->bullets[i]->position.x < 0 || arena->bullets[i]->position.x > arena->width - ARENA_BORDER || arena->bullets[i]->position.y < 0 || arena->bullets[i]->position.y > arena->height - ARENA_BORDER){
             arena->bullets = removeBulletFromBullets(arena->bullets, arena->numBullets, i);
             arena->numBullets--;

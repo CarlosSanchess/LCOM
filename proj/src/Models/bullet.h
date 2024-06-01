@@ -6,8 +6,8 @@
 #include "dev_interface/devices/video_gr.h"
 
 #define BULLET_SPEED 5
-#define BULLET_WIDTH 60
-#define BULLET_HEIGHT 60
+#define BULLET_WIDTH 10
+#define BULLET_HEIGHT 34
 
 #define PLAYER 1
 #define ENEMY 2
