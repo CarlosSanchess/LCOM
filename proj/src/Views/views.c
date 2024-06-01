@@ -5,6 +5,7 @@ int drawArena(Arena arena){
     drawTank(arena.tank);
     drawEnemyTank(arena.enemyTank);
     drawBuilds(arena.builts, arena.numBuilts);
+    drawBomb(arena.bomba);
 
     return 0;
 }
@@ -19,10 +20,6 @@ int drawEnemyTank(EnemyTank *tank) {
     return 0;
 }
 
-int drawBomb(int x, int y){
-    xpm_draw_ignore(bomb, x, y, GREEN_SCREEN);
-    return 0;
-}
 
 int drawMenu(Menu menu, HighScore score){
     drawHighScore(score); 
@@ -96,3 +93,13 @@ int drawGameBackGround(){
     xpm_draw_Background(mapa, 0, 0);
     return 0;
 }
+
+int drawBomb(bomb bomb){
+    if(bomb.active){
+    xpm_draw_ignore(bomba, bomb.pos.x, bomb.pos.y, GREEN_SCREEN);        
+    }
+    return 0;
+}
+
+
+

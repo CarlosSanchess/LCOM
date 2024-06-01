@@ -4,6 +4,7 @@
 #include "Tank.h"
 #include "mouse.h"
 #include "obstacle.h"
+#include "bomb.h"
 
 #define NUM_OBSTACLES 12
 #define ARENA_BORDER 50
@@ -26,6 +27,8 @@ typedef struct{
     int curr_score;
 
     bool endGame;
+
+    bomb bomba;
 }Arena;
 
 Arena* createArena(int width, int height, MouseInfo *mouseInfo);

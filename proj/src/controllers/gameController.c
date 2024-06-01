@@ -12,6 +12,7 @@ void resetGame(Arena *arena) {
     arena->numBuilts = 0;
     arena->numBullets = 0;
     arena->endGame = false;
+    arena->bomba.active = false;
 
     for(size_t i = 0; i < arena->numBullets; i++){
         removeBulletFromBullets(arena->bullets, arena->numBullets, i);

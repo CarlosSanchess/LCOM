@@ -36,6 +36,7 @@
 #include "../xpm/martelo.xpm"
 #include "../xpm/menu.xpm"
 #include "../xpm/mapa1.xpm"
+#include "../Models/bomb.h"
 
 int drawMenu(Menu menu, HighScore score);
 int drawArena(Arena arena);
@@ -45,7 +46,7 @@ int drawMouse(MouseInfo mouse);
 int drawBullet(bullet b);
 int drawBullets(Arena arena);
 int drawBuilds(Obstacle** builds, size_t numBuilts);
-int drawBomb(int x, int y);
+int drawBomb(bomb bomba);
 int drawHighScore(HighScore score);
 int drawMenuBackGround();
 int drawGameBackGround();
