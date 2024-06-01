@@ -3,7 +3,6 @@
 
 #include <lcom/lcf.h>
 #include "Position.h"
-#include "utils/utilsFunctions.h"
 #include "Models/bullet.h"
 #include "Hitbox.h"
 

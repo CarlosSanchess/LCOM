@@ -1,7 +1,6 @@
 #ifndef __TIMER_CONTROLLER__
 #define __TIMER_CONTROLLER__
 
-#include "utils/utilsFunctions.h"
 #include "../Models/mouse.h"
 #include "../Models/arena.h"
 
