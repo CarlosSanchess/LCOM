@@ -41,8 +41,8 @@ void freebullet(bullet* b){
 void createBulletHitbox(bullet* b, Hitbox* Hitbox){
     Hitbox->x1 = b->position.x;
     Hitbox->y1 = b->position.y;
-    Hitbox->x2 = BULLET_WIDTH;
-    Hitbox->y2 = BULLET_HEIGHT;
+    Hitbox->x2 = b->position.x + BULLET_WIDTH;
+    Hitbox->y2 = b-> position.y + BULLET_HEIGHT;
     if(b->origin == PLAYER){Hitbox->origin = PLAYER;}else{ Hitbox->origin = ENEMY;}
 }
 
