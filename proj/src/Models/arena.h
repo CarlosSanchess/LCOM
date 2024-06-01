@@ -25,6 +25,7 @@ typedef struct{
 
     int curr_score;
 
+    bool endGame;
 }Arena;
 
 Arena* createArena(int width, int height, MouseInfo *mouseInfo);

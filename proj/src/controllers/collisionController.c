@@ -31,22 +31,20 @@ int processCollisions(Arena* arena,size_t index, Hitbox tankHB, Hitbox enemyTank
     }
 
     if (checkCollision(bulletHB, tankHB)) {
-        drawBomb(arena->tank->position.x, arena->tank->position.y);
+        // drawBomb(arena->tank->position.x, arena->tank->position.y);
         arena->bullets = removeBulletFromBullets(arena->bullets, arena->numBullets, index);
         arena->numBullets--;
         arena->curr_score = 0;
-
-
+        arena->endGame = true;
         return 2;
     }
 
     if (checkCollision(bulletHB, enemyTankHB)) {
-        drawBomb(arena->enemyTank->position.x, arena->enemyTank->position.y);
+        // drawBomb(arena->enemyTank->position.x, arena->enemyTank->position.y);
         arena->bullets = removeBulletFromBullets(arena->bullets, arena->numBullets, index);
         arena->numBullets--;
         arena->curr_score++;
-
-
+        arena->endGame = true;
         return 2;
     }
   

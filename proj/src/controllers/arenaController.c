@@ -12,7 +12,12 @@ Waypoint waypoints[NUM_WAYPOINTS] = {
 bool waypointsGenerated = false;
 Waypoint combinedWaypoints[NEW_NUM_WAYPOINTS];
 
-int processArena(Arena* arena) {
+int processArena(State* currentState, Arena* arena) {
+    if(arena->endGame){
+        changeToMenu(currentState, arena);
+        return 0;
+    }
+    
     if (!waypointsGenerated){
         Waypoint newWaypoints[10];
         generateWaypoints(newWaypoints, 10);

@@ -2,7 +2,7 @@
 static xpm_row_t const bomb[] = {
 /* columns rows colors chars-per-pixel */
 "200 200 238 2 ",
-"   c None",
+"   c #4ee44e",
 ".  c #5E2415",
 "X  c #64240F",
 "o  c #6C260D",
@@ -280,6 +280,7 @@ static xpm_row_t const bomb[] = {
 "                                                                                                                                                                                                                  V                                                                                                                                                                                             ",
 "                                                                                                                                                                                                          V   V                                                                                                                                                                                                 ",
 "                                                                                                                                                                                                          V                                                                                                                                                                                                     ",
+"                                                                                                                                                                                                                                                                                                                                                                                                                ",
 "                                                                                                                                                                                                                                                                                                                                                                                                                ",
 "                                                                                                                                                                                                                                                                                                                                                                                                                ",
 "                                                                                                                                                                                                                                                                                                                                                                                                                ",
