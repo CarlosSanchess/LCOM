@@ -22,6 +22,7 @@ Menu menu = {0, false, {{840, 557}, {800, 660},{645,755}}};
 MouseInfo mouseInfo = {.mousePosition = { 50, 50, 0}, 0, true};
 const char *highscoreFile = "highscore.txt";
 HighScore highScore;
+bool sp_handshake = false;
 
 //kbc
 uint8_t irq_kbc;
@@ -29,6 +30,8 @@ uint8_t irq_kbc;
 uint8_t irq_mouse;
 //timer
 uint8_t irq_timer;
+//serial_port
+uint8_t irq_sp;
 
 int safeExit();
 int setUp();
@@ -62,6 +65,11 @@ int run(){
                     safeExit();
                     return 0;
                   }
+                }
+
+                if(msg.m_notify.interrupts & irq_sp){ //serial port interrupt
+                  serial_int_handler();
+
                 }
 
                 if(msg.m_notify.interrupts & irq_timer){ //timer interrupt
