@@ -3,13 +3,7 @@
 
 #include "../dev_interface/devices/rtc.h"
 #include "Models/arena.h"
-
-typedef struct {
-    int score;
-    uint8_t hours;
-    uint8_t minutes;
-    uint8_t seconds;
-} HighScore;
+#include "Models/HighScore.h"
 
 void initHighScore(HighScore *highScore);
 

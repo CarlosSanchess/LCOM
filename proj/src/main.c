@@ -73,7 +73,7 @@ int run(){
                   switch (currentState)
                   {
                   case inMenu:
-                      drawMenu(menu);
+                      drawMenu(menu, highScore);
                       checkAndUpdateHighScore(arena,&highScore);
                     break;
                   case inGame:
@@ -141,7 +141,7 @@ int setUp(){
   }
 
   drawMenuBackGround();
-  drawMenu(menu);
+  drawMenu(menu,highScore);
   buffer_to_video_mem();
 
   

@@ -15,11 +15,10 @@
 
 int (rtc_subscribe_int)(uint8_t *bit_no);
 int (rtc_unsubscribe_int)();
-int (rtc_read_reg)(uint32_t reg, uint32_t *data);
-int (rtc_write_reg)(uint32_t reg, uint32_t data);
+int (rtc_read_reg)(uint8_t reg, uint8_t *data);
 bool (rtc_update_in_progress)();
 bool (is_rtc_binary)();
-int (bcd_to_binary)(uint32_t *bcd);
+int (bcd_to_binary)(uint8_t *bcd);
 void (update_rtc_time)(uint8_t *seconds, uint8_t *minutes, uint8_t *hours);
 
 #endif /* RTC_H_ */

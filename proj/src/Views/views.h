@@ -6,8 +6,20 @@
 #include "Models/Tank.h"
 #include "Models/mouse.h"
 #include "Models/bullet.h"
+#include "Models/HighScore.h"
 #include "dev_interface/devices/video_gr.h"
-#include "../xpm/bullet_xpm.xpm"
+#include "../xpm/numbers/0.xpm"
+#include "../xpm/numbers/1.xpm"
+#include "../xpm/numbers/2.xpm"
+#include "../xpm/numbers/3.xpm"
+#include "../xpm/numbers/4.xpm"
+#include "../xpm/numbers/5.xpm"
+#include "../xpm/numbers/7.xpm"
+#include "../xpm/numbers/8.xpm"
+#include "../xpm/numbers/9.xpm"
+#include "../xpm/numbers/:.xpm"
+#include "../xpm/numbers/highscore.xpm"
+#include "../xpm/bullet.xpm"
 #include "../xpm/tank_green.xpm"
 #include "../xpm/tank_red.xpm"
 #include "../xpm/bomb.xpm"
@@ -24,7 +36,7 @@
 #include "../xpm/martelo.xpm"
 #include "../xpm/menu.xpm"
 
-int drawMenu(Menu menu);
+int drawMenu(Menu menu, HighScore score);
 int drawArena(Arena arena);
 int drawTank(tank *tank);
 int drawEnemyTank(EnemyTank *tank);
@@ -33,6 +45,7 @@ int drawBullet(bullet b);
 int drawBullets(Arena arena);
 int drawBuilds(Obstacle** builds, size_t numBuilts);
 int drawBomb(int x, int y);
+int drawHighScore(HighScore score);
 int drawMenuBackGround();
 
 #endif
