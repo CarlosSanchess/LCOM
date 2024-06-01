@@ -35,6 +35,7 @@
 #include "../xpm/blocks/block10.xpm"
 #include "../xpm/martelo.xpm"
 #include "../xpm/menu.xpm"
+#include "../xpm/mapa1.xpm"
 
 int drawMenu(Menu menu, HighScore score);
 int drawArena(Arena arena);
@@ -47,6 +48,7 @@ int drawBuilds(Obstacle** builds, size_t numBuilts);
 int drawBomb(int x, int y);
 int drawHighScore(HighScore score);
 int drawMenuBackGround();
+int drawGameBackGround();
 
 #endif
 

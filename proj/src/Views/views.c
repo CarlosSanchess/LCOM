@@ -117,3 +117,8 @@ int drawBuilds(Obstacle** builds, size_t numBuilts){
     }
     return 0;
 }
+
+int drawGameBackGround(){
+    xpm_draw_Background(mapa, 0, 0);
+    return 0;
+}

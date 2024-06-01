@@ -6,8 +6,10 @@
 #include "Models/state.h"
 #include "Views/views.h"
 
+
 void resetGame(Arena *arena);
 int changeToMenu(State *gameState, Arena* arena);
+int changeBackground();
 
 #endif
 
