@@ -38,6 +38,8 @@ int drawBullets(Arena arena);
 int drawBuilds(Obstacle** builds, size_t numBuilts);
 int drawBomb(int x, int y);
 int drawHighScore(HighScore score);
+int drawScore(HighScore score);
+int drawChrono(HighScore score);
 int drawMenuBackGround();
 int drawGameBackGround();
 int drawScoreBackGround();
