@@ -86,7 +86,7 @@ int drawChrono(HighScore score){
     char timeString[9]; 
     sprintf(timeString, "%02d%02d%02d", score.hours, score.minutes, score.seconds);
 
-    int digitWidth = 15;
+    // int digitWidth = 15;
 
     int startX[] = {498, 523, 600, 625, 704, 729};
     int startY[] = {379, 380, 383, 383, 383, 383};
