@@ -49,10 +49,10 @@ int handleTank(Arena* arena){
 }
 int handleMenu(State *gameState ,Menu *menu, Arena* arena){
     if(scanCode == BREAK_CODE(S_KEY)){
-        menu->selected = ((menu->selected + 1) % 2);
+        menu->selected = ((menu->selected + 1) % 3);
     }
     if(scanCode == BREAK_CODE(W_KEY)){
-        menu->selected = ((menu->selected + 1) % 2);
+        menu->selected = ((menu->selected + 1) % 3);
     }
     
     if(scanCode == BREAK_CODE(ENTER_KEY)){

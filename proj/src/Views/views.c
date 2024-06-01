@@ -32,6 +32,9 @@ int drawMenu(Menu menu, HighScore score){
     if(menu.selected == 1){
         xpm_draw_ignore(granade, menu.coord[1][0], menu.coord[1][1], GREEN_SCREEN);  
     }
+    if(menu.selected == 2){
+        xpm_draw_ignore(granade, menu.coord[2][0], menu.coord[2][1], GREEN_SCREEN);  
+    }
     return 0;
 }
 int drawMenuBackGround(){
