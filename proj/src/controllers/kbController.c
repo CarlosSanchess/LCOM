@@ -53,7 +53,8 @@ int handleMenu(State *gameState ,Menu *menu, Arena* arena){
         menu->selected = ((menu->selected + 1) % 3);
     }
     if(scanCode == BREAK_CODE(W_KEY)){
-        menu->selected = ((menu->selected + 1) % 3);
+        if (menu->selected == 0) menu->selected = 2;
+        else menu->selected = ((menu->selected - 1) % 3);
     }
     
     if(scanCode == BREAK_CODE(ENTER_KEY)){
