@@ -13,6 +13,7 @@
 #include "Models/obstacle.h"
 #include "Models/arena.h"
 #include "controllers/builderController.h"
+#include "controllers/gameController.h"
 
 #define MOUSE_SCALING_FACTOR 0.5
 #define SCREEN_WIDTH 1152
@@ -35,9 +36,10 @@ extern int mouse_errorHandling;
  * @param menu Pointer to the Menu structure.
  * @param arena Pointer to the Arena structure.
  * @param mouseInfo Pointer to the MouseInfo structure.
+ * @param score Value of the current HighScore.
  * @return int Returns 0 on success, 1 if the game should exit.
  */
-int handleInterruptMouse(State *gameState, Menu *menu, Arena *arena, MouseInfo *mouseInfo);
+int handleInterruptMouse(State *gameState, Menu *menu, Arena *arena, MouseInfo *mouseInfo, HighScore score);
 
 /**
  * @brief Updates the mouse position based on input.
@@ -52,9 +54,10 @@ void getPositionMouse(MouseInfo *mouseInfo);
  * @param gameState Pointer to the current game state.
  * @param menu Pointer to the Menu structure.
  * @param mouseInfo Pointer to the MouseInfo structure.
+ * @param score Value of the current HighScore.
  * @return int Returns 0 on success, non-zero on failure.
  */
-int processMenu(State *gameState, Menu *menu, MouseInfo *mouseInfo);
+int processMenu(State *gameState, Menu *menu, MouseInfo *mouseInfo, HighScore score);
 
 /**
  * @brief Processes the build actions in the arena based on mouse input.

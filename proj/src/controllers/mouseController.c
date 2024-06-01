@@ -12,12 +12,12 @@ void print_double(double n) {
 
 //TODO ERROR HANDLING
 //No need to pass mouse info
-int handleInterruptMouse(State *gameState, Menu *menu, Arena* arena, MouseInfo *mouseInfo){
+int handleInterruptMouse(State *gameState, Menu *menu, Arena* arena, MouseInfo *mouseInfo, HighScore score){
     
     getPositionMouse(mouseInfo);
 
     if(*gameState == inMenu){
-      if(processMenu(gameState, menu, mouseInfo) != 0){
+      if(processMenu(gameState, menu, mouseInfo, score) != 0){
         return 1;
     }
     }
@@ -74,7 +74,7 @@ void getPositionMouse(MouseInfo *mouseInfo) {
     }
 }
 
-int processMenu(State *gameState, Menu *menu, MouseInfo *mouseInfo){
+int processMenu(State *gameState, Menu *menu, MouseInfo *mouseInfo, HighScore score){
 
     if((mouseInfo->mousePosition.x > 318 && mouseInfo->mousePosition.x < 830) && (mouseInfo->mousePosition.y > 561 && mouseInfo->mousePosition.y < 639)){
         menu->selected = 0;
@@ -94,8 +94,7 @@ int processMenu(State *gameState, Menu *menu, MouseInfo *mouseInfo){
         }
     }else if((mouseInfo->mousePosition.x > 725 && mouseInfo->mousePosition.x < 1107) && (mouseInfo->mousePosition.y > 33 && mouseInfo->mousePosition.y < 106)){
         if(mouse_byte_packet.lb){
-            *gameState = Score;
-            mouseInfo->crossHair = 1;
+            changeToHighScore(gameState, score);
         }
     }else if((mouseInfo->mousePosition.x > 511 && mouseInfo->mousePosition.x < 639) && (mouseInfo->mousePosition.y > 762 && mouseInfo->mousePosition.y < 824)){
         menu->selected = 2;

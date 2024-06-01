@@ -174,5 +174,14 @@ int drawGameBackGround();
  */
 int drawScoreBackGround();
 
+/**
+ * @brief Draws the whole HighScore Page.
+ * 
+ * @return int Returns 0 on success.
+ */
+int drawHighScorePage(HighScore score);
+
+
+
 #endif
 

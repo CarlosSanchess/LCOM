@@ -33,4 +33,12 @@ int changeToMenu(State *gameState, Arena* arena);
  */
 int changeBackground();
 
+/**
+ * @brief Changes the state and the Background to the Highscore.
+ * 
+ * @return int Returns 0 on success, non-zero on failure.
+ */
+int changeToHighScore(State* gameState, HighScore score);
+
+
 #endif // __GAME_CONTROLLER

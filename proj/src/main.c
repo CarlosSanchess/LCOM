@@ -58,7 +58,7 @@ int run(){
                 }
 
                 if (msg.m_notify.interrupts & irq_mouse){ //mouse interrupt
-                  if(handleInterruptMouse(&currentState, &menu, arena, &mouseInfo)){
+                  if(handleInterruptMouse(&currentState, &menu, arena, &mouseInfo, highScore)){
                     safeExit();
                     return 0;
                   }
@@ -77,8 +77,7 @@ int run(){
                     changeBackground(); //Only in first iteration
 
                     processArena(&currentState, arena);
-                    drawArena(*arena);                  
-                    break;
+                    drawArena(*arena);
                   default:
                     break;
                   

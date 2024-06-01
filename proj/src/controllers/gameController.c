@@ -45,3 +45,13 @@ int changeBackground(){
     return 0;
 }
 
+int changeToHighScore(State* gameState, HighScore score){
+
+    if(*gameState == inMenu && backgroundFlag == 0){
+        *gameState = Score;
+        drawHighScorePage(score);
+        backgroundFlag = 1;
+        return 0;
+    }
+    return 1;
+}
