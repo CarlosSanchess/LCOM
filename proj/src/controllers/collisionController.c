@@ -12,7 +12,7 @@ bool checkCollision(Hitbox a, Hitbox b) {
 }
 
 int processCollisions(Arena* arena,size_t index, Hitbox tankHB, Hitbox enemyTankHB,Hitbox bulletHB) {
-    
+
     for (size_t j = 0; j < NUM_OBSTACLES; j++) {
         Obstacle *obstacle = &arena->obstacles[j];
         if (arena->bullets[index]->position.x >= obstacle->x1 - 10 &&  arena->bullets[index]->position.x <= obstacle->x2 + 5 &&
