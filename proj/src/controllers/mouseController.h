@@ -1,3 +1,8 @@
+/**
+ * @file mouseController.h
+ * @brief Declares functions for handling mouse interrupts and controlling game states based on mouse lb clicks.
+ */
+
 #ifndef __MouseController__
 #define __MouseController__
 
@@ -23,10 +28,41 @@
 extern struct packet mouse_byte_packet;
 extern int mouse_errorHandling;
 
-int handleInterruptMouse(State *gameState, Menu *menu, Arena* arena, MouseInfo *mouseInfo);
+/**
+ * @brief Handles mouse interrupts and processes game state changes.
+ * 
+ * @param gameState Pointer to the current game state.
+ * @param menu Pointer to the Menu structure.
+ * @param arena Pointer to the Arena structure.
+ * @param mouseInfo Pointer to the MouseInfo structure.
+ * @return int Returns 0 on success, 1 if the game should exit.
+ */
+int handleInterruptMouse(State *gameState, Menu *menu, Arena *arena, MouseInfo *mouseInfo);
+
+/**
+ * @brief Updates the mouse position based on input.
+ * 
+ * @param mouseInfo Pointer to the MouseInfo structure.
+ */
 void getPositionMouse(MouseInfo *mouseInfo);
+
+/**
+ * @brief Processes the menu interactions based on mouse input.
+ * 
+ * @param gameState Pointer to the current game state.
+ * @param menu Pointer to the Menu structure.
+ * @param mouseInfo Pointer to the MouseInfo structure.
+ * @return int Returns 0 on success, non-zero on failure.
+ */
 int processMenu(State *gameState, Menu *menu, MouseInfo *mouseInfo);
-int processBuild(Arena* arena, MouseInfo* mouseInfo);
 
+/**
+ * @brief Processes the build actions in the arena based on mouse input.
+ * 
+ * @param arena Pointer to the Arena structure.
+ * @param mouseInfo Pointer to the MouseInfo structure.
+ * @return int Returns 0 on success.
+ */
+int processBuild(Arena *arena, MouseInfo *mouseInfo);
 
-#endif
+#endif // __MouseController__

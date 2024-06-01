@@ -54,18 +54,6 @@ void (kbc_ih)() {
     if(read_output_buffer(status, &scanCode) != OK){error = 1;}
 }
 
-
-bool (ready_to_poll)(){
-    uint8_t status;
-    if(read_stat_reg(&status) != OK){
-        return false;
-    }
-    
-    if(status & BIT(0) && !(status & MOUSE_DATA)){
-        return true;
-    }
-    return false;
-}
 int (write_kbc_command)(uint8_t port, uint8_t commandByte) {
 
     uint8_t status;

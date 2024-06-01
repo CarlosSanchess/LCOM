@@ -93,15 +93,6 @@ void buffer_swap() {
     current_buffer = temp;
 }
 
-int (vg_draw_rectangle)(uint16_t x, uint16_t y, uint16_t width, uint16_t height, uint32_t color) {
-    for (unsigned i = 0; i < height; ++i) {
-        for (unsigned j = 0; j < width; ++j) {
-            vg_draw_pixel(x + j, y + i, color, current_buffer);
-        }
-    }
-    return OK;
-}
-
 int (vg_exit_graphics)(){
   free(current_buffer);
   free(background_buffer);
