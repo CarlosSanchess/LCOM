@@ -55,19 +55,19 @@ void freeEnemyTank(EnemyTank *enemyTank) {
 
 void getTankHitBox(tank* tank, Hitbox *hitbox){
 
-   hitbox->x1 = tank->position.x - TANK_WIDTH / 2;
-   hitbox->x2 = tank->position.x + TANK_WIDTH / 2;
-   hitbox->y1 = tank->position.y - TANK_HEIGHT / 2;
-   hitbox->y2 = tank->position.y + TANK_HEIGHT / 2;
+   hitbox->x1 = tank->position.x;
+   hitbox->x2 = tank->position.x + TANK_WIDTH;
+   hitbox->y1 = tank->position.y;
+   hitbox->y2 = tank->position.y + TANK_HEIGHT;
    hitbox->origin = PLAYER;
 }
 
 void getEnemyTankHitBox(EnemyTank* tank, Hitbox *hitbox){
 
-   hitbox->x1 = tank->position.x - TANK_WIDTH / 2;
-   hitbox->x2 = tank->position.x + TANK_WIDTH / 2;
-   hitbox->y1 = tank->position.y - TANK_HEIGHT / 2;
-   hitbox->y2 = tank->position.y + TANK_HEIGHT / 2;
+   hitbox->x1 = tank->position.x;
+   hitbox->x2 = tank->position.x + TANK_WIDTH - 1;
+   hitbox->y1 = tank->position.y;
+   hitbox->y2 = tank->position.y + TANK_HEIGHT;
    hitbox->origin = ENEMY;
 }
 

@@ -77,7 +77,7 @@ int run(){
                       checkAndUpdateHighScore(arena,&highScore);
                     break;
                   case inGame:
-                      processArena(arena);
+                      processArena(&currentState, arena);
 
                     if(!aux){
                       xpm_draw_Background(mapa, 0, 0);
