@@ -80,6 +80,14 @@ void serial_int_handler();
 int serial_config();
 
 /**
+ * @brief Sends a byte through the serial port.
+ *
+ * @param byte Byte to be sent.
+ * @return 0 upon success, non-zero otherwise
+ */
+int send_byte(uint8_t byte);
+
+/**
  * @brief Clears the FIFO buffers of the serial port.
  *
  * @return 0 upon success, non-zero otherwise

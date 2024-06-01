@@ -78,19 +78,23 @@ void serial_int_handler() {
         sys_inb(SERIAL_PORT_COM1 + UART_RBR, &data);  
         fifo_enqueue(&rx_fifo, data);
     }
-    
-    if (iir & UART_IIR_THRI) {  
-        if(serial_stat(&stat) != 0) {
-            return 1;
-        }
-        if(!(stat & WRITE_READY)) {
-            return 1;
-        }
-        if (!fifo_is_empty(&tx_fifo)) {
-            fifo_dequeue(&tx_fifo, &data);
-            sys_outb(SERIAL_PORT_COM1 + UART_THR, data); 
-        }
+}
+
+int send_byte(uint8_t byte) {
+    uint8_t stat;
+    if(serial_stat(&stat) != 0) {
+        return 1;
     }
+    if(!(stat & STAT_READY)) {
+        return 1;
+    }
+    if(stat_error(stat)) {
+        return 1;
+    }
+    if(sys_outb(SERIAL_PORT_COM1 + UART_THR, byte) != OK) {
+        return 1;
+    }
+    return 0;
 }
 
 int serial_config() {
