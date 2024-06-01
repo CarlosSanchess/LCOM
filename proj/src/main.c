@@ -8,7 +8,6 @@
 #include "controllers/timerController.h"
 #include "controllers/rtcController.h"
 
-#include "xpm/mapa1.xpm"
 
 #include "Models/state.h"
 #include "Models/menu.h"
@@ -40,8 +39,6 @@ int run(){
     message msg;
     int ipc_status;
     uint8_t r;
-
-    int aux = 0;
 
     initHighScore(&highScore);
 
@@ -77,13 +74,9 @@ int run(){
                       checkAndUpdateHighScore(arena,&highScore);
                     break;
                   case inGame:
-                      processArena(&currentState, arena);
+                    changeBackground(); //Only in first iteration
 
-                    if(!aux){
-                      xpm_draw_Background(mapa, 0, 0);
-                    }
-                    aux = 1;
-
+                    processArena(&currentState, arena);
                     drawArena(*arena);                  
                     break;
                   default:

@@ -1,5 +1,6 @@
 #include "gameController.h"
 
+static int backgroundFlag = 0;
 
 void resetGame(Arena *arena) {
     freeTank(arena->tank);
@@ -16,6 +17,7 @@ int changeToMenu(State* gameState, Arena* arena){
 
     if (*gameState == inGame) {
             *gameState = inMenu;
+            backgroundFlag = 0;
             resetGame(arena);
             drawMenuBackGround();
             return 0;
@@ -23,6 +25,16 @@ int changeToMenu(State* gameState, Arena* arena){
             return 1;
         }
 
+    return 0;
+}
+
+int changeBackground(){
+    if(backgroundFlag == 0){
+        drawGameBackGround();
+        backgroundFlag = 1;
+            printf("desenhou jogo");
+
+    }
     return 0;
 }
 
