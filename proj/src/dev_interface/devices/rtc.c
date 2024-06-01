@@ -5,7 +5,7 @@
 int rtc_hook_id = 5;
 
 int (rtc_subscribe_int)(uint8_t *bit_no) {
-    *bit_no = rtc_hook_id;
+    *bit_no = BIT(rtc_hook_id);
     if (sys_irqsetpolicy(RTC_IRQ, IRQ_REENABLE, &rtc_hook_id) != OK) {
         fprintf(stderr, "Error in rtc_subscribe_int\n");
         return ERROR;
