@@ -92,12 +92,18 @@ int processMenu(State *gameState, Menu *menu, MouseInfo *mouseInfo){
                 mouseInfo->crossHair = 1;
             }
         }
-    } else if((mouseInfo->mousePosition.x > 511 && mouseInfo->mousePosition.x < 639) && (mouseInfo->mousePosition.y > 762 && mouseInfo->mousePosition.y < 824)){
+    }else if((mouseInfo->mousePosition.x > 725 && mouseInfo->mousePosition.x < 1107) && (mouseInfo->mousePosition.y > 33 && mouseInfo->mousePosition.y < 106)){
+        if(mouse_byte_packet.lb){
+            if(menu->selected == 2){
+                *gameState = Score;
+                mouseInfo->crossHair = 1;
+            }
+        }
+    }else if((mouseInfo->mousePosition.x > 511 && mouseInfo->mousePosition.x < 639) && (mouseInfo->mousePosition.y > 762 && mouseInfo->mousePosition.y < 824)){
         if(mouse_byte_packet.lb){
             return 2;
         }
     }
-    
     return 0;
 }
 

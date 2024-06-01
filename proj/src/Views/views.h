@@ -8,21 +8,12 @@
 #include "Models/bullet.h"
 #include "Models/HighScore.h"
 #include "dev_interface/devices/video_gr.h"
-#include "../xpm/numbers/0.xpm"
-#include "../xpm/numbers/1.xpm"
-#include "../xpm/numbers/2.xpm"
-#include "../xpm/numbers/3.xpm"
-#include "../xpm/numbers/4.xpm"
-#include "../xpm/numbers/5.xpm"
-#include "../xpm/numbers/7.xpm"
-#include "../xpm/numbers/8.xpm"
-#include "../xpm/numbers/9.xpm"
-#include "../xpm/numbers/:.xpm"
-#include "../xpm/highscore.xpm"
 #include "../xpm/bullet.xpm"
 #include "../xpm/tank_green.xpm"
 #include "../xpm/tank_red.xpm"
 #include "../xpm/bomb.xpm"
+#include "../xpm/highscore.xpm"
+#include "../xpm/menuScore.xpm"
 #include "../xpm/blocks/block1.xpm"
 #include "../xpm/blocks/block2.xpm"
 #include "../xpm/blocks/block3.xpm"
@@ -50,6 +41,7 @@ int drawBomb(bomb bomba);
 int drawHighScore(HighScore score);
 int drawMenuBackGround();
 int drawGameBackGround();
+int drawScoreBackGround();
 
 #endif
 

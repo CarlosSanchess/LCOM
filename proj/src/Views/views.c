@@ -46,6 +46,44 @@ int drawHighScore(HighScore score){
     return 0;
 }
 
+int drawChrono(HighScore score){
+    
+    char timeString[9]; 
+    sprintf(timeString, "%02d%02d%02d", score.hours, score.minutes, score.seconds);
+
+    int digitWidth = 15;
+
+    int startX[] = {498, 523, 600, 625, 704, 729};
+    int startY[] = {379, 380, 383, 383, 383, 383};
+
+    for (size_t i = 0; i < strlen(timeString); ++i) {
+        int digit = timeString[i] - '0';
+        
+        int xPos = startX[i];
+        int yPos = startY[i];
+
+        switch (digit) {
+            case 0: xpm_draw_ignore(number0, xPos, yPos, GREEN_SCREEN); break;
+            case 1: xpm_draw_ignore(number1, xPos, yPos, GREEN_SCREEN); break;
+            case 2: xpm_draw_ignore(number2, xPos, yPos, GREEN_SCREEN); break;
+            case 3: xpm_draw_ignore(number3, xPos, yPos, GREEN_SCREEN); break;
+            case 4: xpm_draw_ignore(number4, xPos, yPos, GREEN_SCREEN); break;
+            case 5: xpm_draw_ignore(number5, xPos, yPos, GREEN_SCREEN); break;
+            case 6: xpm_draw_ignore(number6, xPos, yPos, GREEN_SCREEN); break;
+            case 7: xpm_draw_ignore(number7, xPos, yPos, GREEN_SCREEN); break;
+            case 8: xpm_draw_ignore(number8, xPos, yPos, GREEN_SCREEN); break;
+            case 9: xpm_draw_ignore(number9, xPos, yPos, GREEN_SCREEN); break;
+        }
+    }
+
+    return 0;
+}
+
+int drawScoreBackGround(){
+    xpm_draw_Background(scoreXPM, 0, 0);
+    return 0;
+}
+
 int drawMouse(MouseInfo mouse){
     if((mouse.mousePosition.x > 0 && mouse.mousePosition.x < 1152) && (mouse.mousePosition.y > 0 && mouse.mousePosition.y < 864)){
         if(mouse.crossHair == 0){

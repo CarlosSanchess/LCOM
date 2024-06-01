@@ -4,7 +4,8 @@
 typedef enum{
   inMenu,
   inGame,
-  Multi
+  Multi,
+  Score
 }State;
 
 
