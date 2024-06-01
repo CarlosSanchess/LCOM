@@ -20,6 +20,9 @@ int handleInterruptKBC(State *gameState, Menu *menuInfo, Arena *arena){
         handleTank(arena);
         handleArena(arena);
     }
+    if(*gameState == Score){
+        if(handleScore(gameState) != 0){return 1;}
+    }
     return 0;
 }
 
@@ -64,3 +67,11 @@ int handleMenu(State *gameState ,Menu *menu, Arena* arena){
     }
     return 0;
 }
+
+int handleScore(State *gameState){
+    if(scanCode == BREAK_CODE(ESC_KEY)){
+        changeToMenuFromScores(gameState);
+    }
+    return 0;
+}
+

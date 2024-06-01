@@ -52,4 +52,13 @@ int handleTank(Arena *arena);
  */
 int handleArena(Arena *arena);
 
+/**
+ * @brief Handles HighScore Page interactions based on keyboard input.
+ * 
+ * @param gameState Pointer to the state structure.
+ * @return int Returns 0 on success.
+ */
+int handleScore(State *gameState);
+
+
 #endif // __KBController__

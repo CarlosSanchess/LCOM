@@ -37,6 +37,13 @@ int changeToMenu(State* gameState, Arena* arena){
     return 0;
 }
 
+int changeToMenuFromScores(State* gameState){
+
+    *gameState = inMenu;
+    drawMenuBackGround();
+
+    return 0;
+}
 int changeBackground(){
     if(backgroundFlag == 0){
         drawGameBackGround();
@@ -47,10 +54,9 @@ int changeBackground(){
 
 int changeToHighScore(State* gameState, HighScore score){
 
-    if(*gameState == inMenu && backgroundFlag == 0){
+    if(*gameState == inMenu){
         *gameState = Score;
         drawHighScorePage(score);
-        backgroundFlag = 1;
         return 0;
     }
     return 1;

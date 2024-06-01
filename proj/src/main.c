@@ -78,6 +78,11 @@ int run(){
 
                     processArena(&currentState, arena);
                     drawArena(*arena);
+                    break;
+                  case Score:
+                      drawChrono(highScore);
+                      drawHighScore(highScore);
+                    break;
                   default:
                     break;
                   

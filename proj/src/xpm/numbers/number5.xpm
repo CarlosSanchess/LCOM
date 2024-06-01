@@ -109,7 +109,7 @@ static  xpm_row_t const number5[] = {
 "=. c #A2A2A2",
 "-. c #A1A7AC",
 ";. c #A2A9AC",
-":. c gray68",
+":. c #ADADAD",
 ">. c #A6AEB3",
 ",. c #AAAEB1",
 "<. c #A5B4BD",

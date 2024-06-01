@@ -2,11 +2,11 @@
 static  xpm_row_t const number9resize[] = {
 /* columns rows colors chars-per-pixel */
 "70 80 152 2",
-"   c black",
-".  c gray5",
+"   c #000000",
+".  c #0d0d0d",
 "X  c #0F1010",
 "o  c #100F0F",
-"O  c gray7",
+"O  c #121212",
 "+  c #171818",
 "@  c #181717",
 "#  c #1B1B1B",
@@ -16,7 +16,7 @@ static  xpm_row_t const number9resize[] = {
 "*  c #232424",
 "=  c #262728",
 "-  c #272829",
-";  c gray17",
+";  c #2b2b2b",
 ":  c #2E2F30",
 ">  c #2F3031",
 ",  c #323334",
