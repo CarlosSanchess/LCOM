@@ -12,7 +12,7 @@
 #define SHOOTD 120   ///< Delay for shooting 
 #define DRAWD 600    ///< Delay for drawing 
 #define BUILDD 60    ///< Delay for building 
-#define BOMBD 40     ///< Delay for bomb activation
+#define BOMBD 25     ///< Delay for bomb activation
 
 static unsigned int timerCounter = 0; ///< Counter for timer events
 

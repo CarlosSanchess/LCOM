@@ -181,6 +181,13 @@ int drawScoreBackGround();
  */
 int drawHighScorePage(HighScore score);
 
+/**
+ * @brief Draws the whole the chrono and score stats.
+ * 
+ * @return int Returns 0 on success.
+ */
+int drawStats(HighScore score);
+
 
 
 #endif

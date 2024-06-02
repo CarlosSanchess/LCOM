@@ -48,30 +48,28 @@ int drawHighScore(HighScore score){
 
 int drawScore(HighScore score){
     
-    char scoreString[20]; 
+    char scoreString[20] = {0}; 
     sprintf(scoreString, "%d", score.score);
-
     int digitWidth = 20;
 
     int startX = 610;
-    int startY = 275;
+    int startY = 250;
 
     for (size_t i = 0; i < strlen(scoreString); ++i) {
         int digit = scoreString[i] - '0';
-
         int xPos = startX + i * digitWidth;
 
         switch (digit) {
-            case 0: xpm_draw_ignore(number0resize, xPos, startY, GREEN_SCREEN); break;
-            case 1: xpm_draw_ignore(number1resize, xPos, startY, GREEN_SCREEN); break;
-            case 2: xpm_draw_ignore(number2resize, xPos, startY, GREEN_SCREEN); break;
-            case 3: xpm_draw_ignore(number3resize, xPos, startY, GREEN_SCREEN); break;
-            case 4: xpm_draw_ignore(number4resize, xPos, startY, GREEN_SCREEN); break;
-            case 5: xpm_draw_ignore(number5resize, xPos, startY, GREEN_SCREEN); break;
-            case 6: xpm_draw_ignore(number6resize, xPos, startY, GREEN_SCREEN); break;
-            case 7: xpm_draw_ignore(number7resize, xPos, startY, GREEN_SCREEN); break;
-            case 8: xpm_draw_ignore(number8resize, xPos, startY, GREEN_SCREEN); break;
-            case 9: xpm_draw_ignore(number9resize, xPos, startY, GREEN_SCREEN); break;
+            case 0: xpm_draw_ignore(number0, xPos, startY, GREEN_SCREEN); break;
+            case 1: xpm_draw_ignore(number1, xPos, startY, GREEN_SCREEN); break;
+            case 2: xpm_draw_ignore(number2, xPos, startY, GREEN_SCREEN); break;
+            case 3: xpm_draw_ignore(number3, xPos, startY, GREEN_SCREEN); break;
+            case 4: xpm_draw_ignore(number4, xPos, startY, GREEN_SCREEN); break;
+            case 5: xpm_draw_ignore(number5, xPos, startY, GREEN_SCREEN); break;
+            case 6: xpm_draw_ignore(number6, xPos, startY, GREEN_SCREEN); break;
+            case 7: xpm_draw_ignore(number7, xPos, startY, GREEN_SCREEN); break;
+            case 8: xpm_draw_ignore(number8, xPos, startY, GREEN_SCREEN); break;
+            case 9: xpm_draw_ignore(number9, xPos, startY, GREEN_SCREEN); break;
         }
     }
 
@@ -83,8 +81,8 @@ int drawChrono(HighScore score){
     char timeString[9]; 
     sprintf(timeString, "%02d%02d%02d", score.hours, score.minutes, score.seconds);
 
-    int startX[] = {498, 523, 600, 625, 704, 729};
-    int startY = 383;
+    int startX[] = {485, 513, 590, 620, 694, 725};
+    int startY = 355;
 
     for (size_t i = 0; i < strlen(timeString); ++i) {
         int digit = timeString[i] - '0';
@@ -117,8 +115,7 @@ int drawScoreBackGround(){
 int drawHighScorePage(HighScore score){
 
     drawScoreBackGround();
-    drawChrono(score);
-    drawScore(score);
+    drawStats(score);
 
     return 0;
 }
@@ -178,5 +175,10 @@ int drawBomb(bomb bomb){
     return 0;
 }
 
+int drawStats(HighScore score){ 
+    drawChrono(score);
+    drawScore(score);
 
+    return 0;
+}
 

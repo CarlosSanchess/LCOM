@@ -10,7 +10,7 @@ PROG=proj
 
 # source code files to be compiled
 
-SRCS = main.c utils.c kbc.c mouse.c rtc.c timer.c video_gr.c views.c arena.c tank.c obstacle.c bullet.c arenaController.c mouseController.c rtcController.c enemyController.c tankController.c bulletController.c kbController.c timerController.c collisionController.c builderController.c gameController.c
+SRCS = main.c utils.c kbc.c mouse.c rtc.c timer.c video_gr.c serial_port.c views.c arena.c tank.c obstacle.c bullet.c arenaController.c mouseController.c rtcController.c enemyController.c tankController.c bulletController.c kbController.c timerController.c collisionController.c builderController.c gameController.c serialPortController.c 
 
 # additional compilation flags
 # "-Wall -Wextra -Werror -I . -std=c11 -Wno-unused-parameter" are already set

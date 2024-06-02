@@ -40,6 +40,7 @@ int processCollisions(Arena* arena,size_t index, Hitbox tankHB, Hitbox enemyTank
         arena->bomba.pos.y = tankHB.y1;
         arena->bomba.pos.x = tankHB.x1;
         arena->bomba.active = true;
+        arena->tank->canShoot = false;
         return 2;
     }
 
@@ -49,6 +50,7 @@ int processCollisions(Arena* arena,size_t index, Hitbox tankHB, Hitbox enemyTank
         arena->curr_score++;
         arena->bomba.pos.y = enemyTankHB.y1;
         arena->bomba.pos.x = enemyTankHB.x1;
+        arena->enemyTank->canShoot = false;
 
         arena->bomba.active = true;
         return 2;

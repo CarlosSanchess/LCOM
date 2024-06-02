@@ -24,6 +24,8 @@ const char *highscoreFile = "highscore.txt";
 HighScore highScore;
 bool sp_handshake = false;
 
+MSTATE mstate = INIT;
+
 //kbc
 uint8_t irq_kbc;
 //mouse
@@ -54,7 +56,7 @@ int run(){
         switch (_ENDPOINT_P(msg.m_source)) {
             case HARDWARE: 
                  if (msg.m_notify.interrupts & irq_kbc){  //kb interrupt
-                  if(handleInterruptKBC(&currentState, &menu, arena)){
+                  if(handleInterruptKBC(&currentState, &menu, arena, &mstate)){
                     safeExit();
                     return 0;
                   }
@@ -68,8 +70,9 @@ int run(){
                 }
 
                 if(msg.m_notify.interrupts & irq_sp){ //serial port interrupt
-                  serial_int_handler();
-
+                   if(currentState == Multi){
+                       handleSPInterrupt(&mstate);
+                   }
                 }
 
                 if(msg.m_notify.interrupts & irq_timer){ //timer interrupt
@@ -88,8 +91,7 @@ int run(){
                     drawArena(*arena);
                     break;
                   case Score:
-                      drawChrono(highScore);
-                      drawHighScore(highScore);
+                      drawStats(highScore);
                     break;
                   default:
                     break;
@@ -130,6 +132,10 @@ int safeExit(){
 
      return 1;
    }
+  if(serial_unsubscribe_int() != 0){
+      fprintf(stderr, "Failed to unsub serial interrrupts.");
+      return 1;
+  }
 
    if(write_mouse(DISABLE_DATA_REPORT) != 0){
     return 1;
@@ -166,6 +172,9 @@ int setUp(){
      return 1;
   }
 
+  if(serial_subscribe_int(&irq_sp) != 0){
+    return 1;
+  }
   return 0;
 }
 int main(int argc, char *argv[]) {

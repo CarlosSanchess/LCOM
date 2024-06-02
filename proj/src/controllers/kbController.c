@@ -1,7 +1,7 @@
 #include "kbController.h"
 extern uint8_t scanCode;
 
-int handleInterruptKBC(State *gameState, Menu *menuInfo, Arena *arena){
+int handleInterruptKBC(State *gameState, Menu *menuInfo, Arena *arena, MSTATE *mstate){
     kbc_ih(); 
     if (scanCode == BREAK_CODE(ESC_KEY)) {
         if (*gameState == inGame) {
@@ -10,6 +10,10 @@ int handleInterruptKBC(State *gameState, Menu *menuInfo, Arena *arena){
         } else if (*gameState == inMenu) {
             return 1;
         }
+    }
+    if(scanCode == BREAK_CODE(A_KEY)){
+        printf("handle INT");
+        handleSPInterrupt(mstate);
     }
     if(*gameState == inMenu){
         if(handleMenu(gameState, menuInfo, arena)){

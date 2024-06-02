@@ -2,7 +2,7 @@
 static  xpm_row_t const number9[] = {
 /* columns rows colors chars-per-pixel */
 "40 46 125 2",
-"   c black",
+"   c #4ee44e",
 ".  c #0C0C0C",
 "X  c #111111",
 "o  c #1B1B1B",

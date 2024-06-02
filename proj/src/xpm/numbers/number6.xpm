@@ -94,7 +94,7 @@ static  xpm_row_t const number6[] = {
 "{  c #48CA48",
 "}  c #48D348",
 "|  c #4BDA4B",
-" . c #4DE34D",
+" . c #4ee44e",
 ".. c #74838B",
 "X. c #7D8285",
 "o. c #7A868C",

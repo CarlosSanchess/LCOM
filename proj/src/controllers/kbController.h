@@ -13,6 +13,7 @@
 #include "controllers/tankController.h"
 #include "controllers/bulletController.h"
 #include "controllers/gameController.h"
+#include "controllers/serialPortController.h"
 
 extern uint8_t scanCode;
 
@@ -24,7 +25,7 @@ extern uint8_t scanCode;
  * @param arena Pointer to the Arena structure.
  * @return int Returns 0 on success, 1 if the game should exit.
  */
-int handleInterruptKBC(State *gameState, Menu *menu, Arena *arena);
+int handleInterruptKBC(State *gameState, Menu *menuInfo, Arena *arena, MSTATE *mstate);
 
 /**
  * @brief Processes the menu interactions based on keyboard input.
