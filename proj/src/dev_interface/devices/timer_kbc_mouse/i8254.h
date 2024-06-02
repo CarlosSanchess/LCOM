@@ -1,13 +1,13 @@
+/**
+ * @file i8254.h
+ * @brief Constants and function declarations for interfacing with the i8042 keyboard controller.
+ */
+
+
 #ifndef _LCOM_I8254_H_
 #define _LCOM_I8254_H_
 
 #include <lcom/lcf.h>
-
-/** @defgroup i8254 i8254
- * @{
- *
- * Constants for programming the i8254 Timer.
- */
 
 #define TIMER_FREQ 1193182 /**< @brief clock frequency for timer in PC and AT */
 #define TIMER0_IRQ 0 /**< @brief Timer 0 IRQ line */
