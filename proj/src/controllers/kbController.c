@@ -11,9 +11,6 @@ int handleInterruptKBC(State *gameState, Menu *menuInfo, Arena *arena, MSTATE *m
             return 1;
         }
     }
-    if(scanCode == BREAK_CODE(A_KEY)){
-        handleSPInterrupt(mstate);
-    }
     if(*gameState == inMenu){
         if(handleMenu(gameState, menuInfo, arena)){
         return 1;
