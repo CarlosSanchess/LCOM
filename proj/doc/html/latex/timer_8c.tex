@@ -1,0 +1,244 @@
+\doxysection{LCOM-\/main/proj/src/dev\+\_\+interface/devices/timer\+\_\+kbc\+\_\+mouse/timer.c File Reference}
+\hypertarget{timer_8c}{}\label{timer_8c}\index{LCOM-\/main/proj/src/dev\_interface/devices/timer\_kbc\_mouse/timer.c@{LCOM-\/main/proj/src/dev\_interface/devices/timer\_kbc\_mouse/timer.c}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/timer.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include "{}timer.\+h"{}}\newline
+Include dependency graph for timer.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{timer_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{timer_8c_a21f22bbb7b9fe4534635bce1c68c2e94}{INI\+\_\+\+VALUES}}(x)~(x \& 0x30)
+\item 
+\#define \mbox{\hyperlink{timer_8c_a1d1040d9840a33ba8756c9583c102353}{COUNT\+\_\+\+MODE}}(x)~(x \& 0x0E)
+\item 
+\#define \mbox{\hyperlink{timer_8c_af3c11044f4e79f03f81b75d3a7e18306}{BASE\+\_\+\+VALUES}}(x)~(x \& 0x01)
+\item 
+\#define \mbox{\hyperlink{timer_8c_a276404642106aad084f9849211859874}{TIMER\+\_\+\+TO\+\_\+\+PORT}}(x)~(x + 0x40)
+\item 
+\#define \mbox{\hyperlink{timer_8c_a8fe83ac76edc595f6b98cd4a4127aed5}{ERROR}}~1
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{timer_8c_aca1506be74dfc71c6f90772ca269c619}{timer\+\_\+set\+\_\+frequency}} (uint8\+\_\+t timer, uint32\+\_\+t freq)
+\begin{DoxyCompactList}\small\item\em Sets the frequency of the specified timer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{timer_8c_a6f786481e80308348d629d605ffa2d84}{timer\+\_\+subscribe\+\_\+int}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}bit\+\_\+no)
+\begin{DoxyCompactList}\small\item\em Subscribes to timer interrupts. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{timer_8c_ab9eea51549744bca5c5c923b388bb4ee}{timer\+\_\+unsubscribe\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes from timer interrupts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{timer_8c_a10fc9c867b15c7da6649311c9987cd17}{timer\+\_\+int\+\_\+handler}} ()
+\begin{DoxyCompactList}\small\item\em Timer interrupt handler that increments the timer counter. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{timer_8c_afafc1891c876602d55b894103b1841a7}{timer\+\_\+get\+\_\+conf}} (uint8\+\_\+t timer, uint8\+\_\+t \texorpdfstring{$\ast$}{*}st)
+\begin{DoxyCompactList}\small\item\em Retrieves the configuration of the specified timer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{timer_8c_a2f6a1c71f61dce5b3b6eecba83e7d7e9}{timer\+\_\+display\+\_\+conf}} (uint8\+\_\+t timer, uint8\+\_\+t st, enum timer\+\_\+status\+\_\+field field)
+\begin{DoxyCompactList}\small\item\em Displays the configuration of the specified timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{timer_8c_ab54283a672f4b80136585c9973814206}{timer\+\_\+counter}} = 0
+\item 
+int \mbox{\hyperlink{timer_8c_a96f78a87d064e47d627d222f67a8d012}{hook\+\_\+id}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{timer_8c_af3c11044f4e79f03f81b75d3a7e18306}\label{timer_8c_af3c11044f4e79f03f81b75d3a7e18306} 
+\index{timer.c@{timer.c}!BASE\_VALUES@{BASE\_VALUES}}
+\index{BASE\_VALUES@{BASE\_VALUES}!timer.c@{timer.c}}
+\doxysubsubsection{\texorpdfstring{BASE\_VALUES}{BASE\_VALUES}}
+{\footnotesize\ttfamily \#define BASE\+\_\+\+VALUES(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(x \& 0x01)}
+
+\Hypertarget{timer_8c_a1d1040d9840a33ba8756c9583c102353}\label{timer_8c_a1d1040d9840a33ba8756c9583c102353} 
+\index{timer.c@{timer.c}!COUNT\_MODE@{COUNT\_MODE}}
+\index{COUNT\_MODE@{COUNT\_MODE}!timer.c@{timer.c}}
+\doxysubsubsection{\texorpdfstring{COUNT\_MODE}{COUNT\_MODE}}
+{\footnotesize\ttfamily \#define COUNT\+\_\+\+MODE(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(x \& 0x0E)}
+
+\Hypertarget{timer_8c_a8fe83ac76edc595f6b98cd4a4127aed5}\label{timer_8c_a8fe83ac76edc595f6b98cd4a4127aed5} 
+\index{timer.c@{timer.c}!ERROR@{ERROR}}
+\index{ERROR@{ERROR}!timer.c@{timer.c}}
+\doxysubsubsection{\texorpdfstring{ERROR}{ERROR}}
+{\footnotesize\ttfamily \#define ERROR~1}
+
+\Hypertarget{timer_8c_a21f22bbb7b9fe4534635bce1c68c2e94}\label{timer_8c_a21f22bbb7b9fe4534635bce1c68c2e94} 
+\index{timer.c@{timer.c}!INI\_VALUES@{INI\_VALUES}}
+\index{INI\_VALUES@{INI\_VALUES}!timer.c@{timer.c}}
+\doxysubsubsection{\texorpdfstring{INI\_VALUES}{INI\_VALUES}}
+{\footnotesize\ttfamily \#define INI\+\_\+\+VALUES(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(x \& 0x30)}
+
+\Hypertarget{timer_8c_a276404642106aad084f9849211859874}\label{timer_8c_a276404642106aad084f9849211859874} 
+\index{timer.c@{timer.c}!TIMER\_TO\_PORT@{TIMER\_TO\_PORT}}
+\index{TIMER\_TO\_PORT@{TIMER\_TO\_PORT}!timer.c@{timer.c}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TO\_PORT}{TIMER\_TO\_PORT}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TO\+\_\+\+PORT(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(x + 0x40)}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{timer_8c_a2f6a1c71f61dce5b3b6eecba83e7d7e9}\label{timer_8c_a2f6a1c71f61dce5b3b6eecba83e7d7e9} 
+\index{timer.c@{timer.c}!timer\_display\_conf@{timer\_display\_conf}}
+\index{timer\_display\_conf@{timer\_display\_conf}!timer.c@{timer.c}}
+\doxysubsubsection{\texorpdfstring{timer\_display\_conf()}{timer\_display\_conf()}}
+{\footnotesize\ttfamily int timer\+\_\+display\+\_\+conf (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{timer,  }\item[{uint8\+\_\+t}]{st,  }\item[{enum timer\+\_\+status\+\_\+field}]{field }\end{DoxyParamCaption})}
+
+
+
+Displays the configuration of the specified timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timer} & Timer to display configuration for (0, 1, or 2). \\
+\hline
+{\em st} & Configuration byte. \\
+\hline
+{\em field} & Field of the timer status to display (all, initialization mode, mode, or base). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 on failure. 
+\end{DoxyReturn}
+\Hypertarget{timer_8c_afafc1891c876602d55b894103b1841a7}\label{timer_8c_afafc1891c876602d55b894103b1841a7} 
+\index{timer.c@{timer.c}!timer\_get\_conf@{timer\_get\_conf}}
+\index{timer\_get\_conf@{timer\_get\_conf}!timer.c@{timer.c}}
+\doxysubsubsection{\texorpdfstring{timer\_get\_conf()}{timer\_get\_conf()}}
+{\footnotesize\ttfamily int timer\+\_\+get\+\_\+conf (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{timer,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{st }\end{DoxyParamCaption})}
+
+
+
+Retrieves the configuration of the specified timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timer} & Timer to get configuration for (0, 1, or 2). \\
+\hline
+{\em st} & Address of the variable to store the configuration byte. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 on failure. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{timer_8c_afafc1891c876602d55b894103b1841a7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{timer_8c_afafc1891c876602d55b894103b1841a7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{timer_8c_a10fc9c867b15c7da6649311c9987cd17}\label{timer_8c_a10fc9c867b15c7da6649311c9987cd17} 
+\index{timer.c@{timer.c}!timer\_int\_handler@{timer\_int\_handler}}
+\index{timer\_int\_handler@{timer\_int\_handler}!timer.c@{timer.c}}
+\doxysubsubsection{\texorpdfstring{timer\_int\_handler()}{timer\_int\_handler()}}
+{\footnotesize\ttfamily void timer\+\_\+int\+\_\+handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Timer interrupt handler that increments the timer counter. 
+
+\Hypertarget{timer_8c_aca1506be74dfc71c6f90772ca269c619}\label{timer_8c_aca1506be74dfc71c6f90772ca269c619} 
+\index{timer.c@{timer.c}!timer\_set\_frequency@{timer\_set\_frequency}}
+\index{timer\_set\_frequency@{timer\_set\_frequency}!timer.c@{timer.c}}
+\doxysubsubsection{\texorpdfstring{timer\_set\_frequency()}{timer\_set\_frequency()}}
+{\footnotesize\ttfamily int timer\+\_\+set\+\_\+frequency (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{timer,  }\item[{uint32\+\_\+t}]{freq }\end{DoxyParamCaption})}
+
+
+
+Sets the frequency of the specified timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timer} & Timer to set the frequency for (0, 1, or 2). \\
+\hline
+{\em freq} & Desired frequency. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 on failure. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{timer_8c_aca1506be74dfc71c6f90772ca269c619_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{timer_8c_a6f786481e80308348d629d605ffa2d84}\label{timer_8c_a6f786481e80308348d629d605ffa2d84} 
+\index{timer.c@{timer.c}!timer\_subscribe\_int@{timer\_subscribe\_int}}
+\index{timer\_subscribe\_int@{timer\_subscribe\_int}!timer.c@{timer.c}}
+\doxysubsubsection{\texorpdfstring{timer\_subscribe\_int()}{timer\_subscribe\_int()}}
+{\footnotesize\ttfamily int timer\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{bit\+\_\+no }\end{DoxyParamCaption})}
+
+
+
+Subscribes to timer interrupts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+\_\+no} & Address of the variable to store the interrupt bit mask. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 on failure. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{timer_8c_a6f786481e80308348d629d605ffa2d84_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{timer_8c_ab9eea51549744bca5c5c923b388bb4ee}\label{timer_8c_ab9eea51549744bca5c5c923b388bb4ee} 
+\index{timer.c@{timer.c}!timer\_unsubscribe\_int@{timer\_unsubscribe\_int}}
+\index{timer\_unsubscribe\_int@{timer\_unsubscribe\_int}!timer.c@{timer.c}}
+\doxysubsubsection{\texorpdfstring{timer\_unsubscribe\_int()}{timer\_unsubscribe\_int()}}
+{\footnotesize\ttfamily int timer\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unsubscribes from timer interrupts. 
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 on failure. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{timer_8c_ab9eea51549744bca5c5c923b388bb4ee_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{timer_8c_a96f78a87d064e47d627d222f67a8d012}\label{timer_8c_a96f78a87d064e47d627d222f67a8d012} 
+\index{timer.c@{timer.c}!hook\_id@{hook\_id}}
+\index{hook\_id@{hook\_id}!timer.c@{timer.c}}
+\doxysubsubsection{\texorpdfstring{hook\_id}{hook\_id}}
+{\footnotesize\ttfamily int hook\+\_\+id = 0}
+
+\Hypertarget{timer_8c_ab54283a672f4b80136585c9973814206}\label{timer_8c_ab54283a672f4b80136585c9973814206} 
+\index{timer.c@{timer.c}!timer\_counter@{timer\_counter}}
+\index{timer\_counter@{timer\_counter}!timer.c@{timer.c}}
+\doxysubsubsection{\texorpdfstring{timer\_counter}{timer\_counter}}
+{\footnotesize\ttfamily unsigned int timer\+\_\+counter = 0}
+

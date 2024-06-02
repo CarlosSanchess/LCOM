@@ -1,0 +1,11 @@
+<map id="changeToMenuFromScores" name="changeToMenuFromScores">
+<area shape="rect" id="Node000001" title="Changes the state and the Background to the Menu, from the HighScores." alt="" coords="5,5,186,32"/>
+<area shape="rect" id="Node000002" href="$views_8c.html#a6b5e5ea4778b78a346207b59bc4c3158" title="Draws the menu background." alt="" coords="234,5,386,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,16,218,16,218,21,186,21"/>
+<area shape="rect" id="Node000003" href="$video__gr_8c.html#a0ee44da8a7c935a067fae7ca09d8f7f9" title="Draws an XPM image as the background." alt="" coords="434,5,590,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="387,16,419,16,419,21,387,21"/>
+<area shape="rect" id="Node000004" href="$video__gr_8c.html#a5c4e9586406f8d2cf7f2a5db188b6686" title="Draws a pixel at specified coordinates with a given color." alt="" coords="638,5,740,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="591,16,623,16,623,21,591,21"/>
+<area shape="rect" id="Node000005" href="$video__gr_8c.html#a3190e4645454cb66c939eadd3dbad84a" title="Gets the screen width." alt="" coords="788,5,864,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="740,16,772,16,772,21,740,21"/>
+</map>

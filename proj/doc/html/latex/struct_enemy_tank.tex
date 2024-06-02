@@ -1,0 +1,85 @@
+\doxysection{Enemy\+Tank Struct Reference}
+\hypertarget{struct_enemy_tank}{}\label{struct_enemy_tank}\index{EnemyTank@{EnemyTank}}
+
+
+Structure to store enemy tank details.  
+
+
+
+
+{\ttfamily \#include $<$Tank.\+h$>$}
+
+
+
+Collaboration diagram for Enemy\+Tank\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{struct_enemy_tank__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structposition}{position}} \mbox{\hyperlink{struct_enemy_tank_a080775109cda5d659c5c1922855d7fc4}{position}}
+\item 
+int \mbox{\hyperlink{struct_enemy_tank_ae07b65cc92c33adebca39c1270248d6e}{speed}}
+\item 
+int \mbox{\hyperlink{struct_enemy_tank_a1c725041dd5e9bc7283c434a336e4680}{direction}}
+\item 
+int \mbox{\hyperlink{struct_enemy_tank_a8626ec5d5bf557198398ee7bcf695acb}{current\+Waypoint}}
+\item 
+bool \mbox{\hyperlink{struct_enemy_tank_acf99e5cf24a1ccfd83e3f7c24e17d5c9}{following\+Player}}
+\item 
+bool \mbox{\hyperlink{struct_enemy_tank_a67e44b808031e991a56ad6b47b74d4a5}{can\+Shoot}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure to store enemy tank details. 
+
+This structure holds the position, speed, movement, rotation, shooting capability, and direction of the enemy tank. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_enemy_tank_a67e44b808031e991a56ad6b47b74d4a5}\label{struct_enemy_tank_a67e44b808031e991a56ad6b47b74d4a5} 
+\index{EnemyTank@{EnemyTank}!canShoot@{canShoot}}
+\index{canShoot@{canShoot}!EnemyTank@{EnemyTank}}
+\doxysubsubsection{\texorpdfstring{canShoot}{canShoot}}
+{\footnotesize\ttfamily bool Enemy\+Tank\+::can\+Shoot}
+
+Whether the enemy tank can shoot \Hypertarget{struct_enemy_tank_a8626ec5d5bf557198398ee7bcf695acb}\label{struct_enemy_tank_a8626ec5d5bf557198398ee7bcf695acb} 
+\index{EnemyTank@{EnemyTank}!currentWaypoint@{currentWaypoint}}
+\index{currentWaypoint@{currentWaypoint}!EnemyTank@{EnemyTank}}
+\doxysubsubsection{\texorpdfstring{currentWaypoint}{currentWaypoint}}
+{\footnotesize\ttfamily int Enemy\+Tank\+::current\+Waypoint}
+
+Current waypoint index \Hypertarget{struct_enemy_tank_a1c725041dd5e9bc7283c434a336e4680}\label{struct_enemy_tank_a1c725041dd5e9bc7283c434a336e4680} 
+\index{EnemyTank@{EnemyTank}!direction@{direction}}
+\index{direction@{direction}!EnemyTank@{EnemyTank}}
+\doxysubsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily int Enemy\+Tank\+::direction}
+
+Direction of the enemy tank (0\+: UP, 1\+: RIGHT, 2\+: DOWN, 3\+: LEFT) \Hypertarget{struct_enemy_tank_acf99e5cf24a1ccfd83e3f7c24e17d5c9}\label{struct_enemy_tank_acf99e5cf24a1ccfd83e3f7c24e17d5c9} 
+\index{EnemyTank@{EnemyTank}!followingPlayer@{followingPlayer}}
+\index{followingPlayer@{followingPlayer}!EnemyTank@{EnemyTank}}
+\doxysubsubsection{\texorpdfstring{followingPlayer}{followingPlayer}}
+{\footnotesize\ttfamily bool Enemy\+Tank\+::following\+Player}
+
+Whether the enemy tank is following the player \Hypertarget{struct_enemy_tank_a080775109cda5d659c5c1922855d7fc4}\label{struct_enemy_tank_a080775109cda5d659c5c1922855d7fc4} 
+\index{EnemyTank@{EnemyTank}!position@{position}}
+\index{position@{position}!EnemyTank@{EnemyTank}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structposition}{position}} Enemy\+Tank\+::position}
+
+Position and orientation of the enemy tank \Hypertarget{struct_enemy_tank_ae07b65cc92c33adebca39c1270248d6e}\label{struct_enemy_tank_ae07b65cc92c33adebca39c1270248d6e} 
+\index{EnemyTank@{EnemyTank}!speed@{speed}}
+\index{speed@{speed}!EnemyTank@{EnemyTank}}
+\doxysubsubsection{\texorpdfstring{speed}{speed}}
+{\footnotesize\ttfamily int Enemy\+Tank\+::speed}
+
+Speed of the enemy tank 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+LCOM-\/main/proj/src/\+Models/\mbox{\hyperlink{_tank_8h}{Tank.\+h}}\end{DoxyCompactItemize}

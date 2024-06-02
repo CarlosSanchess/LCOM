@@ -1,0 +1,19 @@
+<map id="popObstacle" name="popObstacle">
+<area shape="rect" id="Node000001" title="Removes the first obstacle from the array." alt="" coords="721,31,815,57"/>
+<area shape="rect" id="Node000002" href="$builder_controller_8c.html#ac65254b6bc497a824fcdcd5b6eafae20" title="Processes built obstacles in the arena." alt="" coords="435,5,535,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="705,41,535,26,536,20,706,36"/>
+<area shape="rect" id="Node000006" href="$game_controller_8c.html#af235f3867aed0ba757c2a5c9c86a23fb" title="Resets the game by reinitializing the arena." alt="" coords="588,56,673,83"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="706,58,674,64,673,59,705,53"/>
+<area shape="rect" id="Node000003" href="$arena_controller_8c.html#a0eaf53413d600619b39e10fd81be10ef" title="Processes the current state of the arena." alt="" coords="265,5,366,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="420,21,367,21,367,16,420,16"/>
+<area shape="rect" id="Node000004" href="$main_8c.html#a58e8be2db2660128e4e6456a9c981fb5" title=" " alt="" coords="162,31,201,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="250,34,202,43,201,38,249,28"/>
+<area shape="rect" id="Node000005" href="$main_8c.html#a7a72220d8366dd84709e79ce415862e5" title=" " alt="" coords="5,31,114,57"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="146,47,114,47,114,41,146,41"/>
+<area shape="rect" id="Node000007" href="$game_controller_8c.html#a00ed09a539771f3a9f9b725597bc7f08" title="Changes the game state to the menu." alt="" coords="430,56,540,83"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="572,72,540,72,540,67,572,67"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="423,54,362,35,364,30,424,49"/>
+<area shape="rect" id="Node000008" href="$kb_controller_8c.html#a7c807c44f534a91d6d580c71b35dec38" title="Handles keyboard interrupts and processes game state changes." alt="" coords="249,56,382,83"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="415,72,383,72,383,67,415,67"/>
+<area shape="poly" id="edge8_Node000008_Node000004" title=" " alt="" coords="233,56,201,50,202,45,234,51"/>
+</map>

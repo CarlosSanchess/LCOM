@@ -1,0 +1,96 @@
+\doxysection{views.\+h}
+\hypertarget{views_8h_source}{}\label{views_8h_source}\index{LCOM-\/main/proj/src/Views/views.h@{LCOM-\/main/proj/src/Views/views.h}}
+\mbox{\hyperlink{views_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ \_\_VIEWS\_\_}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ \_\_VIEWS\_\_}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{arena_8h}{Models/arena.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{menu_8h}{Models/menu.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_tank_8h}{Models/Tank.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_models_2mouse_8h}{Models/mouse.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{bullet_8h}{Models/bullet.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_high_score_8h}{Models/HighScore.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{video__gr_8h}{dev\_interface/devices/video\_gr.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}../xpm/bullet.xpm"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}../xpm/tank\_green.xpm"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}../xpm/tank\_red.xpm"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}../xpm/bomb.xpm"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}../xpm/highscore.xpm"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}../xpm/menuScore.xpm"{}}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}../xpm/numbers/number0.xpm"{}}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}../xpm/numbers/number1.xpm"{}}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}../xpm/numbers/number2.xpm"{}}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}../xpm/numbers/number3.xpm"{}}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}../xpm/numbers/number4.xpm"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}../xpm/numbers/number5.xpm"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}../xpm/numbers/number6.xpm"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}../xpm/numbers/number7.xpm"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}../xpm/numbers/number8.xpm"{}}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ "{}../xpm/numbers/number9.xpm"{}}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ "{}../xpm/numbers/number0resize.xpm"{}}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ "{}../xpm/numbers/number1resize.xpm"{}}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ "{}../xpm/numbers/number2resize.xpm"{}}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ "{}../xpm/numbers/number3resize.xpm"{}}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ "{}../xpm/numbers/number4resize.xpm"{}}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#include\ "{}../xpm/numbers/number5resize.xpm"{}}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ "{}../xpm/numbers/number6resize.xpm"{}}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#include\ "{}../xpm/numbers/number7resize.xpm"{}}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#include\ "{}../xpm/numbers/number8resize.xpm"{}}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#include\ "{}../xpm/numbers/number9resize.xpm"{}}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#include\ "{}../xpm/blocks/block1.xpm"{}}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#include\ "{}../xpm/blocks/block2.xpm"{}}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#include\ "{}../xpm/blocks/block3.xpm"{}}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#include\ "{}../xpm/blocks/block4.xpm"{}}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#include\ "{}../xpm/blocks/block5.xpm"{}}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#include\ "{}../xpm/blocks/block6.xpm"{}}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#include\ "{}../xpm/blocks/block7.xpm"{}}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#include\ "{}../xpm/blocks/block8.xpm"{}}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#include\ "{}../xpm/blocks/block9.xpm"{}}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#include\ "{}../xpm/blocks/block10.xpm"{}}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#include\ "{}../xpm/martelo.xpm"{}}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#include\ "{}../xpm/menu.xpm"{}}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#include\ "{}../xpm/mapa1.xpm"{}}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{bomb_8h}{../Models/bomb.h}}"{}}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00065\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{views_8h_a7217fc029c74467b1ffab1f2f1c570db}{drawMenu}}(\mbox{\hyperlink{struct_menu}{Menu}}\ \mbox{\hyperlink{main_8c_a2ad0f4be462ff63c3c72779e80988d15}{menu}},\ \mbox{\hyperlink{struct_high_score}{HighScore}}\ score);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00073\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{views_8h_ad0c6e30d8341ef923801e3fc1aac2a87}{drawArena}}(\mbox{\hyperlink{struct_arena}{Arena}}\ arena);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00081\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{views_8h_a021c38e5484df43338d807e514a9441d}{drawTank}}(\mbox{\hyperlink{structtank}{tank}}\ *\mbox{\hyperlink{structtank}{tank}});}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00089\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{views_8h_aefba8b2a47700757729bb0da4af1c069}{drawEnemyTank}}(\mbox{\hyperlink{struct_enemy_tank}{EnemyTank}}\ *\mbox{\hyperlink{structtank}{tank}});}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00097\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{views_8h_ae8f024e8f545f09e9e395dca36b00908}{drawMouse}}(\mbox{\hyperlink{struct_mouse_info}{MouseInfo}}\ mouse);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00105\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{views_8h_a4f69ca18c0a85ef638b7710e14d22b89}{drawBullet}}(\mbox{\hyperlink{structbullet}{bullet}}\ b);}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00113\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{views_8h_a2e35cd85e9b10790713015ddcadf5873}{drawBullets}}(\mbox{\hyperlink{struct_arena}{Arena}}\ arena);}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00122\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{views_8h_a643860208cc1c763f4a6ec7dcd7e1669}{drawBuilds}}(\mbox{\hyperlink{struct_obstacle}{Obstacle}}**\ builds,\ \textcolor{keywordtype}{size\_t}\ numBuilts);}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00130\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{views_8h_a9ef2413a1cd75ebf95b7a0f61d31998d}{drawBomb}}(\mbox{\hyperlink{structbomb}{bomb}}\ bomba);}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00138\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{views_8h_a87d18a98b6e01254d1c19ba254670562}{drawHighScore}}(\mbox{\hyperlink{struct_high_score}{HighScore}}\ score);}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00146\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{views_8h_a9c44a9a186dd7ca2257eb4d08aed3db7}{drawScore}}(\mbox{\hyperlink{struct_high_score}{HighScore}}\ score);}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00154\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{views_8h_a518c838b97ded94b9a14f769464563fb}{drawChrono}}(\mbox{\hyperlink{struct_high_score}{HighScore}}\ score);}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00161\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{views_8h_a6b5e5ea4778b78a346207b59bc4c3158}{drawMenuBackGround}}();}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00168\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{views_8h_a1413e18c9ce70d5003cbc8793cc8c70d}{drawGameBackGround}}();}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00175\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{views_8h_aeffe9751239b407eb57e9e5c9af53aff}{drawScoreBackGround}}();}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00182\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{views_8h_ac809db7888e72a78fbbc05642298b49b}{drawHighScorePage}}(\mbox{\hyperlink{struct_high_score}{HighScore}}\ score);}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00189\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{views_8h_ae4f30b621bd22dff478de0da223dd92b}{drawStats}}(\mbox{\hyperlink{struct_high_score}{HighScore}}\ score);}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00194\ }
+
+\end{DoxyCode}

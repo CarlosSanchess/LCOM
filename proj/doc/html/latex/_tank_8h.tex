@@ -1,0 +1,291 @@
+\doxysection{LCOM-\/main/proj/src/\+Models/\+Tank.h File Reference}
+\hypertarget{_tank_8h}{}\label{_tank_8h}\index{LCOM-\/main/proj/src/Models/Tank.h@{LCOM-\/main/proj/src/Models/Tank.h}}
+
+
+Defines the tank and enemy tank structures and functions for tank management.  
+
+
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include "{}Position.\+h"{}}\newline
+{\ttfamily \#include "{}Models/bullet.\+h"{}}\newline
+{\ttfamily \#include "{}Hitbox.\+h"{}}\newline
+Include dependency graph for Tank.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_tank_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_tank_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtank}{tank}}
+\begin{DoxyCompactList}\small\item\em Structure to store tank details. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_enemy_tank}{Enemy\+Tank}}
+\begin{DoxyCompactList}\small\item\em Structure to store enemy tank details. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_tank_8h_a437ef08681e7210d6678427030446a54}{LEFT}}~-\/2
+\item 
+\#define \mbox{\hyperlink{_tank_8h_a80fb826a684cf3f0d306b22aa100ddac}{RIGHT}}~2
+\item 
+\#define \mbox{\hyperlink{_tank_8h_a1965eaca47dbf3f87acdafc2208f04eb}{UP}}~1
+\item 
+\#define \mbox{\hyperlink{_tank_8h_a4193cd1c8c2e6ebd0e056fa2364a663f}{DOWN}}~-\/1
+\item 
+\#define \mbox{\hyperlink{_tank_8h_ab3a0b6ad15af831cdfce17763d52768a}{TANK\+\_\+\+WIDTH}}~42
+\item 
+\#define \mbox{\hyperlink{_tank_8h_ac5cda2013a81070cb9d9629570fdbb34}{TANK\+\_\+\+HEIGHT}}~46
+\item 
+\#define \mbox{\hyperlink{_tank_8h_aa037a6d6a4f04d51c7ec1c9ee9054e76}{MAP\+\_\+\+WIDTH}}~1152
+\item 
+\#define \mbox{\hyperlink{_tank_8h_a529d5ebb449edf31d9835d13f4fb9f89}{MAP\+\_\+\+HEIGHT}}~864
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtank}{tank}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_tank_8h_af0f78c94a6562688f7efb448d44e2ffa}{create\+Tank}} (int x, int y, uint16\+\_\+t deg, int hp, int speed)
+\begin{DoxyCompactList}\small\item\em Creates a new tank. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_tank_8h_a42aa5c5144bd173a7e2fb159c8c2f72a}{free\+Tank}} (\mbox{\hyperlink{structtank}{tank}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structtank}{tank}})
+\begin{DoxyCompactList}\small\item\em Frees the memory allocated for the tank. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_enemy_tank}{Enemy\+Tank}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_tank_8h_a2b4d3b1e5c1918d513937a5c9b8f15cf}{create\+Enemy\+Tank}} (int x, int y, uint16\+\_\+t deg, int hp, int speed)
+\begin{DoxyCompactList}\small\item\em Creates a new enemy tank. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_tank_8h_a56f65050438e9382e351d33ab303261e}{free\+Enemy\+Tank}} (\mbox{\hyperlink{struct_enemy_tank}{Enemy\+Tank}} \texorpdfstring{$\ast$}{*}enemy\+Tank)
+\begin{DoxyCompactList}\small\item\em Frees the memory allocated for the enemy tank. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_tank_8h_ac4e486b849ba0d072820106f51914f4a}{get\+Tank\+Hit\+Box}} (\mbox{\hyperlink{structtank}{tank}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structtank}{tank}}, \mbox{\hyperlink{struct_hitbox}{Hitbox}} \texorpdfstring{$\ast$}{*}hitbox)
+\begin{DoxyCompactList}\small\item\em Gets the hitbox of the tank. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_tank_8h_a8ffef91179a9e2accc41a7437610ecb8}{get\+Enemy\+Tank\+Hit\+Box}} (\mbox{\hyperlink{struct_enemy_tank}{Enemy\+Tank}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structtank}{tank}}, \mbox{\hyperlink{struct_hitbox}{Hitbox}} \texorpdfstring{$\ast$}{*}hitbox)
+\begin{DoxyCompactList}\small\item\em Gets the hitbox of the enemy tank. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines the tank and enemy tank structures and functions for tank management. 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_tank_8h_a4193cd1c8c2e6ebd0e056fa2364a663f}\label{_tank_8h_a4193cd1c8c2e6ebd0e056fa2364a663f} 
+\index{Tank.h@{Tank.h}!DOWN@{DOWN}}
+\index{DOWN@{DOWN}!Tank.h@{Tank.h}}
+\doxysubsubsection{\texorpdfstring{DOWN}{DOWN}}
+{\footnotesize\ttfamily \#define DOWN~-\/1}
+
+\Hypertarget{_tank_8h_a437ef08681e7210d6678427030446a54}\label{_tank_8h_a437ef08681e7210d6678427030446a54} 
+\index{Tank.h@{Tank.h}!LEFT@{LEFT}}
+\index{LEFT@{LEFT}!Tank.h@{Tank.h}}
+\doxysubsubsection{\texorpdfstring{LEFT}{LEFT}}
+{\footnotesize\ttfamily \#define LEFT~-\/2}
+
+\Hypertarget{_tank_8h_a529d5ebb449edf31d9835d13f4fb9f89}\label{_tank_8h_a529d5ebb449edf31d9835d13f4fb9f89} 
+\index{Tank.h@{Tank.h}!MAP\_HEIGHT@{MAP\_HEIGHT}}
+\index{MAP\_HEIGHT@{MAP\_HEIGHT}!Tank.h@{Tank.h}}
+\doxysubsubsection{\texorpdfstring{MAP\_HEIGHT}{MAP\_HEIGHT}}
+{\footnotesize\ttfamily \#define MAP\+\_\+\+HEIGHT~864}
+
+\Hypertarget{_tank_8h_aa037a6d6a4f04d51c7ec1c9ee9054e76}\label{_tank_8h_aa037a6d6a4f04d51c7ec1c9ee9054e76} 
+\index{Tank.h@{Tank.h}!MAP\_WIDTH@{MAP\_WIDTH}}
+\index{MAP\_WIDTH@{MAP\_WIDTH}!Tank.h@{Tank.h}}
+\doxysubsubsection{\texorpdfstring{MAP\_WIDTH}{MAP\_WIDTH}}
+{\footnotesize\ttfamily \#define MAP\+\_\+\+WIDTH~1152}
+
+\Hypertarget{_tank_8h_a80fb826a684cf3f0d306b22aa100ddac}\label{_tank_8h_a80fb826a684cf3f0d306b22aa100ddac} 
+\index{Tank.h@{Tank.h}!RIGHT@{RIGHT}}
+\index{RIGHT@{RIGHT}!Tank.h@{Tank.h}}
+\doxysubsubsection{\texorpdfstring{RIGHT}{RIGHT}}
+{\footnotesize\ttfamily \#define RIGHT~2}
+
+\Hypertarget{_tank_8h_ac5cda2013a81070cb9d9629570fdbb34}\label{_tank_8h_ac5cda2013a81070cb9d9629570fdbb34} 
+\index{Tank.h@{Tank.h}!TANK\_HEIGHT@{TANK\_HEIGHT}}
+\index{TANK\_HEIGHT@{TANK\_HEIGHT}!Tank.h@{Tank.h}}
+\doxysubsubsection{\texorpdfstring{TANK\_HEIGHT}{TANK\_HEIGHT}}
+{\footnotesize\ttfamily \#define TANK\+\_\+\+HEIGHT~46}
+
+\Hypertarget{_tank_8h_ab3a0b6ad15af831cdfce17763d52768a}\label{_tank_8h_ab3a0b6ad15af831cdfce17763d52768a} 
+\index{Tank.h@{Tank.h}!TANK\_WIDTH@{TANK\_WIDTH}}
+\index{TANK\_WIDTH@{TANK\_WIDTH}!Tank.h@{Tank.h}}
+\doxysubsubsection{\texorpdfstring{TANK\_WIDTH}{TANK\_WIDTH}}
+{\footnotesize\ttfamily \#define TANK\+\_\+\+WIDTH~42}
+
+\Hypertarget{_tank_8h_a1965eaca47dbf3f87acdafc2208f04eb}\label{_tank_8h_a1965eaca47dbf3f87acdafc2208f04eb} 
+\index{Tank.h@{Tank.h}!UP@{UP}}
+\index{UP@{UP}!Tank.h@{Tank.h}}
+\doxysubsubsection{\texorpdfstring{UP}{UP}}
+{\footnotesize\ttfamily \#define UP~1}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_tank_8h_a2b4d3b1e5c1918d513937a5c9b8f15cf}\label{_tank_8h_a2b4d3b1e5c1918d513937a5c9b8f15cf} 
+\index{Tank.h@{Tank.h}!createEnemyTank@{createEnemyTank}}
+\index{createEnemyTank@{createEnemyTank}!Tank.h@{Tank.h}}
+\doxysubsubsection{\texorpdfstring{createEnemyTank()}{createEnemyTank()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_enemy_tank}{Enemy\+Tank}} \texorpdfstring{$\ast$}{*} create\+Enemy\+Tank (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{uint16\+\_\+t}]{deg,  }\item[{int}]{hp,  }\item[{int}]{speed }\end{DoxyParamCaption})}
+
+
+
+Creates a new enemy tank. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate of the enemy tank. \\
+\hline
+{\em y} & Y coordinate of the enemy tank. \\
+\hline
+{\em deg} & Orientation of the enemy tank in degrees. \\
+\hline
+{\em hp} & Health points of the enemy tank. \\
+\hline
+{\em speed} & Speed of the enemy tank. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the created enemy tank. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_tank_8h_a2b4d3b1e5c1918d513937a5c9b8f15cf_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_tank_8h_af0f78c94a6562688f7efb448d44e2ffa}\label{_tank_8h_af0f78c94a6562688f7efb448d44e2ffa} 
+\index{Tank.h@{Tank.h}!createTank@{createTank}}
+\index{createTank@{createTank}!Tank.h@{Tank.h}}
+\doxysubsubsection{\texorpdfstring{createTank()}{createTank()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtank}{tank}} \texorpdfstring{$\ast$}{*} create\+Tank (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{uint16\+\_\+t}]{deg,  }\item[{int}]{hp,  }\item[{int}]{speed }\end{DoxyParamCaption})}
+
+
+
+Creates a new tank. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate of the tank. \\
+\hline
+{\em y} & Y coordinate of the tank. \\
+\hline
+{\em deg} & Orientation of the tank in degrees. \\
+\hline
+{\em hp} & Health points of the tank. \\
+\hline
+{\em speed} & Speed of the tank. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the created tank. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_tank_8h_af0f78c94a6562688f7efb448d44e2ffa_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_tank_8h_a56f65050438e9382e351d33ab303261e}\label{_tank_8h_a56f65050438e9382e351d33ab303261e} 
+\index{Tank.h@{Tank.h}!freeEnemyTank@{freeEnemyTank}}
+\index{freeEnemyTank@{freeEnemyTank}!Tank.h@{Tank.h}}
+\doxysubsubsection{\texorpdfstring{freeEnemyTank()}{freeEnemyTank()}}
+{\footnotesize\ttfamily void free\+Enemy\+Tank (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_enemy_tank}{Enemy\+Tank}} \texorpdfstring{$\ast$}{*}}]{enemy\+Tank }\end{DoxyParamCaption})}
+
+
+
+Frees the memory allocated for the enemy tank. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enemy\+Tank} & Pointer to the enemy tank to be freed. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_tank_8h_a56f65050438e9382e351d33ab303261e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_tank_8h_a42aa5c5144bd173a7e2fb159c8c2f72a}\label{_tank_8h_a42aa5c5144bd173a7e2fb159c8c2f72a} 
+\index{Tank.h@{Tank.h}!freeTank@{freeTank}}
+\index{freeTank@{freeTank}!Tank.h@{Tank.h}}
+\doxysubsubsection{\texorpdfstring{freeTank()}{freeTank()}}
+{\footnotesize\ttfamily void free\+Tank (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtank}{tank}} \texorpdfstring{$\ast$}{*}}]{tank }\end{DoxyParamCaption})}
+
+
+
+Frees the memory allocated for the tank. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tank} & Pointer to the tank to be freed. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_tank_8h_a42aa5c5144bd173a7e2fb159c8c2f72a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_tank_8h_a8ffef91179a9e2accc41a7437610ecb8}\label{_tank_8h_a8ffef91179a9e2accc41a7437610ecb8} 
+\index{Tank.h@{Tank.h}!getEnemyTankHitBox@{getEnemyTankHitBox}}
+\index{getEnemyTankHitBox@{getEnemyTankHitBox}!Tank.h@{Tank.h}}
+\doxysubsubsection{\texorpdfstring{getEnemyTankHitBox()}{getEnemyTankHitBox()}}
+{\footnotesize\ttfamily void get\+Enemy\+Tank\+Hit\+Box (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_enemy_tank}{Enemy\+Tank}} \texorpdfstring{$\ast$}{*}}]{tank,  }\item[{\mbox{\hyperlink{struct_hitbox}{Hitbox}} \texorpdfstring{$\ast$}{*}}]{hitbox }\end{DoxyParamCaption})}
+
+
+
+Gets the hitbox of the enemy tank. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tank} & Pointer to the enemy tank. \\
+\hline
+{\em hitbox} & Pointer to the hitbox structure to be filled. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_tank_8h_a8ffef91179a9e2accc41a7437610ecb8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_tank_8h_ac4e486b849ba0d072820106f51914f4a}\label{_tank_8h_ac4e486b849ba0d072820106f51914f4a} 
+\index{Tank.h@{Tank.h}!getTankHitBox@{getTankHitBox}}
+\index{getTankHitBox@{getTankHitBox}!Tank.h@{Tank.h}}
+\doxysubsubsection{\texorpdfstring{getTankHitBox()}{getTankHitBox()}}
+{\footnotesize\ttfamily void get\+Tank\+Hit\+Box (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtank}{tank}} \texorpdfstring{$\ast$}{*}}]{tank,  }\item[{\mbox{\hyperlink{struct_hitbox}{Hitbox}} \texorpdfstring{$\ast$}{*}}]{hitbox }\end{DoxyParamCaption})}
+
+
+
+Gets the hitbox of the tank. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tank} & Pointer to the tank. \\
+\hline
+{\em hitbox} & Pointer to the hitbox structure to be filled. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_tank_8h_ac4e486b849ba0d072820106f51914f4a_icgraph}
+\end{center}
+\end{figure}

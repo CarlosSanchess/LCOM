@@ -1,0 +1,119 @@
+\doxysection{LCOM-\/main/proj/src/controllers/bullet\+Controller.c File Reference}
+\hypertarget{bullet_controller_8c}{}\label{bullet_controller_8c}\index{LCOM-\/main/proj/src/controllers/bulletController.c@{LCOM-\/main/proj/src/controllers/bulletController.c}}
+{\ttfamily \#include "{}bullet\+Controller.\+h"{}}\newline
+Include dependency graph for bullet\+Controller.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bullet_controller_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{bullet_controller_8c_aa0615d5eaae96e125e8ef83e9001ea2c}{add\+Bullet\+To\+Arena}} (\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}arena, int tank\+Color)
+\begin{DoxyCompactList}\small\item\em Adds a bullet to the arena. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bullet_controller_8c_adfe547a3a876754f9d9c341de541b029}{bullet\+Move}} (\mbox{\hyperlink{structbullet}{bullet}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structbullet}{bullet}})
+\begin{DoxyCompactList}\small\item\em Moves a bullet. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bullet_controller_8c_a4a3f28da9e441ed7db54508a451f7412}{process\+Bullets}} (\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}arena)
+\begin{DoxyCompactList}\small\item\em Processes all bullets in the arena. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{bullet_controller_8c_aa0615d5eaae96e125e8ef83e9001ea2c}\label{bullet_controller_8c_aa0615d5eaae96e125e8ef83e9001ea2c} 
+\index{bulletController.c@{bulletController.c}!addBulletToArena@{addBulletToArena}}
+\index{addBulletToArena@{addBulletToArena}!bulletController.c@{bulletController.c}}
+\doxysubsubsection{\texorpdfstring{addBulletToArena()}{addBulletToArena()}}
+{\footnotesize\ttfamily int add\+Bullet\+To\+Arena (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}}]{arena,  }\item[{int}]{tank\+Color }\end{DoxyParamCaption})}
+
+
+
+Adds a bullet to the arena. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arena} & Pointer to the arena structure. \\
+\hline
+{\em tank\+Color} & Color of the tank that fired the bullet. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Status code indicating the result of the addition. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{bullet_controller_8c_aa0615d5eaae96e125e8ef83e9001ea2c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bullet_controller_8c_aa0615d5eaae96e125e8ef83e9001ea2c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bullet_controller_8c_adfe547a3a876754f9d9c341de541b029}\label{bullet_controller_8c_adfe547a3a876754f9d9c341de541b029} 
+\index{bulletController.c@{bulletController.c}!bulletMove@{bulletMove}}
+\index{bulletMove@{bulletMove}!bulletController.c@{bulletController.c}}
+\doxysubsubsection{\texorpdfstring{bulletMove()}{bulletMove()}}
+{\footnotesize\ttfamily int bullet\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structbullet}{bullet}} \texorpdfstring{$\ast$}{*}}]{bullet }\end{DoxyParamCaption})}
+
+
+
+Moves a bullet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bullet} & Pointer to the bullet structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Status code indicating the result of the movement. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bullet_controller_8c_adfe547a3a876754f9d9c341de541b029_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bullet_controller_8c_a4a3f28da9e441ed7db54508a451f7412}\label{bullet_controller_8c_a4a3f28da9e441ed7db54508a451f7412} 
+\index{bulletController.c@{bulletController.c}!processBullets@{processBullets}}
+\index{processBullets@{processBullets}!bulletController.c@{bulletController.c}}
+\doxysubsubsection{\texorpdfstring{processBullets()}{processBullets()}}
+{\footnotesize\ttfamily int process\+Bullets (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}}]{arena }\end{DoxyParamCaption})}
+
+
+
+Processes all bullets in the arena. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arena} & Pointer to the arena structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Status code indicating the result of the processing. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bullet_controller_8c_a4a3f28da9e441ed7db54508a451f7412_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bullet_controller_8c_a4a3f28da9e441ed7db54508a451f7412_icgraph}
+\end{center}
+\end{figure}

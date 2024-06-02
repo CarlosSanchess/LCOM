@@ -1,0 +1,133 @@
+\doxysection{LCOM-\/main/proj/src/controllers/rtc\+Controller.c File Reference}
+\hypertarget{rtc_controller_8c}{}\label{rtc_controller_8c}\index{LCOM-\/main/proj/src/controllers/rtcController.c@{LCOM-\/main/proj/src/controllers/rtcController.c}}
+{\ttfamily \#include "{}rtc\+Controller.\+h"{}}\newline
+Include dependency graph for rtc\+Controller.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_controller_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{rtc_controller_8c_a820cd50f917abcf1de46d71149ffc324}{read\+High\+Score\+From\+File}} (\mbox{\hyperlink{struct_high_score}{High\+Score}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_a69079d20e1a6e00621d75bf226230088}{high\+Score}})
+\begin{DoxyCompactList}\small\item\em Reads the High Score from a file or initializes the high score with default values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rtc_controller_8c_a8b6f55340ba7bc7e78846045a875c8be}{write\+High\+Score\+To\+File}} (\mbox{\hyperlink{struct_high_score}{High\+Score}} score)
+\begin{DoxyCompactList}\small\item\em Writes the High Score to a file or initializes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rtc_controller_8c_a1f6c7ecf88af951944ef21195a4e5c36}{init\+High\+Score}} (\mbox{\hyperlink{struct_high_score}{High\+Score}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_a69079d20e1a6e00621d75bf226230088}{high\+Score}})
+\begin{DoxyCompactList}\small\item\em Initializes the high score with default values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rtc_controller_8c_a8d761e037fe0486a6788dbc4dea43b7f}{check\+And\+Update\+High\+Score}} (\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}arena, \mbox{\hyperlink{struct_high_score}{High\+Score}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_a69079d20e1a6e00621d75bf226230088}{high\+Score}})
+\begin{DoxyCompactList}\small\item\em Checks and updates the high score if the current score is higher. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{rtc_controller_8c_aeac90097f29f7529968697163cea5c18}{filename}} = "{}/home/lcom/labs/g4/proj/src/highscore.\+txt"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{rtc_controller_8c_a8d761e037fe0486a6788dbc4dea43b7f}\label{rtc_controller_8c_a8d761e037fe0486a6788dbc4dea43b7f} 
+\index{rtcController.c@{rtcController.c}!checkAndUpdateHighScore@{checkAndUpdateHighScore}}
+\index{checkAndUpdateHighScore@{checkAndUpdateHighScore}!rtcController.c@{rtcController.c}}
+\doxysubsubsection{\texorpdfstring{checkAndUpdateHighScore()}{checkAndUpdateHighScore()}}
+{\footnotesize\ttfamily void check\+And\+Update\+High\+Score (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}}]{arena,  }\item[{\mbox{\hyperlink{struct_high_score}{High\+Score}} \texorpdfstring{$\ast$}{*}}]{high\+Score }\end{DoxyParamCaption})}
+
+
+
+Checks and updates the high score if the current score is higher. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arena} & Pointer to the \doxylink{struct_arena}{Arena} structure. \\
+\hline
+{\em high\+Score} & Pointer to the \doxylink{struct_high_score}{High\+Score} structure. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_controller_8c_a8d761e037fe0486a6788dbc4dea43b7f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_controller_8c_a8d761e037fe0486a6788dbc4dea43b7f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rtc_controller_8c_a1f6c7ecf88af951944ef21195a4e5c36}\label{rtc_controller_8c_a1f6c7ecf88af951944ef21195a4e5c36} 
+\index{rtcController.c@{rtcController.c}!initHighScore@{initHighScore}}
+\index{initHighScore@{initHighScore}!rtcController.c@{rtcController.c}}
+\doxysubsubsection{\texorpdfstring{initHighScore()}{initHighScore()}}
+{\footnotesize\ttfamily void init\+High\+Score (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_high_score}{High\+Score}} \texorpdfstring{$\ast$}{*}}]{high\+Score }\end{DoxyParamCaption})}
+
+
+
+Initializes the high score with default values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em high\+Score} & Pointer to the \doxylink{struct_high_score}{High\+Score} structure. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{rtc_controller_8c_a820cd50f917abcf1de46d71149ffc324}\label{rtc_controller_8c_a820cd50f917abcf1de46d71149ffc324} 
+\index{rtcController.c@{rtcController.c}!readHighScoreFromFile@{readHighScoreFromFile}}
+\index{readHighScoreFromFile@{readHighScoreFromFile}!rtcController.c@{rtcController.c}}
+\doxysubsubsection{\texorpdfstring{readHighScoreFromFile()}{readHighScoreFromFile()}}
+{\footnotesize\ttfamily void read\+High\+Score\+From\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_high_score}{High\+Score}} \texorpdfstring{$\ast$}{*}}]{high\+Score }\end{DoxyParamCaption})}
+
+
+
+Reads the High Score from a file or initializes the high score with default values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em high\+Score} & Pointer to the \doxylink{struct_high_score}{High\+Score} structure. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_controller_8c_a820cd50f917abcf1de46d71149ffc324_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rtc_controller_8c_a8b6f55340ba7bc7e78846045a875c8be}\label{rtc_controller_8c_a8b6f55340ba7bc7e78846045a875c8be} 
+\index{rtcController.c@{rtcController.c}!writeHighScoreToFile@{writeHighScoreToFile}}
+\index{writeHighScoreToFile@{writeHighScoreToFile}!rtcController.c@{rtcController.c}}
+\doxysubsubsection{\texorpdfstring{writeHighScoreToFile()}{writeHighScoreToFile()}}
+{\footnotesize\ttfamily void write\+High\+Score\+To\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_high_score}{High\+Score}}}]{score }\end{DoxyParamCaption})}
+
+
+
+Writes the High Score to a file or initializes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em high\+Score} & Pointer to the \doxylink{struct_high_score}{High\+Score} structure. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_controller_8c_a8b6f55340ba7bc7e78846045a875c8be_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{rtc_controller_8c_aeac90097f29f7529968697163cea5c18}\label{rtc_controller_8c_aeac90097f29f7529968697163cea5c18} 
+\index{rtcController.c@{rtcController.c}!filename@{filename}}
+\index{filename@{filename}!rtcController.c@{rtcController.c}}
+\doxysubsubsection{\texorpdfstring{filename}{filename}}
+{\footnotesize\ttfamily char\texorpdfstring{$\ast$}{*} filename = "{}/home/lcom/labs/g4/proj/src/highscore.\+txt"{}}
+

@@ -1,0 +1,13 @@
+<map id="handleDelayedEvents" name="handleDelayedEvents">
+<area shape="rect" id="Node000001" title="Handles all delayed events in the game." alt="" coords="5,107,151,133"/>
+<area shape="rect" id="Node000002" href="$timer_controller_8c.html#ad2e7ce906b2cb5d60b61b4ce485dd1f1" title="Handles the delay for bomb activation." alt="" coords="228,5,368,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,104,140,73,198,42,216,35,217,40,200,46,143,77,98,108"/>
+<area shape="rect" id="Node000003" href="$timer_controller_8c.html#a1d8e0a0c1b8788fe37a0c90b1c5944f1" title="Handles the delay for building&#45;related actions." alt="" coords="218,56,378,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="139,103,222,84,223,89,140,109"/>
+<area shape="rect" id="Node000004" href="$timer_controller_8c.html#a7992846e782544053fc1694500fcc91a" title="Handles the delay for enemy tank shooting." alt="" coords="199,107,397,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="151,117,183,117,183,123,151,123"/>
+<area shape="rect" id="Node000005" href="$timer_controller_8c.html#a8ec9a72dbe5edac7174809831de79462" title="Handles the delay for mouse&#45;related actions." alt="" coords="225,157,371,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="140,131,223,151,222,156,139,137"/>
+<area shape="rect" id="Node000006" href="$timer_controller_8c.html#a3fe5dd899f9f8e4f6deef2d14bdcdc79" title="Handles the delay for tank shooting." alt="" coords="219,208,377,235"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="98,132,143,163,200,194,217,200,216,205,198,198,140,167,95,136"/>
+</map>

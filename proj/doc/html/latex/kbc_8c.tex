@@ -1,0 +1,236 @@
+\doxysection{LCOM-\/main/proj/src/dev\+\_\+interface/devices/timer\+\_\+kbc\+\_\+mouse/kbc.c File Reference}
+\hypertarget{kbc_8c}{}\label{kbc_8c}\index{LCOM-\/main/proj/src/dev\_interface/devices/timer\_kbc\_mouse/kbc.c@{LCOM-\/main/proj/src/dev\_interface/devices/timer\_kbc\_mouse/kbc.c}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include "{}i8042.\+h"{}}\newline
+{\ttfamily \#include "{}kbc.\+h"{}}\newline
+Include dependency graph for kbc.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{kbc_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{kbc_8c_a18c596b224bba98ca524a0bfa9730609}{kbc\+\_\+subscribe\+\_\+int}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}bit\+\_\+no)
+\begin{DoxyCompactList}\small\item\em Subscribes keyboard interrupts. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{kbc_8c_a0e945987c2233f1c30a645ec5fc750c1}{kbc\+\_\+unsubscribe\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes keyboard interrupts. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{kbc_8c_a2e83d0a707b0980afca5b4252bd54048}{read\+\_\+stat\+\_\+reg}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}status)
+\begin{DoxyCompactList}\small\item\em Reads the status register. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{kbc_8c_a12eca83a3af06cfa624052a4c5611087}{read\+\_\+output\+\_\+buffer}} (uint8\+\_\+t status, uint8\+\_\+t \texorpdfstring{$\ast$}{*}buffer)
+\begin{DoxyCompactList}\small\item\em Reads the output buffer if the status register indicates it\textquotesingle{}s ready. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{kbc_8c_ab9e6ed7960d60aa4834f2038247d4536}{kbc\+\_\+ih}} ()
+\begin{DoxyCompactList}\small\item\em Keyboard interrupt handler. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{kbc_8c_a4822f96183ff9c6373060b217700c1d1}{write\+\_\+kbc\+\_\+command}} (uint8\+\_\+t port, uint8\+\_\+t command\+Byte)
+\begin{DoxyCompactList}\small\item\em Writes a command byte to the specified port. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{kbc_8c_a7a3172cc98e93d8eadfb9ab30373799e}{error}} = 0
+\item 
+int \mbox{\hyperlink{kbc_8c_a66950d98786a9b087f74991e4b6794e3}{kbc\+\_\+hook\+\_\+id}} = 1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{kbc_8c_ab9e6ed7960d60aa4834f2038247d4536}\label{kbc_8c_ab9e6ed7960d60aa4834f2038247d4536} 
+\index{kbc.c@{kbc.c}!kbc\_ih@{kbc\_ih}}
+\index{kbc\_ih@{kbc\_ih}!kbc.c@{kbc.c}}
+\doxysubsubsection{\texorpdfstring{kbc\_ih()}{kbc\_ih()}}
+{\footnotesize\ttfamily void kbc\+\_\+ih (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Keyboard interrupt handler. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kbc_8c_ab9e6ed7960d60aa4834f2038247d4536_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kbc_8c_ab9e6ed7960d60aa4834f2038247d4536_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kbc_8c_a18c596b224bba98ca524a0bfa9730609}\label{kbc_8c_a18c596b224bba98ca524a0bfa9730609} 
+\index{kbc.c@{kbc.c}!kbc\_subscribe\_int@{kbc\_subscribe\_int}}
+\index{kbc\_subscribe\_int@{kbc\_subscribe\_int}!kbc.c@{kbc.c}}
+\doxysubsubsection{\texorpdfstring{kbc\_subscribe\_int()}{kbc\_subscribe\_int()}}
+{\footnotesize\ttfamily int kbc\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{bit\+\_\+no }\end{DoxyParamCaption})}
+
+
+
+Subscribes keyboard interrupts. 
+
+Subscribes to keyboard interrupts.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+\_\+no} & Pointer to the bit number to be set in the mask returned upon an interrupt. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 upon success, non-\/zero otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kbc_8c_a18c596b224bba98ca524a0bfa9730609_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kbc_8c_a0e945987c2233f1c30a645ec5fc750c1}\label{kbc_8c_a0e945987c2233f1c30a645ec5fc750c1} 
+\index{kbc.c@{kbc.c}!kbc\_unsubscribe\_int@{kbc\_unsubscribe\_int}}
+\index{kbc\_unsubscribe\_int@{kbc\_unsubscribe\_int}!kbc.c@{kbc.c}}
+\doxysubsubsection{\texorpdfstring{kbc\_unsubscribe\_int()}{kbc\_unsubscribe\_int()}}
+{\footnotesize\ttfamily int kbc\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unsubscribes keyboard interrupts. 
+
+Unsubscribes from keyboard interrupts.
+
+\begin{DoxyReturn}{Returns}
+int Returns 0 upon success, non-\/zero otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kbc_8c_a0e945987c2233f1c30a645ec5fc750c1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kbc_8c_a12eca83a3af06cfa624052a4c5611087}\label{kbc_8c_a12eca83a3af06cfa624052a4c5611087} 
+\index{kbc.c@{kbc.c}!read\_output\_buffer@{read\_output\_buffer}}
+\index{read\_output\_buffer@{read\_output\_buffer}!kbc.c@{kbc.c}}
+\doxysubsubsection{\texorpdfstring{read\_output\_buffer()}{read\_output\_buffer()}}
+{\footnotesize\ttfamily int read\+\_\+output\+\_\+buffer (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{status,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Reads the output buffer if the status register indicates it\textquotesingle{}s ready. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & Status register value. \\
+\hline
+{\em buffer} & Pointer to store the output buffer value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 upon success, non-\/zero otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{kbc_8c_a12eca83a3af06cfa624052a4c5611087_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kbc_8c_a12eca83a3af06cfa624052a4c5611087_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kbc_8c_a2e83d0a707b0980afca5b4252bd54048}\label{kbc_8c_a2e83d0a707b0980afca5b4252bd54048} 
+\index{kbc.c@{kbc.c}!read\_stat\_reg@{read\_stat\_reg}}
+\index{read\_stat\_reg@{read\_stat\_reg}!kbc.c@{kbc.c}}
+\doxysubsubsection{\texorpdfstring{read\_stat\_reg()}{read\_stat\_reg()}}
+{\footnotesize\ttfamily int read\+\_\+stat\+\_\+reg (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{status }\end{DoxyParamCaption})}
+
+
+
+Reads the status register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & Pointer to store the status register value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 upon success, non-\/zero otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{kbc_8c_a2e83d0a707b0980afca5b4252bd54048_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kbc_8c_a2e83d0a707b0980afca5b4252bd54048_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kbc_8c_a4822f96183ff9c6373060b217700c1d1}\label{kbc_8c_a4822f96183ff9c6373060b217700c1d1} 
+\index{kbc.c@{kbc.c}!write\_kbc\_command@{write\_kbc\_command}}
+\index{write\_kbc\_command@{write\_kbc\_command}!kbc.c@{kbc.c}}
+\doxysubsubsection{\texorpdfstring{write\_kbc\_command()}{write\_kbc\_command()}}
+{\footnotesize\ttfamily int write\+\_\+kbc\+\_\+command (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port,  }\item[{uint8\+\_\+t}]{command\+Byte }\end{DoxyParamCaption})}
+
+
+
+Writes a command byte to the specified port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The port to write to. \\
+\hline
+{\em command\+Byte} & The command byte to write. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 upon success, non-\/zero otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kbc_8c_a4822f96183ff9c6373060b217700c1d1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kbc_8c_a4822f96183ff9c6373060b217700c1d1_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{kbc_8c_a7a3172cc98e93d8eadfb9ab30373799e}\label{kbc_8c_a7a3172cc98e93d8eadfb9ab30373799e} 
+\index{kbc.c@{kbc.c}!error@{error}}
+\index{error@{error}!kbc.c@{kbc.c}}
+\doxysubsubsection{\texorpdfstring{error}{error}}
+{\footnotesize\ttfamily bool error = 0}
+
+\Hypertarget{kbc_8c_a66950d98786a9b087f74991e4b6794e3}\label{kbc_8c_a66950d98786a9b087f74991e4b6794e3} 
+\index{kbc.c@{kbc.c}!kbc\_hook\_id@{kbc\_hook\_id}}
+\index{kbc\_hook\_id@{kbc\_hook\_id}!kbc.c@{kbc.c}}
+\doxysubsubsection{\texorpdfstring{kbc\_hook\_id}{kbc\_hook\_id}}
+{\footnotesize\ttfamily int kbc\+\_\+hook\+\_\+id = 1}
+

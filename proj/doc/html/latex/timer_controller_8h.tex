@@ -1,0 +1,273 @@
+\doxysection{LCOM-\/main/proj/src/controllers/timer\+Controller.h File Reference}
+\hypertarget{timer_controller_8h}{}\label{timer_controller_8h}\index{LCOM-\/main/proj/src/controllers/timerController.h@{LCOM-\/main/proj/src/controllers/timerController.h}}
+
+
+Declares functions for handling timer-\/based events in the game.  
+
+
+{\ttfamily \#include "{}../\+Models/mouse.\+h"{}}\newline
+{\ttfamily \#include "{}../\+Models/arena.\+h"{}}\newline
+Include dependency graph for timer\+Controller.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{timer_controller_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{timer_controller_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{timer_controller_8h_aa15c9c930fa8b1f7899c07dfdc5fb2c5}{SHOOTD}}~120
+\begin{DoxyCompactList}\small\item\em Delay for shooting. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{timer_controller_8h_ae4df3311579ffd68204f5e4b1ab75f6f}{DRAWD}}~600
+\begin{DoxyCompactList}\small\item\em Delay for drawing. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{timer_controller_8h_a83a096084659db196c8ea17335ea624a}{BUILDD}}~60
+\begin{DoxyCompactList}\small\item\em Delay for building. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{timer_controller_8h_a6ccf1d50567ef60f1f2ed60925e75e13}{BOMBD}}~25
+\begin{DoxyCompactList}\small\item\em Delay for bomb activation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{timer_controller_8h_ac70fadf0f68e56c8d2f99322c108d69e}{timer\+\_\+increment}} ()
+\begin{DoxyCompactList}\small\item\em Increments the global timer counter. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{timer_controller_8h_a8b6cb111da7ee1f0d45ce1381392380d}{handle\+Delayed\+Events}} (\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}arena, \mbox{\hyperlink{struct_mouse_info}{Mouse\+Info}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_a4b7a142226097e18c01a5405d023b2ea}{mouse\+Info}})
+\begin{DoxyCompactList}\small\item\em Handles all delayed events in the game. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{timer_controller_8h_a3fe5dd899f9f8e4f6deef2d14bdcdc79}{handle\+Delayed\+Shooting}} (\mbox{\hyperlink{structtank}{tank}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structtank}{tank}})
+\begin{DoxyCompactList}\small\item\em Handles the delay for tank shooting. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{timer_controller_8h_a8ec9a72dbe5edac7174809831de79462}{handle\+Delayed\+Mouse}} (\mbox{\hyperlink{struct_mouse_info}{Mouse\+Info}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_a4b7a142226097e18c01a5405d023b2ea}{mouse\+Info}})
+\begin{DoxyCompactList}\small\item\em Handles the delay for mouse-\/related actions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{timer_controller_8h_a1d8e0a0c1b8788fe37a0c90b1c5944f1}{handle\+Delayed\+Buildings}} (\mbox{\hyperlink{struct_obstacle}{Obstacle}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}obstacles, size\+\_\+t num\+Obstacles)
+\begin{DoxyCompactList}\small\item\em Handles the delay for building-\/related actions. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{timer_controller_8h_a7992846e782544053fc1694500fcc91a}{handle\+Delayed\+Enemy\+Shooting}} (\mbox{\hyperlink{struct_enemy_tank}{Enemy\+Tank}} \texorpdfstring{$\ast$}{*}enemy\+Tank)
+\begin{DoxyCompactList}\small\item\em Handles the delay for enemy tank shooting. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{timer_controller_8h_ad2e7ce906b2cb5d60b61b4ce485dd1f1}{handle\+Delayed\+Bomb}} (\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}arena)
+\begin{DoxyCompactList}\small\item\em Handles the delay for bomb activation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declares functions for handling timer-\/based events in the game. 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{timer_controller_8h_a6ccf1d50567ef60f1f2ed60925e75e13}\label{timer_controller_8h_a6ccf1d50567ef60f1f2ed60925e75e13} 
+\index{timerController.h@{timerController.h}!BOMBD@{BOMBD}}
+\index{BOMBD@{BOMBD}!timerController.h@{timerController.h}}
+\doxysubsubsection{\texorpdfstring{BOMBD}{BOMBD}}
+{\footnotesize\ttfamily \#define BOMBD~25}
+
+
+
+Delay for bomb activation. 
+
+\Hypertarget{timer_controller_8h_a83a096084659db196c8ea17335ea624a}\label{timer_controller_8h_a83a096084659db196c8ea17335ea624a} 
+\index{timerController.h@{timerController.h}!BUILDD@{BUILDD}}
+\index{BUILDD@{BUILDD}!timerController.h@{timerController.h}}
+\doxysubsubsection{\texorpdfstring{BUILDD}{BUILDD}}
+{\footnotesize\ttfamily \#define BUILDD~60}
+
+
+
+Delay for building. 
+
+\Hypertarget{timer_controller_8h_ae4df3311579ffd68204f5e4b1ab75f6f}\label{timer_controller_8h_ae4df3311579ffd68204f5e4b1ab75f6f} 
+\index{timerController.h@{timerController.h}!DRAWD@{DRAWD}}
+\index{DRAWD@{DRAWD}!timerController.h@{timerController.h}}
+\doxysubsubsection{\texorpdfstring{DRAWD}{DRAWD}}
+{\footnotesize\ttfamily \#define DRAWD~600}
+
+
+
+Delay for drawing. 
+
+\Hypertarget{timer_controller_8h_aa15c9c930fa8b1f7899c07dfdc5fb2c5}\label{timer_controller_8h_aa15c9c930fa8b1f7899c07dfdc5fb2c5} 
+\index{timerController.h@{timerController.h}!SHOOTD@{SHOOTD}}
+\index{SHOOTD@{SHOOTD}!timerController.h@{timerController.h}}
+\doxysubsubsection{\texorpdfstring{SHOOTD}{SHOOTD}}
+{\footnotesize\ttfamily \#define SHOOTD~120}
+
+
+
+Delay for shooting. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{timer_controller_8h_ad2e7ce906b2cb5d60b61b4ce485dd1f1}\label{timer_controller_8h_ad2e7ce906b2cb5d60b61b4ce485dd1f1} 
+\index{timerController.h@{timerController.h}!handleDelayedBomb@{handleDelayedBomb}}
+\index{handleDelayedBomb@{handleDelayedBomb}!timerController.h@{timerController.h}}
+\doxysubsubsection{\texorpdfstring{handleDelayedBomb()}{handleDelayedBomb()}}
+{\footnotesize\ttfamily void handle\+Delayed\+Bomb (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}}]{arena }\end{DoxyParamCaption})}
+
+
+
+Handles the delay for bomb activation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arena} & Pointer to the \doxylink{struct_arena}{Arena} structure. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{timer_controller_8h_ad2e7ce906b2cb5d60b61b4ce485dd1f1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{timer_controller_8h_a1d8e0a0c1b8788fe37a0c90b1c5944f1}\label{timer_controller_8h_a1d8e0a0c1b8788fe37a0c90b1c5944f1} 
+\index{timerController.h@{timerController.h}!handleDelayedBuildings@{handleDelayedBuildings}}
+\index{handleDelayedBuildings@{handleDelayedBuildings}!timerController.h@{timerController.h}}
+\doxysubsubsection{\texorpdfstring{handleDelayedBuildings()}{handleDelayedBuildings()}}
+{\footnotesize\ttfamily void handle\+Delayed\+Buildings (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_obstacle}{Obstacle}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{obstacles,  }\item[{size\+\_\+t}]{num\+Obstacles }\end{DoxyParamCaption})}
+
+
+
+Handles the delay for building-\/related actions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obstacles} & Array of pointers to \doxylink{struct_obstacle}{Obstacle} structures. \\
+\hline
+{\em num\+Obstacles} & Number of obstacles in the array. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{timer_controller_8h_a1d8e0a0c1b8788fe37a0c90b1c5944f1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{timer_controller_8h_a7992846e782544053fc1694500fcc91a}\label{timer_controller_8h_a7992846e782544053fc1694500fcc91a} 
+\index{timerController.h@{timerController.h}!handleDelayedEnemyShooting@{handleDelayedEnemyShooting}}
+\index{handleDelayedEnemyShooting@{handleDelayedEnemyShooting}!timerController.h@{timerController.h}}
+\doxysubsubsection{\texorpdfstring{handleDelayedEnemyShooting()}{handleDelayedEnemyShooting()}}
+{\footnotesize\ttfamily int handle\+Delayed\+Enemy\+Shooting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_enemy_tank}{Enemy\+Tank}} \texorpdfstring{$\ast$}{*}}]{enemy\+Tank }\end{DoxyParamCaption})}
+
+
+
+Handles the delay for enemy tank shooting. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enemy\+Tank} & Pointer to the \doxylink{struct_enemy_tank}{Enemy\+Tank} structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{timer_controller_8h_a7992846e782544053fc1694500fcc91a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{timer_controller_8h_a8b6cb111da7ee1f0d45ce1381392380d}\label{timer_controller_8h_a8b6cb111da7ee1f0d45ce1381392380d} 
+\index{timerController.h@{timerController.h}!handleDelayedEvents@{handleDelayedEvents}}
+\index{handleDelayedEvents@{handleDelayedEvents}!timerController.h@{timerController.h}}
+\doxysubsubsection{\texorpdfstring{handleDelayedEvents()}{handleDelayedEvents()}}
+{\footnotesize\ttfamily int handle\+Delayed\+Events (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}}]{arena,  }\item[{\mbox{\hyperlink{struct_mouse_info}{Mouse\+Info}} \texorpdfstring{$\ast$}{*}}]{mouse\+Info }\end{DoxyParamCaption})}
+
+
+
+Handles all delayed events in the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arena} & Pointer to the \doxylink{struct_arena}{Arena} structure. \\
+\hline
+{\em mouse\+Info} & Pointer to the \doxylink{struct_mouse_info}{Mouse\+Info} structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{timer_controller_8h_a8b6cb111da7ee1f0d45ce1381392380d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{timer_controller_8h_a8b6cb111da7ee1f0d45ce1381392380d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{timer_controller_8h_a8ec9a72dbe5edac7174809831de79462}\label{timer_controller_8h_a8ec9a72dbe5edac7174809831de79462} 
+\index{timerController.h@{timerController.h}!handleDelayedMouse@{handleDelayedMouse}}
+\index{handleDelayedMouse@{handleDelayedMouse}!timerController.h@{timerController.h}}
+\doxysubsubsection{\texorpdfstring{handleDelayedMouse()}{handleDelayedMouse()}}
+{\footnotesize\ttfamily void handle\+Delayed\+Mouse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_mouse_info}{Mouse\+Info}} \texorpdfstring{$\ast$}{*}}]{mouse\+Info }\end{DoxyParamCaption})}
+
+
+
+Handles the delay for mouse-\/related actions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mouse\+Info} & Pointer to the \doxylink{struct_mouse_info}{Mouse\+Info} structure. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{timer_controller_8h_a8ec9a72dbe5edac7174809831de79462_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{timer_controller_8h_a3fe5dd899f9f8e4f6deef2d14bdcdc79}\label{timer_controller_8h_a3fe5dd899f9f8e4f6deef2d14bdcdc79} 
+\index{timerController.h@{timerController.h}!handleDelayedShooting@{handleDelayedShooting}}
+\index{handleDelayedShooting@{handleDelayedShooting}!timerController.h@{timerController.h}}
+\doxysubsubsection{\texorpdfstring{handleDelayedShooting()}{handleDelayedShooting()}}
+{\footnotesize\ttfamily int handle\+Delayed\+Shooting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtank}{tank}} \texorpdfstring{$\ast$}{*}}]{tank }\end{DoxyParamCaption})}
+
+
+
+Handles the delay for tank shooting. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tank} & Pointer to the tank structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{timer_controller_8h_a3fe5dd899f9f8e4f6deef2d14bdcdc79_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{timer_controller_8h_ac70fadf0f68e56c8d2f99322c108d69e}\label{timer_controller_8h_ac70fadf0f68e56c8d2f99322c108d69e} 
+\index{timerController.h@{timerController.h}!timer\_increment@{timer\_increment}}
+\index{timer\_increment@{timer\_increment}!timerController.h@{timerController.h}}
+\doxysubsubsection{\texorpdfstring{timer\_increment()}{timer\_increment()}}
+{\footnotesize\ttfamily void timer\+\_\+increment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Increments the global timer counter. 
+

@@ -1,0 +1,15 @@
+<map id="LCOM&#45;main/proj/src/dev_interface/devices/timer_kbc_mouse/mouse.c" name="LCOM&#45;main/proj/src/dev_interface/devices/timer_kbc_mouse/mouse.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,188,64"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="70,261,147,288"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="75,66,61,88,51,113,49,125,51,138,71,197,96,247,91,249,66,199,46,139,44,125,46,111,57,86,71,63"/>
+<area shape="rect" id="Node000003" href="$dev__interface_2devices_2timer__kbc__mouse_2mouse_8h.html" title="Constants, global variables, and function declarations for interfacing with the mouse." alt="" coords="61,112,132,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="99,64,99,96,94,96,94,64"/>
+<area shape="rect" id="Node000005" href="$kbc_8h.html" title="Constants, global variables, and function declarations for interfacing with the keyboard controller." alt="" coords="157,112,210,139"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="126,62,162,99,158,103,122,66"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="99,139,102,213,106,246,101,246,97,214,94,139"/>
+<area shape="rect" id="Node000004" href="$i8042_8h.html" title="Constants and function declarations for interfacing with the i8042 keyboard controller." alt="" coords="112,187,175,213"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="107,138,129,172,125,175,102,141"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="140,215,123,248,119,246,135,213"/>
+<area shape="poly" id="edge7_Node000005_Node000002" title=" " alt="" coords="190,139,196,174,196,195,190,215,172,238,150,255,147,251,168,234,185,212,190,194,191,174,185,140"/>
+<area shape="poly" id="edge8_Node000005_Node000004" title=" " alt="" coords="179,141,160,174,155,172,174,138"/>
+</map>

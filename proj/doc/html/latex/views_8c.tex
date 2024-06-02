@@ -1,0 +1,608 @@
+\doxysection{LCOM-\/main/proj/src/\+Views/views.c File Reference}
+\hypertarget{views_8c}{}\label{views_8c}\index{LCOM-\/main/proj/src/Views/views.c@{LCOM-\/main/proj/src/Views/views.c}}
+{\ttfamily \#include "{}views.\+h"{}}\newline
+Include dependency graph for views.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{views_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{views_8c_ad0c6e30d8341ef923801e3fc1aac2a87}{draw\+Arena}} (\mbox{\hyperlink{struct_arena}{Arena}} arena)
+\begin{DoxyCompactList}\small\item\em Draws the arena screen. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{views_8c_a021c38e5484df43338d807e514a9441d}{draw\+Tank}} (\mbox{\hyperlink{structtank}{tank}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structtank}{tank}})
+\begin{DoxyCompactList}\small\item\em Draws the player tank on the screen. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{views_8c_aefba8b2a47700757729bb0da4af1c069}{draw\+Enemy\+Tank}} (\mbox{\hyperlink{struct_enemy_tank}{Enemy\+Tank}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structtank}{tank}})
+\begin{DoxyCompactList}\small\item\em Draws an enemy tank on the screen. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{views_8c_a7217fc029c74467b1ffab1f2f1c570db}{draw\+Menu}} (\mbox{\hyperlink{struct_menu}{Menu}} \mbox{\hyperlink{main_8c_a2ad0f4be462ff63c3c72779e80988d15}{menu}}, \mbox{\hyperlink{struct_high_score}{High\+Score}} score)
+\begin{DoxyCompactList}\small\item\em Draws the menu screen. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{views_8c_a6b5e5ea4778b78a346207b59bc4c3158}{draw\+Menu\+Back\+Ground}} ()
+\begin{DoxyCompactList}\small\item\em Draws the menu background. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{views_8c_a87d18a98b6e01254d1c19ba254670562}{draw\+High\+Score}} (\mbox{\hyperlink{struct_high_score}{High\+Score}} score)
+\begin{DoxyCompactList}\small\item\em Draws the high score screen. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{views_8c_a9c44a9a186dd7ca2257eb4d08aed3db7}{draw\+Score}} (\mbox{\hyperlink{struct_high_score}{High\+Score}} score)
+\begin{DoxyCompactList}\small\item\em Draws the player\textquotesingle{}s score on the screen. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{views_8c_a518c838b97ded94b9a14f769464563fb}{draw\+Chrono}} (\mbox{\hyperlink{struct_high_score}{High\+Score}} score)
+\begin{DoxyCompactList}\small\item\em Draws the rtc info about the highscore on the screen. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{views_8c_aeffe9751239b407eb57e9e5c9af53aff}{draw\+Score\+Back\+Ground}} ()
+\begin{DoxyCompactList}\small\item\em Draws the score menu background. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{views_8c_ac809db7888e72a78fbbc05642298b49b}{draw\+High\+Score\+Page}} (\mbox{\hyperlink{struct_high_score}{High\+Score}} score)
+\begin{DoxyCompactList}\small\item\em Draws the whole \doxylink{struct_high_score}{High\+Score} Page. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{views_8c_ae8f024e8f545f09e9e395dca36b00908}{draw\+Mouse}} (\mbox{\hyperlink{struct_mouse_info}{Mouse\+Info}} mouse)
+\begin{DoxyCompactList}\small\item\em Draws the mouse cursor on the screen. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{views_8c_a2e35cd85e9b10790713015ddcadf5873}{draw\+Bullets}} (\mbox{\hyperlink{struct_arena}{Arena}} arena)
+\begin{DoxyCompactList}\small\item\em Draws all bullets in the arena. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{views_8c_a4f69ca18c0a85ef638b7710e14d22b89}{draw\+Bullet}} (\mbox{\hyperlink{structbullet}{bullet}} b)
+\begin{DoxyCompactList}\small\item\em Draws a bullet on the screen. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{views_8c_a643860208cc1c763f4a6ec7dcd7e1669}{draw\+Builds}} (\mbox{\hyperlink{struct_obstacle}{Obstacle}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}builds, size\+\_\+t num\+Builts)
+\begin{DoxyCompactList}\small\item\em Draws dynamically built obstacles (by the user hammer) in the arena, they fade after 10 secs. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{views_8c_a1413e18c9ce70d5003cbc8793cc8c70d}{draw\+Game\+Back\+Ground}} ()
+\begin{DoxyCompactList}\small\item\em Draws the game background. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{views_8c_ac940e672661daf372dc8ee9f3645a2d7}{draw\+Bomb}} (\mbox{\hyperlink{structbomb}{bomb}} \mbox{\hyperlink{structbomb}{bomb}})
+\begin{DoxyCompactList}\small\item\em Draws a bomb on the screen after one of the tanks die. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{views_8c_ae4f30b621bd22dff478de0da223dd92b}{draw\+Stats}} (\mbox{\hyperlink{struct_high_score}{High\+Score}} score)
+\begin{DoxyCompactList}\small\item\em Draws the whole the chrono and score stats. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{views_8c_ad0c6e30d8341ef923801e3fc1aac2a87}\label{views_8c_ad0c6e30d8341ef923801e3fc1aac2a87} 
+\index{views.c@{views.c}!drawArena@{drawArena}}
+\index{drawArena@{drawArena}!views.c@{views.c}}
+\doxysubsubsection{\texorpdfstring{drawArena()}{drawArena()}}
+{\footnotesize\ttfamily int draw\+Arena (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_arena}{Arena}}}]{arena }\end{DoxyParamCaption})}
+
+
+
+Draws the arena screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arena} & The arena to draw. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{views_8c_ad0c6e30d8341ef923801e3fc1aac2a87_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{views_8c_ad0c6e30d8341ef923801e3fc1aac2a87_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{views_8c_ac940e672661daf372dc8ee9f3645a2d7}\label{views_8c_ac940e672661daf372dc8ee9f3645a2d7} 
+\index{views.c@{views.c}!drawBomb@{drawBomb}}
+\index{drawBomb@{drawBomb}!views.c@{views.c}}
+\doxysubsubsection{\texorpdfstring{drawBomb()}{drawBomb()}}
+{\footnotesize\ttfamily int draw\+Bomb (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structbomb}{bomb}}}]{bomba }\end{DoxyParamCaption})}
+
+
+
+Draws a bomb on the screen after one of the tanks die. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bomba} & The bomb to draw. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{views_8c_ac940e672661daf372dc8ee9f3645a2d7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{views_8c_ac940e672661daf372dc8ee9f3645a2d7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{views_8c_a643860208cc1c763f4a6ec7dcd7e1669}\label{views_8c_a643860208cc1c763f4a6ec7dcd7e1669} 
+\index{views.c@{views.c}!drawBuilds@{drawBuilds}}
+\index{drawBuilds@{drawBuilds}!views.c@{views.c}}
+\doxysubsubsection{\texorpdfstring{drawBuilds()}{drawBuilds()}}
+{\footnotesize\ttfamily int draw\+Builds (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_obstacle}{Obstacle}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{builds,  }\item[{size\+\_\+t}]{num\+Builts }\end{DoxyParamCaption})}
+
+
+
+Draws dynamically built obstacles (by the user hammer) in the arena, they fade after 10 secs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em builds} & \doxylink{struct_obstacle}{Obstacle} to draw. \\
+\hline
+{\em num\+Builts} & Number of obstacles. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{views_8c_a643860208cc1c763f4a6ec7dcd7e1669_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{views_8c_a643860208cc1c763f4a6ec7dcd7e1669_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{views_8c_a4f69ca18c0a85ef638b7710e14d22b89}\label{views_8c_a4f69ca18c0a85ef638b7710e14d22b89} 
+\index{views.c@{views.c}!drawBullet@{drawBullet}}
+\index{drawBullet@{drawBullet}!views.c@{views.c}}
+\doxysubsubsection{\texorpdfstring{drawBullet()}{drawBullet()}}
+{\footnotesize\ttfamily int draw\+Bullet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structbullet}{bullet}}}]{b }\end{DoxyParamCaption})}
+
+
+
+Draws a bullet on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & The bullet to draw. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{views_8c_a4f69ca18c0a85ef638b7710e14d22b89_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{views_8c_a4f69ca18c0a85ef638b7710e14d22b89_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{views_8c_a2e35cd85e9b10790713015ddcadf5873}\label{views_8c_a2e35cd85e9b10790713015ddcadf5873} 
+\index{views.c@{views.c}!drawBullets@{drawBullets}}
+\index{drawBullets@{drawBullets}!views.c@{views.c}}
+\doxysubsubsection{\texorpdfstring{drawBullets()}{drawBullets()}}
+{\footnotesize\ttfamily int draw\+Bullets (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_arena}{Arena}}}]{arena }\end{DoxyParamCaption})}
+
+
+
+Draws all bullets in the arena. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arena} & The arena containing the bullets. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{views_8c_a2e35cd85e9b10790713015ddcadf5873_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{views_8c_a2e35cd85e9b10790713015ddcadf5873_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{views_8c_a518c838b97ded94b9a14f769464563fb}\label{views_8c_a518c838b97ded94b9a14f769464563fb} 
+\index{views.c@{views.c}!drawChrono@{drawChrono}}
+\index{drawChrono@{drawChrono}!views.c@{views.c}}
+\doxysubsubsection{\texorpdfstring{drawChrono()}{drawChrono()}}
+{\footnotesize\ttfamily int draw\+Chrono (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_high_score}{High\+Score}}}]{score }\end{DoxyParamCaption})}
+
+
+
+Draws the rtc info about the highscore on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em score} & The time to display is inside the struct. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{views_8c_a518c838b97ded94b9a14f769464563fb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{views_8c_a518c838b97ded94b9a14f769464563fb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{views_8c_aefba8b2a47700757729bb0da4af1c069}\label{views_8c_aefba8b2a47700757729bb0da4af1c069} 
+\index{views.c@{views.c}!drawEnemyTank@{drawEnemyTank}}
+\index{drawEnemyTank@{drawEnemyTank}!views.c@{views.c}}
+\doxysubsubsection{\texorpdfstring{drawEnemyTank()}{drawEnemyTank()}}
+{\footnotesize\ttfamily int draw\+Enemy\+Tank (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_enemy_tank}{Enemy\+Tank}} \texorpdfstring{$\ast$}{*}}]{tank }\end{DoxyParamCaption})}
+
+
+
+Draws an enemy tank on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tank} & The enemy tank to draw. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{views_8c_aefba8b2a47700757729bb0da4af1c069_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{views_8c_aefba8b2a47700757729bb0da4af1c069_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{views_8c_a1413e18c9ce70d5003cbc8793cc8c70d}\label{views_8c_a1413e18c9ce70d5003cbc8793cc8c70d} 
+\index{views.c@{views.c}!drawGameBackGround@{drawGameBackGround}}
+\index{drawGameBackGround@{drawGameBackGround}!views.c@{views.c}}
+\doxysubsubsection{\texorpdfstring{drawGameBackGround()}{drawGameBackGround()}}
+{\footnotesize\ttfamily int draw\+Game\+Back\+Ground (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the game background. 
+
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{views_8c_a1413e18c9ce70d5003cbc8793cc8c70d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{views_8c_a1413e18c9ce70d5003cbc8793cc8c70d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{views_8c_a87d18a98b6e01254d1c19ba254670562}\label{views_8c_a87d18a98b6e01254d1c19ba254670562} 
+\index{views.c@{views.c}!drawHighScore@{drawHighScore}}
+\index{drawHighScore@{drawHighScore}!views.c@{views.c}}
+\doxysubsubsection{\texorpdfstring{drawHighScore()}{drawHighScore()}}
+{\footnotesize\ttfamily int draw\+High\+Score (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_high_score}{High\+Score}}}]{score }\end{DoxyParamCaption})}
+
+
+
+Draws the high score screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em score} & The high score to display. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{views_8c_a87d18a98b6e01254d1c19ba254670562_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{views_8c_a87d18a98b6e01254d1c19ba254670562_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{views_8c_ac809db7888e72a78fbbc05642298b49b}\label{views_8c_ac809db7888e72a78fbbc05642298b49b} 
+\index{views.c@{views.c}!drawHighScorePage@{drawHighScorePage}}
+\index{drawHighScorePage@{drawHighScorePage}!views.c@{views.c}}
+\doxysubsubsection{\texorpdfstring{drawHighScorePage()}{drawHighScorePage()}}
+{\footnotesize\ttfamily int draw\+High\+Score\+Page (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_high_score}{High\+Score}}}]{score }\end{DoxyParamCaption})}
+
+
+
+Draws the whole \doxylink{struct_high_score}{High\+Score} Page. 
+
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{views_8c_ac809db7888e72a78fbbc05642298b49b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{views_8c_ac809db7888e72a78fbbc05642298b49b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{views_8c_a7217fc029c74467b1ffab1f2f1c570db}\label{views_8c_a7217fc029c74467b1ffab1f2f1c570db} 
+\index{views.c@{views.c}!drawMenu@{drawMenu}}
+\index{drawMenu@{drawMenu}!views.c@{views.c}}
+\doxysubsubsection{\texorpdfstring{drawMenu()}{drawMenu()}}
+{\footnotesize\ttfamily int draw\+Menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_menu}{Menu}}}]{menu,  }\item[{\mbox{\hyperlink{struct_high_score}{High\+Score}}}]{score }\end{DoxyParamCaption})}
+
+
+
+Draws the menu screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em menu} & The menu to draw. \\
+\hline
+{\em score} & The high score to display on the menu. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{views_8c_a7217fc029c74467b1ffab1f2f1c570db_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{views_8c_a7217fc029c74467b1ffab1f2f1c570db_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{views_8c_a6b5e5ea4778b78a346207b59bc4c3158}\label{views_8c_a6b5e5ea4778b78a346207b59bc4c3158} 
+\index{views.c@{views.c}!drawMenuBackGround@{drawMenuBackGround}}
+\index{drawMenuBackGround@{drawMenuBackGround}!views.c@{views.c}}
+\doxysubsubsection{\texorpdfstring{drawMenuBackGround()}{drawMenuBackGround()}}
+{\footnotesize\ttfamily int draw\+Menu\+Back\+Ground (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the menu background. 
+
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{views_8c_a6b5e5ea4778b78a346207b59bc4c3158_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{views_8c_a6b5e5ea4778b78a346207b59bc4c3158_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{views_8c_ae8f024e8f545f09e9e395dca36b00908}\label{views_8c_ae8f024e8f545f09e9e395dca36b00908} 
+\index{views.c@{views.c}!drawMouse@{drawMouse}}
+\index{drawMouse@{drawMouse}!views.c@{views.c}}
+\doxysubsubsection{\texorpdfstring{drawMouse()}{drawMouse()}}
+{\footnotesize\ttfamily int draw\+Mouse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_mouse_info}{Mouse\+Info}}}]{mouse }\end{DoxyParamCaption})}
+
+
+
+Draws the mouse cursor on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mouse} & The mouse information to draw. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{views_8c_ae8f024e8f545f09e9e395dca36b00908_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{views_8c_ae8f024e8f545f09e9e395dca36b00908_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{views_8c_a9c44a9a186dd7ca2257eb4d08aed3db7}\label{views_8c_a9c44a9a186dd7ca2257eb4d08aed3db7} 
+\index{views.c@{views.c}!drawScore@{drawScore}}
+\index{drawScore@{drawScore}!views.c@{views.c}}
+\doxysubsubsection{\texorpdfstring{drawScore()}{drawScore()}}
+{\footnotesize\ttfamily int draw\+Score (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_high_score}{High\+Score}}}]{score }\end{DoxyParamCaption})}
+
+
+
+Draws the player\textquotesingle{}s score on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em score} & The score to display. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{views_8c_a9c44a9a186dd7ca2257eb4d08aed3db7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{views_8c_a9c44a9a186dd7ca2257eb4d08aed3db7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{views_8c_aeffe9751239b407eb57e9e5c9af53aff}\label{views_8c_aeffe9751239b407eb57e9e5c9af53aff} 
+\index{views.c@{views.c}!drawScoreBackGround@{drawScoreBackGround}}
+\index{drawScoreBackGround@{drawScoreBackGround}!views.c@{views.c}}
+\doxysubsubsection{\texorpdfstring{drawScoreBackGround()}{drawScoreBackGround()}}
+{\footnotesize\ttfamily int draw\+Score\+Back\+Ground (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the score menu background. 
+
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{views_8c_aeffe9751239b407eb57e9e5c9af53aff_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{views_8c_aeffe9751239b407eb57e9e5c9af53aff_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{views_8c_ae4f30b621bd22dff478de0da223dd92b}\label{views_8c_ae4f30b621bd22dff478de0da223dd92b} 
+\index{views.c@{views.c}!drawStats@{drawStats}}
+\index{drawStats@{drawStats}!views.c@{views.c}}
+\doxysubsubsection{\texorpdfstring{drawStats()}{drawStats()}}
+{\footnotesize\ttfamily int draw\+Stats (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_high_score}{High\+Score}}}]{score }\end{DoxyParamCaption})}
+
+
+
+Draws the whole the chrono and score stats. 
+
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{views_8c_ae4f30b621bd22dff478de0da223dd92b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{views_8c_ae4f30b621bd22dff478de0da223dd92b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{views_8c_a021c38e5484df43338d807e514a9441d}\label{views_8c_a021c38e5484df43338d807e514a9441d} 
+\index{views.c@{views.c}!drawTank@{drawTank}}
+\index{drawTank@{drawTank}!views.c@{views.c}}
+\doxysubsubsection{\texorpdfstring{drawTank()}{drawTank()}}
+{\footnotesize\ttfamily int draw\+Tank (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtank}{tank}} \texorpdfstring{$\ast$}{*}}]{tank }\end{DoxyParamCaption})}
+
+
+
+Draws the player tank on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tank} & The tank to draw. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{views_8c_a021c38e5484df43338d807e514a9441d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{views_8c_a021c38e5484df43338d807e514a9441d_icgraph}
+\end{center}
+\end{figure}

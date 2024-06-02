@@ -1,0 +1,64 @@
+\doxysection{video\+\_\+gr.\+h}
+\hypertarget{video__gr_8h_source}{}\label{video__gr_8h_source}\index{LCOM-\/main/proj/src/dev\_interface/devices/video\_gr.h@{LCOM-\/main/proj/src/dev\_interface/devices/video\_gr.h}}
+\mbox{\hyperlink{video__gr_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ VIDEO\_GR\_H\_}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ VIDEO\_GR\_H\_}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <lcom/lcf.h>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{graphics__const_8h}{graphics\_const.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}math.h"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ GREEN\_SCREEN\ 0x4ee44e\ }}
+\DoxyCodeLine{00015\ vbe\_mode\_info\_t\ \mbox{\hyperlink{video__gr_8h_a7711b1ebe1b9fd81b0fffba46f6715ee}{vbe\_mode\_info}};}
+\DoxyCodeLine{00016\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{video__gr_8h_a6fd010fe02d446268c32ff69c0483707}{video\_mem}};}
+\DoxyCodeLine{00017\ \textcolor{keyword}{static}\ uint8\_t\ *background\_buffer;}
+\DoxyCodeLine{00018\ \textcolor{keyword}{static}\ uint8\_t\ *current\_buffer;}
+\DoxyCodeLine{00019\ \textcolor{keyword}{static}\ uint8\_t\ *triple\_buffer;}
+\DoxyCodeLine{00020\ \textcolor{keyword}{static}\ uint32\_t\ buffer\_size;}
+\DoxyCodeLine{00021\ \textcolor{keyword}{static}\ uint32\_t\ vram\_size;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00029\ int\ (\mbox{\hyperlink{video__gr_8h_acf777d8344d18301dc8c93fed15070e6}{video\_init}})(uint16\_t\ mode);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00040\ int\ (\mbox{\hyperlink{video__gr_8h_a5c4e9586406f8d2cf7f2a5db188b6686}{vg\_draw\_pixel}})(uint16\_t\ x,\ uint16\_t\ y,\ uint32\_t\ color,\ uint8\_t\ *buffer);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00045\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{video__gr_8h_a473dc52fb85e17880f2effa929143576}{buffer\_swap}}();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00050\ void\ (\mbox{\hyperlink{video__gr_8h_a3e842192038953bd212f6d32d000e234}{buffer\_to\_video\_mem}})();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00057\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{video__gr_8h_a3190e4645454cb66c939eadd3dbad84a}{get\_width}}();}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00064\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{video__gr_8h_ac14c2c4b4538a3809f521d1a87fdf1c0}{get\_height}}();}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00073\ uint32\_t\ (\mbox{\hyperlink{video__gr_8h_aad25364e461463195fb65d1df29fd237}{complete\_color\_dir\_mode}})(uint32\_t\ color,\ uint32\_t\ *new\_color);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00085\ uint32\_t\ (\mbox{\hyperlink{video__gr_8h_a7fe0b7efc09486ad03348b77a93853fa}{indexed\_mode}})(uint16\_t\ col,\ uint16\_t\ row,\ uint8\_t\ step,\ uint32\_t\ first,\ uint8\_t\ n);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00095\ uint32\_t\ (\mbox{\hyperlink{video__gr_8h_ad04caa9632bdb6892f46a3f006e17428}{direct\_mode}})(uint32\_t\ red,\ uint32\_t\ green,\ uint32\_t\ blue);}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00105\ uint32\_t\ (\mbox{\hyperlink{video__gr_8h_a275cb09fced7ea8a7057948d6e5d61c7}{calculate\_red}})(uint32\_t\ first,\ uint16\_t\ col,\ uint8\_t\ step);}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00115\ uint32\_t\ (\mbox{\hyperlink{video__gr_8h_a61aef8007c7b7170c02e88e91c2bf9fa}{calculate\_green}})(uint32\_t\ first,\ uint16\_t\ row,\ uint8\_t\ step);}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00126\ uint32\_t\ (\mbox{\hyperlink{video__gr_8h_a64734c7543ea5e09c6a554ec6d91e7c4}{calculate\_blue}})(uint32\_t\ first,\ uint16\_t\ row,\ uint16\_t\ col,\ uint8\_t\ step);}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00136\ int\ (\mbox{\hyperlink{video__gr_8h_a0ee44da8a7c935a067fae7ca09d8f7f9}{xpm\_draw\_Background}})(xpm\_map\_t\ xpm,\ uint16\_t\ x,\ uint16\_t\ y);}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00146\ int\ (\mbox{\hyperlink{video__gr_8h_a81365f088a254b9d97925d6dd688c963}{xpm\_draw}})(xpm\_map\_t\ xpm,\ uint16\_t\ x,\ uint16\_t\ y);}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00157\ int\ (\mbox{\hyperlink{video__gr_8h_ad2aba6eddab4c859594b10186962d2c8}{xpm\_draw\_ignore}})(xpm\_map\_t\ xpm,\ uint16\_t\ x,\ uint16\_t\ y,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ ignoredColor);}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00169\ int\ (\mbox{\hyperlink{video__gr_8h_ae339c39acf578dff3312348128e99bbd}{xpm\_draw\_ignore\_rot}})(xpm\_map\_t\ xpm,\ uint16\_t\ x,\ uint16\_t\ y,\ uint16\_t\ deg,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ ignoredColor);}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00181\ int\ (\mbox{\hyperlink{video__gr_8h_a3bbc52d06c25081a66af6da64b3de8a5}{xpm\_draw\_ignore\_Block}})(xpm\_map\_t\ xpm,\ uint16\_t\ x,\ uint16\_t\ y,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ ignoredColor,\ \textcolor{keywordtype}{int}\ number);}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00193\ int\ (\mbox{\hyperlink{video__gr_8h_a351b92fa64fbe32254f0b53d4814cfd0}{xpm\_draw\_ignore\_Hammer}})(xpm\_map\_t\ xpm,\ uint16\_t\ x,\ uint16\_t\ y,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ ignoredColor,\ \textcolor{keywordtype}{bool}\ canBuild);}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00200\ int\ (\mbox{\hyperlink{video__gr_8h_a507a812f049fb333f8388fa3a92f0cd0}{vg\_exit\_graphics}})();}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00207\ int\ (\mbox{\hyperlink{video__gr_8h_ab1ed6f27008637833756145d9f287560}{restore\_videoBuffer}})();}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00209\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ VIDEO\_GR\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

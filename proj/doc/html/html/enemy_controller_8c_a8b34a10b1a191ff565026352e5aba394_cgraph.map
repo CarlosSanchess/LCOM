@@ -1,0 +1,29 @@
+<map id="updateEnemyTank" name="updateEnemyTank">
+<area shape="rect" id="Node000001" title="Updates the state of an enemy tank." alt="" coords="5,107,135,133"/>
+<area shape="rect" id="Node000002" href="$enemy_controller_8c.html#a82af8e097e729dbb72a83a6acf7c1803" title="Calculates the distance between two points." alt="" coords="464,56,588,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,104,182,92,323,77,448,69,448,74,324,82,183,97,125,109"/>
+<area shape="rect" id="Node000003" href="$enemy_controller_8c.html#aca1b3e0f0440437651ab9b6e87f464a5" title="Makes an enemy tank follow the player." alt="" coords="254,157,345,184"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="133,131,183,143,240,155,238,160,182,148,131,136"/>
+<area shape="rect" id="Node000007" href="$enemy_controller_8c.html#a2f7a89fb7d28477bf0bb7960ebc7158c" title="Checks if an enemy tank has reached a waypoint." alt="" coords="225,5,374,32"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="88,104,130,76,182,48,220,34,222,39,184,53,133,81,91,108"/>
+<area shape="rect" id="Node000008" href="$enemy_controller_8c.html#ace6678d597fe1f25bb0bab2ee0891e94" title="Moves an enemy tank towards a waypoint with deviation also providing some randomness." alt="" coords="183,107,416,133"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="135,117,167,117,167,123,135,123"/>
+<area shape="rect" id="Node000009" href="$enemy_controller_8c.html#a2b756f1cab75c6f8a7828db63a5c083a" title="Makes an enemy tank shoot at the player." alt="" coords="248,208,351,235"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="89,132,130,163,184,194,233,209,232,214,182,198,127,168,86,136"/>
+<area shape="rect" id="Node000004" href="$enemy_controller_8c.html#a5eb2eadd15c827a4e1a4f1484ae9b3d0" title="Attempts to move an enemy tank towards a target." alt="" coords="479,157,574,184"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="345,168,463,168,463,173,345,173"/>
+<area shape="rect" id="Node000005" href="$enemy_controller_8c.html#a24a22572e3e16181962a139f5eaa0228" title="Checks if an enemy tank can move to a new position." alt="" coords="649,107,763,133"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="573,155,641,135,642,141,575,160"/>
+<area shape="rect" id="Node000006" href="$enemy_controller_8c.html#a7e678de7062743d885efb2a8c2965a9c" title="Updates the direction of an enemy tank based on an angle rotating it." alt="" coords="636,157,776,184"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="574,168,621,168,621,173,574,173"/>
+<area shape="poly" id="edge7_Node000007_Node000002" title=" " alt="" coords="363,30,449,50,448,55,362,35"/>
+<area shape="poly" id="edge10_Node000008_Node000002" title=" " alt="" coords="362,103,448,84,449,89,363,109"/>
+<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="365,131,417,143,464,154,463,159,415,148,364,137"/>
+<area shape="poly" id="edge11_Node000008_Node000005" title=" " alt="" coords="416,117,634,117,634,123,416,123"/>
+<area shape="rect" id="Node000010" href="$bullet_controller_8c.html#aa0615d5eaae96e125e8ef83e9001ea2c" title="Adds a bullet to the arena." alt="" coords="465,259,588,285"/>
+<area shape="poly" id="edge13_Node000009_Node000010" title=" " alt="" coords="352,230,450,252,449,258,351,235"/>
+<area shape="rect" id="Node000012" href="$enemy_controller_8c.html#af6f8bbb15e2b0c3247bcee8f9eaec054" title="Updates the direction of an enemy tank towards a target." alt="" coords="471,208,582,235"/>
+<area shape="poly" id="edge15_Node000009_Node000012" title=" " alt="" coords="352,219,455,219,455,224,352,224"/>
+<area shape="rect" id="Node000011" href="$bullet_8c.html#aaa22717a020280d880939a5aeec1ce25" title="Creates a new bullet." alt="" coords="661,259,751,285"/>
+<area shape="poly" id="edge14_Node000010_Node000011" title=" " alt="" coords="588,269,645,269,645,275,588,275"/>
+</map>

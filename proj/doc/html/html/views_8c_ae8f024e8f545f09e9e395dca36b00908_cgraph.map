@@ -1,0 +1,12 @@
+<map id="drawMouse" name="drawMouse">
+<area shape="rect" id="Node000001" title="Draws the mouse cursor on the screen." alt="" coords="5,31,93,57"/>
+<area shape="rect" id="Node000002" href="$video__gr_8c.html#ad2aba6eddab4c859594b10186962d2c8" title="Draws an XPM image ignoring a specified color." alt="" coords="169,5,291,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,35,153,27,154,32,93,41"/>
+<area shape="rect" id="Node000005" href="$video__gr_8c.html#a351b92fa64fbe32254f0b53d4814cfd0" title="Draws an XPM image ignoring a specified color, with an option to indicate build capability." alt="" coords="141,56,319,83"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="93,47,126,52,125,57,93,53"/>
+<area shape="rect" id="Node000003" href="$video__gr_8c.html#a5c4e9586406f8d2cf7f2a5db188b6686" title="Draws a pixel at specified coordinates with a given color." alt="" coords="367,31,468,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="292,24,352,32,351,38,291,30"/>
+<area shape="rect" id="Node000004" href="$video__gr_8c.html#a3190e4645454cb66c939eadd3dbad84a" title="Gets the screen width." alt="" coords="516,31,593,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="469,41,500,41,500,47,469,47"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="319,55,351,50,352,55,320,60"/>
+</map>

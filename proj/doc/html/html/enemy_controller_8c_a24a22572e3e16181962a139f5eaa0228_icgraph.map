@@ -1,0 +1,19 @@
+<map id="canMoveEnemy" name="canMoveEnemy">
+<area shape="rect" id="Node000001" title="Checks if an enemy tank can move to a new position." alt="" coords="1000,31,1114,57"/>
+<area shape="rect" id="Node000002" href="$enemy_controller_8c.html#a5eb2eadd15c827a4e1a4f1484ae9b3d0" title="Attempts to move an enemy tank towards a target." alt="" coords="857,5,952,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="984,35,953,29,953,24,985,29"/>
+<area shape="rect" id="Node000008" href="$enemy_controller_8c.html#ace6678d597fe1f25bb0bab2ee0891e94" title="Moves an enemy tank towards a waypoint with deviation also providing some randomness." alt="" coords="576,56,809,83"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="985,52,810,64,809,59,985,46"/>
+<area shape="rect" id="Node000003" href="$enemy_controller_8c.html#aca1b3e0f0440437651ab9b6e87f464a5" title="Makes an enemy tank follow the player." alt="" coords="647,5,738,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="842,21,738,21,738,16,842,16"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="843,38,810,47,760,58,759,53,808,41,841,33"/>
+<area shape="rect" id="Node000004" href="$enemy_controller_8c.html#a8b34a10b1a191ff565026352e5aba394" title="Updates the state of an enemy tank." alt="" coords="398,31,528,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="632,28,528,40,528,34,631,23"/>
+<area shape="rect" id="Node000005" href="$arena_controller_8c.html#a0eaf53413d600619b39e10fd81be10ef" title="Processes the current state of the arena." alt="" coords="249,31,350,57"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="383,47,351,47,351,41,383,41"/>
+<area shape="rect" id="Node000006" href="$main_8c.html#a58e8be2db2660128e4e6456a9c981fb5" title=" " alt="" coords="162,31,201,57"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="233,47,202,47,202,41,233,41"/>
+<area shape="rect" id="Node000007" href="$main_8c.html#a7a72220d8366dd84709e79ce415862e5" title=" " alt="" coords="5,31,114,57"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="146,47,114,47,114,41,146,41"/>
+<area shape="poly" id="edge8_Node000008_Node000004" title=" " alt="" coords="560,57,528,54,528,48,560,52"/>
+</map>

@@ -1,0 +1,95 @@
+\doxysection{LCOM-\/main/proj/src/controllers/serial\+Port\+Controller.h File Reference}
+\hypertarget{serial_port_controller_8h}{}\label{serial_port_controller_8h}\index{LCOM-\/main/proj/src/controllers/serialPortController.h@{LCOM-\/main/proj/src/controllers/serialPortController.h}}
+
+
+Header file for serial port state management and interrupt handling.  
+
+
+{\ttfamily \#include "{}dev\+\_\+interface/devices/serial\+\_\+port.\+h"{}}\newline
+Include dependency graph for serial\+Port\+Controller.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{serial_port_controller_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{serial_port_controller_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{serial_port_controller_8h_ad648bc77b7d067f854037055c76de5d6}{MSTATE}} \{ \mbox{\hyperlink{serial_port_controller_8h_ad648bc77b7d067f854037055c76de5d6a0cb1b2c6a7db1f1084886c98909a3f36}{INIT}}
+, \mbox{\hyperlink{serial_port_controller_8h_ad648bc77b7d067f854037055c76de5d6a757971c0bc5a1972d5f1b1be2c0e2087}{WAITING}}
+, \mbox{\hyperlink{serial_port_controller_8h_ad648bc77b7d067f854037055c76de5d6a7a691a2430ec26878897b5fbc9c22a4c}{CONNECTED}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration representing the different states of the serial port. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{serial_port_controller_8h_a6d46c8a523f05d6f4f5b3e8ccdbe635b}{handle\+SPInterrupt}} ()
+\begin{DoxyCompactList}\small\item\em Handles the serial port interrupt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for serial port state management and interrupt handling. 
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{serial_port_controller_8h_ad648bc77b7d067f854037055c76de5d6}\label{serial_port_controller_8h_ad648bc77b7d067f854037055c76de5d6} 
+\index{serialPortController.h@{serialPortController.h}!MSTATE@{MSTATE}}
+\index{MSTATE@{MSTATE}!serialPortController.h@{serialPortController.h}}
+\doxysubsubsection{\texorpdfstring{MSTATE}{MSTATE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{serial_port_controller_8h_ad648bc77b7d067f854037055c76de5d6}{MSTATE}}}
+
+
+
+Enumeration representing the different states of the serial port. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INIT@{INIT}!serialPortController.h@{serialPortController.h}}\index{serialPortController.h@{serialPortController.h}!INIT@{INIT}}}\Hypertarget{serial_port_controller_8h_ad648bc77b7d067f854037055c76de5d6a0cb1b2c6a7db1f1084886c98909a3f36}\label{serial_port_controller_8h_ad648bc77b7d067f854037055c76de5d6a0cb1b2c6a7db1f1084886c98909a3f36} 
+INIT&Initial state \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WAITING@{WAITING}!serialPortController.h@{serialPortController.h}}\index{serialPortController.h@{serialPortController.h}!WAITING@{WAITING}}}\Hypertarget{serial_port_controller_8h_ad648bc77b7d067f854037055c76de5d6a757971c0bc5a1972d5f1b1be2c0e2087}\label{serial_port_controller_8h_ad648bc77b7d067f854037055c76de5d6a757971c0bc5a1972d5f1b1be2c0e2087} 
+WAITING&Waiting state \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CONNECTED@{CONNECTED}!serialPortController.h@{serialPortController.h}}\index{serialPortController.h@{serialPortController.h}!CONNECTED@{CONNECTED}}}\Hypertarget{serial_port_controller_8h_ad648bc77b7d067f854037055c76de5d6a7a691a2430ec26878897b5fbc9c22a4c}\label{serial_port_controller_8h_ad648bc77b7d067f854037055c76de5d6a7a691a2430ec26878897b5fbc9c22a4c} 
+CONNECTED&Connected state \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{serial_port_controller_8h_a6d46c8a523f05d6f4f5b3e8ccdbe635b}\label{serial_port_controller_8h_a6d46c8a523f05d6f4f5b3e8ccdbe635b} 
+\index{serialPortController.h@{serialPortController.h}!handleSPInterrupt@{handleSPInterrupt}}
+\index{handleSPInterrupt@{handleSPInterrupt}!serialPortController.h@{serialPortController.h}}
+\doxysubsubsection{\texorpdfstring{handleSPInterrupt()}{handleSPInterrupt()}}
+{\footnotesize\ttfamily int handle\+SPInterrupt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the serial port interrupt. 
+
+This function should be called when a serial port interrupt is generated. It processes the interrupt and performs necessary actions based on the current state and received data.
+
+\begin{DoxyReturn}{Returns}
+0 upon success, non-\/zero otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{serial_port_controller_8h_a6d46c8a523f05d6f4f5b3e8ccdbe635b_icgraph}
+\end{center}
+\end{figure}

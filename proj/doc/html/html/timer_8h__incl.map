@@ -1,0 +1,8 @@
+<map id="LCOM&#45;main/proj/src/dev_interface/devices/timer_kbc_mouse/timer.h" name="LCOM&#45;main/proj/src/dev_interface/devices/timer_kbc_mouse/timer.h">
+<area shape="rect" id="Node000001" title="Timer&#45;related functions and definitions." alt="" coords="5,5,178,64"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="53,187,130,213"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,65,85,100,85,139,89,171,84,172,80,139,80,100,84,64"/>
+<area shape="rect" id="Node000003" href="$i8254_8h.html" title="Constants and function declarations for interfacing with the i8042 keyboard controller." alt="" coords="95,112,158,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="105,63,118,96,113,98,100,65"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="123,140,106,174,102,171,118,138"/>
+</map>

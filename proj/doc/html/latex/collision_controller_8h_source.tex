@@ -1,0 +1,26 @@
+\doxysection{collision\+Controller.\+h}
+\hypertarget{collision_controller_8h_source}{}\label{collision_controller_8h_source}\index{LCOM-\/main/proj/src/controllers/collisionController.h@{LCOM-\/main/proj/src/controllers/collisionController.h}}
+\mbox{\hyperlink{collision_controller_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ \_\_COLLISION\_}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ \_\_COLLISION\_}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <lcom/lcf.h>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{views_8h}{Views/views.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{bullet_8h}{Models/bullet.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_tank_8h}{Models/Tank.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{arena_8h}{Models/arena.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_position_8h}{Models/Position.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_hitbox_8h}{Models/Hitbox.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{game_controller_8h}{controllers/gameController.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{graphics__const_8h}{dev\_interface/devices/graphics\_const.h}}"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{collision_controller_8h_a8bf2b4622c41d0df8c764d7bd2e8bebc}{checkCollision}}(\mbox{\hyperlink{struct_hitbox}{Hitbox}}\ a,\ \mbox{\hyperlink{struct_hitbox}{Hitbox}}\ b);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{collision_controller_8h_a80018dbb43e45130fdc924f9f1e1baa0}{processCollisions}}(\mbox{\hyperlink{struct_arena}{Arena}}*\ arena,\ \textcolor{keywordtype}{size\_t}\ index,\ \mbox{\hyperlink{struct_hitbox}{Hitbox}}\ tankHB,\ \mbox{\hyperlink{struct_hitbox}{Hitbox}}\ enemyTankHB,\ \mbox{\hyperlink{struct_hitbox}{Hitbox}}\ bulletHB);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_COLLISION\_}}
+
+\end{DoxyCode}

@@ -1,0 +1,7 @@
+<map id="handleArena" name="handleArena">
+<area shape="rect" id="Node000001" title="Handles arena interactions based on keyboard input." alt="" coords="5,5,99,32"/>
+<area shape="rect" id="Node000002" href="$bullet_controller_8c.html#aa0615d5eaae96e125e8ef83e9001ea2c" title="Adds a bullet to the arena." alt="" coords="147,5,270,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,16,131,16,131,21,99,21"/>
+<area shape="rect" id="Node000003" href="$bullet_8c.html#aaa22717a020280d880939a5aeec1ce25" title="Creates a new bullet." alt="" coords="318,5,408,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="270,16,302,16,302,21,270,21"/>
+</map>

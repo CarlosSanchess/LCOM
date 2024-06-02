@@ -1,0 +1,22 @@
+<map id="drawMenuBackGround" name="drawMenuBackGround">
+<area shape="rect" id="Node000001" title="Draws the menu background." alt="" coords="832,56,984,83"/>
+<area shape="rect" id="Node000002" href="$game_controller_8c.html#a00ed09a539771f3a9f9b725597bc7f08" title="Changes the game state to the menu." alt="" coords="446,5,556,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="831,55,784,47,661,32,556,24,556,19,662,27,784,41,832,50"/>
+<area shape="rect" id="Node000007" href="$game_controller_8c.html#a6c1aa145dc1fba62193e5c9f6b8da784" title="Changes the state and the Background to the Menu, from the HighScores." alt="" coords="604,56,784,83"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="816,72,785,72,785,67,816,67"/>
+<area shape="rect" id="Node000009" href="$main_8c.html#ada06e65686f854920bbae55688ed5484" title=" " alt="" coords="162,107,217,133"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="835,89,784,97,616,113,451,121,217,123,217,118,451,115,615,107,784,92,834,84"/>
+<area shape="rect" id="Node000003" href="$kb_controller_8c.html#a7c807c44f534a91d6d580c71b35dec38" title="Handles keyboard interrupts and processes game state changes." alt="" coords="265,56,398,83"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="440,39,380,58,378,53,439,34"/>
+<area shape="rect" id="Node000006" href="$arena_controller_8c.html#a0eaf53413d600619b39e10fd81be10ef" title="Processes the current state of the arena." alt="" coords="281,5,382,32"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="431,21,383,21,383,16,431,16"/>
+<area shape="rect" id="Node000004" href="$main_8c.html#a58e8be2db2660128e4e6456a9c981fb5" title=" " alt="" coords="170,56,209,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="250,72,210,72,210,67,250,67"/>
+<area shape="rect" id="Node000005" href="$main_8c.html#a7a72220d8366dd84709e79ce415862e5" title=" " alt="" coords="5,81,114,108"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="155,79,114,87,113,82,154,73"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="278,40,210,65,209,60,276,35"/>
+<area shape="rect" id="Node000008" href="$kb_controller_8c.html#a8f674ccf39d43d1afdab395f72ccd240" title="Handles HighScore Page interactions based on keyboard input." alt="" coords="454,56,548,83"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="588,72,548,72,548,67,588,67"/>
+<area shape="poly" id="edge9_Node000008_Node000003" title=" " alt="" coords="438,72,399,72,399,67,438,67"/>
+<area shape="poly" id="edge11_Node000009_Node000005" title=" " alt="" coords="146,114,113,108,114,103,147,109"/>
+</map>

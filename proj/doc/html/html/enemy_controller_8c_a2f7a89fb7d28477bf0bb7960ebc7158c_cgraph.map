@@ -1,0 +1,5 @@
+<map id="hasReachedWaypoint" name="hasReachedWaypoint">
+<area shape="rect" id="Node000001" title="Checks if an enemy tank has reached a waypoint." alt="" coords="5,5,154,32"/>
+<area shape="rect" id="Node000002" href="$enemy_controller_8c.html#a82af8e097e729dbb72a83a6acf7c1803" title="Calculates the distance between two points." alt="" coords="202,5,326,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,16,186,16,186,21,154,21"/>
+</map>

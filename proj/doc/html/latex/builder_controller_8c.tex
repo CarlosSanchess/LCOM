@@ -1,0 +1,99 @@
+\doxysection{LCOM-\/main/proj/src/controllers/builder\+Controller.c File Reference}
+\hypertarget{builder_controller_8c}{}\label{builder_controller_8c}\index{LCOM-\/main/proj/src/controllers/builderController.c@{LCOM-\/main/proj/src/controllers/builderController.c}}
+{\ttfamily \#include "{}builder\+Controller.\+h"{}}\newline
+Include dependency graph for builder\+Controller.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{builder_controller_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{builder_controller_8c_a12ac1a2cf94f1f33d6ede0b633680891}{add\+\_\+obstacle\+To\+Arena}} (\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}arena, int x1, int x2, int y1, int y2)
+\begin{DoxyCompactList}\small\item\em Adds an obstacle to the arena. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{builder_controller_8c_ac65254b6bc497a824fcdcd5b6eafae20}{process\+Builts}} (\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}arena)
+\begin{DoxyCompactList}\small\item\em Processes built obstacles in the arena. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{builder_controller_8c_a12ac1a2cf94f1f33d6ede0b633680891}\label{builder_controller_8c_a12ac1a2cf94f1f33d6ede0b633680891} 
+\index{builderController.c@{builderController.c}!add\_obstacleToArena@{add\_obstacleToArena}}
+\index{add\_obstacleToArena@{add\_obstacleToArena}!builderController.c@{builderController.c}}
+\doxysubsubsection{\texorpdfstring{add\_obstacleToArena()}{add\_obstacleToArena()}}
+{\footnotesize\ttfamily int add\+\_\+obstacle\+To\+Arena (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}}]{arena,  }\item[{int}]{x1,  }\item[{int}]{x2,  }\item[{int}]{y1,  }\item[{int}]{y2 }\end{DoxyParamCaption})}
+
+
+
+Adds an obstacle to the arena. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arena} & Pointer to the arena structure. \\
+\hline
+{\em x1} & X coordinate of the first corner of the obstacle. \\
+\hline
+{\em x2} & X coordinate of the opposite corner of the obstacle. \\
+\hline
+{\em y1} & Y coordinate of the first corner of the obstacle. \\
+\hline
+{\em y2} & Y coordinate of the opposite corner of the obstacle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Status code indicating the result of the addition. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{builder_controller_8c_a12ac1a2cf94f1f33d6ede0b633680891_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{builder_controller_8c_a12ac1a2cf94f1f33d6ede0b633680891_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{builder_controller_8c_ac65254b6bc497a824fcdcd5b6eafae20}\label{builder_controller_8c_ac65254b6bc497a824fcdcd5b6eafae20} 
+\index{builderController.c@{builderController.c}!processBuilts@{processBuilts}}
+\index{processBuilts@{processBuilts}!builderController.c@{builderController.c}}
+\doxysubsubsection{\texorpdfstring{processBuilts()}{processBuilts()}}
+{\footnotesize\ttfamily int process\+Builts (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}}]{arena }\end{DoxyParamCaption})}
+
+
+
+Processes built obstacles in the arena. 
+
+Processes built structures in the arena.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arena} & Pointer to the arena structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Status code indicating the result of the processing. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{builder_controller_8c_ac65254b6bc497a824fcdcd5b6eafae20_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{builder_controller_8c_ac65254b6bc497a824fcdcd5b6eafae20_icgraph}
+\end{center}
+\end{figure}

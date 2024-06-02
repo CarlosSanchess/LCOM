@@ -1,0 +1,315 @@
+\doxysection{LCOM-\/main/proj/src/controllers/mouse\+Controller.h File Reference}
+\hypertarget{mouse_controller_8h}{}\label{mouse_controller_8h}\index{LCOM-\/main/proj/src/controllers/mouseController.h@{LCOM-\/main/proj/src/controllers/mouseController.h}}
+
+
+Declares functions for handling mouse interrupts and controlling game states based on mouse lb clicks.  
+
+
+{\ttfamily \#include "{}../dev\+\_\+interface/devices/timer\+\_\+kbc\+\_\+mouse/mouse.\+h"{}}\newline
+{\ttfamily \#include "{}Models/state.\+h"{}}\newline
+{\ttfamily \#include "{}Models/menu.\+h"{}}\newline
+{\ttfamily \#include "{}Models/mouse.\+h"{}}\newline
+{\ttfamily \#include "{}Models/obstacle.\+h"{}}\newline
+{\ttfamily \#include "{}Models/arena.\+h"{}}\newline
+{\ttfamily \#include "{}controllers/builder\+Controller.\+h"{}}\newline
+{\ttfamily \#include "{}controllers/game\+Controller.\+h"{}}\newline
+Include dependency graph for mouse\+Controller.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_controller_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{mouse_controller_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{mouse_controller_8h_a76bf238d14734ada3ef9fadfdea45ca7}{MOUSE\+\_\+\+SCALING\+\_\+\+FACTOR}}~0.\+5
+\item 
+\#define \mbox{\hyperlink{mouse_controller_8h_a2cd109632a6dcccaa80b43561b1ab700}{SCREEN\+\_\+\+WIDTH}}~1152
+\item 
+\#define \mbox{\hyperlink{mouse_controller_8h_a397203d8c79e62a109f64b62b242d59e}{SCREEN\+\_\+\+WIDTH\+\_\+\+RIGHT}}~5
+\item 
+\#define \mbox{\hyperlink{mouse_controller_8h_a8c2c4b95adb1e59c67fdca5a3fe3a314}{HAMMER\+\_\+\+TOP}}~18
+\item 
+\#define \mbox{\hyperlink{mouse_controller_8h_accc4ddca90489957fbebe2c66fe3c425}{HAMMER\+\_\+\+LOW}}~795
+\item 
+\#define \mbox{\hyperlink{mouse_controller_8h_ada88c8cedc62ff074b2d99f18318f8c7}{HAMMER\+\_\+\+LEFT}}~5
+\item 
+\#define \mbox{\hyperlink{mouse_controller_8h_a77a05a5000468b25f765316ba3b3d497}{HAMMER\+\_\+\+RIGHT}}~1085
+\item 
+\#define \mbox{\hyperlink{mouse_controller_8h_a3a697659cf60d4d3710ad47a67134952}{SCREEN\+\_\+\+HEIGHT\+\_\+\+LOW}}~795
+\item 
+\#define \mbox{\hyperlink{mouse_controller_8h_a8a051b8695b4004fdadadd7ab10f7bef}{CURSOR\+\_\+\+WIDTH}}~50
+\item 
+\#define \mbox{\hyperlink{mouse_controller_8h_a7f913fcf73aaf5db0a9f07665b6f71b1}{CURSOR\+\_\+\+HEIGHT}}~50
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{mouse_controller_8h_a59eab8192e96165c0e79d6bd94e762a4}{handle\+Interrupt\+Mouse}} (\mbox{\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \texorpdfstring{$\ast$}{*}game\+State, \mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_a2ad0f4be462ff63c3c72779e80988d15}{menu}}, \mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}arena, \mbox{\hyperlink{struct_mouse_info}{Mouse\+Info}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_a4b7a142226097e18c01a5405d023b2ea}{mouse\+Info}}, \mbox{\hyperlink{struct_high_score}{High\+Score}} score)
+\begin{DoxyCompactList}\small\item\em Handles mouse interrupts and processes game state changes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mouse_controller_8h_af9b1810e8b067ad56cc0a459efce9e4e}{get\+Position\+Mouse}} (\mbox{\hyperlink{struct_mouse_info}{Mouse\+Info}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_a4b7a142226097e18c01a5405d023b2ea}{mouse\+Info}})
+\begin{DoxyCompactList}\small\item\em Updates the mouse position based on input. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{mouse_controller_8h_a348c097f86faf1b588054d360a374988}{process\+Menu}} (\mbox{\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \texorpdfstring{$\ast$}{*}game\+State, \mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_a2ad0f4be462ff63c3c72779e80988d15}{menu}}, \mbox{\hyperlink{struct_mouse_info}{Mouse\+Info}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_a4b7a142226097e18c01a5405d023b2ea}{mouse\+Info}}, \mbox{\hyperlink{struct_high_score}{High\+Score}} score)
+\begin{DoxyCompactList}\small\item\em Processes the menu interactions based on mouse input. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{mouse_controller_8h_a96ada83b8c99d911101012141c0eda0c}{process\+Build}} (\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}arena, \mbox{\hyperlink{struct_mouse_info}{Mouse\+Info}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_a4b7a142226097e18c01a5405d023b2ea}{mouse\+Info}})
+\begin{DoxyCompactList}\small\item\em Processes the build actions in the arena based on mouse input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct packet \mbox{\hyperlink{mouse_controller_8h_a75558100998943936b90b314221ce75c}{mouse\+\_\+byte\+\_\+packet}}
+\begin{DoxyCompactList}\small\item\em Global variable to store the mouse packet. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{mouse_controller_8h_acf34c0529492bf9429cc05f65cda577c}{mouse\+\_\+error\+Handling}}
+\begin{DoxyCompactList}\small\item\em Global variable to handle mouse errors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declares functions for handling mouse interrupts and controlling game states based on mouse lb clicks. 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{mouse_controller_8h_a7f913fcf73aaf5db0a9f07665b6f71b1}\label{mouse_controller_8h_a7f913fcf73aaf5db0a9f07665b6f71b1} 
+\index{mouseController.h@{mouseController.h}!CURSOR\_HEIGHT@{CURSOR\_HEIGHT}}
+\index{CURSOR\_HEIGHT@{CURSOR\_HEIGHT}!mouseController.h@{mouseController.h}}
+\doxysubsubsection{\texorpdfstring{CURSOR\_HEIGHT}{CURSOR\_HEIGHT}}
+{\footnotesize\ttfamily \#define CURSOR\+\_\+\+HEIGHT~50}
+
+\Hypertarget{mouse_controller_8h_a8a051b8695b4004fdadadd7ab10f7bef}\label{mouse_controller_8h_a8a051b8695b4004fdadadd7ab10f7bef} 
+\index{mouseController.h@{mouseController.h}!CURSOR\_WIDTH@{CURSOR\_WIDTH}}
+\index{CURSOR\_WIDTH@{CURSOR\_WIDTH}!mouseController.h@{mouseController.h}}
+\doxysubsubsection{\texorpdfstring{CURSOR\_WIDTH}{CURSOR\_WIDTH}}
+{\footnotesize\ttfamily \#define CURSOR\+\_\+\+WIDTH~50}
+
+\Hypertarget{mouse_controller_8h_ada88c8cedc62ff074b2d99f18318f8c7}\label{mouse_controller_8h_ada88c8cedc62ff074b2d99f18318f8c7} 
+\index{mouseController.h@{mouseController.h}!HAMMER\_LEFT@{HAMMER\_LEFT}}
+\index{HAMMER\_LEFT@{HAMMER\_LEFT}!mouseController.h@{mouseController.h}}
+\doxysubsubsection{\texorpdfstring{HAMMER\_LEFT}{HAMMER\_LEFT}}
+{\footnotesize\ttfamily \#define HAMMER\+\_\+\+LEFT~5}
+
+\Hypertarget{mouse_controller_8h_accc4ddca90489957fbebe2c66fe3c425}\label{mouse_controller_8h_accc4ddca90489957fbebe2c66fe3c425} 
+\index{mouseController.h@{mouseController.h}!HAMMER\_LOW@{HAMMER\_LOW}}
+\index{HAMMER\_LOW@{HAMMER\_LOW}!mouseController.h@{mouseController.h}}
+\doxysubsubsection{\texorpdfstring{HAMMER\_LOW}{HAMMER\_LOW}}
+{\footnotesize\ttfamily \#define HAMMER\+\_\+\+LOW~795}
+
+\Hypertarget{mouse_controller_8h_a77a05a5000468b25f765316ba3b3d497}\label{mouse_controller_8h_a77a05a5000468b25f765316ba3b3d497} 
+\index{mouseController.h@{mouseController.h}!HAMMER\_RIGHT@{HAMMER\_RIGHT}}
+\index{HAMMER\_RIGHT@{HAMMER\_RIGHT}!mouseController.h@{mouseController.h}}
+\doxysubsubsection{\texorpdfstring{HAMMER\_RIGHT}{HAMMER\_RIGHT}}
+{\footnotesize\ttfamily \#define HAMMER\+\_\+\+RIGHT~1085}
+
+\Hypertarget{mouse_controller_8h_a8c2c4b95adb1e59c67fdca5a3fe3a314}\label{mouse_controller_8h_a8c2c4b95adb1e59c67fdca5a3fe3a314} 
+\index{mouseController.h@{mouseController.h}!HAMMER\_TOP@{HAMMER\_TOP}}
+\index{HAMMER\_TOP@{HAMMER\_TOP}!mouseController.h@{mouseController.h}}
+\doxysubsubsection{\texorpdfstring{HAMMER\_TOP}{HAMMER\_TOP}}
+{\footnotesize\ttfamily \#define HAMMER\+\_\+\+TOP~18}
+
+\Hypertarget{mouse_controller_8h_a76bf238d14734ada3ef9fadfdea45ca7}\label{mouse_controller_8h_a76bf238d14734ada3ef9fadfdea45ca7} 
+\index{mouseController.h@{mouseController.h}!MOUSE\_SCALING\_FACTOR@{MOUSE\_SCALING\_FACTOR}}
+\index{MOUSE\_SCALING\_FACTOR@{MOUSE\_SCALING\_FACTOR}!mouseController.h@{mouseController.h}}
+\doxysubsubsection{\texorpdfstring{MOUSE\_SCALING\_FACTOR}{MOUSE\_SCALING\_FACTOR}}
+{\footnotesize\ttfamily \#define MOUSE\+\_\+\+SCALING\+\_\+\+FACTOR~0.\+5}
+
+\Hypertarget{mouse_controller_8h_a3a697659cf60d4d3710ad47a67134952}\label{mouse_controller_8h_a3a697659cf60d4d3710ad47a67134952} 
+\index{mouseController.h@{mouseController.h}!SCREEN\_HEIGHT\_LOW@{SCREEN\_HEIGHT\_LOW}}
+\index{SCREEN\_HEIGHT\_LOW@{SCREEN\_HEIGHT\_LOW}!mouseController.h@{mouseController.h}}
+\doxysubsubsection{\texorpdfstring{SCREEN\_HEIGHT\_LOW}{SCREEN\_HEIGHT\_LOW}}
+{\footnotesize\ttfamily \#define SCREEN\+\_\+\+HEIGHT\+\_\+\+LOW~795}
+
+\Hypertarget{mouse_controller_8h_a2cd109632a6dcccaa80b43561b1ab700}\label{mouse_controller_8h_a2cd109632a6dcccaa80b43561b1ab700} 
+\index{mouseController.h@{mouseController.h}!SCREEN\_WIDTH@{SCREEN\_WIDTH}}
+\index{SCREEN\_WIDTH@{SCREEN\_WIDTH}!mouseController.h@{mouseController.h}}
+\doxysubsubsection{\texorpdfstring{SCREEN\_WIDTH}{SCREEN\_WIDTH}}
+{\footnotesize\ttfamily \#define SCREEN\+\_\+\+WIDTH~1152}
+
+\Hypertarget{mouse_controller_8h_a397203d8c79e62a109f64b62b242d59e}\label{mouse_controller_8h_a397203d8c79e62a109f64b62b242d59e} 
+\index{mouseController.h@{mouseController.h}!SCREEN\_WIDTH\_RIGHT@{SCREEN\_WIDTH\_RIGHT}}
+\index{SCREEN\_WIDTH\_RIGHT@{SCREEN\_WIDTH\_RIGHT}!mouseController.h@{mouseController.h}}
+\doxysubsubsection{\texorpdfstring{SCREEN\_WIDTH\_RIGHT}{SCREEN\_WIDTH\_RIGHT}}
+{\footnotesize\ttfamily \#define SCREEN\+\_\+\+WIDTH\+\_\+\+RIGHT~5}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{mouse_controller_8h_af9b1810e8b067ad56cc0a459efce9e4e}\label{mouse_controller_8h_af9b1810e8b067ad56cc0a459efce9e4e} 
+\index{mouseController.h@{mouseController.h}!getPositionMouse@{getPositionMouse}}
+\index{getPositionMouse@{getPositionMouse}!mouseController.h@{mouseController.h}}
+\doxysubsubsection{\texorpdfstring{getPositionMouse()}{getPositionMouse()}}
+{\footnotesize\ttfamily void get\+Position\+Mouse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_mouse_info}{Mouse\+Info}} \texorpdfstring{$\ast$}{*}}]{mouse\+Info }\end{DoxyParamCaption})}
+
+
+
+Updates the mouse position based on input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mouse\+Info} & Pointer to the \doxylink{struct_mouse_info}{Mouse\+Info} structure. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_controller_8h_af9b1810e8b067ad56cc0a459efce9e4e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_controller_8h_af9b1810e8b067ad56cc0a459efce9e4e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mouse_controller_8h_a59eab8192e96165c0e79d6bd94e762a4}\label{mouse_controller_8h_a59eab8192e96165c0e79d6bd94e762a4} 
+\index{mouseController.h@{mouseController.h}!handleInterruptMouse@{handleInterruptMouse}}
+\index{handleInterruptMouse@{handleInterruptMouse}!mouseController.h@{mouseController.h}}
+\doxysubsubsection{\texorpdfstring{handleInterruptMouse()}{handleInterruptMouse()}}
+{\footnotesize\ttfamily int handle\+Interrupt\+Mouse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \texorpdfstring{$\ast$}{*}}]{game\+State,  }\item[{\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}}]{menu,  }\item[{\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}}]{arena,  }\item[{\mbox{\hyperlink{struct_mouse_info}{Mouse\+Info}} \texorpdfstring{$\ast$}{*}}]{mouse\+Info,  }\item[{\mbox{\hyperlink{struct_high_score}{High\+Score}}}]{score }\end{DoxyParamCaption})}
+
+
+
+Handles mouse interrupts and processes game state changes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+State} & Pointer to the current game state. \\
+\hline
+{\em menu} & Pointer to the \doxylink{struct_menu}{Menu} structure. \\
+\hline
+{\em arena} & Pointer to the \doxylink{struct_arena}{Arena} structure. \\
+\hline
+{\em mouse\+Info} & Pointer to the \doxylink{struct_mouse_info}{Mouse\+Info} structure. \\
+\hline
+{\em score} & Value of the current \doxylink{struct_high_score}{High\+Score}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success, 1 if the game should exit. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_controller_8h_a59eab8192e96165c0e79d6bd94e762a4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_controller_8h_a59eab8192e96165c0e79d6bd94e762a4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mouse_controller_8h_a96ada83b8c99d911101012141c0eda0c}\label{mouse_controller_8h_a96ada83b8c99d911101012141c0eda0c} 
+\index{mouseController.h@{mouseController.h}!processBuild@{processBuild}}
+\index{processBuild@{processBuild}!mouseController.h@{mouseController.h}}
+\doxysubsubsection{\texorpdfstring{processBuild()}{processBuild()}}
+{\footnotesize\ttfamily int process\+Build (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}}]{arena,  }\item[{\mbox{\hyperlink{struct_mouse_info}{Mouse\+Info}} \texorpdfstring{$\ast$}{*}}]{mouse\+Info }\end{DoxyParamCaption})}
+
+
+
+Processes the build actions in the arena based on mouse input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arena} & Pointer to the \doxylink{struct_arena}{Arena} structure. \\
+\hline
+{\em mouse\+Info} & Pointer to the \doxylink{struct_mouse_info}{Mouse\+Info} structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_controller_8h_a96ada83b8c99d911101012141c0eda0c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_controller_8h_a96ada83b8c99d911101012141c0eda0c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mouse_controller_8h_a348c097f86faf1b588054d360a374988}\label{mouse_controller_8h_a348c097f86faf1b588054d360a374988} 
+\index{mouseController.h@{mouseController.h}!processMenu@{processMenu}}
+\index{processMenu@{processMenu}!mouseController.h@{mouseController.h}}
+\doxysubsubsection{\texorpdfstring{processMenu()}{processMenu()}}
+{\footnotesize\ttfamily int process\+Menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \texorpdfstring{$\ast$}{*}}]{game\+State,  }\item[{\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}}]{menu,  }\item[{\mbox{\hyperlink{struct_mouse_info}{Mouse\+Info}} \texorpdfstring{$\ast$}{*}}]{mouse\+Info,  }\item[{\mbox{\hyperlink{struct_high_score}{High\+Score}}}]{score }\end{DoxyParamCaption})}
+
+
+
+Processes the menu interactions based on mouse input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+State} & Pointer to the current game state. \\
+\hline
+{\em menu} & Pointer to the \doxylink{struct_menu}{Menu} structure. \\
+\hline
+{\em mouse\+Info} & Pointer to the \doxylink{struct_mouse_info}{Mouse\+Info} structure. \\
+\hline
+{\em score} & Value of the current \doxylink{struct_high_score}{High\+Score}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success, non-\/zero on failure. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_controller_8h_a348c097f86faf1b588054d360a374988_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_controller_8h_a348c097f86faf1b588054d360a374988_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{mouse_controller_8h_a75558100998943936b90b314221ce75c}\label{mouse_controller_8h_a75558100998943936b90b314221ce75c} 
+\index{mouseController.h@{mouseController.h}!mouse\_byte\_packet@{mouse\_byte\_packet}}
+\index{mouse\_byte\_packet@{mouse\_byte\_packet}!mouseController.h@{mouseController.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_byte\_packet}{mouse\_byte\_packet}}
+{\footnotesize\ttfamily struct packet mouse\+\_\+byte\+\_\+packet\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Global variable to store the mouse packet. 
+
+\Hypertarget{mouse_controller_8h_acf34c0529492bf9429cc05f65cda577c}\label{mouse_controller_8h_acf34c0529492bf9429cc05f65cda577c} 
+\index{mouseController.h@{mouseController.h}!mouse\_errorHandling@{mouse\_errorHandling}}
+\index{mouse\_errorHandling@{mouse\_errorHandling}!mouseController.h@{mouseController.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_errorHandling}{mouse\_errorHandling}}
+{\footnotesize\ttfamily int mouse\+\_\+error\+Handling\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Global variable to handle mouse errors. 
+

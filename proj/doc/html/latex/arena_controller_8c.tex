@@ -1,0 +1,98 @@
+\doxysection{LCOM-\/main/proj/src/controllers/arena\+Controller.c File Reference}
+\hypertarget{arena_controller_8c}{}\label{arena_controller_8c}\index{LCOM-\/main/proj/src/controllers/arenaController.c@{LCOM-\/main/proj/src/controllers/arenaController.c}}
+{\ttfamily \#include "{}arena\+Controller.\+h"{}}\newline
+Include dependency graph for arena\+Controller.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{arena_controller_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{arena_controller_8c_a0eaf53413d600619b39e10fd81be10ef}{process\+Arena}} (\mbox{\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_a62d920a9a06d7ac5b8c98e175defd014}{current\+State}}, \mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}arena)
+\begin{DoxyCompactList}\small\item\em Processes the current state of the arena. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_waypoint}{Waypoint}} \mbox{\hyperlink{arena_controller_8c_a93a0b8290778aa0400d46d2046f28c38}{waypoints}} \mbox{[}\mbox{\hyperlink{enemy_controller_8h_a106af341aeb948bdf26d7e19841e27a6}{NUM\+\_\+\+WAYPOINTS}}\mbox{]}
+\item 
+bool \mbox{\hyperlink{arena_controller_8c_a46323a6373fa143cfa0d972060476aa4}{waypoints\+Generated}} = false
+\item 
+\mbox{\hyperlink{struct_waypoint}{Waypoint}} \mbox{\hyperlink{arena_controller_8c_a77326f93eea00459baf225f1a30e2016}{combined\+Waypoints}} \mbox{[}\mbox{\hyperlink{arena_controller_8h_a6641dd4245d741149a53ecdb477e3e8e}{NEW\+\_\+\+NUM\+\_\+\+WAYPOINTS}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{arena_controller_8c_a0eaf53413d600619b39e10fd81be10ef}\label{arena_controller_8c_a0eaf53413d600619b39e10fd81be10ef} 
+\index{arenaController.c@{arenaController.c}!processArena@{processArena}}
+\index{processArena@{processArena}!arenaController.c@{arenaController.c}}
+\doxysubsubsection{\texorpdfstring{processArena()}{processArena()}}
+{\footnotesize\ttfamily int process\+Arena (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \texorpdfstring{$\ast$}{*}}]{current\+State,  }\item[{\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}}]{arena }\end{DoxyParamCaption})}
+
+
+
+Processes the current state of the arena. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+State} & Pointer to the current game state. \\
+\hline
+{\em arena} & Pointer to the arena structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Status code indicating the result of the processing. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{arena_controller_8c_a0eaf53413d600619b39e10fd81be10ef_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{arena_controller_8c_a0eaf53413d600619b39e10fd81be10ef_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{arena_controller_8c_a77326f93eea00459baf225f1a30e2016}\label{arena_controller_8c_a77326f93eea00459baf225f1a30e2016} 
+\index{arenaController.c@{arenaController.c}!combinedWaypoints@{combinedWaypoints}}
+\index{combinedWaypoints@{combinedWaypoints}!arenaController.c@{arenaController.c}}
+\doxysubsubsection{\texorpdfstring{combinedWaypoints}{combinedWaypoints}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_waypoint}{Waypoint}} combined\+Waypoints\mbox{[}\mbox{\hyperlink{arena_controller_8h_a6641dd4245d741149a53ecdb477e3e8e}{NEW\+\_\+\+NUM\+\_\+\+WAYPOINTS}}\mbox{]}}
+
+\Hypertarget{arena_controller_8c_a93a0b8290778aa0400d46d2046f28c38}\label{arena_controller_8c_a93a0b8290778aa0400d46d2046f28c38} 
+\index{arenaController.c@{arenaController.c}!waypoints@{waypoints}}
+\index{waypoints@{waypoints}!arenaController.c@{arenaController.c}}
+\doxysubsubsection{\texorpdfstring{waypoints}{waypoints}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_waypoint}{Waypoint}} waypoints\mbox{[}\mbox{\hyperlink{enemy_controller_8h_a106af341aeb948bdf26d7e19841e27a6}{NUM\+\_\+\+WAYPOINTS}}\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \{890,\ 170\},\ \{1089,\ 774\},\ \{840,\ 439\},\ \{691,\ 16\},\ \{388,\ 101\},}
+\DoxyCodeLine{\ \ \ \ \{300,\ 431\},\ \{80,\ 558\},\ \{421,\ 780\},\ \{700,\ 200\},\ \{100,\ 300\},}
+\DoxyCodeLine{\ \ \ \ \{900,\ 500\},\ \{600,\ 700\},\ \{500,\ 50\},\ \{200,\ 600\},\ \{800,\ 100\},}
+\DoxyCodeLine{\ \ \ \ \{400,\ 400\},\ \{1000,\ 800\},\ \{300,\ 200\},\ \{50,\ 750\},\ \{500,\ 350\},}
+\DoxyCodeLine{\ \ \ \ \{800,\ 600\},\ \{600,\ 250\},\ \{230,\ 800\},\ \{950,\ 200\},\ \{300,\ 600\},}
+\DoxyCodeLine{\ \ \ \ \{150,\ 400\},\ \{700,\ 600\},\ \{400,\ 150\},\ \{900,\ 700\},\ \{50,\ 50\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{arena_controller_8c_a46323a6373fa143cfa0d972060476aa4}\label{arena_controller_8c_a46323a6373fa143cfa0d972060476aa4} 
+\index{arenaController.c@{arenaController.c}!waypointsGenerated@{waypointsGenerated}}
+\index{waypointsGenerated@{waypointsGenerated}!arenaController.c@{arenaController.c}}
+\doxysubsubsection{\texorpdfstring{waypointsGenerated}{waypointsGenerated}}
+{\footnotesize\ttfamily bool waypoints\+Generated = false}
+
+Flag indicating if waypoints have been generated 

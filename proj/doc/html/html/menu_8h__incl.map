@@ -1,0 +1,15 @@
+<map id="LCOM&#45;main/proj/src/Models/menu.h" name="LCOM&#45;main/proj/src/Models/menu.h">
+<area shape="rect" id="Node000001" title="Defines the Menu structure used for menu management." alt="" coords="78,5,215,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,104,131,131"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,50,91,94,87,90,126,47"/>
+<area shape="rect" id="Node000003" href="$video__gr_8h.html" title="Functions and definitions for video graphics mode." alt="" coords="155,96,298,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="167,47,200,83,196,86,163,50"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="139,261,216,288"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="197,141,174,162,157,188,154,202,155,218,165,247,160,249,149,219,148,202,152,186,170,158,193,137"/>
+<area shape="rect" id="Node000005" href="$graphics__const_8h.html" title="Constants and macros for programming the graphics card." alt="" coords="167,187,287,213"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="221,139,221,171,215,171,216,139"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="311,187,372,213"/>
+<area shape="poly" id="edge7_Node000003_Node000006" title=" " alt="" coords="258,137,312,175,309,180,255,141"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="231,186,233,154,238,155,236,186"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="220,215,197,250,192,247,216,212"/>
+</map>

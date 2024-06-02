@@ -1,0 +1,70 @@
+\doxysection{serial\+\_\+port.\+h}
+\hypertarget{serial__port_8h_source}{}\label{serial__port_8h_source}\index{LCOM-\/main/proj/src/dev\_interface/devices/serial\_port.h@{LCOM-\/main/proj/src/dev\_interface/devices/serial\_port.h}}
+\mbox{\hyperlink{serial__port_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ SERIAL\_PORT\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ SERIAL\_PORT\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <lcom/lcf.h>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ FIFO\_SIZE\ \ \ 16}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ SERIAL\_PORT\_COM1\ \ \ \ 0x3F8}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ UART\_IIR\ 2\ \ }}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ UART\_RBR\ 0\ \ }}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ UART\_LCR\ 3\ \ }}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ UART\_THR\ 0\ \ }}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ UART\_IER\ 1\ \ }}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ UART\_LSR\ 5\ \ }}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ UART\_FCR\ 2\ \ }}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ UART\_FCR\_CLEAR\ 6\ }}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ UART\_IIR\_RDI\ \ 4\ }}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ UART\_IIR\_THRI\ 2\ }}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ UART\_IER\_RDI\ \ 1\ }}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ UART\_IER\_THRI\ 2\ }}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ STAT\_READY\ BIT(0)\ \ }}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ WRITE\_READY\ BIT(5)\ \ }}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ STAT\_ERROR\ (BIT(3)\ |\ BIT(2)\ |\ BIT(1))\ }}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00042\ \ \ \ \ uint8\_t\ buffer[\mbox{\hyperlink{serial__port_8h_a6092455278a1ac67204e0dbe08f9d13f}{FIFO\_SIZE}}];}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structfifo__t_ae93028e986799fceacecbd153729f855}{head}};}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structfifo__t_abe914ae9dd92644d8a53a4b99d89b487}{tail}};}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structfifo__t_a9a42f0bd8835dedcbd539b2143ce72cf}{count}};}
+\DoxyCodeLine{00046\ \}\ \mbox{\hyperlink{structfifo__t}{fifo\_t}};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00054\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{serial__port_8h_a967774712b7c6939a5f7adf49496aa08}{serial\_subscribe\_int}}(uint8\_t\ *bit\_no);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00061\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{serial__port_8h_ae7f39492f4273a8a529a80a7eceae62d}{serial\_unsubscribe\_int}}();}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00069\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{serial__port_8h_a70195f8d713f50e2133dbbe4e3ab6870}{serial\_stat}}(uint8\_t\ *stat);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00077\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{serial__port_8h_afc633cbdf84332e704a7a8a0057f7756}{stat\_error}}(uint8\_t\ stat);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00082\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{serial__port_8h_a71e0230b553ce9929e84ad98452dcb18}{serial\_int\_handler}}(\mbox{\hyperlink{structfifo__t}{fifo\_t}}\ *rx\_fifo);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00089\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{serial__port_8h_a3be9499c359da5c8f5e49f0cde034fd3}{serial\_config}}();}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00097\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{serial__port_8h_af26804966e7098d673255be2b3985449}{send\_byte}}(uint8\_t\ \textcolor{keywordtype}{byte});}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00104\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{serial__port_8h_a8c319b8e7ca6fa684c1fc6d7c8e933d5}{serial\_clear\_fifo}}(\mbox{\hyperlink{structfifo__t}{fifo\_t}}\ *rx\_fifo,\ \mbox{\hyperlink{structfifo__t}{fifo\_t}}\ *tx\_fifo);}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ uint8\_t\ \mbox{\hyperlink{serial__port_8h_a2d2c07c00ddcd0d30c68d4ee026af684}{fifo\_dequeue}}(\mbox{\hyperlink{structfifo__t}{fifo\_t}}\ *fifo)\ ;}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{serial__port_8h_a06f85c5a0356f9a1d926efdbeaab080a}{fifo\_enqueue}}(\mbox{\hyperlink{structfifo__t}{fifo\_t}}\ *fifo,\ uint8\_t\ data);}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \textcolor{comment}{//\ static\ int\ fifo\_is\_full(fifo\_t\ *fifo);}}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \textcolor{comment}{//\ static\ int\ fifo\_is\_empty(fifo\_t\ *fifo);}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ SERIAL\_PORT\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

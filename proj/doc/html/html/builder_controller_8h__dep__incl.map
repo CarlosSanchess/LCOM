@@ -1,0 +1,31 @@
+<map id="LCOM&#45;main/proj/src/controllers/builderController.h" name="LCOM&#45;main/proj/src/controllers/builderController.h">
+<area shape="rect" id="Node000001" title="Defines functions for user building and managing obstacles in the arena." alt="" coords="244,5,437,48"/>
+<area shape="rect" id="Node000002" href="$builder_controller_8c.html" title=" " alt="" coords="30,96,224,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="277,57,178,98,176,93,275,52"/>
+<area shape="rect" id="Node000003" href="$bullet_controller_8h.html" title="Defines functions for managing bullets in the arena." alt="" coords="247,96,434,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="343,64,343,96,338,96,338,64"/>
+<area shape="rect" id="Node000012" href="$mouse_controller_8h.html" title="Declares functions for handling mouse interrupts and controlling game states based on mouse lb clicks..." alt="" coords="597,96,791,139"/>
+<area shape="poly" id="edge14_Node000001_Node000012" title=" " alt="" coords="438,50,611,93,610,98,437,55"/>
+<area shape="poly" id="edge7_Node000003_Node000003" title=" " alt="" coords="450,104,457,109,460,118,453,129,435,135,433,130,449,125,455,117,453,113,447,108"/>
+<area shape="rect" id="Node000004" href="$arena_controller_8h.html" title="Defines functions for processing the game arena." alt="" coords="5,277,193,320"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="232,143,94,171,22,189,17,199,16,210,25,233,45,255,69,275,65,279,41,259,20,236,10,211,11,198,19,185,92,166,231,138"/>
+<area shape="rect" id="Node000007" href="$bullet_controller_8c.html" title=" " alt="" coords="33,187,219,229"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="277,147,177,188,175,184,275,142"/>
+<area shape="rect" id="Node000008" href="$enemy_controller_8h.html" title="Defines functions and constants for enemy tanks &quot;Intelligent&quot; movement." alt="" coords="243,187,438,229"/>
+<area shape="poly" id="edge8_Node000003_Node000008" title=" " alt="" coords="343,154,343,186,338,186,338,154"/>
+<area shape="rect" id="Node000010" href="$kb_controller_8h.html" title="Declares functions for handling keyboard interrupts and controlling game states." alt="" coords="461,187,630,229"/>
+<area shape="poly" id="edge11_Node000003_Node000010" title=" " alt="" coords="404,143,499,184,496,188,401,148"/>
+<area shape="rect" id="Node000005" href="$arena_controller_8c.html" title=" " alt="" coords="5,368,193,411"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="102,336,102,368,96,368,96,336"/>
+<area shape="rect" id="Node000006" href="$main_8c.html" title=" " alt="" coords="380,368,517,411"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="196,322,380,368,379,373,195,327"/>
+<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="271,238,157,279,155,274,269,233"/>
+<area shape="rect" id="Node000009" href="$enemy_controller_8c.html" title=" " alt="" coords="217,277,411,320"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="332,245,322,278,317,276,327,243"/>
+<area shape="poly" id="edge13_Node000010_Node000006" title=" " alt="" coords="508,242,491,259,477,279,460,325,452,368,447,367,455,324,473,276,487,256,504,238"/>
+<area shape="rect" id="Node000011" href="$kb_controller_8c.html" title=" " alt="" coords="486,277,656,320"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="558,243,568,276,563,278,553,245"/>
+<area shape="poly" id="edge16_Node000012_Node000006" title=" " alt="" coords="702,154,705,192,703,236,693,281,683,303,670,322,638,350,599,370,558,382,518,388,517,383,556,376,597,365,635,346,666,318,679,300,688,280,698,236,700,192,697,154"/>
+<area shape="rect" id="Node000013" href="$mouse_controller_8c.html" title=" " alt="" coords="731,187,926,229"/>
+<area shape="poly" id="edge15_Node000012_Node000013" title=" " alt="" coords="739,145,798,184,795,188,737,150"/>
+</map>

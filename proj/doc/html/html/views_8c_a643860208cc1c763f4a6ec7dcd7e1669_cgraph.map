@@ -1,0 +1,9 @@
+<map id="drawBuilds" name="drawBuilds">
+<area shape="rect" id="Node000001" title="Draws dynamically built obstacles (by the user hammer) in the arena, they fade after 10 secs." alt="" coords="5,5,90,32"/>
+<area shape="rect" id="Node000002" href="$video__gr_8c.html#ad2aba6eddab4c859594b10186962d2c8" title="Draws an XPM image ignoring a specified color." alt="" coords="138,5,260,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,16,122,16,122,21,90,21"/>
+<area shape="rect" id="Node000003" href="$video__gr_8c.html#a5c4e9586406f8d2cf7f2a5db188b6686" title="Draws a pixel at specified coordinates with a given color." alt="" coords="308,5,409,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="260,16,292,16,292,21,260,21"/>
+<area shape="rect" id="Node000004" href="$video__gr_8c.html#a3190e4645454cb66c939eadd3dbad84a" title="Gets the screen width." alt="" coords="457,5,534,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="410,16,441,16,441,21,410,21"/>
+</map>

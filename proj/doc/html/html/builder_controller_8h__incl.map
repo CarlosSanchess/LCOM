@@ -1,0 +1,44 @@
+<map id="LCOM&#45;main/proj/src/controllers/builderController.h" name="LCOM&#45;main/proj/src/controllers/builderController.h">
+<area shape="rect" id="Node000001" title="Defines functions for user building and managing obstacles in the arena." alt="" coords="6,5,199,48"/>
+<area shape="rect" id="Node000002" href="$arena_8h.html" title="This file contains the data structure and function declarations for the Models of the game arena." alt="" coords="95,96,206,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,47,137,81,133,84,113,50"/>
+<area shape="rect" id="Node000015" href="$obstacle_8h.html" title="Defines the Dynamic Obstacle built by the user hammer, structure and functions for obstacle managemen..." alt="" coords="15,171,97,197"/>
+<area shape="poly" id="edge26_Node000001_Node000015" title=" " alt="" coords="99,49,67,156,61,155,94,47"/>
+<area shape="rect" id="Node000003" href="$_tank_8h.html" title="Defines the tank and enemy tank structures and functions for tank management." alt="" coords="120,171,181,197"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="153,123,153,155,148,155,148,123"/>
+<area shape="rect" id="Node000012" href="$_models_2mouse_8h.html" title="Defines the MouseInfo structure and includes resources for mouse handling." alt="" coords="368,245,440,272"/>
+<area shape="poly" id="edge17_Node000002_Node000012" title=" " alt="" coords="173,121,371,235,368,240,171,125"/>
+<area shape="poly" id="edge22_Node000002_Node000015" title=" " alt="" coords="136,125,86,163,83,159,132,121"/>
+<area shape="rect" id="Node000016" href="$bomb_8h.html" title="This file contains the data structure for handling bomb element model." alt="" coords="280,245,344,272"/>
+<area shape="poly" id="edge24_Node000002_Node000016" title=" " alt="" coords="166,121,289,233,285,237,162,125"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="109,485,187,512"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="130,200,101,220,73,247,49,281,36,320,33,382,37,436,48,450,63,463,96,480,94,485,60,467,45,454,32,438,28,382,31,320,44,279,69,244,98,216,127,196"/>
+<area shape="rect" id="Node000005" href="$_position_8h.html" title="Defines the position structure used to store coordinates and orientation." alt="" coords="139,328,218,355"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="174,196,199,216,220,244,224,264,220,283,202,317,197,315,215,281,218,264,215,246,195,220,171,200"/>
+<area shape="rect" id="Node000006" href="$bullet_8h.html" title="This file contains the data structure and functions for handling bullets in the game." alt="" coords="96,245,205,272"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="153,198,153,230,148,230,148,198"/>
+<area shape="rect" id="Node000007" href="$_hitbox_8h.html" title="Defines the Hitbox structure used for collision detection." alt="" coords="45,328,115,355"/>
+<area shape="poly" id="edge16_Node000003_Node000007" title=" " alt="" coords="131,200,106,220,86,246,78,280,78,312,73,312,73,279,81,244,103,216,128,196"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="179,356,156,471,151,469,173,355"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="157,272,172,313,167,315,152,273"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="141,274,102,319,98,315,137,271"/>
+<area shape="rect" id="Node000009" href="$video__gr_8h.html" title="Functions and definitions for video graphics mode." alt="" coords="243,320,386,363"/>
+<area shape="poly" id="edge10_Node000006_Node000009" title=" " alt="" coords="177,270,260,310,258,315,175,275"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="46,411,111,437"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="82,355,82,395,76,395,77,355"/>
+<area shape="poly" id="edge11_Node000009_Node000004" title=" " alt="" coords="286,365,226,413,169,475,165,471,222,409,282,361"/>
+<area shape="rect" id="Node000010" href="$graphics__const_8h.html" title="Constants and macros for programming the graphics card." alt="" coords="321,411,441,437"/>
+<area shape="poly" id="edge12_Node000009_Node000010" title=" " alt="" coords="326,362,355,398,351,401,322,365"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="236,411,297,437"/>
+<area shape="poly" id="edge15_Node000009_Node000011" title=" " alt="" coords="304,365,284,398,280,396,300,362"/>
+<area shape="poly" id="edge13_Node000010_Node000004" title=" " alt="" coords="341,440,202,483,200,478,340,435"/>
+<area shape="poly" id="edge14_Node000010_Node000009" title=" " alt="" coords="375,412,348,376,352,373,380,408"/>
+<area shape="poly" id="edge18_Node000012_Node000005" title=" " alt="" coords="368,275,231,323,226,325,224,320,230,317,367,270"/>
+<area shape="poly" id="edge19_Node000012_Node000009" title=" " alt="" coords="392,274,350,312,347,308,388,271"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="566,328,682,355"/>
+<area shape="poly" id="edge20_Node000012_Node000013" title=" " alt="" coords="439,270,576,320,575,325,437,275"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="410,328,542,355"/>
+<area shape="poly" id="edge21_Node000012_Node000014" title=" " alt="" coords="417,271,457,315,453,319,413,274"/>
+<area shape="poly" id="edge23_Node000015_Node000004" title=" " alt="" coords="52,199,33,241,14,303,9,337,9,372,15,405,29,436,42,452,58,464,96,482,93,487,55,469,38,455,24,439,10,407,4,372,4,337,9,302,28,239,47,196"/>
+<area shape="poly" id="edge25_Node000016_Node000005" title=" " alt="" coords="292,275,214,322,211,317,290,270"/>
+</map>

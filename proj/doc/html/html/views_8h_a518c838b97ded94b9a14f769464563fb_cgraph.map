@@ -1,0 +1,9 @@
+<map id="drawChrono" name="drawChrono">
+<area shape="rect" id="Node000001" title="Draws the rtc info about the highscore on the screen." alt="" coords="5,5,95,32"/>
+<area shape="rect" id="Node000002" href="$video__gr_8c.html#ad2aba6eddab4c859594b10186962d2c8" title="Draws an XPM image ignoring a specified color." alt="" coords="143,5,265,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,16,127,16,127,21,95,21"/>
+<area shape="rect" id="Node000003" href="$video__gr_8c.html#a5c4e9586406f8d2cf7f2a5db188b6686" title="Draws a pixel at specified coordinates with a given color." alt="" coords="313,5,414,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="265,16,297,16,297,21,265,21"/>
+<area shape="rect" id="Node000004" href="$video__gr_8c.html#a3190e4645454cb66c939eadd3dbad84a" title="Gets the screen width." alt="" coords="462,5,539,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="415,16,446,16,446,21,415,21"/>
+</map>

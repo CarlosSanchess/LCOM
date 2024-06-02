@@ -1,0 +1,25 @@
+<map id="changeToMenu" name="changeToMenu">
+<area shape="rect" id="Node000001" title="Changes the game state to the menu." alt="" coords="5,132,115,159"/>
+<area shape="rect" id="Node000002" href="$views_8c.html#a6b5e5ea4778b78a346207b59bc4c3158" title="Draws the menu background." alt="" coords="163,56,315,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,129,190,87,193,92,95,134"/>
+<area shape="rect" id="Node000006" href="$game_controller_8c.html#af235f3867aed0ba757c2a5c9c86a23fb" title="Resets the game by reinitializing the arena." alt="" coords="196,157,282,184"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="116,150,181,160,181,165,115,156"/>
+<area shape="rect" id="Node000003" href="$video__gr_8c.html#a0ee44da8a7c935a067fae7ca09d8f7f9" title="Draws an XPM image as the background." alt="" coords="368,5,524,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="296,53,373,34,374,39,297,58"/>
+<area shape="rect" id="Node000004" href="$video__gr_8c.html#a5c4e9586406f8d2cf7f2a5db188b6686" title="Draws a pixel at specified coordinates with a given color." alt="" coords="576,5,678,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="524,16,561,16,561,21,524,21"/>
+<area shape="rect" id="Node000005" href="$video__gr_8c.html#a3190e4645454cb66c939eadd3dbad84a" title="Gets the screen width." alt="" coords="726,5,802,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="678,16,710,16,710,21,678,21"/>
+<area shape="rect" id="Node000007" href="$tank_8c.html#a2b4d3b1e5c1918d513937a5c9b8f15cf" title="Creates a new enemy tank." alt="" coords="383,56,509,83"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="258,154,304,124,362,92,378,86,380,91,364,97,307,128,261,159"/>
+<area shape="rect" id="Node000008" href="$tank_8c.html#af0f78c94a6562688f7efb448d44e2ffa" title="Creates a new tank." alt="" coords="403,107,488,133"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="281,158,387,131,388,137,283,163"/>
+<area shape="rect" id="Node000009" href="$tank_8c.html#a56f65050438e9382e351d33ab303261e" title="Frees the memory allocated for the enemy tank." alt="" coords="390,157,501,184"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="282,168,374,168,374,173,282,173"/>
+<area shape="rect" id="Node000010" href="$tank_8c.html#a42aa5c5144bd173a7e2fb159c8c2f72a" title="Frees the memory allocated for the tank." alt="" coords="411,208,481,235"/>
+<area shape="poly" id="edge9_Node000006_Node000010" title=" " alt="" coords="283,178,396,207,395,212,281,184"/>
+<area shape="rect" id="Node000011" href="$obstacle_8c.html#a4fa70a860bafd5124df0bfb4ed1f3517" title="Removes the first obstacle from the array." alt="" coords="399,259,493,285"/>
+<area shape="poly" id="edge10_Node000006_Node000011" title=" " alt="" coords="261,182,307,213,364,244,385,252,383,257,362,249,304,218,258,187"/>
+<area shape="rect" id="Node000012" href="$bullet_8c.html#a25c3c0cb94a0b278b6aeabde6bf0fb19" title="Removes a bullet from an array of bullets." alt="" coords="363,309,528,336"/>
+<area shape="poly" id="edge11_Node000006_Node000012" title=" " alt="" coords="252,183,296,237,328,268,364,295,374,300,371,305,362,300,325,272,293,241,248,186"/>
+</map>

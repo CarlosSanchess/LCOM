@@ -1,0 +1,27 @@
+<map id="drawArena" name="drawArena">
+<area shape="rect" id="Node000001" title="Draws the arena screen." alt="" coords="5,107,88,133"/>
+<area shape="rect" id="Node000002" href="$views_8c.html#ac940e672661daf372dc8ee9f3645a2d7" title="Draws a bomb on the screen after one of the tanks die." alt="" coords="139,5,221,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="60,104,134,42,140,38,143,42,137,46,64,108"/>
+<area shape="rect" id="Node000006" href="$views_8c.html#a643860208cc1c763f4a6ec7dcd7e1669" title="Draws dynamically built obstacles (by the user hammer) in the arena, they fade after 10 secs." alt="" coords="138,56,222,83"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="83,104,127,86,129,91,85,109"/>
+<area shape="rect" id="Node000007" href="$views_8c.html#a2e35cd85e9b10790713015ddcadf5873" title="Draws all bullets in the arena." alt="" coords="136,107,224,133"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="88,117,120,117,120,123,88,123"/>
+<area shape="rect" id="Node000010" href="$views_8c.html#aefba8b2a47700757729bb0da4af1c069" title="Draws an enemy tank on the screen." alt="" coords="275,157,392,184"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="89,130,136,143,260,161,259,167,135,148,88,136"/>
+<area shape="rect" id="Node000011" href="$views_8c.html#a021c38e5484df43338d807e514a9441d" title="Draws the player tank on the screen." alt="" coords="295,208,371,235"/>
+<area shape="poly" id="edge13_Node000001_Node000011" title=" " alt="" coords="73,131,137,163,212,188,281,207,279,212,210,193,135,168,70,136"/>
+<area shape="rect" id="Node000003" href="$video__gr_8c.html#ad2aba6eddab4c859594b10186962d2c8" title="Draws an XPM image ignoring a specified color." alt="" coords="272,56,394,83"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="222,30,277,48,275,53,221,35"/>
+<area shape="rect" id="Node000004" href="$video__gr_8c.html#a5c4e9586406f8d2cf7f2a5db188b6686" title="Draws a pixel at specified coordinates with a given color." alt="" coords="635,107,736,133"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="395,75,620,108,619,113,395,81"/>
+<area shape="rect" id="Node000005" href="$video__gr_8c.html#a3190e4645454cb66c939eadd3dbad84a" title="Gets the screen width." alt="" coords="784,107,860,133"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="737,117,768,117,768,123,737,123"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="222,67,256,67,256,72,222,72"/>
+<area shape="rect" id="Node000008" href="$views_8c.html#a4f69ca18c0a85ef638b7710e14d22b89" title="Draws a bullet on the screen." alt="" coords="293,107,374,133"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="224,117,277,117,277,123,224,123"/>
+<area shape="rect" id="Node000009" href="$video__gr_8c.html#ae339c39acf578dff3312348128e99bbd" title="Draws a rotated XPM image ignoring a specified color." alt="" coords="442,132,587,159"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="375,123,428,131,427,136,374,128"/>
+<area shape="poly" id="edge10_Node000009_Node000004" title=" " alt="" coords="587,132,619,127,620,132,588,137"/>
+<area shape="poly" id="edge12_Node000010_Node000009" title=" " alt="" coords="392,160,427,155,427,160,392,165"/>
+<area shape="poly" id="edge14_Node000011_Node000009" title=" " alt="" coords="366,205,393,194,466,163,468,167,395,198,368,210"/>
+</map>

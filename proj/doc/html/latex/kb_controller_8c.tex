@@ -1,0 +1,215 @@
+\doxysection{LCOM-\/main/proj/src/controllers/kb\+Controller.c File Reference}
+\hypertarget{kb_controller_8c}{}\label{kb_controller_8c}\index{LCOM-\/main/proj/src/controllers/kbController.c@{LCOM-\/main/proj/src/controllers/kbController.c}}
+{\ttfamily \#include "{}kb\+Controller.\+h"{}}\newline
+Include dependency graph for kb\+Controller.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kb_controller_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{kb_controller_8c_a7c807c44f534a91d6d580c71b35dec38}{handle\+Interrupt\+KBC}} (\mbox{\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \texorpdfstring{$\ast$}{*}game\+State, \mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}menu\+Info, \mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}arena, \mbox{\hyperlink{serial_port_controller_8h_ad648bc77b7d067f854037055c76de5d6}{MSTATE}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_aedc5572ef7fe1b8d1353567cd9a9ac54}{mstate}})
+\begin{DoxyCompactList}\small\item\em Handles keyboard interrupts and processes game state changes. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{kb_controller_8c_a51dcba88830e36e39c9c614fb4f17014}{handle\+Arena}} (\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}arena)
+\begin{DoxyCompactList}\small\item\em Handles arena interactions based on keyboard input. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{kb_controller_8c_a217fce9c35c892d4cfc84827c087f8ba}{handle\+Tank}} (\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}arena)
+\begin{DoxyCompactList}\small\item\em Handles tank movements based on keyboard input. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{kb_controller_8c_a49ab70f4325d6326ae082c9829b4b0cd}{handle\+Menu}} (\mbox{\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \texorpdfstring{$\ast$}{*}game\+State, \mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_a2ad0f4be462ff63c3c72779e80988d15}{menu}}, \mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}arena)
+\begin{DoxyCompactList}\small\item\em Processes the menu interactions based on keyboard input. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{kb_controller_8c_a8f674ccf39d43d1afdab395f72ccd240}{handle\+Score}} (\mbox{\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \texorpdfstring{$\ast$}{*}game\+State)
+\begin{DoxyCompactList}\small\item\em Handles \doxylink{struct_high_score}{High\+Score} Page interactions based on keyboard input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{kb_controller_8c_ac4c81d34a9be02e382c2086d9fb765a9}{scan\+Code}}
+\begin{DoxyCompactList}\small\item\em Global variable to store the scan code from keyboard interrupts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{kb_controller_8c_a51dcba88830e36e39c9c614fb4f17014}\label{kb_controller_8c_a51dcba88830e36e39c9c614fb4f17014} 
+\index{kbController.c@{kbController.c}!handleArena@{handleArena}}
+\index{handleArena@{handleArena}!kbController.c@{kbController.c}}
+\doxysubsubsection{\texorpdfstring{handleArena()}{handleArena()}}
+{\footnotesize\ttfamily int handle\+Arena (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}}]{arena }\end{DoxyParamCaption})}
+
+
+
+Handles arena interactions based on keyboard input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arena} & Pointer to the \doxylink{struct_arena}{Arena} structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kb_controller_8c_a51dcba88830e36e39c9c614fb4f17014_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kb_controller_8c_a51dcba88830e36e39c9c614fb4f17014_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kb_controller_8c_a7c807c44f534a91d6d580c71b35dec38}\label{kb_controller_8c_a7c807c44f534a91d6d580c71b35dec38} 
+\index{kbController.c@{kbController.c}!handleInterruptKBC@{handleInterruptKBC}}
+\index{handleInterruptKBC@{handleInterruptKBC}!kbController.c@{kbController.c}}
+\doxysubsubsection{\texorpdfstring{handleInterruptKBC()}{handleInterruptKBC()}}
+{\footnotesize\ttfamily int handle\+Interrupt\+KBC (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \texorpdfstring{$\ast$}{*}}]{game\+State,  }\item[{\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}}]{menu\+Info,  }\item[{\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}}]{arena,  }\item[{\mbox{\hyperlink{serial_port_controller_8h_ad648bc77b7d067f854037055c76de5d6}{MSTATE}} \texorpdfstring{$\ast$}{*}}]{mstate }\end{DoxyParamCaption})}
+
+
+
+Handles keyboard interrupts and processes game state changes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+State} & Pointer to the current game state. \\
+\hline
+{\em menu} & Pointer to the \doxylink{struct_menu}{Menu} structure. \\
+\hline
+{\em arena} & Pointer to the \doxylink{struct_arena}{Arena} structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success, 1 if the game should exit. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kb_controller_8c_a7c807c44f534a91d6d580c71b35dec38_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kb_controller_8c_a7c807c44f534a91d6d580c71b35dec38_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kb_controller_8c_a49ab70f4325d6326ae082c9829b4b0cd}\label{kb_controller_8c_a49ab70f4325d6326ae082c9829b4b0cd} 
+\index{kbController.c@{kbController.c}!handleMenu@{handleMenu}}
+\index{handleMenu@{handleMenu}!kbController.c@{kbController.c}}
+\doxysubsubsection{\texorpdfstring{handleMenu()}{handleMenu()}}
+{\footnotesize\ttfamily int handle\+Menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \texorpdfstring{$\ast$}{*}}]{game\+State,  }\item[{\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}}]{menu,  }\item[{\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}}]{arena }\end{DoxyParamCaption})}
+
+
+
+Processes the menu interactions based on keyboard input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+State} & Pointer to the current game state. \\
+\hline
+{\em menu} & Pointer to the \doxylink{struct_menu}{Menu} structure. \\
+\hline
+{\em arena} & Pointer to the \doxylink{struct_arena}{Arena} structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success, 1 if the game should exit. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kb_controller_8c_a49ab70f4325d6326ae082c9829b4b0cd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kb_controller_8c_a8f674ccf39d43d1afdab395f72ccd240}\label{kb_controller_8c_a8f674ccf39d43d1afdab395f72ccd240} 
+\index{kbController.c@{kbController.c}!handleScore@{handleScore}}
+\index{handleScore@{handleScore}!kbController.c@{kbController.c}}
+\doxysubsubsection{\texorpdfstring{handleScore()}{handleScore()}}
+{\footnotesize\ttfamily int handle\+Score (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \texorpdfstring{$\ast$}{*}}]{game\+State }\end{DoxyParamCaption})}
+
+
+
+Handles \doxylink{struct_high_score}{High\+Score} Page interactions based on keyboard input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+State} & Pointer to the state structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kb_controller_8c_a8f674ccf39d43d1afdab395f72ccd240_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kb_controller_8c_a8f674ccf39d43d1afdab395f72ccd240_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kb_controller_8c_a217fce9c35c892d4cfc84827c087f8ba}\label{kb_controller_8c_a217fce9c35c892d4cfc84827c087f8ba} 
+\index{kbController.c@{kbController.c}!handleTank@{handleTank}}
+\index{handleTank@{handleTank}!kbController.c@{kbController.c}}
+\doxysubsubsection{\texorpdfstring{handleTank()}{handleTank()}}
+{\footnotesize\ttfamily int handle\+Tank (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}}]{arena }\end{DoxyParamCaption})}
+
+
+
+Handles tank movements based on keyboard input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arena} & Pointer to the \doxylink{struct_arena}{Arena} structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{kb_controller_8c_a217fce9c35c892d4cfc84827c087f8ba_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kb_controller_8c_a217fce9c35c892d4cfc84827c087f8ba_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{kb_controller_8c_ac4c81d34a9be02e382c2086d9fb765a9}\label{kb_controller_8c_ac4c81d34a9be02e382c2086d9fb765a9} 
+\index{kbController.c@{kbController.c}!scanCode@{scanCode}}
+\index{scanCode@{scanCode}!kbController.c@{kbController.c}}
+\doxysubsubsection{\texorpdfstring{scanCode}{scanCode}}
+{\footnotesize\ttfamily uint8\+\_\+t scan\+Code\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Global variable to store the scan code from keyboard interrupts. 
+

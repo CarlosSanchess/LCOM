@@ -1,0 +1,21 @@
+<map id="drawHighScorePage" name="drawHighScorePage">
+<area shape="rect" id="Node000001" title="Draws the whole HighScore Page." alt="" coords="5,31,144,57"/>
+<area shape="rect" id="Node000002" href="$views_8c.html#aeffe9751239b407eb57e9e5c9af53aff" title="Draws the score menu background." alt="" coords="192,5,346,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,32,176,28,176,33,144,38"/>
+<area shape="rect" id="Node000006" href="$views_8c.html#ae4f30b621bd22dff478de0da223dd92b" title="Draws the whole the chrono and score stats." alt="" coords="229,56,309,83"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="144,50,214,60,213,65,144,56"/>
+<area shape="rect" id="Node000003" href="$video__gr_8c.html#a0ee44da8a7c935a067fae7ca09d8f7f9" title="Draws an XPM image as the background." alt="" coords="531,5,688,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="346,16,516,16,516,21,346,21"/>
+<area shape="rect" id="Node000004" href="$video__gr_8c.html#a5c4e9586406f8d2cf7f2a5db188b6686" title="Draws a pixel at specified coordinates with a given color." alt="" coords="736,31,837,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="689,27,721,32,720,37,688,33"/>
+<area shape="rect" id="Node000005" href="$video__gr_8c.html#a3190e4645454cb66c939eadd3dbad84a" title="Gets the screen width." alt="" coords="885,31,961,57"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="838,41,869,41,869,47,838,47"/>
+<area shape="rect" id="Node000007" href="$views_8c.html#a518c838b97ded94b9a14f769464563fb" title="Draws the rtc info about the highscore on the screen." alt="" coords="394,56,483,83"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="309,67,379,67,379,72,309,72"/>
+<area shape="rect" id="Node000009" href="$views_8c.html#a9c44a9a186dd7ca2257eb4d08aed3db7" title="Draws the player&#39;s score on the screen." alt="" coords="398,107,480,133"/>
+<area shape="poly" id="edge9_Node000006_Node000009" title=" " alt="" coords="310,79,383,101,382,106,308,84"/>
+<area shape="rect" id="Node000008" href="$video__gr_8c.html#ad2aba6eddab4c859594b10186962d2c8" title="Draws an XPM image ignoring a specified color." alt="" coords="548,56,671,83"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="484,67,533,67,533,72,484,72"/>
+<area shape="poly" id="edge8_Node000008_Node000004" title=" " alt="" coords="671,58,720,51,721,56,672,63"/>
+<area shape="poly" id="edge10_Node000009_Node000008" title=" " alt="" coords="480,105,547,85,549,90,481,110"/>
+</map>

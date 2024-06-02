@@ -1,0 +1,9 @@
+<map id="shootAtPlayer" name="shootAtPlayer">
+<area shape="rect" id="Node000001" title="Makes an enemy tank shoot at the player." alt="" coords="5,31,109,57"/>
+<area shape="rect" id="Node000002" href="$bullet_controller_8c.html#aa0615d5eaae96e125e8ef83e9001ea2c" title="Adds a bullet to the arena." alt="" coords="157,5,280,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,33,141,28,142,33,109,39"/>
+<area shape="rect" id="Node000004" href="$enemy_controller_8c.html#af6f8bbb15e2b0c3247bcee8f9eaec054" title="Updates the direction of an enemy tank towards a target." alt="" coords="163,56,274,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="109,49,148,56,147,61,109,55"/>
+<area shape="rect" id="Node000003" href="$bullet_8c.html#aaa22717a020280d880939a5aeec1ce25" title="Creates a new bullet." alt="" coords="328,5,418,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="280,16,312,16,312,21,280,21"/>
+</map>

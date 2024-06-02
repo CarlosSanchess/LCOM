@@ -1,0 +1,9 @@
+<map id="drawTank" name="drawTank">
+<area shape="rect" id="Node000001" title="Draws the player tank on the screen." alt="" coords="5,5,82,32"/>
+<area shape="rect" id="Node000002" href="$video__gr_8c.html#ae339c39acf578dff3312348128e99bbd" title="Draws a rotated XPM image ignoring a specified color." alt="" coords="130,5,274,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,16,114,16,114,21,82,21"/>
+<area shape="rect" id="Node000003" href="$video__gr_8c.html#a5c4e9586406f8d2cf7f2a5db188b6686" title="Draws a pixel at specified coordinates with a given color." alt="" coords="322,5,423,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="274,16,307,16,307,21,274,21"/>
+<area shape="rect" id="Node000004" href="$video__gr_8c.html#a3190e4645454cb66c939eadd3dbad84a" title="Gets the screen width." alt="" coords="471,5,548,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="424,16,455,16,455,21,424,21"/>
+</map>

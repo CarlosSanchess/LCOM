@@ -1,0 +1,94 @@
+\doxysection{LCOM-\/main/proj/src/\+Models/arena.c File Reference}
+\hypertarget{arena_8c}{}\label{arena_8c}\index{LCOM-\/main/proj/src/Models/arena.c@{LCOM-\/main/proj/src/Models/arena.c}}
+{\ttfamily \#include "{}arena.\+h"{}}\newline
+Include dependency graph for arena.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{arena_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{arena_8c_a44f4a926829c5771ee4483a5179e015b}{create\+Arena}} (int width, int height, \mbox{\hyperlink{struct_mouse_info}{Mouse\+Info}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_a4b7a142226097e18c01a5405d023b2ea}{mouse\+Info}})
+\begin{DoxyCompactList}\small\item\em Creates and initializes a new game arena. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{arena_8c_a88d9af0d4df5265659673497c6e9925a}{destroy\+Arena}} (\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}arena)
+\begin{DoxyCompactList}\small\item\em Destroys a game arena, freeing allocated memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{arena_8c_a44f4a926829c5771ee4483a5179e015b}\label{arena_8c_a44f4a926829c5771ee4483a5179e015b} 
+\index{arena.c@{arena.c}!createArena@{createArena}}
+\index{createArena@{createArena}!arena.c@{arena.c}}
+\doxysubsubsection{\texorpdfstring{createArena()}{createArena()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*} create\+Arena (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height,  }\item[{\mbox{\hyperlink{struct_mouse_info}{Mouse\+Info}} \texorpdfstring{$\ast$}{*}}]{mouse\+Info }\end{DoxyParamCaption})}
+
+
+
+Creates and initializes a new game arena. 
+
+This function allocates memory for a new \doxylink{struct_arena}{Arena} structure and initializes it with default values, including setting up the player\textquotesingle{}s tank, enemy tank, obstacles, and other game elements.
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Width of the arena. \\
+\hline
+{\em height} & Height of the arena. \\
+\hline
+{\em mouse\+Info} & Pointer to the \doxylink{struct_mouse_info}{Mouse\+Info} structure for crosshair handling. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Arena\texorpdfstring{$\ast$}{*} Pointer to the newly created \doxylink{struct_arena}{Arena} structure, or NULL if memory allocation fails. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{arena_8c_a44f4a926829c5771ee4483a5179e015b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{arena_8c_a44f4a926829c5771ee4483a5179e015b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{arena_8c_a88d9af0d4df5265659673497c6e9925a}\label{arena_8c_a88d9af0d4df5265659673497c6e9925a} 
+\index{arena.c@{arena.c}!destroyArena@{destroyArena}}
+\index{destroyArena@{destroyArena}!arena.c@{arena.c}}
+\doxysubsubsection{\texorpdfstring{destroyArena()}{destroyArena()}}
+{\footnotesize\ttfamily void destroy\+Arena (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}}]{arena }\end{DoxyParamCaption})}
+
+
+
+Destroys a game arena, freeing allocated memory. 
+
+This function cleans up and frees all memory allocated for the \doxylink{struct_arena}{Arena} structure, including the tanks and any dynamically allocated arrays.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arena} & Pointer to the \doxylink{struct_arena}{Arena} structure to be destroyed. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{arena_8c_a88d9af0d4df5265659673497c6e9925a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{arena_8c_a88d9af0d4df5265659673497c6e9925a_icgraph}
+\end{center}
+\end{figure}

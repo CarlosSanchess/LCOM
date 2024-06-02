@@ -1,0 +1,15 @@
+<map id="drawScoreBackGround" name="drawScoreBackGround">
+<area shape="rect" id="Node000001" title="Draws the score menu background." alt="" coords="961,5,1116,32"/>
+<area shape="rect" id="Node000002" href="$views_8c.html#ac809db7888e72a78fbbc05642298b49b" title="Draws the whole HighScore Page." alt="" coords="775,5,913,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="946,21,913,21,913,16,946,16"/>
+<area shape="rect" id="Node000003" href="$game_controller_8c.html#adc03125dce9a87c28d83611526ea43bf" title="Changes the state and the Background to the Highscore." alt="" coords="590,5,727,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="760,21,727,21,727,16,760,16"/>
+<area shape="rect" id="Node000004" href="$mouse_controller_8c.html#a348c097f86faf1b588054d360a374988" title="Processes the menu interactions based on mouse input." alt="" coords="442,5,542,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="574,21,542,21,542,16,574,16"/>
+<area shape="rect" id="Node000005" href="$mouse_controller_8c.html#a59eab8192e96165c0e79d6bd94e762a4" title="Handles mouse interrupts and processes game state changes." alt="" coords="249,5,394,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="426,21,395,21,395,16,426,16"/>
+<area shape="rect" id="Node000006" href="$main_8c.html#a58e8be2db2660128e4e6456a9c981fb5" title=" " alt="" coords="162,5,201,32"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="234,21,201,21,201,16,234,16"/>
+<area shape="rect" id="Node000007" href="$main_8c.html#a7a72220d8366dd84709e79ce415862e5" title=" " alt="" coords="5,5,114,32"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="146,21,114,21,114,16,146,16"/>
+</map>

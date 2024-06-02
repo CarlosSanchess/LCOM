@@ -1,0 +1,19 @@
+<map id="xpm_draw_ignore_rot" name="xpm_draw_ignore_rot">
+<area shape="rect" id="Node000001" title="Draws a rotated XPM image ignoring a specified color." alt="" coords="674,56,818,83"/>
+<area shape="rect" id="Node000002" href="$views_8c.html#a4f69ca18c0a85ef638b7710e14d22b89" title="Draws a bullet on the screen." alt="" coords="545,5,626,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="686,53,626,34,627,29,688,48"/>
+<area shape="rect" id="Node000007" href="$views_8c.html#aefba8b2a47700757729bb0da4af1c069" title="Draws an enemy tank on the screen." alt="" coords="379,56,497,83"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="659,72,497,72,497,67,659,67"/>
+<area shape="rect" id="Node000008" href="$views_8c.html#a021c38e5484df43338d807e514a9441d" title="Draws the player tank on the screen." alt="" coords="547,107,624,133"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="688,90,625,111,623,106,686,85"/>
+<area shape="rect" id="Node000003" href="$views_8c.html#a2e35cd85e9b10790713015ddcadf5873" title="Draws all bullets in the arena." alt="" coords="394,5,482,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="529,21,483,21,483,16,529,16"/>
+<area shape="rect" id="Node000004" href="$views_8c.html#ad0c6e30d8341ef923801e3fc1aac2a87" title="Draws the arena screen." alt="" coords="249,56,331,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="383,40,332,58,331,53,381,35"/>
+<area shape="rect" id="Node000005" href="$main_8c.html#a58e8be2db2660128e4e6456a9c981fb5" title=" " alt="" coords="162,56,201,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="234,72,201,72,201,67,234,67"/>
+<area shape="rect" id="Node000006" href="$main_8c.html#a7a72220d8366dd84709e79ce415862e5" title=" " alt="" coords="5,56,114,83"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="146,72,114,72,114,67,146,67"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="364,72,332,72,332,67,364,67"/>
+<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="531,118,459,110,379,97,331,85,333,80,380,92,460,105,532,113"/>
+</map>

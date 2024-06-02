@@ -1,0 +1,100 @@
+\doxysection{LCOM-\/main/proj/src/controllers/builder\+Controller.h File Reference}
+\hypertarget{builder_controller_8h}{}\label{builder_controller_8h}\index{LCOM-\/main/proj/src/controllers/builderController.h@{LCOM-\/main/proj/src/controllers/builderController.h}}
+
+
+Defines functions for user building and managing obstacles in the arena.  
+
+
+{\ttfamily \#include "{}Models/arena.\+h"{}}\newline
+{\ttfamily \#include "{}Models/obstacle.\+h"{}}\newline
+Include dependency graph for builder\+Controller.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{builder_controller_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{builder_controller_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{builder_controller_8h_a12ac1a2cf94f1f33d6ede0b633680891}{add\+\_\+obstacle\+To\+Arena}} (\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}arena, int x1, int x2, int y1, int y2)
+\begin{DoxyCompactList}\small\item\em Adds an obstacle to the arena. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{builder_controller_8h_ac65254b6bc497a824fcdcd5b6eafae20}{process\+Builts}} (\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}arena)
+\begin{DoxyCompactList}\small\item\em Processes built obstacles in the arena. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines functions for user building and managing obstacles in the arena. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{builder_controller_8h_a12ac1a2cf94f1f33d6ede0b633680891}\label{builder_controller_8h_a12ac1a2cf94f1f33d6ede0b633680891} 
+\index{builderController.h@{builderController.h}!add\_obstacleToArena@{add\_obstacleToArena}}
+\index{add\_obstacleToArena@{add\_obstacleToArena}!builderController.h@{builderController.h}}
+\doxysubsubsection{\texorpdfstring{add\_obstacleToArena()}{add\_obstacleToArena()}}
+{\footnotesize\ttfamily int add\+\_\+obstacle\+To\+Arena (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}}]{arena,  }\item[{int}]{x1,  }\item[{int}]{x2,  }\item[{int}]{y1,  }\item[{int}]{y2 }\end{DoxyParamCaption})}
+
+
+
+Adds an obstacle to the arena. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arena} & Pointer to the arena structure. \\
+\hline
+{\em x1} & X coordinate of the first corner of the obstacle. \\
+\hline
+{\em x2} & X coordinate of the opposite corner of the obstacle. \\
+\hline
+{\em y1} & Y coordinate of the first corner of the obstacle. \\
+\hline
+{\em y2} & Y coordinate of the opposite corner of the obstacle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Status code indicating the result of the addition. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{builder_controller_8h_a12ac1a2cf94f1f33d6ede0b633680891_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{builder_controller_8h_a12ac1a2cf94f1f33d6ede0b633680891_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{builder_controller_8h_ac65254b6bc497a824fcdcd5b6eafae20}\label{builder_controller_8h_ac65254b6bc497a824fcdcd5b6eafae20} 
+\index{builderController.h@{builderController.h}!processBuilts@{processBuilts}}
+\index{processBuilts@{processBuilts}!builderController.h@{builderController.h}}
+\doxysubsubsection{\texorpdfstring{processBuilts()}{processBuilts()}}
+{\footnotesize\ttfamily int process\+Builts (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}}]{arena }\end{DoxyParamCaption})}
+
+
+
+Processes built obstacles in the arena. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arena} & Pointer to the arena structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Status code indicating the result of the processing. 
+\end{DoxyReturn}

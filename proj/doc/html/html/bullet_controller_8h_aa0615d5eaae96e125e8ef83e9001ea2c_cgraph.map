@@ -1,0 +1,5 @@
+<map id="addBulletToArena" name="addBulletToArena">
+<area shape="rect" id="Node000001" title="Adds a bullet to the arena." alt="" coords="5,5,129,32"/>
+<area shape="rect" id="Node000002" href="$bullet_8c.html#aaa22717a020280d880939a5aeec1ce25" title="Creates a new bullet." alt="" coords="177,5,267,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,16,161,16,161,21,129,21"/>
+</map>

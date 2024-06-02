@@ -1,0 +1,16 @@
+<map id="freeEnemyTank" name="freeEnemyTank">
+<area shape="rect" id="Node000001" title="Frees the memory allocated for the enemy tank." alt="" coords="721,31,832,57"/>
+<area shape="rect" id="Node000002" href="$game_controller_8c.html#af235f3867aed0ba757c2a5c9c86a23fb" title="Resets the game by reinitializing the arena." alt="" coords="588,31,673,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="705,47,673,47,673,41,705,41"/>
+<area shape="rect" id="Node000003" href="$game_controller_8c.html#a00ed09a539771f3a9f9b725597bc7f08" title="Changes the game state to the menu." alt="" coords="430,31,540,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="572,47,540,47,540,41,572,41"/>
+<area shape="rect" id="Node000004" href="$kb_controller_8c.html#a7c807c44f534a91d6d580c71b35dec38" title="Handles keyboard interrupts and processes game state changes." alt="" coords="249,5,382,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="415,36,382,31,383,26,416,31"/>
+<area shape="rect" id="Node000007" href="$arena_controller_8c.html#a0eaf53413d600619b39e10fd81be10ef" title="Processes the current state of the arena." alt="" coords="265,56,366,83"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="416,57,367,64,366,59,415,52"/>
+<area shape="rect" id="Node000005" href="$main_8c.html#a58e8be2db2660128e4e6456a9c981fb5" title=" " alt="" coords="162,31,201,57"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="234,37,202,43,201,38,233,32"/>
+<area shape="rect" id="Node000006" href="$main_8c.html#a7a72220d8366dd84709e79ce415862e5" title=" " alt="" coords="5,31,114,57"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="146,47,114,47,114,41,146,41"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="249,60,201,50,202,45,250,54"/>
+</map>

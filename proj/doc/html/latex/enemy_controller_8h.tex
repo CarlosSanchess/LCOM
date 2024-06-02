@@ -1,0 +1,554 @@
+\doxysection{LCOM-\/main/proj/src/controllers/enemy\+Controller.h File Reference}
+\hypertarget{enemy_controller_8h}{}\label{enemy_controller_8h}\index{LCOM-\/main/proj/src/controllers/enemyController.h@{LCOM-\/main/proj/src/controllers/enemyController.h}}
+
+
+Defines functions and constants for enemy tanks "{}\+Intelligent"{} movement.  
+
+
+{\ttfamily \#include "{}tank\+Controller.\+h"{}}\newline
+{\ttfamily \#include "{}bullet\+Controller.\+h"{}}\newline
+{\ttfamily \#include "{}Models/\+Tank.\+h"{}}\newline
+{\ttfamily \#include "{}Models/arena.\+h"{}}\newline
+{\ttfamily \#include "{}Models/\+Position.\+h"{}}\newline
+Include dependency graph for enemy\+Controller.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{enemy_controller_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{enemy_controller_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_waypoint}{Waypoint}}
+\begin{DoxyCompactList}\small\item\em Structure to represent a waypoint. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{enemy_controller_8h_a82a44efc85df01454b615c968168dd09}{WAYPOINT\+\_\+\+MAX\+\_\+\+DISTANCE}}~300
+\item 
+\#define \mbox{\hyperlink{enemy_controller_8h_a5643b100e61bee75105a023b78335171}{PATROL\+\_\+\+SPEED}}~4
+\item 
+\#define \mbox{\hyperlink{enemy_controller_8h_a0b08972153712b6b04d96546e4518063}{FOLLOW\+\_\+\+SPEED}}~3
+\item 
+\#define \mbox{\hyperlink{enemy_controller_8h_a22b4f42747ecaa2ad32ea5d6a4a01c4d}{FOLLOW\+\_\+\+THRESHOLD}}~200
+\item 
+\#define \mbox{\hyperlink{enemy_controller_8h_ac2c99217fff3e033b3dc846d3c6f2051}{MIN\+\_\+\+DISTANCE\+\_\+\+TO\+\_\+\+OBSTACLE}}~5
+\item 
+\#define \mbox{\hyperlink{enemy_controller_8h_a106af341aeb948bdf26d7e19841e27a6}{NUM\+\_\+\+WAYPOINTS}}~30
+\item 
+\#define \mbox{\hyperlink{enemy_controller_8h_a474df8706e878c90c5ec14ed7c438c8c}{NUM\+\_\+\+ATTEMPTS}}~10
+\item 
+\#define \mbox{\hyperlink{enemy_controller_8h_ab8eab4fdc072a9d61ddee8e7c508dd0a}{WAYPOINT\+\_\+\+TOLERANCE}}~0
+\item 
+\#define \mbox{\hyperlink{enemy_controller_8h_a0351e86a69da7f513f59240246a49d09}{MAX\+\_\+\+WAYPOINTS}}~30
+\item 
+\#define \mbox{\hyperlink{enemy_controller_8h_a674f415dc8c5cd75caaeea04ed433599}{STUCK\+\_\+\+THRESHOLD}}~5
+\item 
+\#define \mbox{\hyperlink{enemy_controller_8h_ad1426ed31a1ff02ed1152abf347df5c5}{MOVE\+\_\+\+DEVIATION}}~3
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{enemy_controller_8h_a82af8e097e729dbb72a83a6acf7c1803}{calculate\+Distance}} (int x1, int y1, int x2, int y2)
+\begin{DoxyCompactList}\small\item\em Calculates the distance between two points. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{enemy_controller_8h_a24a22572e3e16181962a139f5eaa0228}{can\+Move\+Enemy}} (int newX, int newY, \mbox{\hyperlink{struct_obstacle}{Obstacle}} obstacles\mbox{[}$\,$\mbox{]}, int num\+Obstacles)
+\begin{DoxyCompactList}\small\item\em Checks if an enemy tank can move to a new position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{enemy_controller_8h_af6f8bbb15e2b0c3247bcee8f9eaec054}{update\+Direction}} (\mbox{\hyperlink{struct_enemy_tank}{Enemy\+Tank}} \texorpdfstring{$\ast$}{*}enemy, int targetX, int targetY)
+\begin{DoxyCompactList}\small\item\em Updates the direction of an enemy tank towards a target. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{enemy_controller_8h_a7e678de7062743d885efb2a8c2965a9c}{update\+Tank\+Direction}} (\mbox{\hyperlink{struct_enemy_tank}{Enemy\+Tank}} \texorpdfstring{$\ast$}{*}enemy, double angle)
+\begin{DoxyCompactList}\small\item\em Updates the direction of an enemy tank based on an angle rotating it. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{enemy_controller_8h_a5eb2eadd15c827a4e1a4f1484ae9b3d0}{attempt\+Move}} (\mbox{\hyperlink{struct_enemy_tank}{Enemy\+Tank}} \texorpdfstring{$\ast$}{*}enemy, int speed, int targetX, int targetY, \mbox{\hyperlink{struct_obstacle}{Obstacle}} obstacles\mbox{[}$\,$\mbox{]}, int num\+Obstacles, bool within\+Threshold)
+\begin{DoxyCompactList}\small\item\em Attempts to move an enemy tank towards a target. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{enemy_controller_8h_aca1b3e0f0440437651ab9b6e87f464a5}{follow\+Player}} (\mbox{\hyperlink{struct_enemy_tank}{Enemy\+Tank}} \texorpdfstring{$\ast$}{*}enemy, \mbox{\hyperlink{structtank}{tank}} \texorpdfstring{$\ast$}{*}player, \mbox{\hyperlink{struct_obstacle}{Obstacle}} obstacles\mbox{[}$\,$\mbox{]}, int num\+Obstacles)
+\begin{DoxyCompactList}\small\item\em Makes an enemy tank follow the player. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{enemy_controller_8h_a2b756f1cab75c6f8a7828db63a5c083a}{shoot\+At\+Player}} (\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}arena)
+\begin{DoxyCompactList}\small\item\em Makes an enemy tank shoot at the player. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{enemy_controller_8h_ab2160076a27fd983f08cf082f5f9a765}{generate\+Waypoints}} (\mbox{\hyperlink{struct_waypoint}{Waypoint}} \mbox{\hyperlink{arena_controller_8c_a93a0b8290778aa0400d46d2046f28c38}{waypoints}}\mbox{[}$\,$\mbox{]}, int num\+Waypoints)
+\begin{DoxyCompactList}\small\item\em Generates random waypoints for enemy navigation providing a certain randomness on each subsequent gameplay. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{enemy_controller_8h_ace6678d597fe1f25bb0bab2ee0891e94}{move\+Towards\+Waypoint\+With\+Deviation}} (\mbox{\hyperlink{struct_enemy_tank}{Enemy\+Tank}} \texorpdfstring{$\ast$}{*}enemy, \mbox{\hyperlink{struct_waypoint}{Waypoint}} target\+Waypoint, \mbox{\hyperlink{struct_obstacle}{Obstacle}} obstacles\mbox{[}$\,$\mbox{]}, int num\+Obstacles)
+\begin{DoxyCompactList}\small\item\em Moves an enemy tank towards a waypoint with deviation also providing some randomness. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{enemy_controller_8h_a2f7a89fb7d28477bf0bb7960ebc7158c}{has\+Reached\+Waypoint}} (\mbox{\hyperlink{struct_enemy_tank}{Enemy\+Tank}} \texorpdfstring{$\ast$}{*}enemy, \mbox{\hyperlink{struct_waypoint}{Waypoint}} waypoint)
+\begin{DoxyCompactList}\small\item\em Checks if an enemy tank has reached a waypoint. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{enemy_controller_8h_a8b34a10b1a191ff565026352e5aba394}{update\+Enemy\+Tank}} (\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}arena, \mbox{\hyperlink{struct_enemy_tank}{Enemy\+Tank}} \texorpdfstring{$\ast$}{*}enemy, \mbox{\hyperlink{structtank}{tank}} \texorpdfstring{$\ast$}{*}player, \mbox{\hyperlink{struct_waypoint}{Waypoint}} \mbox{\hyperlink{arena_controller_8c_a93a0b8290778aa0400d46d2046f28c38}{waypoints}}\mbox{[}$\,$\mbox{]}, int num\+Waypoints, \mbox{\hyperlink{struct_obstacle}{Obstacle}} obstacles\mbox{[}$\,$\mbox{]}, int num\+Obstacles)
+\begin{DoxyCompactList}\small\item\em Updates the state of an enemy tank. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_waypoint}{Waypoint}} \mbox{\hyperlink{enemy_controller_8h_a93a0b8290778aa0400d46d2046f28c38}{waypoints}} \mbox{[}\mbox{\hyperlink{enemy_controller_8h_a106af341aeb948bdf26d7e19841e27a6}{NUM\+\_\+\+WAYPOINTS}}\mbox{]}
+\item 
+bool \mbox{\hyperlink{enemy_controller_8h_a46323a6373fa143cfa0d972060476aa4}{waypoints\+Generated}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines functions and constants for enemy tanks "{}\+Intelligent"{} movement. 
+
+In order to make the enemy movement more interesting, the enemy tanks patrol certain waypoints looking for the player. Some of them are hard-\/coded the other waypoints are randomly generated. This file represents our effort to make the movement seem less predictabls and more challenging. 
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{enemy_controller_8h_a0b08972153712b6b04d96546e4518063}\label{enemy_controller_8h_a0b08972153712b6b04d96546e4518063} 
+\index{enemyController.h@{enemyController.h}!FOLLOW\_SPEED@{FOLLOW\_SPEED}}
+\index{FOLLOW\_SPEED@{FOLLOW\_SPEED}!enemyController.h@{enemyController.h}}
+\doxysubsubsection{\texorpdfstring{FOLLOW\_SPEED}{FOLLOW\_SPEED}}
+{\footnotesize\ttfamily \#define FOLLOW\+\_\+\+SPEED~3}
+
+Speed of enemy tanks while following the player \Hypertarget{enemy_controller_8h_a22b4f42747ecaa2ad32ea5d6a4a01c4d}\label{enemy_controller_8h_a22b4f42747ecaa2ad32ea5d6a4a01c4d} 
+\index{enemyController.h@{enemyController.h}!FOLLOW\_THRESHOLD@{FOLLOW\_THRESHOLD}}
+\index{FOLLOW\_THRESHOLD@{FOLLOW\_THRESHOLD}!enemyController.h@{enemyController.h}}
+\doxysubsubsection{\texorpdfstring{FOLLOW\_THRESHOLD}{FOLLOW\_THRESHOLD}}
+{\footnotesize\ttfamily \#define FOLLOW\+\_\+\+THRESHOLD~200}
+
+Threshold distance for following the player \Hypertarget{enemy_controller_8h_a0351e86a69da7f513f59240246a49d09}\label{enemy_controller_8h_a0351e86a69da7f513f59240246a49d09} 
+\index{enemyController.h@{enemyController.h}!MAX\_WAYPOINTS@{MAX\_WAYPOINTS}}
+\index{MAX\_WAYPOINTS@{MAX\_WAYPOINTS}!enemyController.h@{enemyController.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_WAYPOINTS}{MAX\_WAYPOINTS}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+WAYPOINTS~30}
+
+Maximum number of waypoints \Hypertarget{enemy_controller_8h_ac2c99217fff3e033b3dc846d3c6f2051}\label{enemy_controller_8h_ac2c99217fff3e033b3dc846d3c6f2051} 
+\index{enemyController.h@{enemyController.h}!MIN\_DISTANCE\_TO\_OBSTACLE@{MIN\_DISTANCE\_TO\_OBSTACLE}}
+\index{MIN\_DISTANCE\_TO\_OBSTACLE@{MIN\_DISTANCE\_TO\_OBSTACLE}!enemyController.h@{enemyController.h}}
+\doxysubsubsection{\texorpdfstring{MIN\_DISTANCE\_TO\_OBSTACLE}{MIN\_DISTANCE\_TO\_OBSTACLE}}
+{\footnotesize\ttfamily \#define MIN\+\_\+\+DISTANCE\+\_\+\+TO\+\_\+\+OBSTACLE~5}
+
+Minimum distance to avoid obstacles \Hypertarget{enemy_controller_8h_ad1426ed31a1ff02ed1152abf347df5c5}\label{enemy_controller_8h_ad1426ed31a1ff02ed1152abf347df5c5} 
+\index{enemyController.h@{enemyController.h}!MOVE\_DEVIATION@{MOVE\_DEVIATION}}
+\index{MOVE\_DEVIATION@{MOVE\_DEVIATION}!enemyController.h@{enemyController.h}}
+\doxysubsubsection{\texorpdfstring{MOVE\_DEVIATION}{MOVE\_DEVIATION}}
+{\footnotesize\ttfamily \#define MOVE\+\_\+\+DEVIATION~3}
+
+Deviation allowed in movement \Hypertarget{enemy_controller_8h_a474df8706e878c90c5ec14ed7c438c8c}\label{enemy_controller_8h_a474df8706e878c90c5ec14ed7c438c8c} 
+\index{enemyController.h@{enemyController.h}!NUM\_ATTEMPTS@{NUM\_ATTEMPTS}}
+\index{NUM\_ATTEMPTS@{NUM\_ATTEMPTS}!enemyController.h@{enemyController.h}}
+\doxysubsubsection{\texorpdfstring{NUM\_ATTEMPTS}{NUM\_ATTEMPTS}}
+{\footnotesize\ttfamily \#define NUM\+\_\+\+ATTEMPTS~10}
+
+Number of attempts to find a valid movement path \Hypertarget{enemy_controller_8h_a106af341aeb948bdf26d7e19841e27a6}\label{enemy_controller_8h_a106af341aeb948bdf26d7e19841e27a6} 
+\index{enemyController.h@{enemyController.h}!NUM\_WAYPOINTS@{NUM\_WAYPOINTS}}
+\index{NUM\_WAYPOINTS@{NUM\_WAYPOINTS}!enemyController.h@{enemyController.h}}
+\doxysubsubsection{\texorpdfstring{NUM\_WAYPOINTS}{NUM\_WAYPOINTS}}
+{\footnotesize\ttfamily \#define NUM\+\_\+\+WAYPOINTS~30}
+
+Number of waypoints for enemy navigation \Hypertarget{enemy_controller_8h_a5643b100e61bee75105a023b78335171}\label{enemy_controller_8h_a5643b100e61bee75105a023b78335171} 
+\index{enemyController.h@{enemyController.h}!PATROL\_SPEED@{PATROL\_SPEED}}
+\index{PATROL\_SPEED@{PATROL\_SPEED}!enemyController.h@{enemyController.h}}
+\doxysubsubsection{\texorpdfstring{PATROL\_SPEED}{PATROL\_SPEED}}
+{\footnotesize\ttfamily \#define PATROL\+\_\+\+SPEED~4}
+
+Speed of enemy tanks while patrolling \Hypertarget{enemy_controller_8h_a674f415dc8c5cd75caaeea04ed433599}\label{enemy_controller_8h_a674f415dc8c5cd75caaeea04ed433599} 
+\index{enemyController.h@{enemyController.h}!STUCK\_THRESHOLD@{STUCK\_THRESHOLD}}
+\index{STUCK\_THRESHOLD@{STUCK\_THRESHOLD}!enemyController.h@{enemyController.h}}
+\doxysubsubsection{\texorpdfstring{STUCK\_THRESHOLD}{STUCK\_THRESHOLD}}
+{\footnotesize\ttfamily \#define STUCK\+\_\+\+THRESHOLD~5}
+
+Threshold for considering an enemy tank as stuck \Hypertarget{enemy_controller_8h_a82a44efc85df01454b615c968168dd09}\label{enemy_controller_8h_a82a44efc85df01454b615c968168dd09} 
+\index{enemyController.h@{enemyController.h}!WAYPOINT\_MAX\_DISTANCE@{WAYPOINT\_MAX\_DISTANCE}}
+\index{WAYPOINT\_MAX\_DISTANCE@{WAYPOINT\_MAX\_DISTANCE}!enemyController.h@{enemyController.h}}
+\doxysubsubsection{\texorpdfstring{WAYPOINT\_MAX\_DISTANCE}{WAYPOINT\_MAX\_DISTANCE}}
+{\footnotesize\ttfamily \#define WAYPOINT\+\_\+\+MAX\+\_\+\+DISTANCE~300}
+
+Maximum distance for waypoints \Hypertarget{enemy_controller_8h_ab8eab4fdc072a9d61ddee8e7c508dd0a}\label{enemy_controller_8h_ab8eab4fdc072a9d61ddee8e7c508dd0a} 
+\index{enemyController.h@{enemyController.h}!WAYPOINT\_TOLERANCE@{WAYPOINT\_TOLERANCE}}
+\index{WAYPOINT\_TOLERANCE@{WAYPOINT\_TOLERANCE}!enemyController.h@{enemyController.h}}
+\doxysubsubsection{\texorpdfstring{WAYPOINT\_TOLERANCE}{WAYPOINT\_TOLERANCE}}
+{\footnotesize\ttfamily \#define WAYPOINT\+\_\+\+TOLERANCE~0}
+
+Tolerance distance for reaching waypoints 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{enemy_controller_8h_a5eb2eadd15c827a4e1a4f1484ae9b3d0}\label{enemy_controller_8h_a5eb2eadd15c827a4e1a4f1484ae9b3d0} 
+\index{enemyController.h@{enemyController.h}!attemptMove@{attemptMove}}
+\index{attemptMove@{attemptMove}!enemyController.h@{enemyController.h}}
+\doxysubsubsection{\texorpdfstring{attemptMove()}{attemptMove()}}
+{\footnotesize\ttfamily bool attempt\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_enemy_tank}{Enemy\+Tank}} \texorpdfstring{$\ast$}{*}}]{enemy,  }\item[{int}]{speed,  }\item[{int}]{targetX,  }\item[{int}]{targetY,  }\item[{\mbox{\hyperlink{struct_obstacle}{Obstacle}}}]{obstacles\mbox{[}$\,$\mbox{]},  }\item[{int}]{num\+Obstacles,  }\item[{bool}]{within\+Threshold }\end{DoxyParamCaption})}
+
+
+
+Attempts to move an enemy tank towards a target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enemy} & Pointer to the enemy tank. \\
+\hline
+{\em speed} & Speed of the enemy tank. \\
+\hline
+{\em targetX} & X coordinate of the target. \\
+\hline
+{\em targetY} & Y coordinate of the target. \\
+\hline
+{\em obstacles} & Array of obstacles. \\
+\hline
+{\em num\+Obstacles} & Number of obstacles. \\
+\hline
+{\em within\+Threshold} & Flag indicating if the movement is within threshold. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True if the enemy tank can move, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{enemy_controller_8h_a5eb2eadd15c827a4e1a4f1484ae9b3d0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{enemy_controller_8h_a5eb2eadd15c827a4e1a4f1484ae9b3d0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{enemy_controller_8h_a82af8e097e729dbb72a83a6acf7c1803}\label{enemy_controller_8h_a82af8e097e729dbb72a83a6acf7c1803} 
+\index{enemyController.h@{enemyController.h}!calculateDistance@{calculateDistance}}
+\index{calculateDistance@{calculateDistance}!enemyController.h@{enemyController.h}}
+\doxysubsubsection{\texorpdfstring{calculateDistance()}{calculateDistance()}}
+{\footnotesize\ttfamily double calculate\+Distance (\begin{DoxyParamCaption}\item[{int}]{x1,  }\item[{int}]{y1,  }\item[{int}]{x2,  }\item[{int}]{y2 }\end{DoxyParamCaption})}
+
+
+
+Calculates the distance between two points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x1} & X coordinate of the first point. \\
+\hline
+{\em y1} & Y coordinate of the first point. \\
+\hline
+{\em x2} & X coordinate of the second point. \\
+\hline
+{\em y2} & Y coordinate of the second point. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double The distance between the two points. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{enemy_controller_8h_a82af8e097e729dbb72a83a6acf7c1803_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{enemy_controller_8h_a24a22572e3e16181962a139f5eaa0228}\label{enemy_controller_8h_a24a22572e3e16181962a139f5eaa0228} 
+\index{enemyController.h@{enemyController.h}!canMoveEnemy@{canMoveEnemy}}
+\index{canMoveEnemy@{canMoveEnemy}!enemyController.h@{enemyController.h}}
+\doxysubsubsection{\texorpdfstring{canMoveEnemy()}{canMoveEnemy()}}
+{\footnotesize\ttfamily bool can\+Move\+Enemy (\begin{DoxyParamCaption}\item[{int}]{newX,  }\item[{int}]{newY,  }\item[{\mbox{\hyperlink{struct_obstacle}{Obstacle}}}]{obstacles\mbox{[}$\,$\mbox{]},  }\item[{int}]{num\+Obstacles }\end{DoxyParamCaption})}
+
+
+
+Checks if an enemy tank can move to a new position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newX} & New X coordinate. \\
+\hline
+{\em newY} & New Y coordinate. \\
+\hline
+{\em obstacles} & Array of obstacles. \\
+\hline
+{\em num\+Obstacles} & Number of obstacles. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True if the enemy tank can move to the new position, false otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{enemy_controller_8h_a24a22572e3e16181962a139f5eaa0228_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{enemy_controller_8h_aca1b3e0f0440437651ab9b6e87f464a5}\label{enemy_controller_8h_aca1b3e0f0440437651ab9b6e87f464a5} 
+\index{enemyController.h@{enemyController.h}!followPlayer@{followPlayer}}
+\index{followPlayer@{followPlayer}!enemyController.h@{enemyController.h}}
+\doxysubsubsection{\texorpdfstring{followPlayer()}{followPlayer()}}
+{\footnotesize\ttfamily void follow\+Player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_enemy_tank}{Enemy\+Tank}} \texorpdfstring{$\ast$}{*}}]{enemy,  }\item[{\mbox{\hyperlink{structtank}{tank}} \texorpdfstring{$\ast$}{*}}]{player,  }\item[{\mbox{\hyperlink{struct_obstacle}{Obstacle}}}]{obstacles\mbox{[}$\,$\mbox{]},  }\item[{int}]{num\+Obstacles }\end{DoxyParamCaption})}
+
+
+
+Makes an enemy tank follow the player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enemy} & Pointer to the enemy tank. \\
+\hline
+{\em player} & Pointer to the player\textquotesingle{}s tank. \\
+\hline
+{\em obstacles} & Array of obstacles. \\
+\hline
+{\em num\+Obstacles} & Number of obstacles. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{enemy_controller_8h_aca1b3e0f0440437651ab9b6e87f464a5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{enemy_controller_8h_aca1b3e0f0440437651ab9b6e87f464a5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{enemy_controller_8h_ab2160076a27fd983f08cf082f5f9a765}\label{enemy_controller_8h_ab2160076a27fd983f08cf082f5f9a765} 
+\index{enemyController.h@{enemyController.h}!generateWaypoints@{generateWaypoints}}
+\index{generateWaypoints@{generateWaypoints}!enemyController.h@{enemyController.h}}
+\doxysubsubsection{\texorpdfstring{generateWaypoints()}{generateWaypoints()}}
+{\footnotesize\ttfamily void generate\+Waypoints (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_waypoint}{Waypoint}}}]{waypoints\mbox{[}$\,$\mbox{]},  }\item[{int}]{num\+Waypoints }\end{DoxyParamCaption})}
+
+
+
+Generates random waypoints for enemy navigation providing a certain randomness on each subsequent gameplay. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em waypoints} & Array of waypoints to generate. \\
+\hline
+{\em num\+Waypoints} & Number of waypoints to generate. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{enemy_controller_8h_ab2160076a27fd983f08cf082f5f9a765_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{enemy_controller_8h_a2f7a89fb7d28477bf0bb7960ebc7158c}\label{enemy_controller_8h_a2f7a89fb7d28477bf0bb7960ebc7158c} 
+\index{enemyController.h@{enemyController.h}!hasReachedWaypoint@{hasReachedWaypoint}}
+\index{hasReachedWaypoint@{hasReachedWaypoint}!enemyController.h@{enemyController.h}}
+\doxysubsubsection{\texorpdfstring{hasReachedWaypoint()}{hasReachedWaypoint()}}
+{\footnotesize\ttfamily bool has\+Reached\+Waypoint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_enemy_tank}{Enemy\+Tank}} \texorpdfstring{$\ast$}{*}}]{enemy,  }\item[{\mbox{\hyperlink{struct_waypoint}{Waypoint}}}]{waypoint }\end{DoxyParamCaption})}
+
+
+
+Checks if an enemy tank has reached a waypoint. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enemy} & Pointer to the enemy tank. \\
+\hline
+{\em waypoint} & The waypoint to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True if the enemy tank has reached the waypoint, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{enemy_controller_8h_a2f7a89fb7d28477bf0bb7960ebc7158c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{enemy_controller_8h_a2f7a89fb7d28477bf0bb7960ebc7158c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{enemy_controller_8h_ace6678d597fe1f25bb0bab2ee0891e94}\label{enemy_controller_8h_ace6678d597fe1f25bb0bab2ee0891e94} 
+\index{enemyController.h@{enemyController.h}!moveTowardsWaypointWithDeviation@{moveTowardsWaypointWithDeviation}}
+\index{moveTowardsWaypointWithDeviation@{moveTowardsWaypointWithDeviation}!enemyController.h@{enemyController.h}}
+\doxysubsubsection{\texorpdfstring{moveTowardsWaypointWithDeviation()}{moveTowardsWaypointWithDeviation()}}
+{\footnotesize\ttfamily void move\+Towards\+Waypoint\+With\+Deviation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_enemy_tank}{Enemy\+Tank}} \texorpdfstring{$\ast$}{*}}]{enemy,  }\item[{\mbox{\hyperlink{struct_waypoint}{Waypoint}}}]{target\+Waypoint,  }\item[{\mbox{\hyperlink{struct_obstacle}{Obstacle}}}]{obstacles\mbox{[}$\,$\mbox{]},  }\item[{int}]{num\+Obstacles }\end{DoxyParamCaption})}
+
+
+
+Moves an enemy tank towards a waypoint with deviation also providing some randomness. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enemy} & Pointer to the enemy tank. \\
+\hline
+{\em target\+Waypoint} & The target waypoint. \\
+\hline
+{\em obstacles} & Array of obstacles. \\
+\hline
+{\em num\+Obstacles} & Number of obstacles. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{enemy_controller_8h_ace6678d597fe1f25bb0bab2ee0891e94_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{enemy_controller_8h_ace6678d597fe1f25bb0bab2ee0891e94_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{enemy_controller_8h_a2b756f1cab75c6f8a7828db63a5c083a}\label{enemy_controller_8h_a2b756f1cab75c6f8a7828db63a5c083a} 
+\index{enemyController.h@{enemyController.h}!shootAtPlayer@{shootAtPlayer}}
+\index{shootAtPlayer@{shootAtPlayer}!enemyController.h@{enemyController.h}}
+\doxysubsubsection{\texorpdfstring{shootAtPlayer()}{shootAtPlayer()}}
+{\footnotesize\ttfamily void shoot\+At\+Player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}}]{arena }\end{DoxyParamCaption})}
+
+
+
+Makes an enemy tank shoot at the player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arena} & Pointer to the arena structure. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{enemy_controller_8h_a2b756f1cab75c6f8a7828db63a5c083a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{enemy_controller_8h_a2b756f1cab75c6f8a7828db63a5c083a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{enemy_controller_8h_af6f8bbb15e2b0c3247bcee8f9eaec054}\label{enemy_controller_8h_af6f8bbb15e2b0c3247bcee8f9eaec054} 
+\index{enemyController.h@{enemyController.h}!updateDirection@{updateDirection}}
+\index{updateDirection@{updateDirection}!enemyController.h@{enemyController.h}}
+\doxysubsubsection{\texorpdfstring{updateDirection()}{updateDirection()}}
+{\footnotesize\ttfamily void update\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_enemy_tank}{Enemy\+Tank}} \texorpdfstring{$\ast$}{*}}]{enemy,  }\item[{int}]{targetX,  }\item[{int}]{targetY }\end{DoxyParamCaption})}
+
+
+
+Updates the direction of an enemy tank towards a target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enemy} & Pointer to the enemy tank. \\
+\hline
+{\em targetX} & X coordinate of the target. \\
+\hline
+{\em targetY} & Y coordinate of the target. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{enemy_controller_8h_af6f8bbb15e2b0c3247bcee8f9eaec054_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{enemy_controller_8h_a8b34a10b1a191ff565026352e5aba394}\label{enemy_controller_8h_a8b34a10b1a191ff565026352e5aba394} 
+\index{enemyController.h@{enemyController.h}!updateEnemyTank@{updateEnemyTank}}
+\index{updateEnemyTank@{updateEnemyTank}!enemyController.h@{enemyController.h}}
+\doxysubsubsection{\texorpdfstring{updateEnemyTank()}{updateEnemyTank()}}
+{\footnotesize\ttfamily void update\+Enemy\+Tank (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}}]{arena,  }\item[{\mbox{\hyperlink{struct_enemy_tank}{Enemy\+Tank}} \texorpdfstring{$\ast$}{*}}]{enemy,  }\item[{\mbox{\hyperlink{structtank}{tank}} \texorpdfstring{$\ast$}{*}}]{player,  }\item[{\mbox{\hyperlink{struct_waypoint}{Waypoint}}}]{waypoints\mbox{[}$\,$\mbox{]},  }\item[{int}]{num\+Waypoints,  }\item[{\mbox{\hyperlink{struct_obstacle}{Obstacle}}}]{obstacles\mbox{[}$\,$\mbox{]},  }\item[{int}]{num\+Obstacles }\end{DoxyParamCaption})}
+
+
+
+Updates the state of an enemy tank. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arena} & Pointer to the arena structure. \\
+\hline
+{\em enemy} & Pointer to the enemy tank. \\
+\hline
+{\em player} & Pointer to the player\textquotesingle{}s tank. \\
+\hline
+{\em waypoints} & Array of waypoints. \\
+\hline
+{\em num\+Waypoints} & Number of waypoints. \\
+\hline
+{\em obstacles} & Array of obstacles. \\
+\hline
+{\em num\+Obstacles} & Number of obstacles. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{enemy_controller_8h_a8b34a10b1a191ff565026352e5aba394_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{enemy_controller_8h_a8b34a10b1a191ff565026352e5aba394_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{enemy_controller_8h_a7e678de7062743d885efb2a8c2965a9c}\label{enemy_controller_8h_a7e678de7062743d885efb2a8c2965a9c} 
+\index{enemyController.h@{enemyController.h}!updateTankDirection@{updateTankDirection}}
+\index{updateTankDirection@{updateTankDirection}!enemyController.h@{enemyController.h}}
+\doxysubsubsection{\texorpdfstring{updateTankDirection()}{updateTankDirection()}}
+{\footnotesize\ttfamily void update\+Tank\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_enemy_tank}{Enemy\+Tank}} \texorpdfstring{$\ast$}{*}}]{enemy,  }\item[{double}]{angle }\end{DoxyParamCaption})}
+
+
+
+Updates the direction of an enemy tank based on an angle rotating it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enemy} & Pointer to the enemy tank. \\
+\hline
+{\em angle} & The angle to update the direction. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{enemy_controller_8h_a7e678de7062743d885efb2a8c2965a9c_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{enemy_controller_8h_a93a0b8290778aa0400d46d2046f28c38}\label{enemy_controller_8h_a93a0b8290778aa0400d46d2046f28c38} 
+\index{enemyController.h@{enemyController.h}!waypoints@{waypoints}}
+\index{waypoints@{waypoints}!enemyController.h@{enemyController.h}}
+\doxysubsubsection{\texorpdfstring{waypoints}{waypoints}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_waypoint}{Waypoint}} waypoints\mbox{[}\mbox{\hyperlink{enemy_controller_8h_a106af341aeb948bdf26d7e19841e27a6}{NUM\+\_\+\+WAYPOINTS}}\mbox{]}}
+
+Array of waypoints for enemy navigation \Hypertarget{enemy_controller_8h_a46323a6373fa143cfa0d972060476aa4}\label{enemy_controller_8h_a46323a6373fa143cfa0d972060476aa4} 
+\index{enemyController.h@{enemyController.h}!waypointsGenerated@{waypointsGenerated}}
+\index{waypointsGenerated@{waypointsGenerated}!enemyController.h@{enemyController.h}}
+\doxysubsubsection{\texorpdfstring{waypointsGenerated}{waypointsGenerated}}
+{\footnotesize\ttfamily bool waypoints\+Generated\hspace{0.3cm}{\ttfamily [extern]}}
+
+Flag indicating if waypoints have been generated 

@@ -1,0 +1,10 @@
+<map id="write_mouse" name="write_mouse">
+<area shape="rect" id="Node000001" title="Writes a command byte to the mouse." alt="" coords="5,5,100,32"/>
+<area shape="rect" id="Node000002" href="$utils_8c.html#a2b56f50ba159e9d5115ed1a75eff15d9" title=" " alt="" coords="484,5,575,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,16,469,16,469,21,100,21"/>
+<area shape="rect" id="Node000003" href="$kbc_8c.html#a4822f96183ff9c6373060b217700c1d1" title="Writes a command byte to the specified port." alt="" coords="148,31,288,57"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="100,23,133,28,132,33,100,28"/>
+<area shape="rect" id="Node000004" href="$kbc_8c.html#a2e83d0a707b0980afca5b4252bd54048" title="Reads the status register." alt="" coords="336,31,436,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="288,41,320,41,320,47,288,47"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="436,33,469,27,470,32,437,38"/>
+</map>

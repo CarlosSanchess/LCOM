@@ -1,0 +1,70 @@
+\doxysection{enemy\+Controller.\+h}
+\hypertarget{enemy_controller_8h_source}{}\label{enemy_controller_8h_source}\index{LCOM-\/main/proj/src/controllers/enemyController.h@{LCOM-\/main/proj/src/controllers/enemyController.h}}
+\mbox{\hyperlink{enemy_controller_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ ENEMY\_CONTROLLER\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ ENEMY\_CONTROLLER\_H}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{tank_controller_8h}{tankController.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{bullet_controller_8h}{bulletController.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_tank_8h}{Models/Tank.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{arena_8h}{Models/arena.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_position_8h}{Models/Position.h}}"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ WAYPOINT\_MAX\_DISTANCE\ 300}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ PATROL\_SPEED\ 4}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ FOLLOW\_SPEED\ 3}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ FOLLOW\_THRESHOLD\ 200}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ MIN\_DISTANCE\_TO\_OBSTACLE\ 5}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ NUM\_WAYPOINTS\ 30}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ NUM\_ATTEMPTS\ 10}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ WAYPOINT\_TOLERANCE\ 0}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ MAX\_WAYPOINTS\ 30}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ STUCK\_THRESHOLD\ 5}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ MOVE\_DEVIATION\ 3}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_waypoint_a3d5015e834fa5331e14a603904100069}{x}};\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_waypoint_abb605de80600096d5c30e736bfa9fa9e}{y}};\ }
+\DoxyCodeLine{00058\ \}\ \mbox{\hyperlink{struct_waypoint}{Waypoint}};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00061\ \mbox{\hyperlink{struct_waypoint}{Waypoint}}\ \mbox{\hyperlink{enemy_controller_8h_a93a0b8290778aa0400d46d2046f28c38}{waypoints}}[\mbox{\hyperlink{enemy_controller_8h_a106af341aeb948bdf26d7e19841e27a6}{NUM\_WAYPOINTS}}];}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{enemy_controller_8h_a46323a6373fa143cfa0d972060476aa4}{waypointsGenerated}};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00075\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{enemy_controller_8h_a82af8e097e729dbb72a83a6acf7c1803}{calculateDistance}}(\textcolor{keywordtype}{int}\ x1,\ \textcolor{keywordtype}{int}\ y1,\ \textcolor{keywordtype}{int}\ x2,\ \textcolor{keywordtype}{int}\ y2);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00086\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{enemy_controller_8h_a24a22572e3e16181962a139f5eaa0228}{canMoveEnemy}}(\textcolor{keywordtype}{int}\ newX,\ \textcolor{keywordtype}{int}\ newY,\ \mbox{\hyperlink{struct_obstacle}{Obstacle}}\ obstacles[],\ \textcolor{keywordtype}{int}\ numObstacles);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00095\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{enemy_controller_8h_af6f8bbb15e2b0c3247bcee8f9eaec054}{updateDirection}}(\mbox{\hyperlink{struct_enemy_tank}{EnemyTank}}\ *enemy,\ \textcolor{keywordtype}{int}\ targetX,\ \textcolor{keywordtype}{int}\ targetY);}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00103\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{enemy_controller_8h_a7e678de7062743d885efb2a8c2965a9c}{updateTankDirection}}(\mbox{\hyperlink{struct_enemy_tank}{EnemyTank}}\ *enemy,\ \textcolor{keywordtype}{double}\ angle);}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00117\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{enemy_controller_8h_a5eb2eadd15c827a4e1a4f1484ae9b3d0}{attemptMove}}(\mbox{\hyperlink{struct_enemy_tank}{EnemyTank}}\ *enemy,\ \textcolor{keywordtype}{int}\ speed,\ \textcolor{keywordtype}{int}\ targetX,\ \textcolor{keywordtype}{int}\ targetY,\ \mbox{\hyperlink{struct_obstacle}{Obstacle}}\ obstacles[],\ \textcolor{keywordtype}{int}\ numObstacles,\ \textcolor{keywordtype}{bool}\ withinThreshold);}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00127\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{enemy_controller_8h_aca1b3e0f0440437651ab9b6e87f464a5}{followPlayer}}(\mbox{\hyperlink{struct_enemy_tank}{EnemyTank}}\ *enemy,\ \mbox{\hyperlink{structtank}{tank}}\ *player,\ \mbox{\hyperlink{struct_obstacle}{Obstacle}}\ obstacles[],\ \textcolor{keywordtype}{int}\ numObstacles);}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00134\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{enemy_controller_8h_a2b756f1cab75c6f8a7828db63a5c083a}{shootAtPlayer}}(\mbox{\hyperlink{struct_arena}{Arena}}\ *arena);}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00142\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{enemy_controller_8h_ab2160076a27fd983f08cf082f5f9a765}{generateWaypoints}}(\mbox{\hyperlink{struct_waypoint}{Waypoint}}\ \mbox{\hyperlink{enemy_controller_8h_a93a0b8290778aa0400d46d2046f28c38}{waypoints}}[],\ \textcolor{keywordtype}{int}\ numWaypoints);}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00152\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{enemy_controller_8h_ace6678d597fe1f25bb0bab2ee0891e94}{moveTowardsWaypointWithDeviation}}(\mbox{\hyperlink{struct_enemy_tank}{EnemyTank}}\ *enemy,\ \mbox{\hyperlink{struct_waypoint}{Waypoint}}\ targetWaypoint,\ \mbox{\hyperlink{struct_obstacle}{Obstacle}}\ obstacles[],\ \textcolor{keywordtype}{int}\ numObstacles);}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00161\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{enemy_controller_8h_a2f7a89fb7d28477bf0bb7960ebc7158c}{hasReachedWaypoint}}(\mbox{\hyperlink{struct_enemy_tank}{EnemyTank}}\ *enemy,\ \mbox{\hyperlink{struct_waypoint}{Waypoint}}\ waypoint);}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00174\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{enemy_controller_8h_a8b34a10b1a191ff565026352e5aba394}{updateEnemyTank}}(\mbox{\hyperlink{struct_arena}{Arena}}\ *arena,\ \mbox{\hyperlink{struct_enemy_tank}{EnemyTank}}\ *enemy,\ \mbox{\hyperlink{structtank}{tank}}\ *player,\ \mbox{\hyperlink{struct_waypoint}{Waypoint}}\ \mbox{\hyperlink{enemy_controller_8h_a93a0b8290778aa0400d46d2046f28c38}{waypoints}}[],\ \textcolor{keywordtype}{int}\ numWaypoints,\ \mbox{\hyperlink{struct_obstacle}{Obstacle}}\ obstacles[],\ \textcolor{keywordtype}{int}\ numObstacles);}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ENEMY\_CONTROLLER\_H}}
+
+\end{DoxyCode}

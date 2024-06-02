@@ -1,0 +1,113 @@
+<map id="proj_main_loop" name="proj_main_loop">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,1120,114,1147"/>
+<area shape="rect" id="Node000002" href="$main_8c.html#a58e8be2db2660128e4e6456a9c981fb5" title=" " alt="" coords="170,715,209,741"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,1119,177,755,182,757,68,1120"/>
+<area shape="rect" id="Node000108" href="$main_8c.html#ada06e65686f854920bbae55688ed5484" title=" " alt="" coords="162,1424,217,1451"/>
+<area shape="poly" id="edge51_Node000001_Node000108" title=" " alt="" coords="69,1146,179,1408,174,1410,64,1148"/>
+<area shape="rect" id="Node000003" href="$video__gr_8c.html#a3e842192038953bd212f6d32d000e234" title="Copies the contents of the current buffer to the video memory." alt="" coords="284,1272,426,1299"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="193,742,195,843,204,999,213,1080,226,1155,244,1217,255,1240,267,1258,273,1264,269,1268,263,1262,250,1243,239,1219,221,1156,208,1081,199,999,190,843,188,742"/>
+<area shape="rect" id="Node000004" href="$game_controller_8c.html#ada6217738e08311a4d3961f4c8f1ab7f" title="Changes the background of the game." alt="" coords="289,120,421,147"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="188,714,189,607,197,439,206,352,219,271,238,203,249,177,263,157,273,148,277,152,267,160,254,180,243,205,224,272,211,352,202,440,194,607,193,714"/>
+<area shape="rect" id="Node000009" href="$rtc_controller_8c.html#a8d761e037fe0486a6788dbc4dea43b7f" title="Checks and updates the high score if the current score is higher." alt="" coords="265,221,445,248"/>
+<area shape="poly" id="edge5_Node000002_Node000009" title=" " alt="" coords="188,714,192,623,203,487,212,415,225,350,242,296,263,258,265,256,269,260,267,262,247,298,230,351,217,416,208,487,197,623,194,714"/>
+<area shape="rect" id="Node000016" href="$arena_8c.html#a44f4a926829c5771ee4483a5179e015b" title="Creates and initializes a new game arena." alt="" coords="310,272,401,299"/>
+<area shape="poly" id="edge7_Node000002_Node000016" title=" " alt="" coords="188,714,191,657,201,570,223,469,241,419,263,372,290,336,320,307,324,311,294,339,267,375,246,421,229,471,206,571,196,657,193,714"/>
+<area shape="rect" id="Node000021" href="$views_8c.html#ad0c6e30d8341ef923801e3fc1aac2a87" title="Draws the arena screen." alt="" coords="314,385,396,412"/>
+<area shape="poly" id="edge11_Node000002_Node000021" title=" " alt="" coords="193,713,221,642,263,549,300,481,334,424,339,427,305,484,267,552,226,645,198,715"/>
+<area shape="rect" id="Node000030" href="$views_8c.html#a7217fc029c74467b1ffab1f2f1c570db" title="Draws the menu screen." alt="" coords="315,1120,395,1147"/>
+<area shape="poly" id="edge19_Node000002_Node000030" title=" " alt="" coords="194,742,201,815,215,923,236,1029,251,1071,267,1100,283,1113,302,1121,299,1126,280,1117,263,1103,246,1073,231,1031,209,924,196,816,189,742"/>
+<area shape="rect" id="Node000032" href="$views_8c.html#ae8f024e8f545f09e9e395dca36b00908" title="Draws the mouse cursor on the screen." alt="" coords="312,563,399,589"/>
+<area shape="poly" id="edge23_Node000002_Node000032" title=" " alt="" coords="202,712,263,650,323,598,327,602,267,654,205,716"/>
+<area shape="rect" id="Node000034" href="$views_8c.html#ae4f30b621bd22dff478de0da223dd92b" title="Draws the whole the chrono and score stats." alt="" coords="316,664,395,691"/>
+<area shape="poly" id="edge26_Node000002_Node000034" title=" " alt="" coords="209,720,300,691,301,696,210,725"/>
+<area shape="rect" id="Node000037" href="$timer_controller_8c.html#a8b6cb111da7ee1f0d45ce1381392380d" title="Handles all delayed events in the game." alt="" coords="283,791,428,817"/>
+<area shape="poly" id="edge31_Node000002_Node000037" title=" " alt="" coords="211,734,312,781,309,786,208,739"/>
+<area shape="rect" id="Node000043" href="$kb_controller_8c.html#a7c807c44f534a91d6d580c71b35dec38" title="Handles keyboard interrupts and processes game state changes." alt="" coords="289,1019,422,1045"/>
+<area shape="poly" id="edge37_Node000002_Node000043" title=" " alt="" coords="200,741,342,1004,337,1006,196,743"/>
+<area shape="rect" id="Node000056" href="$serial_port_controller_8h.html#a6d46c8a523f05d6f4f5b3e8ccdbe635b" title="Handles the serial port interrupt." alt="" coords="530,1120,655,1147"/>
+<area shape="poly" id="edge45_Node000002_Node000056" title=" " alt="" coords="195,742,202,808,216,903,238,996,251,1032,267,1055,300,1070,363,1087,516,1117,515,1123,362,1092,298,1075,263,1059,247,1034,232,997,211,904,196,809,189,742"/>
+<area shape="rect" id="Node000066" href="$mouse_controller_8c.html#a59eab8192e96165c0e79d6bd94e762a4" title="Handles mouse interrupts and processes game state changes." alt="" coords="283,69,428,96"/>
+<area shape="poly" id="edge44_Node000002_Node000066" title=" " alt="" coords="188,714,187,598,194,416,203,320,216,231,236,157,248,128,263,106,268,101,272,105,267,110,253,131,241,159,221,232,208,320,199,416,193,598,193,714"/>
+<area shape="rect" id="Node000077" href="$arena_controller_8c.html#a0eaf53413d600619b39e10fd81be10ef" title="Processes the current state of the arena." alt="" coords="305,1171,406,1197"/>
+<area shape="poly" id="edge46_Node000002_Node000077" title=" " alt="" coords="194,742,198,826,210,951,220,1016,232,1075,248,1124,267,1157,292,1173,289,1178,263,1160,243,1126,227,1077,214,1017,205,951,193,826,188,742"/>
+<area shape="rect" id="Node000098" href="$video__gr_8c.html#ab1ed6f27008637833756145d9f287560" title="Restores the video buffer." alt="" coords="290,171,420,197"/>
+<area shape="poly" id="edge48_Node000002_Node000098" title=" " alt="" coords="188,714,190,615,200,463,209,383,222,310,240,250,251,226,263,208,274,198,278,202,267,211,255,228,245,251,227,311,214,384,205,463,196,615,193,714"/>
+<area shape="rect" id="Node000099" href="$main_8c.html#a8619d3a38415d23a59f3a923502608bb" title=" " alt="" coords="321,1221,389,1248"/>
+<area shape="poly" id="edge49_Node000002_Node000099" title=" " alt="" coords="194,742,197,835,207,975,217,1048,229,1115,246,1170,267,1208,285,1221,307,1229,305,1234,282,1226,263,1211,241,1173,224,1117,211,1049,202,976,191,835,188,742"/>
+<area shape="rect" id="Node000005" href="$views_8c.html#a1413e18c9ce70d5003cbc8793cc8c70d" title="Draws the game background." alt="" coords="515,5,670,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="421,118,444,106,459,91,467,75,475,58,492,42,501,37,503,41,495,46,480,61,472,77,463,94,447,110,423,122"/>
+<area shape="rect" id="Node000010" href="$rtc_8c.html#ad023d88dfb321240fc060baa424c7493" title="Updates the provided variables with the current RTC time." alt="" coords="535,56,650,83"/>
+<area shape="poly" id="edge6_Node000009_Node000010" title=" " alt="" coords="426,219,444,207,455,194,462,180,467,151,471,122,479,107,492,93,519,77,522,82,495,97,483,110,477,123,472,152,467,182,460,197,447,211,429,223"/>
+<area shape="rect" id="Node000017" href="$tank_8c.html#a2b4d3b1e5c1918d513937a5c9b8f15cf" title="Creates a new enemy tank." alt="" coords="529,208,656,235"/>
+<area shape="poly" id="edge8_Node000016_Node000017" title=" " alt="" coords="401,270,493,244,521,237,522,242,494,249,402,275"/>
+<area shape="rect" id="Node000018" href="$tank_8c.html#af0f78c94a6562688f7efb448d44e2ffa" title="Creates a new tank." alt="" coords="550,107,635,133"/>
+<area shape="poly" id="edge9_Node000016_Node000018" title=" " alt="" coords="401,278,423,271,444,258,455,245,462,231,467,202,471,173,479,158,492,143,511,131,533,123,535,128,514,136,495,147,483,161,477,174,472,203,467,232,460,247,447,262,426,275,402,283"/>
+<area shape="rect" id="Node000019" href="$arena_8c.html#a88d9af0d4df5265659673497c6e9925a" title="Destroys a game arena, freeing allocated memory." alt="" coords="543,157,642,184"/>
+<area shape="poly" id="edge10_Node000016_Node000019" title=" " alt="" coords="401,276,423,269,444,258,459,243,467,227,475,210,492,194,527,178,529,183,495,198,480,213,472,229,463,246,447,262,425,274,402,281"/>
+<area shape="rect" id="Node000022" href="$views_8c.html#ac940e672661daf372dc8ee9f3645a2d7" title="Draws a bomb on the screen after one of the tanks die." alt="" coords="551,259,634,285"/>
+<area shape="poly" id="edge12_Node000021_Node000022" title=" " alt="" coords="370,383,421,339,455,316,492,295,535,280,537,285,494,300,458,320,424,344,373,387"/>
+<area shape="rect" id="Node000024" href="$views_8c.html#a643860208cc1c763f4a6ec7dcd7e1669" title="Draws dynamically built obstacles (by the user hammer) in the arena, they fade after 10 secs." alt="" coords="550,411,635,437"/>
+<area shape="poly" id="edge14_Node000021_Node000024" title=" " alt="" coords="397,400,535,415,535,421,397,406"/>
+<area shape="rect" id="Node000025" href="$views_8c.html#a2e35cd85e9b10790713015ddcadf5873" title="Draws all bullets in the arena." alt="" coords="548,309,637,336"/>
+<area shape="poly" id="edge16_Node000021_Node000025" title=" " alt="" coords="390,382,493,345,533,334,534,339,494,351,392,387"/>
+<area shape="rect" id="Node000028" href="$views_8c.html#aefba8b2a47700757729bb0da4af1c069" title="Draws an enemy tank on the screen." alt="" coords="534,360,651,387"/>
+<area shape="poly" id="edge17_Node000021_Node000028" title=" " alt="" coords="397,392,518,379,519,384,397,397"/>
+<area shape="rect" id="Node000029" href="$views_8c.html#a021c38e5484df43338d807e514a9441d" title="Draws the player tank on the screen." alt="" coords="554,461,631,488"/>
+<area shape="poly" id="edge18_Node000021_Node000029" title=" " alt="" coords="392,410,494,447,540,460,538,465,493,452,390,415"/>
+<area shape="rect" id="Node000023" href="$video__gr_8c.html#ad2aba6eddab4c859594b10186962d2c8" title="Draws an XPM image ignoring a specified color." alt="" coords="755,613,877,640"/>
+<area shape="poly" id="edge13_Node000022_Node000023" title=" " alt="" coords="635,271,665,279,693,295,725,329,750,368,770,410,786,453,806,535,815,597,810,598,801,536,781,455,766,412,746,371,720,333,690,299,663,284,633,277"/>
+<area shape="poly" id="edge15_Node000024_Node000023" title=" " alt="" coords="636,426,665,433,693,447,732,482,764,523,788,563,805,598,801,601,784,566,759,526,728,485,690,452,663,438,634,431"/>
+<area shape="poly" id="edge22_Node000030_Node000023" title=" " alt="" coords="397,1137,422,1145,447,1156,462,1170,471,1184,479,1197,495,1207,550,1229,597,1241,620,1240,642,1235,665,1224,690,1207,705,1191,719,1168,744,1107,764,1031,780,946,801,778,810,656,816,656,806,778,786,947,770,1032,749,1109,724,1171,710,1194,693,1211,668,1229,644,1240,620,1246,597,1246,548,1234,492,1212,476,1200,466,1187,458,1173,444,1161,420,1150,395,1142"/>
+<area shape="rect" id="Node000031" href="$views_8c.html#a87d18a98b6e01254d1c19ba254670562" title="Draws the high score screen." alt="" coords="538,1171,647,1197"/>
+<area shape="poly" id="edge20_Node000030_Node000031" title=" " alt="" coords="396,1139,524,1167,522,1172,395,1144"/>
+<area shape="poly" id="edge21_Node000031_Node000023" title=" " alt="" coords="646,1178,670,1171,690,1157,715,1119,737,1062,756,993,772,917,796,766,809,655,814,656,801,766,777,918,761,994,742,1064,719,1121,694,1161,672,1175,648,1183"/>
+<area shape="poly" id="edge24_Node000032_Node000023" title=" " alt="" coords="399,561,457,548,531,537,612,535,653,540,692,548,745,572,789,601,786,606,743,576,691,553,652,545,612,541,532,543,458,553,400,566"/>
+<area shape="rect" id="Node000033" href="$video__gr_8c.html#a351b92fa64fbe32254f0b53d4814cfd0" title="Draws an XPM image ignoring a specified color, with an option to indicate build capability." alt="" coords="503,563,682,589"/>
+<area shape="poly" id="edge25_Node000032_Node000033" title=" " alt="" coords="399,573,488,573,488,579,399,579"/>
+<area shape="rect" id="Node000035" href="$views_8c.html#a518c838b97ded94b9a14f769464563fb" title="Draws the rtc info about the highscore on the screen." alt="" coords="548,664,637,691"/>
+<area shape="poly" id="edge27_Node000034_Node000035" title=" " alt="" coords="395,675,532,675,532,680,395,680"/>
+<area shape="rect" id="Node000036" href="$views_8c.html#a9c44a9a186dd7ca2257eb4d08aed3db7" title="Draws the player&#39;s score on the screen." alt="" coords="551,613,634,640"/>
+<area shape="poly" id="edge29_Node000034_Node000036" title=" " alt="" coords="395,666,536,636,537,641,396,672"/>
+<area shape="poly" id="edge28_Node000035_Node000023" title=" " alt="" coords="637,665,739,641,740,646,638,670"/>
+<area shape="poly" id="edge30_Node000036_Node000023" title=" " alt="" coords="634,624,739,624,739,629,634,629"/>
+<area shape="rect" id="Node000038" href="$timer_controller_8c.html#ad2e7ce906b2cb5d60b61b4ce485dd1f1" title="Handles the delay for bomb activation." alt="" coords="522,917,663,944"/>
+<area shape="poly" id="edge32_Node000037_Node000038" title=" " alt="" coords="373,816,424,859,458,883,495,903,510,909,508,914,492,908,455,887,421,863,370,820"/>
+<area shape="rect" id="Node000039" href="$timer_controller_8c.html#a1d8e0a0c1b8788fe37a0c90b1c5944f1" title="Handles the delay for building&#45;related actions." alt="" coords="513,715,672,741"/>
+<area shape="poly" id="edge33_Node000037_Node000039" title=" " alt="" coords="390,788,493,751,518,743,520,748,494,756,392,793"/>
+<area shape="rect" id="Node000040" href="$timer_controller_8c.html#a7992846e782544053fc1694500fcc91a" title="Handles the delay for enemy tank shooting." alt="" coords="493,765,692,792"/>
+<area shape="poly" id="edge34_Node000037_Node000040" title=" " alt="" coords="428,794,478,788,478,794,428,799"/>
+<area shape="rect" id="Node000041" href="$timer_controller_8c.html#a8ec9a72dbe5edac7174809831de79462" title="Handles the delay for mouse&#45;related actions." alt="" coords="520,816,665,843"/>
+<area shape="poly" id="edge35_Node000037_Node000041" title=" " alt="" coords="428,809,505,817,504,823,428,814"/>
+<area shape="rect" id="Node000042" href="$timer_controller_8c.html#a3fe5dd899f9f8e4f6deef2d14bdcdc79" title="Handles the delay for tank shooting." alt="" coords="514,867,671,893"/>
+<area shape="poly" id="edge36_Node000037_Node000042" title=" " alt="" coords="392,815,494,852,520,860,518,865,493,857,390,820"/>
+<area shape="rect" id="Node000044" href="$game_controller_8c.html#a00ed09a539771f3a9f9b725597bc7f08" title="Changes the game state to the menu." alt="" coords="538,1272,647,1299"/>
+<area shape="poly" id="edge38_Node000043_Node000044" title=" " alt="" coords="379,1044,413,1071,447,1106,464,1134,472,1158,479,1182,495,1208,525,1237,557,1261,554,1266,521,1241,491,1211,475,1184,466,1160,459,1136,443,1110,410,1075,376,1048"/>
+<area shape="rect" id="Node000050" href="$kb_controller_8c.html#a51dcba88830e36e39c9c614fb4f17014" title="Handles arena interactions based on keyboard input." alt="" coords="546,968,639,995"/>
+<area shape="poly" id="edge40_Node000043_Node000050" title=" " alt="" coords="421,1015,530,992,531,997,422,1021"/>
+<area shape="rect" id="Node000053" href="$kb_controller_8c.html#a49ab70f4325d6326ae082c9829b4b0cd" title="Processes the menu interactions based on keyboard input." alt="" coords="547,1019,638,1045"/>
+<area shape="poly" id="edge41_Node000043_Node000053" title=" " alt="" coords="422,1029,531,1029,531,1035,422,1035"/>
+<area shape="rect" id="Node000054" href="$kb_controller_8c.html#a8f674ccf39d43d1afdab395f72ccd240" title="Handles HighScore Page interactions based on keyboard input." alt="" coords="546,1069,639,1096"/>
+<area shape="poly" id="edge42_Node000043_Node000054" title=" " alt="" coords="422,1043,531,1067,530,1072,421,1049"/>
+<area shape="poly" id="edge43_Node000043_Node000056" title=" " alt="" coords="407,1044,447,1062,462,1073,471,1085,480,1095,495,1106,517,1115,515,1120,492,1110,477,1099,467,1088,458,1077,444,1066,405,1048"/>
+<area shape="rect" id="Node000045" href="$views_8c.html#a6b5e5ea4778b78a346207b59bc4c3158" title="Draws the menu background." alt="" coords="740,1475,892,1501"/>
+<area shape="poly" id="edge39_Node000044_Node000045" title=" " alt="" coords="648,1290,672,1297,693,1308,732,1343,764,1384,788,1425,805,1459,801,1462,784,1427,759,1387,728,1347,690,1313,669,1302,647,1295"/>
+<area shape="poly" id="edge47_Node000077_Node000044" title=" " alt="" coords="407,1191,447,1207,462,1218,471,1229,481,1240,495,1251,524,1265,522,1270,492,1256,477,1244,467,1233,458,1222,444,1212,405,1196"/>
+<area shape="rect" id="Node000105" href="$mouse_8c.html#a1594888614ba7a869289f607a8084aca" title="Writes a command byte to the mouse." alt="" coords="545,1323,640,1349"/>
+<area shape="poly" id="edge50_Node000099_Node000105" title=" " alt="" coords="391,1237,419,1245,447,1258,462,1271,471,1284,480,1297,495,1308,531,1323,529,1328,492,1313,476,1300,467,1287,458,1274,444,1262,417,1250,389,1242"/>
+<area shape="poly" id="edge52_Node000108_Node000003" title=" " alt="" coords="193,1422,218,1371,238,1341,263,1315,282,1303,285,1308,267,1319,242,1344,223,1373,198,1425"/>
+<area shape="poly" id="edge53_Node000108_Node000030" title=" " alt="" coords="187,1423,188,1374,196,1302,205,1263,219,1225,238,1189,263,1157,280,1145,299,1137,301,1142,282,1149,267,1161,242,1192,224,1227,210,1265,201,1303,193,1374,193,1423"/>
+<area shape="poly" id="edge54_Node000108_Node000045" title=" " alt="" coords="193,1451,194,1495,203,1554,212,1585,226,1615,243,1641,267,1663,300,1683,334,1695,370,1701,408,1702,445,1697,483,1689,559,1660,630,1623,693,1582,786,1510,790,1514,696,1586,632,1628,561,1665,485,1694,446,1703,408,1707,370,1707,333,1700,297,1687,263,1667,239,1645,221,1617,207,1587,198,1555,189,1495,187,1451"/>
+<area shape="poly" id="edge61_Node000108_Node000105" title=" " alt="" coords="197,1422,224,1389,242,1372,264,1359,332,1336,404,1325,472,1323,530,1326,530,1331,472,1328,404,1330,333,1341,266,1364,246,1376,228,1393,201,1425"/>
+<area shape="rect" id="Node000109" href="$kbc_8c.html#a18c596b224bba98ca524a0bfa9730609" title="Subscribes keyboard interrupts." alt="" coords="292,1373,418,1400"/>
+<area shape="poly" id="edge55_Node000108_Node000109" title=" " alt="" coords="217,1425,264,1409,288,1402,290,1407,266,1415,218,1430"/>
+<area shape="rect" id="Node000110" href="$mouse_8c.html#a9da18257ff113b686bb826d154bfaa87" title="Subscribes to mouse interrupts." alt="" coords="283,1424,427,1451"/>
+<area shape="poly" id="edge56_Node000108_Node000110" title=" " alt="" coords="218,1435,267,1435,267,1440,218,1440"/>
+<area shape="rect" id="Node000111" href="$rtc_controller_8c.html#a820cd50f917abcf1de46d71149ffc324" title="Reads the High Score from a file or initializes the high score with default values." alt="" coords="277,1475,434,1501"/>
+<area shape="poly" id="edge57_Node000108_Node000111" title=" " alt="" coords="218,1444,266,1460,290,1467,288,1472,264,1465,217,1449"/>
+<area shape="rect" id="Node000112" href="$serial__port_8c.html#a967774712b7c6939a5f7adf49496aa08" title="Subscribes to the interrupts generated by the serial port." alt="" coords="287,1525,423,1552"/>
+<area shape="poly" id="edge58_Node000108_Node000112" title=" " alt="" coords="203,1450,229,1481,266,1511,277,1516,274,1521,264,1516,226,1485,199,1453"/>
+<area shape="rect" id="Node000113" href="$timer_8c.html#a6f786481e80308348d629d605ffa2d84" title="Subscribes to timer interrupts." alt="" coords="288,1576,422,1603"/>
+<area shape="poly" id="edge59_Node000108_Node000113" title=" " alt="" coords="197,1450,221,1505,241,1536,267,1562,275,1568,273,1572,263,1566,237,1539,216,1507,192,1452"/>
+<area shape="rect" id="Node000114" href="$video__gr_8c.html#acf777d8344d18301dc8c93fed15070e6" title="Initializes the video mode." alt="" coords="318,1627,392,1653"/>
+<area shape="poly" id="edge60_Node000108_Node000114" title=" " alt="" coords="195,1451,201,1484,214,1528,235,1574,250,1594,267,1613,284,1624,303,1631,302,1636,281,1629,263,1617,245,1598,231,1576,209,1530,196,1485,190,1452"/>
+</map>

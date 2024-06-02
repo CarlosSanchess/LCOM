@@ -1,0 +1,91 @@
+\doxysection{LCOM-\/main/proj/src/controllers/collision\+Controller.c File Reference}
+\hypertarget{collision_controller_8c}{}\label{collision_controller_8c}\index{LCOM-\/main/proj/src/controllers/collisionController.c@{LCOM-\/main/proj/src/controllers/collisionController.c}}
+{\ttfamily \#include "{}collision\+Controller.\+h"{}}\newline
+Include dependency graph for collision\+Controller.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{collision_controller_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{collision_controller_8c_a8bf2b4622c41d0df8c764d7bd2e8bebc}{check\+Collision}} (\mbox{\hyperlink{struct_hitbox}{Hitbox}} a, \mbox{\hyperlink{struct_hitbox}{Hitbox}} b)
+\begin{DoxyCompactList}\small\item\em Checks if two hitboxes collide. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{collision_controller_8c_a80018dbb43e45130fdc924f9f1e1baa0}{process\+Collisions}} (\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}arena, size\+\_\+t index, \mbox{\hyperlink{struct_hitbox}{Hitbox}} tank\+HB, \mbox{\hyperlink{struct_hitbox}{Hitbox}} enemy\+Tank\+HB, \mbox{\hyperlink{struct_hitbox}{Hitbox}} bullet\+HB)
+\begin{DoxyCompactList}\small\item\em Processes collisions in the arena. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{collision_controller_8c_a8bf2b4622c41d0df8c764d7bd2e8bebc}\label{collision_controller_8c_a8bf2b4622c41d0df8c764d7bd2e8bebc} 
+\index{collisionController.c@{collisionController.c}!checkCollision@{checkCollision}}
+\index{checkCollision@{checkCollision}!collisionController.c@{collisionController.c}}
+\doxysubsubsection{\texorpdfstring{checkCollision()}{checkCollision()}}
+{\footnotesize\ttfamily bool check\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_hitbox}{Hitbox}}}]{a,  }\item[{\mbox{\hyperlink{struct_hitbox}{Hitbox}}}]{b }\end{DoxyParamCaption})}
+
+
+
+Checks if two hitboxes collide. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The first hitbox. \\
+\hline
+{\em b} & The second hitbox. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True if the hitboxes collide, false otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{collision_controller_8c_a8bf2b4622c41d0df8c764d7bd2e8bebc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{collision_controller_8c_a80018dbb43e45130fdc924f9f1e1baa0}\label{collision_controller_8c_a80018dbb43e45130fdc924f9f1e1baa0} 
+\index{collisionController.c@{collisionController.c}!processCollisions@{processCollisions}}
+\index{processCollisions@{processCollisions}!collisionController.c@{collisionController.c}}
+\doxysubsubsection{\texorpdfstring{processCollisions()}{processCollisions()}}
+{\footnotesize\ttfamily int process\+Collisions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}}]{arena,  }\item[{size\+\_\+t}]{index,  }\item[{\mbox{\hyperlink{struct_hitbox}{Hitbox}}}]{tank\+HB,  }\item[{\mbox{\hyperlink{struct_hitbox}{Hitbox}}}]{enemy\+Tank\+HB,  }\item[{\mbox{\hyperlink{struct_hitbox}{Hitbox}}}]{bullet\+HB }\end{DoxyParamCaption})}
+
+
+
+Processes collisions in the arena. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arena} & Pointer to the arena structure. \\
+\hline
+{\em index} & Index of the current object. \\
+\hline
+{\em tank\+HB} & \doxylink{struct_hitbox}{Hitbox} of the player\textquotesingle{}s tank. \\
+\hline
+{\em enemy\+Tank\+HB} & \doxylink{struct_hitbox}{Hitbox} of the enemy tank. \\
+\hline
+{\em bullet\+HB} & \doxylink{struct_hitbox}{Hitbox} of the bullet. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Status code indicating the result of the processing. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{collision_controller_8c_a80018dbb43e45130fdc924f9f1e1baa0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{collision_controller_8c_a80018dbb43e45130fdc924f9f1e1baa0_icgraph}
+\end{center}
+\end{figure}

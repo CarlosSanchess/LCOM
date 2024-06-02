@@ -1,0 +1,11 @@
+<map id="bcd_to_binary" name="bcd_to_binary">
+<area shape="rect" id="Node000001" title="Converts a BCD value to binary." alt="" coords="640,5,742,32"/>
+<area shape="rect" id="Node000002" href="$rtc_8c.html#ad023d88dfb321240fc060baa424c7493" title="Updates the provided variables with the current RTC time." alt="" coords="477,5,592,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="624,21,592,21,592,16,624,16"/>
+<area shape="rect" id="Node000003" href="$rtc_controller_8c.html#a8d761e037fe0486a6788dbc4dea43b7f" title="Checks and updates the high score if the current score is higher." alt="" coords="249,5,429,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="462,21,430,21,430,16,462,16"/>
+<area shape="rect" id="Node000004" href="$main_8c.html#a58e8be2db2660128e4e6456a9c981fb5" title=" " alt="" coords="162,5,201,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="233,21,202,21,202,16,233,16"/>
+<area shape="rect" id="Node000005" href="$main_8c.html#a7a72220d8366dd84709e79ce415862e5" title=" " alt="" coords="5,5,114,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="146,21,114,21,114,16,146,16"/>
+</map>

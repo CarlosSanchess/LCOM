@@ -1,0 +1,9 @@
+<map id="xpm_draw_ignore_Hammer" name="xpm_draw_ignore_Hammer">
+<area shape="rect" id="Node000001" title="Draws an XPM image ignoring a specified color, with an option to indicate build capability." alt="" coords="384,5,563,32"/>
+<area shape="rect" id="Node000002" href="$views_8c.html#ae8f024e8f545f09e9e395dca36b00908" title="Draws the mouse cursor on the screen." alt="" coords="249,5,336,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="369,21,337,21,337,16,369,16"/>
+<area shape="rect" id="Node000003" href="$main_8c.html#a58e8be2db2660128e4e6456a9c981fb5" title=" " alt="" coords="162,5,201,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="233,21,201,21,201,16,233,16"/>
+<area shape="rect" id="Node000004" href="$main_8c.html#a7a72220d8366dd84709e79ce415862e5" title=" " alt="" coords="5,5,114,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="146,21,114,21,114,16,146,16"/>
+</map>

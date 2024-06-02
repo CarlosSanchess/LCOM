@@ -1,0 +1,7 @@
+<map id="attemptMove" name="attemptMove">
+<area shape="rect" id="Node000001" title="Attempts to move an enemy tank towards a target." alt="" coords="5,31,101,57"/>
+<area shape="rect" id="Node000002" href="$enemy_controller_8c.html#a24a22572e3e16181962a139f5eaa0228" title="Checks if an enemy tank can move to a new position." alt="" coords="162,5,275,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,34,146,27,147,32,101,39"/>
+<area shape="rect" id="Node000003" href="$enemy_controller_8c.html#a7e678de7062743d885efb2a8c2965a9c" title="Updates the direction of an enemy tank based on an angle rotating it." alt="" coords="149,56,288,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="101,49,134,54,133,59,101,54"/>
+</map>

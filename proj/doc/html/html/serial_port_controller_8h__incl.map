@@ -1,0 +1,7 @@
+<map id="LCOM&#45;main/proj/src/controllers/serialPortController.h" name="LCOM&#45;main/proj/src/controllers/serialPortController.h">
+<area shape="rect" id="Node000001" title="Header file for serial port state management and interrupt handling." alt="" coords="5,5,216,48"/>
+<area shape="rect" id="Node000002" href="$serial__port_8h.html" title="Header file for serial port communication." alt="" coords="39,96,182,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,48,113,81,108,81,108,48"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="72,187,149,213"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="113,139,113,171,108,171,108,139"/>
+</map>

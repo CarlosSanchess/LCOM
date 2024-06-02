@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['add_5fobstacletoarena_0',['add_obstacleToArena',['../builder_controller_8c.html#a12ac1a2cf94f1f33d6ede0b633680891',1,'add_obstacleToArena(Arena *arena, int x1, int x2, int y1, int y2):&#160;builderController.c'],['../builder_controller_8h.html#a12ac1a2cf94f1f33d6ede0b633680891',1,'add_obstacleToArena(Arena *arena, int x1, int x2, int y1, int y2):&#160;builderController.c']]],
+  ['addbullettoarena_1',['addBulletToArena',['../bullet_controller_8c.html#aa0615d5eaae96e125e8ef83e9001ea2c',1,'addBulletToArena(Arena *arena, int tankColor):&#160;bulletController.c'],['../bullet_controller_8h.html#aa0615d5eaae96e125e8ef83e9001ea2c',1,'addBulletToArena(Arena *arena, int tankColor):&#160;bulletController.c']]],
+  ['attemptmove_2',['attemptMove',['../enemy_controller_8c.html#a5eb2eadd15c827a4e1a4f1484ae9b3d0',1,'attemptMove(EnemyTank *enemy, int speed, int targetX, int targetY, Obstacle obstacles[], int numObstacles, bool withinThreshold):&#160;enemyController.c'],['../enemy_controller_8h.html#a5eb2eadd15c827a4e1a4f1484ae9b3d0',1,'attemptMove(EnemyTank *enemy, int speed, int targetX, int targetY, Obstacle obstacles[], int numObstacles, bool withinThreshold):&#160;enemyController.c']]]
+];

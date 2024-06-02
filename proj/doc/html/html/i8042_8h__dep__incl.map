@@ -1,0 +1,24 @@
+<map id="LCOM&#45;main/proj/src/dev_interface/devices/timer_kbc_mouse/i8042.h" name="LCOM&#45;main/proj/src/dev_interface/devices/timer_kbc_mouse/i8042.h">
+<area shape="rect" id="Node000001" title="Constants and function declarations for interfacing with the i8042 keyboard controller." alt="" coords="191,5,365,64"/>
+<area shape="rect" id="Node000002" href="$kbc_8c.html" title=" " alt="" coords="5,219,170,277"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="228,76,185,114,141,168,107,220,102,217,137,165,182,110,224,72"/>
+<area shape="rect" id="Node000003" href="$kbc_8h.html" title="Constants, global variables, and function declarations for interfacing with the keyboard controller." alt="" coords="196,112,360,171"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="281,80,281,112,276,112,276,80"/>
+<area shape="rect" id="Node000008" href="$dev__interface_2devices_2timer__kbc__mouse_2mouse_8h.html" title="Constants, global variables, and function declarations for interfacing with the mouse." alt="" coords="387,112,569,171"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="348,69,424,109,422,114,345,74"/>
+<area shape="poly" id="edge6_Node000003_Node000002" title=" " alt="" coords="214,181,141,221,138,216,211,176"/>
+<area shape="rect" id="Node000004" href="$kb_controller_8h.html" title="Declares functions for handling keyboard interrupts and controlling game states." alt="" coords="194,227,363,269"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="281,186,281,227,276,227,276,186"/>
+<area shape="rect" id="Node000007" href="$mouse_8c.html" title=" " alt="" coords="387,219,569,277"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="348,176,424,216,422,220,345,181"/>
+<area shape="rect" id="Node000005" href="$kb_controller_8c.html" title=" " alt="" coords="194,325,363,368"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="281,285,281,325,276,325,276,285"/>
+<area shape="rect" id="Node000006" href="$main_8c.html" title=" " alt="" coords="410,325,547,368"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="336,274,436,322,434,327,334,279"/>
+<area shape="poly" id="edge12_Node000008_Node000007" title=" " alt="" coords="481,186,481,218,476,218,476,186"/>
+<area shape="rect" id="Node000009" href="$mouse_controller_8h.html" title="Declares functions for handling mouse interrupts and controlling game states based on mouse lb clicks..." alt="" coords="593,227,787,269"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="551,175,650,224,647,229,549,180"/>
+<area shape="poly" id="edge11_Node000009_Node000006" title=" " alt="" coords="632,278,525,327,522,322,630,274"/>
+<area shape="rect" id="Node000010" href="$mouse_controller_8c.html" title=" " alt="" coords="593,325,787,368"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="693,285,693,325,688,325,688,285"/>
+</map>

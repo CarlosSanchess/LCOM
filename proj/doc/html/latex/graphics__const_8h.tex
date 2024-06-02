@@ -1,0 +1,168 @@
+\doxysection{LCOM-\/main/proj/src/dev\+\_\+interface/devices/graphics\+\_\+const.h File Reference}
+\hypertarget{graphics__const_8h}{}\label{graphics__const_8h}\index{LCOM-\/main/proj/src/dev\_interface/devices/graphics\_const.h@{LCOM-\/main/proj/src/dev\_interface/devices/graphics\_const.h}}
+
+
+Constants and macros for programming the graphics card.  
+
+
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include "{}video\+\_\+gr.\+h"{}}\newline
+Include dependency graph for graphics\+\_\+const.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{graphics__const_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{graphics__const_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{graphics__const_8h_a8fe83ac76edc595f6b98cd4a4127aed5}{ERROR}}~1
+\begin{DoxyCompactList}\small\item\em Error code value. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{graphics__const_8h_ab208dc4bc0e43eff7f62a8841dcf6cb5}{VBE\+\_\+\+MODE}}~0x4\+F02
+\begin{DoxyCompactList}\small\item\em VBE mode set function. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{graphics__const_8h_a06ac6d59c9e1f745e83342631774f64e}{VBE\+\_\+\+LINEAR\+\_\+\+FRAMEBUFFER}}~BIT(14)
+\begin{DoxyCompactList}\small\item\em Linear framebuffer bit. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{graphics__const_8h_aa53be0ee43e860ca573926b78aef894a}{BIOS\+\_\+\+VIDEO\+\_\+\+SERVICES}}~0x10
+\begin{DoxyCompactList}\small\item\em BIOS video services interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{graphics__const_8h_a9c9c26c8bb3b278eae999fe1c82e4a8a}{INDEXED\+\_\+\+COLOR\+\_\+\+MODE}}~0x105
+\begin{DoxyCompactList}\small\item\em Indexed color mode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{graphics__const_8h_a5bf5a899a1cf2023f14213085e18163b}{DIRECT\+\_\+\+COLOR\+\_\+\+MODE}}~0x06
+\begin{DoxyCompactList}\small\item\em Direct color mode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{graphics__const_8h_ade8726343ca32cab0df4d619b18bf083}{R}}(color)~((color $>$$>$ vbe\+\_\+mode\+\_\+info.\+Red\+Field\+Position) \& ((1 $<$$<$ vbe\+\_\+mode\+\_\+info.\+Red\+Mask\+Size) -\/ 1))
+\begin{DoxyCompactList}\small\item\em Extracts the red component from a color. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{graphics__const_8h_a7721ca941dbab8a1a0704d4bd60e513f}{G}}(color)~((color $>$$>$ vbe\+\_\+mode\+\_\+info.\+Green\+Field\+Position) \& ((1 $<$$<$ vbe\+\_\+mode\+\_\+info.\+Green\+Mask\+Size) -\/ 1))
+\begin{DoxyCompactList}\small\item\em Extracts the green component from a color. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{graphics__const_8h_a934a37224d883fbf98cc009c755bd712}{B}}(color)~((color $>$$>$ vbe\+\_\+mode\+\_\+info.\+Blue\+Field\+Position) \& ((1 $<$$<$ vbe\+\_\+mode\+\_\+info.\+Blue\+Mask\+Size) -\/ 1))
+\begin{DoxyCompactList}\small\item\em Extracts the blue component from a color. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Constants and macros for programming the graphics card. 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{graphics__const_8h_a934a37224d883fbf98cc009c755bd712}\label{graphics__const_8h_a934a37224d883fbf98cc009c755bd712} 
+\index{graphics\_const.h@{graphics\_const.h}!B@{B}}
+\index{B@{B}!graphics\_const.h@{graphics\_const.h}}
+\doxysubsubsection{\texorpdfstring{B}{B}}
+{\footnotesize\ttfamily \#define B(\begin{DoxyParamCaption}\item[{}]{color }\end{DoxyParamCaption})~((color $>$$>$ vbe\+\_\+mode\+\_\+info.\+Blue\+Field\+Position) \& ((1 $<$$<$ vbe\+\_\+mode\+\_\+info.\+Blue\+Mask\+Size) -\/ 1))}
+
+
+
+Extracts the blue component from a color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & The color value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The blue component. 
+\end{DoxyReturn}
+\Hypertarget{graphics__const_8h_aa53be0ee43e860ca573926b78aef894a}\label{graphics__const_8h_aa53be0ee43e860ca573926b78aef894a} 
+\index{graphics\_const.h@{graphics\_const.h}!BIOS\_VIDEO\_SERVICES@{BIOS\_VIDEO\_SERVICES}}
+\index{BIOS\_VIDEO\_SERVICES@{BIOS\_VIDEO\_SERVICES}!graphics\_const.h@{graphics\_const.h}}
+\doxysubsubsection{\texorpdfstring{BIOS\_VIDEO\_SERVICES}{BIOS\_VIDEO\_SERVICES}}
+{\footnotesize\ttfamily \#define BIOS\+\_\+\+VIDEO\+\_\+\+SERVICES~0x10}
+
+
+
+BIOS video services interrupt. 
+
+\Hypertarget{graphics__const_8h_a5bf5a899a1cf2023f14213085e18163b}\label{graphics__const_8h_a5bf5a899a1cf2023f14213085e18163b} 
+\index{graphics\_const.h@{graphics\_const.h}!DIRECT\_COLOR\_MODE@{DIRECT\_COLOR\_MODE}}
+\index{DIRECT\_COLOR\_MODE@{DIRECT\_COLOR\_MODE}!graphics\_const.h@{graphics\_const.h}}
+\doxysubsubsection{\texorpdfstring{DIRECT\_COLOR\_MODE}{DIRECT\_COLOR\_MODE}}
+{\footnotesize\ttfamily \#define DIRECT\+\_\+\+COLOR\+\_\+\+MODE~0x06}
+
+
+
+Direct color mode. 
+
+\Hypertarget{graphics__const_8h_a8fe83ac76edc595f6b98cd4a4127aed5}\label{graphics__const_8h_a8fe83ac76edc595f6b98cd4a4127aed5} 
+\index{graphics\_const.h@{graphics\_const.h}!ERROR@{ERROR}}
+\index{ERROR@{ERROR}!graphics\_const.h@{graphics\_const.h}}
+\doxysubsubsection{\texorpdfstring{ERROR}{ERROR}}
+{\footnotesize\ttfamily \#define ERROR~1}
+
+
+
+Error code value. 
+
+\Hypertarget{graphics__const_8h_a7721ca941dbab8a1a0704d4bd60e513f}\label{graphics__const_8h_a7721ca941dbab8a1a0704d4bd60e513f} 
+\index{graphics\_const.h@{graphics\_const.h}!G@{G}}
+\index{G@{G}!graphics\_const.h@{graphics\_const.h}}
+\doxysubsubsection{\texorpdfstring{G}{G}}
+{\footnotesize\ttfamily \#define G(\begin{DoxyParamCaption}\item[{}]{color }\end{DoxyParamCaption})~((color $>$$>$ vbe\+\_\+mode\+\_\+info.\+Green\+Field\+Position) \& ((1 $<$$<$ vbe\+\_\+mode\+\_\+info.\+Green\+Mask\+Size) -\/ 1))}
+
+
+
+Extracts the green component from a color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & The color value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The green component. 
+\end{DoxyReturn}
+\Hypertarget{graphics__const_8h_a9c9c26c8bb3b278eae999fe1c82e4a8a}\label{graphics__const_8h_a9c9c26c8bb3b278eae999fe1c82e4a8a} 
+\index{graphics\_const.h@{graphics\_const.h}!INDEXED\_COLOR\_MODE@{INDEXED\_COLOR\_MODE}}
+\index{INDEXED\_COLOR\_MODE@{INDEXED\_COLOR\_MODE}!graphics\_const.h@{graphics\_const.h}}
+\doxysubsubsection{\texorpdfstring{INDEXED\_COLOR\_MODE}{INDEXED\_COLOR\_MODE}}
+{\footnotesize\ttfamily \#define INDEXED\+\_\+\+COLOR\+\_\+\+MODE~0x105}
+
+
+
+Indexed color mode. 
+
+\Hypertarget{graphics__const_8h_ade8726343ca32cab0df4d619b18bf083}\label{graphics__const_8h_ade8726343ca32cab0df4d619b18bf083} 
+\index{graphics\_const.h@{graphics\_const.h}!R@{R}}
+\index{R@{R}!graphics\_const.h@{graphics\_const.h}}
+\doxysubsubsection{\texorpdfstring{R}{R}}
+{\footnotesize\ttfamily \#define R(\begin{DoxyParamCaption}\item[{}]{color }\end{DoxyParamCaption})~((color $>$$>$ vbe\+\_\+mode\+\_\+info.\+Red\+Field\+Position) \& ((1 $<$$<$ vbe\+\_\+mode\+\_\+info.\+Red\+Mask\+Size) -\/ 1))}
+
+
+
+Extracts the red component from a color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & The color value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The red component. 
+\end{DoxyReturn}
+\Hypertarget{graphics__const_8h_a06ac6d59c9e1f745e83342631774f64e}\label{graphics__const_8h_a06ac6d59c9e1f745e83342631774f64e} 
+\index{graphics\_const.h@{graphics\_const.h}!VBE\_LINEAR\_FRAMEBUFFER@{VBE\_LINEAR\_FRAMEBUFFER}}
+\index{VBE\_LINEAR\_FRAMEBUFFER@{VBE\_LINEAR\_FRAMEBUFFER}!graphics\_const.h@{graphics\_const.h}}
+\doxysubsubsection{\texorpdfstring{VBE\_LINEAR\_FRAMEBUFFER}{VBE\_LINEAR\_FRAMEBUFFER}}
+{\footnotesize\ttfamily \#define VBE\+\_\+\+LINEAR\+\_\+\+FRAMEBUFFER~BIT(14)}
+
+
+
+Linear framebuffer bit. 
+
+\Hypertarget{graphics__const_8h_ab208dc4bc0e43eff7f62a8841dcf6cb5}\label{graphics__const_8h_ab208dc4bc0e43eff7f62a8841dcf6cb5} 
+\index{graphics\_const.h@{graphics\_const.h}!VBE\_MODE@{VBE\_MODE}}
+\index{VBE\_MODE@{VBE\_MODE}!graphics\_const.h@{graphics\_const.h}}
+\doxysubsubsection{\texorpdfstring{VBE\_MODE}{VBE\_MODE}}
+{\footnotesize\ttfamily \#define VBE\+\_\+\+MODE~0x4\+F02}
+
+
+
+VBE mode set function. 
+

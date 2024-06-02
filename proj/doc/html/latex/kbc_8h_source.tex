@@ -1,0 +1,28 @@
+\doxysection{kbc.\+h}
+\hypertarget{kbc_8h_source}{}\label{kbc_8h_source}\index{LCOM-\/main/proj/src/dev\_interface/devices/timer\_kbc\_mouse/kbc.h@{LCOM-\/main/proj/src/dev\_interface/devices/timer\_kbc\_mouse/kbc.h}}
+\mbox{\hyperlink{kbc_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ KBC\_\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ KBC\_\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <lcom/lcf.h>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{i8042_8h}{i8042.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ uint8\_t\ \mbox{\hyperlink{kbc_8h_ac4c81d34a9be02e382c2086d9fb765a9}{scanCode}};\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00020\ int\ (\mbox{\hyperlink{kbc_8h_a18c596b224bba98ca524a0bfa9730609}{kbc\_subscribe\_int}})(uint8\_t\ *bit\_no);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00027\ int\ (\mbox{\hyperlink{kbc_8h_a0e945987c2233f1c30a645ec5fc750c1}{kbc\_unsubscribe\_int}})();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00035\ int\ (\mbox{\hyperlink{kbc_8h_a2e83d0a707b0980afca5b4252bd54048}{read\_stat\_reg}})(uint8\_t\ *status);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00044\ int\ (\mbox{\hyperlink{kbc_8h_a12eca83a3af06cfa624052a4c5611087}{read\_output\_buffer}})(uint8\_t\ status,\ uint8\_t\ *buffer);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ void\ (\mbox{\hyperlink{kbc_8h_ab9e6ed7960d60aa4834f2038247d4536}{kbc\_ih}})();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00058\ int\ (\mbox{\hyperlink{kbc_8h_a4822f96183ff9c6373060b217700c1d1}{write\_kbc\_command}})(uint8\_t\ port,\ uint8\_t\ commandByte);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ KBC\_\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

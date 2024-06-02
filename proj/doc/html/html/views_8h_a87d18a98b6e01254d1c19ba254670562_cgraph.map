@@ -1,0 +1,9 @@
+<map id="drawHighScore" name="drawHighScore">
+<area shape="rect" id="Node000001" title="Draws the high score screen." alt="" coords="5,5,114,32"/>
+<area shape="rect" id="Node000002" href="$video__gr_8c.html#ad2aba6eddab4c859594b10186962d2c8" title="Draws an XPM image ignoring a specified color." alt="" coords="162,5,284,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,16,146,16,146,21,114,21"/>
+<area shape="rect" id="Node000003" href="$video__gr_8c.html#a5c4e9586406f8d2cf7f2a5db188b6686" title="Draws a pixel at specified coordinates with a given color." alt="" coords="332,5,433,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="284,16,316,16,316,21,284,21"/>
+<area shape="rect" id="Node000004" href="$video__gr_8c.html#a3190e4645454cb66c939eadd3dbad84a" title="Gets the screen width." alt="" coords="481,5,558,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="434,16,465,16,465,21,434,21"/>
+</map>

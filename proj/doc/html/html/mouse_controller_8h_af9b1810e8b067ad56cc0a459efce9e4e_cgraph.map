@@ -1,0 +1,14 @@
+<map id="getPositionMouse" name="getPositionMouse">
+<area shape="rect" id="Node000001" title="Updates the mouse position based on input." alt="" coords="5,56,131,83"/>
+<area shape="rect" id="Node000002" href="$mouse_8c.html#a834b6d7efe311484d6da234db333cb97" title="Mouse interrupt handler." alt="" coords="193,31,271,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,57,177,50,178,55,132,62"/>
+<area shape="rect" id="Node000006" href="$mouse_8c.html#ac9e0f43d94ecd4db9213a899a4cd7aea" title="Processes the mouse packet." alt="" coords="179,81,285,108"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="132,76,164,82,163,87,131,82"/>
+<area shape="rect" id="Node000003" href="$kbc_8c.html#a12eca83a3af06cfa624052a4c5611087" title="Reads the output buffer if the status register indicates it&#39;s ready." alt="" coords="333,5,460,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="270,35,317,28,318,33,271,41"/>
+<area shape="rect" id="Node000005" href="$kbc_8c.html#a2e83d0a707b0980afca5b4252bd54048" title="Reads the status register." alt="" coords="347,56,447,83"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="271,47,332,57,331,62,270,53"/>
+<area shape="rect" id="Node000004" href="$utils_8c.html#a2b56f50ba159e9d5115ed1a75eff15d9" title=" " alt="" coords="508,31,599,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="461,26,493,32,492,37,460,32"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="447,59,493,51,494,56,448,64"/>
+</map>

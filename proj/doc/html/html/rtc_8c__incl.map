@@ -1,0 +1,8 @@
+<map id="LCOM&#45;main/proj/src/dev_interface/devices/rtc.c" name="LCOM&#45;main/proj/src/dev_interface/devices/rtc.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,183,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="55,171,133,197"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,48,91,123,94,155,88,156,86,123,89,48"/>
+<area shape="rect" id="Node000003" href="$rtc_8h.html" title="RTC&#45;related functions and definitions." alt="" coords="101,96,148,123"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="104,48,117,80,112,82,99,50"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="122,124,108,157,103,155,117,122"/>
+</map>

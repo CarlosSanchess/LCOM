@@ -1,0 +1,70 @@
+\doxysection{i8042.\+h}
+\hypertarget{i8042_8h_source}{}\label{i8042_8h_source}\index{LCOM-\/main/proj/src/dev\_interface/devices/timer\_kbc\_mouse/i8042.h@{LCOM-\/main/proj/src/dev\_interface/devices/timer\_kbc\_mouse/i8042.h}}
+\mbox{\hyperlink{i8042_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ \_LCOM\_I8042\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ \_LCOM\_I8042\_H}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <lcom/lcf.h>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ DELAY\_US\ 20000\ }}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ KBC\_IRQ\ 1\ \ \ \ \ \ }}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ MOUSE\_IRQ\ 12\ \ \ }}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ ERROR\ 1\ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ KBC\_POLICY\ (IRQ\_REENABLE\ |\ IRQ\_SETPOLICY\ |\ IRQ\_EXCLUSIVE)\ }}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ MOUSE\_POLICY\ (IRQ\_REENABLE\ |\ IRQ\_EXCLUSIVE)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ RB\_COMMAND\ (BIT(7)\ |\ BIT(6))\ }}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ TWO\_BYTE\_LONG\_SC\ (0xE0)\ \ \ \ \ \ }}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{comment}{/*\ I/O\ port\ addresses\ */}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ STAT\_REG\ 0x64\ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ IN\_BUF\ \ 0x64\ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ IN\_BUF\_ARGS\ 0x60\ \ \ \ \ }}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ OUT\_BUF\ 0x60\ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{comment}{/*\ Status\ Register\ */}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ STAT\_ERROR\_HANDLE(status)\ ((status)\ \&\ (BIT(7)\ |\ BIT(6)))\ }}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ INPUT\_BUFFER\ (BIT(1))\ \ \ \ \ \ \ }}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ OUTPUT\_BUFFER\ (BIT(0))\ \ \ \ \ \ }}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ MOUSE\_DATA\ (BIT(5))\ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ OUTPUT\_BUFFER\_FULL(status)\ !((status)\ \&\ (BIT(0)))\ }}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ BREAK\_CODE(makeCode)\ ((0x80)\ |\ makeCode)\ }}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ KBC\_ACTIVATE(command\_byte)\ (command\_byte\ |\ BIT(0))\ }}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ WRITE\_BYTE\_TO\_MOUSE\ 0xD4\ }}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ MOUSE\_ACK\ 0xFA\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ MOUSE\_ERROR\ 0xFE\ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ MOUSE\_Y\_OVFL\ BIT(7)\ \ \ \ \ \ }}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ MOUSE\_X\_OVFL\ BIT(6)\ \ \ \ \ \ }}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ MOUSE\_MSB\_Y\_DELTA\ BIT(5)\ }}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ MOUSE\_MSB\_X\_DELTA\ BIT(4)\ }}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#define\ MOUSE\_MIDDLE\_BUTTON\ BIT(2)\ }}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ MOUSE\_RIGHT\_BUTTON\ BIT(1)\ \ }}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ MOUSE\_LEFT\_BUTTON\ BIT(0)\ \ \ }}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ DISABLE\_DATA\_REPORT\ 0xF5\ \ \ }}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ ENABLE\_DATA\_REPORT\ \ 0xF4\ \ \ }}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ SET\_STREAM\_MODE\ 0xEA\ \ \ \ \ \ \ }}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{comment}{/*\ Keyboard\ Make\ Codes\ */}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ ESC\_KEY\ 0X01\ \ \ \ }}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ A\_KEY\ 0x1e\ \ \ \ \ \ }}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ S\_KEY\ 0x1f\ \ \ \ \ \ }}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ W\_KEY\ 0x11\ \ \ \ \ \ }}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ D\_KEY\ 0x20\ \ \ \ \ \ }}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ ENTER\_KEY\ 0X1c\ \ }}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ SPACE\_KEY\ 0x39\ \ }}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00068\ int\ (\mbox{\hyperlink{i8042_8h_a18c596b224bba98ca524a0bfa9730609}{kbc\_subscribe\_int}})(uint8\_t\ *bit\_no);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00075\ int\ (\mbox{\hyperlink{i8042_8h_a0e945987c2233f1c30a645ec5fc750c1}{kbc\_unsubscribe\_int}})();}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00082\ bool\ (\mbox{\hyperlink{i8042_8h_a2d1d175cae79a9876d5fa5cb6889df06}{ready\_to\_poll}})();}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\_LCOM\_I8042\_H*/}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,96 @@
+\doxysection{LCOM-\/main/proj/src/\+Models/obstacle.c File Reference}
+\hypertarget{obstacle_8c}{}\label{obstacle_8c}\index{LCOM-\/main/proj/src/Models/obstacle.c@{LCOM-\/main/proj/src/Models/obstacle.c}}
+{\ttfamily \#include "{}obstacle.\+h"{}}\newline
+Include dependency graph for obstacle.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=183pt]{obstacle_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_obstacle}{Obstacle}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{obstacle_8c_ab92af7274090b9e5a37ac328be0c3ae4}{create\+Obstacle}} (int x1, int x2, int y1, int y2)
+\begin{DoxyCompactList}\small\item\em Creates a new \doxylink{struct_obstacle}{Obstacle}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_obstacle}{Obstacle}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{obstacle_8c_a6980c6ec253ba9499dab5a7c075acf41}{create\+\_\+obstacle\+\_\+array}} ()
+\begin{DoxyCompactList}\small\item\em Creates an array of \doxylink{struct_obstacle}{Obstacle} pointers. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_obstacle}{Obstacle}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{obstacle_8c_a4fa70a860bafd5124df0bfb4ed1f3517}{pop\+Obstacle}} (\mbox{\hyperlink{struct_obstacle}{Obstacle}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}array, size\+\_\+t num\+Obstacles)
+\begin{DoxyCompactList}\small\item\em Removes the first obstacle from the array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{obstacle_8c_a6980c6ec253ba9499dab5a7c075acf41}\label{obstacle_8c_a6980c6ec253ba9499dab5a7c075acf41} 
+\index{obstacle.c@{obstacle.c}!create\_obstacle\_array@{create\_obstacle\_array}}
+\index{create\_obstacle\_array@{create\_obstacle\_array}!obstacle.c@{obstacle.c}}
+\doxysubsubsection{\texorpdfstring{create\_obstacle\_array()}{create\_obstacle\_array()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_obstacle}{Obstacle}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} create\+\_\+obstacle\+\_\+array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates an array of \doxylink{struct_obstacle}{Obstacle} pointers. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the created array of \doxylink{struct_obstacle}{Obstacle} pointers. 
+\end{DoxyReturn}
+\Hypertarget{obstacle_8c_ab92af7274090b9e5a37ac328be0c3ae4}\label{obstacle_8c_ab92af7274090b9e5a37ac328be0c3ae4} 
+\index{obstacle.c@{obstacle.c}!createObstacle@{createObstacle}}
+\index{createObstacle@{createObstacle}!obstacle.c@{obstacle.c}}
+\doxysubsubsection{\texorpdfstring{createObstacle()}{createObstacle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_obstacle}{Obstacle}} \texorpdfstring{$\ast$}{*} create\+Obstacle (\begin{DoxyParamCaption}\item[{int}]{x1,  }\item[{int}]{x2,  }\item[{int}]{y1,  }\item[{int}]{y2 }\end{DoxyParamCaption})}
+
+
+
+Creates a new \doxylink{struct_obstacle}{Obstacle}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x1} & X coordinate of the first corner. \\
+\hline
+{\em x2} & X coordinate of the opposite corner. \\
+\hline
+{\em y1} & Y coordinate of the first corner. \\
+\hline
+{\em y2} & Y coordinate of the opposite corner. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the created \doxylink{struct_obstacle}{Obstacle}. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{obstacle_8c_ab92af7274090b9e5a37ac328be0c3ae4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{obstacle_8c_a4fa70a860bafd5124df0bfb4ed1f3517}\label{obstacle_8c_a4fa70a860bafd5124df0bfb4ed1f3517} 
+\index{obstacle.c@{obstacle.c}!popObstacle@{popObstacle}}
+\index{popObstacle@{popObstacle}!obstacle.c@{obstacle.c}}
+\doxysubsubsection{\texorpdfstring{popObstacle()}{popObstacle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_obstacle}{Obstacle}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} pop\+Obstacle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_obstacle}{Obstacle}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{array,  }\item[{size\+\_\+t}]{num\+Obstacles }\end{DoxyParamCaption})}
+
+
+
+Removes the first obstacle from the array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & Array of \doxylink{struct_obstacle}{Obstacle} pointers. \\
+\hline
+{\em num\+Obstacles} & Number of obstacles in the array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the modified array of \doxylink{struct_obstacle}{Obstacle} pointers. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{obstacle_8c_a4fa70a860bafd5124df0bfb4ed1f3517_icgraph}
+\end{center}
+\end{figure}

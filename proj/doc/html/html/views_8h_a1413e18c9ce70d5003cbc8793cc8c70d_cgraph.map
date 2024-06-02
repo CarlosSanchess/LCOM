@@ -1,0 +1,9 @@
+<map id="drawGameBackGround" name="drawGameBackGround">
+<area shape="rect" id="Node000001" title="Draws the game background." alt="" coords="5,5,161,32"/>
+<area shape="rect" id="Node000002" href="$video__gr_8c.html#a0ee44da8a7c935a067fae7ca09d8f7f9" title="Draws an XPM image as the background." alt="" coords="209,5,365,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,16,193,16,193,21,161,21"/>
+<area shape="rect" id="Node000003" href="$video__gr_8c.html#a5c4e9586406f8d2cf7f2a5db188b6686" title="Draws a pixel at specified coordinates with a given color." alt="" coords="413,5,514,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="366,16,397,16,397,21,366,21"/>
+<area shape="rect" id="Node000004" href="$video__gr_8c.html#a3190e4645454cb66c939eadd3dbad84a" title="Gets the screen width." alt="" coords="562,5,639,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="515,16,546,16,546,21,515,21"/>
+</map>

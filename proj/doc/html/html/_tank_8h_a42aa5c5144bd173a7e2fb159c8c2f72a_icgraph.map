@@ -1,0 +1,21 @@
+<map id="freeTank" name="freeTank">
+<area shape="rect" id="Node000001" title="Frees the memory allocated for the tank." alt="" coords="734,31,804,57"/>
+<area shape="rect" id="Node000002" href="$arena_8c.html#a88d9af0d4df5265659673497c6e9925a" title="Destroys a game arena, freeing allocated memory." alt="" coords="588,5,686,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="718,37,686,31,687,25,719,32"/>
+<area shape="rect" id="Node000006" href="$game_controller_8c.html#af235f3867aed0ba757c2a5c9c86a23fb" title="Resets the game by reinitializing the arena." alt="" coords="594,56,680,83"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="719,56,681,64,680,59,718,51"/>
+<area shape="rect" id="Node000003" href="$arena_8c.html#a44f4a926829c5771ee4483a5179e015b" title="Creates and initializes a new game arena." alt="" coords="439,5,531,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="572,21,531,21,531,16,572,16"/>
+<area shape="rect" id="Node000004" href="$main_8c.html#a58e8be2db2660128e4e6456a9c981fb5" title=" " alt="" coords="162,56,201,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="424,24,341,31,250,47,202,63,201,58,248,41,340,26,424,18"/>
+<area shape="rect" id="Node000005" href="$main_8c.html#a7a72220d8366dd84709e79ce415862e5" title=" " alt="" coords="5,56,114,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="146,72,114,72,114,67,146,67"/>
+<area shape="rect" id="Node000007" href="$game_controller_8c.html#a00ed09a539771f3a9f9b725597bc7f08" title="Changes the game state to the menu." alt="" coords="430,56,540,83"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="578,72,540,72,540,67,578,67"/>
+<area shape="rect" id="Node000008" href="$kb_controller_8c.html#a7c807c44f534a91d6d580c71b35dec38" title="Handles keyboard interrupts and processes game state changes." alt="" coords="249,56,382,83"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="415,72,383,72,383,67,415,67"/>
+<area shape="rect" id="Node000009" href="$arena_controller_8c.html#a0eaf53413d600619b39e10fd81be10ef" title="Processes the current state of the arena." alt="" coords="265,107,366,133"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="424,90,364,109,362,104,423,85"/>
+<area shape="poly" id="edge8_Node000008_Node000004" title=" " alt="" coords="233,72,202,72,202,67,233,67"/>
+<area shape="poly" id="edge10_Node000009_Node000004" title=" " alt="" coords="263,103,200,79,202,74,265,98"/>
+</map>

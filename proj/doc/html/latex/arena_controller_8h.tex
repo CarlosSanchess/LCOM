@@ -1,0 +1,92 @@
+\doxysection{LCOM-\/main/proj/src/controllers/arena\+Controller.h File Reference}
+\hypertarget{arena_controller_8h}{}\label{arena_controller_8h}\index{LCOM-\/main/proj/src/controllers/arenaController.h@{LCOM-\/main/proj/src/controllers/arenaController.h}}
+
+
+Defines functions for processing the game arena.  
+
+
+{\ttfamily \#include "{}Models/arena.\+h"{}}\newline
+{\ttfamily \#include "{}Models/state.\+h"{}}\newline
+{\ttfamily \#include "{}tank\+Controller.\+h"{}}\newline
+{\ttfamily \#include "{}enemy\+Controller.\+h"{}}\newline
+{\ttfamily \#include "{}bullet\+Controller.\+h"{}}\newline
+{\ttfamily \#include "{}controllers/game\+Controller.\+h"{}}\newline
+Include dependency graph for arena\+Controller.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{arena_controller_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{arena_controller_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{arena_controller_8h_a6641dd4245d741149a53ecdb477e3e8e}{NEW\+\_\+\+NUM\+\_\+\+WAYPOINTS}}~(\mbox{\hyperlink{enemy_controller_8h_a106af341aeb948bdf26d7e19841e27a6}{NUM\+\_\+\+WAYPOINTS}} + 10)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{arena_controller_8h_a0eaf53413d600619b39e10fd81be10ef}{process\+Arena}} (\mbox{\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_a62d920a9a06d7ac5b8c98e175defd014}{current\+State}}, \mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}arena)
+\begin{DoxyCompactList}\small\item\em Processes the current state of the arena. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines functions for processing the game arena. 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{arena_controller_8h_a6641dd4245d741149a53ecdb477e3e8e}\label{arena_controller_8h_a6641dd4245d741149a53ecdb477e3e8e} 
+\index{arenaController.h@{arenaController.h}!NEW\_NUM\_WAYPOINTS@{NEW\_NUM\_WAYPOINTS}}
+\index{NEW\_NUM\_WAYPOINTS@{NEW\_NUM\_WAYPOINTS}!arenaController.h@{arenaController.h}}
+\doxysubsubsection{\texorpdfstring{NEW\_NUM\_WAYPOINTS}{NEW\_NUM\_WAYPOINTS}}
+{\footnotesize\ttfamily \#define NEW\+\_\+\+NUM\+\_\+\+WAYPOINTS~(\mbox{\hyperlink{enemy_controller_8h_a106af341aeb948bdf26d7e19841e27a6}{NUM\+\_\+\+WAYPOINTS}} + 10)}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{arena_controller_8h_a0eaf53413d600619b39e10fd81be10ef}\label{arena_controller_8h_a0eaf53413d600619b39e10fd81be10ef} 
+\index{arenaController.h@{arenaController.h}!processArena@{processArena}}
+\index{processArena@{processArena}!arenaController.h@{arenaController.h}}
+\doxysubsubsection{\texorpdfstring{processArena()}{processArena()}}
+{\footnotesize\ttfamily int process\+Arena (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \texorpdfstring{$\ast$}{*}}]{current\+State,  }\item[{\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}}]{arena }\end{DoxyParamCaption})}
+
+
+
+Processes the current state of the arena. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+State} & Pointer to the current game state. \\
+\hline
+{\em arena} & Pointer to the arena structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Status code indicating the result of the processing. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{arena_controller_8h_a0eaf53413d600619b39e10fd81be10ef_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{arena_controller_8h_a0eaf53413d600619b39e10fd81be10ef_icgraph}
+\end{center}
+\end{figure}

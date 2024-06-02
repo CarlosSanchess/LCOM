@@ -1,0 +1,22 @@
+<map id="removeBulletFromBullets" name="removeBulletFromBullets">
+<area shape="rect" id="Node000001" title="Removes a bullet from an array of bullets." alt="" coords="759,22,924,49"/>
+<area shape="rect" id="Node000002" href="$bullet_controller_8c.html#a4a3f28da9e441ed7db54508a451f7412" title="Processes all bullets in the arena." alt="" coords="431,22,539,49"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="767,21,711,13,649,8,588,13,532,24,531,19,587,7,649,3,711,7,768,16"/>
+<area shape="rect" id="Node000006" href="$collision_controller_8c.html#a80018dbb43e45130fdc924f9f1e1baa0" title="Processes collisions in the arena." alt="" coords="588,22,711,49"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="743,38,712,38,712,33,743,33"/>
+<area shape="rect" id="Node000007" href="$game_controller_8c.html#af235f3867aed0ba757c2a5c9c86a23fb" title="Resets the game by reinitializing the arena." alt="" coords="607,73,692,99"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="774,56,693,77,692,72,773,51"/>
+<area shape="rect" id="Node000003" href="$arena_controller_8c.html#a0eaf53413d600619b39e10fd81be10ef" title="Processes the current state of the arena." alt="" coords="265,22,366,49"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="416,38,367,38,367,33,416,33"/>
+<area shape="rect" id="Node000004" href="$main_8c.html#a58e8be2db2660128e4e6456a9c981fb5" title=" " alt="" coords="162,47,201,74"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="250,50,202,60,201,54,249,45"/>
+<area shape="rect" id="Node000005" href="$main_8c.html#a7a72220d8366dd84709e79ce415862e5" title=" " alt="" coords="5,47,114,74"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="146,63,114,63,114,58,146,58"/>
+<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="572,38,539,38,539,33,572,33"/>
+<area shape="rect" id="Node000008" href="$game_controller_8c.html#a00ed09a539771f3a9f9b725597bc7f08" title="Changes the game state to the menu." alt="" coords="430,73,540,99"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="591,89,540,89,540,83,591,83"/>
+<area shape="poly" id="edge11_Node000008_Node000003" title=" " alt="" coords="423,70,362,52,364,47,424,65"/>
+<area shape="rect" id="Node000009" href="$kb_controller_8c.html#a7c807c44f534a91d6d580c71b35dec38" title="Handles keyboard interrupts and processes game state changes." alt="" coords="249,73,382,99"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="415,89,383,89,383,83,415,83"/>
+<area shape="poly" id="edge10_Node000009_Node000004" title=" " alt="" coords="233,73,201,67,202,62,234,68"/>
+</map>

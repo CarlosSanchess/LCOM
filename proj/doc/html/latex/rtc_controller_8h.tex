@@ -1,0 +1,140 @@
+\doxysection{LCOM-\/main/proj/src/controllers/rtc\+Controller.h File Reference}
+\hypertarget{rtc_controller_8h}{}\label{rtc_controller_8h}\index{LCOM-\/main/proj/src/controllers/rtcController.h@{LCOM-\/main/proj/src/controllers/rtcController.h}}
+
+
+Declares functions for handling RTC (Real-\/\+Time Clock) operations.  
+
+
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include "{}../dev\+\_\+interface/devices/rtc.\+h"{}}\newline
+{\ttfamily \#include "{}Models/arena.\+h"{}}\newline
+{\ttfamily \#include "{}Models/\+High\+Score.\+h"{}}\newline
+Include dependency graph for rtc\+Controller.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_controller_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{rtc_controller_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{rtc_controller_8h_a8b6f55340ba7bc7e78846045a875c8be}{write\+High\+Score\+To\+File}} (\mbox{\hyperlink{struct_high_score}{High\+Score}} score)
+\begin{DoxyCompactList}\small\item\em Writes the High Score to a file or initializes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rtc_controller_8h_a820cd50f917abcf1de46d71149ffc324}{read\+High\+Score\+From\+File}} (\mbox{\hyperlink{struct_high_score}{High\+Score}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_a69079d20e1a6e00621d75bf226230088}{high\+Score}})
+\begin{DoxyCompactList}\small\item\em Reads the High Score from a file or initializes the high score with default values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rtc_controller_8h_a1f6c7ecf88af951944ef21195a4e5c36}{init\+High\+Score}} (\mbox{\hyperlink{struct_high_score}{High\+Score}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_a69079d20e1a6e00621d75bf226230088}{high\+Score}})
+\begin{DoxyCompactList}\small\item\em Initializes the high score with default values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rtc_controller_8h_a8d761e037fe0486a6788dbc4dea43b7f}{check\+And\+Update\+High\+Score}} (\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}arena, \mbox{\hyperlink{struct_high_score}{High\+Score}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_a69079d20e1a6e00621d75bf226230088}{high\+Score}})
+\begin{DoxyCompactList}\small\item\em Checks and updates the high score if the current score is higher. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declares functions for handling RTC (Real-\/\+Time Clock) operations. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{rtc_controller_8h_a8d761e037fe0486a6788dbc4dea43b7f}\label{rtc_controller_8h_a8d761e037fe0486a6788dbc4dea43b7f} 
+\index{rtcController.h@{rtcController.h}!checkAndUpdateHighScore@{checkAndUpdateHighScore}}
+\index{checkAndUpdateHighScore@{checkAndUpdateHighScore}!rtcController.h@{rtcController.h}}
+\doxysubsubsection{\texorpdfstring{checkAndUpdateHighScore()}{checkAndUpdateHighScore()}}
+{\footnotesize\ttfamily void check\+And\+Update\+High\+Score (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}}]{arena,  }\item[{\mbox{\hyperlink{struct_high_score}{High\+Score}} \texorpdfstring{$\ast$}{*}}]{high\+Score }\end{DoxyParamCaption})}
+
+
+
+Checks and updates the high score if the current score is higher. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arena} & Pointer to the \doxylink{struct_arena}{Arena} structure. \\
+\hline
+{\em high\+Score} & Pointer to the \doxylink{struct_high_score}{High\+Score} structure. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_controller_8h_a8d761e037fe0486a6788dbc4dea43b7f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_controller_8h_a8d761e037fe0486a6788dbc4dea43b7f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rtc_controller_8h_a1f6c7ecf88af951944ef21195a4e5c36}\label{rtc_controller_8h_a1f6c7ecf88af951944ef21195a4e5c36} 
+\index{rtcController.h@{rtcController.h}!initHighScore@{initHighScore}}
+\index{initHighScore@{initHighScore}!rtcController.h@{rtcController.h}}
+\doxysubsubsection{\texorpdfstring{initHighScore()}{initHighScore()}}
+{\footnotesize\ttfamily void init\+High\+Score (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_high_score}{High\+Score}} \texorpdfstring{$\ast$}{*}}]{high\+Score }\end{DoxyParamCaption})}
+
+
+
+Initializes the high score with default values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em high\+Score} & Pointer to the \doxylink{struct_high_score}{High\+Score} structure. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{rtc_controller_8h_a820cd50f917abcf1de46d71149ffc324}\label{rtc_controller_8h_a820cd50f917abcf1de46d71149ffc324} 
+\index{rtcController.h@{rtcController.h}!readHighScoreFromFile@{readHighScoreFromFile}}
+\index{readHighScoreFromFile@{readHighScoreFromFile}!rtcController.h@{rtcController.h}}
+\doxysubsubsection{\texorpdfstring{readHighScoreFromFile()}{readHighScoreFromFile()}}
+{\footnotesize\ttfamily void read\+High\+Score\+From\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_high_score}{High\+Score}} \texorpdfstring{$\ast$}{*}}]{high\+Score }\end{DoxyParamCaption})}
+
+
+
+Reads the High Score from a file or initializes the high score with default values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em high\+Score} & Pointer to the \doxylink{struct_high_score}{High\+Score} structure. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_controller_8h_a820cd50f917abcf1de46d71149ffc324_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rtc_controller_8h_a8b6f55340ba7bc7e78846045a875c8be}\label{rtc_controller_8h_a8b6f55340ba7bc7e78846045a875c8be} 
+\index{rtcController.h@{rtcController.h}!writeHighScoreToFile@{writeHighScoreToFile}}
+\index{writeHighScoreToFile@{writeHighScoreToFile}!rtcController.h@{rtcController.h}}
+\doxysubsubsection{\texorpdfstring{writeHighScoreToFile()}{writeHighScoreToFile()}}
+{\footnotesize\ttfamily void write\+High\+Score\+To\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_high_score}{High\+Score}}}]{score }\end{DoxyParamCaption})}
+
+
+
+Writes the High Score to a file or initializes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em high\+Score} & Pointer to the \doxylink{struct_high_score}{High\+Score} structure. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_controller_8h_a8b6f55340ba7bc7e78846045a875c8be_icgraph}
+\end{center}
+\end{figure}

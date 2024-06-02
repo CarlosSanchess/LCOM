@@ -1,0 +1,11 @@
+<map id="LCOM&#45;main/proj/src/dev_interface/devices/timer_kbc_mouse/mouse.h" name="LCOM&#45;main/proj/src/dev_interface/devices/timer_kbc_mouse/mouse.h">
+<area shape="rect" id="Node000001" title="Constants, global variables, and function declarations for interfacing with the mouse." alt="" coords="211,5,394,64"/>
+<area shape="rect" id="Node000002" href="$mouse_controller_8h.html" title="Declares functions for handling mouse interrupts and controlling game states based on mouse lb clicks..." alt="" coords="100,120,294,163"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="265,77,219,122,216,118,261,73"/>
+<area shape="rect" id="Node000005" href="$mouse_8c.html" title=" " alt="" coords="318,112,500,171"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="344,73,382,110,378,114,340,77"/>
+<area shape="rect" id="Node000003" href="$mouse_controller_8c.html" title=" " alt="" coords="5,219,200,261"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="169,176,124,220,121,216,165,172"/>
+<area shape="rect" id="Node000004" href="$main_8c.html" title=" " alt="" coords="223,219,361,261"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="230,172,274,216,270,220,226,176"/>
+</map>

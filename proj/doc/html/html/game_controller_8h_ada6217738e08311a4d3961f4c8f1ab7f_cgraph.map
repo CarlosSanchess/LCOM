@@ -1,0 +1,11 @@
+<map id="changeBackground" name="changeBackground">
+<area shape="rect" id="Node000001" title="Changes the background of the game." alt="" coords="5,5,138,32"/>
+<area shape="rect" id="Node000002" href="$views_8c.html#a1413e18c9ce70d5003cbc8793cc8c70d" title="Draws the game background." alt="" coords="186,5,341,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,16,170,16,170,21,138,21"/>
+<area shape="rect" id="Node000003" href="$video__gr_8c.html#a0ee44da8a7c935a067fae7ca09d8f7f9" title="Draws an XPM image as the background." alt="" coords="389,5,545,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="341,16,373,16,373,21,341,21"/>
+<area shape="rect" id="Node000004" href="$video__gr_8c.html#a5c4e9586406f8d2cf7f2a5db188b6686" title="Draws a pixel at specified coordinates with a given color." alt="" coords="593,5,695,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="546,16,578,16,578,21,546,21"/>
+<area shape="rect" id="Node000005" href="$video__gr_8c.html#a3190e4645454cb66c939eadd3dbad84a" title="Gets the screen width." alt="" coords="743,5,819,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="695,16,727,16,727,21,695,21"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="createArena" name="createArena">
+<area shape="rect" id="Node000001" title="Creates and initializes a new game arena." alt="" coords="5,56,97,83"/>
+<area shape="rect" id="Node000002" href="$tank_8c.html#a2b4d3b1e5c1918d513937a5c9b8f15cf" title="Creates a new enemy tank." alt="" coords="145,5,271,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,53,149,35,151,40,96,58"/>
+<area shape="rect" id="Node000003" href="$tank_8c.html#af0f78c94a6562688f7efb448d44e2ffa" title="Creates a new tank." alt="" coords="165,56,251,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="97,67,150,67,150,72,97,72"/>
+<area shape="rect" id="Node000004" href="$arena_8c.html#a88d9af0d4df5265659673497c6e9925a" title="Destroys a game arena, freeing allocated memory." alt="" coords="159,107,257,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="96,81,151,99,149,104,94,86"/>
+<area shape="rect" id="Node000005" href="$tank_8c.html#a42aa5c5144bd173a7e2fb159c8c2f72a" title="Frees the memory allocated for the tank." alt="" coords="319,107,389,133"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="257,117,304,117,304,123,257,123"/>
+</map>

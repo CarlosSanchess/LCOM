@@ -1,0 +1,35 @@
+\doxysection{timer\+Controller.\+h}
+\hypertarget{timer_controller_8h_source}{}\label{timer_controller_8h_source}\index{LCOM-\/main/proj/src/controllers/timerController.h@{LCOM-\/main/proj/src/controllers/timerController.h}}
+\mbox{\hyperlink{timer_controller_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ \_\_TIMER\_CONTROLLER\_\_}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ \_\_TIMER\_CONTROLLER\_\_}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_models_2mouse_8h}{../Models/mouse.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{arena_8h}{../Models/arena.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ SHOOTD\ 120\ \ \ }}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ DRAWD\ 600\ \ \ \ }}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ BUILDD\ 60\ \ \ \ }}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ BOMBD\ 25\ \ \ \ \ }}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ timerCounter\ =\ 0;\ }
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{timer_controller_8h_ac70fadf0f68e56c8d2f99322c108d69e}{timer\_increment}}();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{timer_controller_8h_a8b6cb111da7ee1f0d45ce1381392380d}{handleDelayedEvents}}(\mbox{\hyperlink{struct_arena}{Arena}}*\ arena,\ \mbox{\hyperlink{struct_mouse_info}{MouseInfo}}*\ \mbox{\hyperlink{main_8c_a4b7a142226097e18c01a5405d023b2ea}{mouseInfo}});}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{timer_controller_8h_a3fe5dd899f9f8e4f6deef2d14bdcdc79}{handleDelayedShooting}}(\mbox{\hyperlink{structtank}{tank}}\ *\mbox{\hyperlink{structtank}{tank}});}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{timer_controller_8h_a8ec9a72dbe5edac7174809831de79462}{handleDelayedMouse}}(\mbox{\hyperlink{struct_mouse_info}{MouseInfo}}*\ \mbox{\hyperlink{main_8c_a4b7a142226097e18c01a5405d023b2ea}{mouseInfo}});}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00054\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{timer_controller_8h_a1d8e0a0c1b8788fe37a0c90b1c5944f1}{handleDelayedBuildings}}(\mbox{\hyperlink{struct_obstacle}{Obstacle}}**\ obstacles,\ \textcolor{keywordtype}{size\_t}\ numObstacles);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00062\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{timer_controller_8h_a7992846e782544053fc1694500fcc91a}{handleDelayedEnemyShooting}}(\mbox{\hyperlink{struct_enemy_tank}{EnemyTank}}\ *enemyTank);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00069\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{timer_controller_8h_ad2e7ce906b2cb5d60b61b4ce485dd1f1}{handleDelayedBomb}}(\mbox{\hyperlink{struct_arena}{Arena}}*\ arena);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_TIMER\_CONTROLLER\_\_}}
+
+\end{DoxyCode}

@@ -1,0 +1,18 @@
+<map id="read_output_buffer" name="read_output_buffer">
+<area shape="rect" id="Node000001" title="Reads the output buffer if the status register indicates it&#39;s ready." alt="" coords="741,31,868,57"/>
+<area shape="rect" id="Node000002" href="$kbc_8c.html#ab9e6ed7960d60aa4834f2038247d4536" title="Keyboard interrupt handler." alt="" coords="625,5,684,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="726,33,684,26,685,21,726,28"/>
+<area shape="rect" id="Node000006" href="$mouse_8c.html#a834b6d7efe311484d6da234db333cb97" title="Mouse interrupt handler." alt="" coords="616,56,693,83"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="726,60,694,65,693,60,725,55"/>
+<area shape="rect" id="Node000003" href="$kb_controller_8c.html#a7c807c44f534a91d6d580c71b35dec38" title="Handles keyboard interrupts and processes game state changes." alt="" coords="255,5,388,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="609,21,389,21,389,16,609,16"/>
+<area shape="rect" id="Node000004" href="$main_8c.html#a58e8be2db2660128e4e6456a9c981fb5" title=" " alt="" coords="162,31,201,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="240,36,202,43,201,38,240,31"/>
+<area shape="rect" id="Node000005" href="$main_8c.html#a7a72220d8366dd84709e79ce415862e5" title=" " alt="" coords="5,31,114,57"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="146,47,114,47,114,41,146,41"/>
+<area shape="rect" id="Node000007" href="$mouse_controller_8c.html#af9b1810e8b067ad56cc0a459efce9e4e" title="Updates the mouse position based on input." alt="" coords="442,56,568,83"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="600,72,568,72,568,67,600,67"/>
+<area shape="rect" id="Node000008" href="$mouse_controller_8c.html#a59eab8192e96165c0e79d6bd94e762a4" title="Handles mouse interrupts and processes game state changes." alt="" coords="249,56,394,83"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="427,72,395,72,395,67,427,67"/>
+<area shape="poly" id="edge8_Node000008_Node000004" title=" " alt="" coords="233,56,201,50,202,45,234,51"/>
+</map>

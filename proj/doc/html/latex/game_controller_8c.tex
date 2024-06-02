@@ -1,0 +1,181 @@
+\doxysection{LCOM-\/main/proj/src/controllers/game\+Controller.c File Reference}
+\hypertarget{game_controller_8c}{}\label{game_controller_8c}\index{LCOM-\/main/proj/src/controllers/gameController.c@{LCOM-\/main/proj/src/controllers/gameController.c}}
+{\ttfamily \#include "{}game\+Controller.\+h"{}}\newline
+Include dependency graph for game\+Controller.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_controller_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{game_controller_8c_af235f3867aed0ba757c2a5c9c86a23fb}{reset\+Game}} (\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}arena)
+\begin{DoxyCompactList}\small\item\em Resets the game by reinitializing the arena. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game_controller_8c_a00ed09a539771f3a9f9b725597bc7f08}{change\+To\+Menu}} (\mbox{\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \texorpdfstring{$\ast$}{*}game\+State, \mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}arena)
+\begin{DoxyCompactList}\small\item\em Changes the game state to the menu. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game_controller_8c_a6c1aa145dc1fba62193e5c9f6b8da784}{change\+To\+Menu\+From\+Scores}} (\mbox{\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \texorpdfstring{$\ast$}{*}game\+State)
+\begin{DoxyCompactList}\small\item\em Changes the state and the Background to the \doxylink{struct_menu}{Menu}, from the High\+Scores. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game_controller_8c_ada6217738e08311a4d3961f4c8f1ab7f}{change\+Background}} ()
+\begin{DoxyCompactList}\small\item\em Changes the background of the game. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game_controller_8c_adc03125dce9a87c28d83611526ea43bf}{change\+To\+High\+Score}} (\mbox{\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \texorpdfstring{$\ast$}{*}game\+State, \mbox{\hyperlink{struct_high_score}{High\+Score}} score)
+\begin{DoxyCompactList}\small\item\em Changes the state and the Background to the Highscore. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{game_controller_8c_ada6217738e08311a4d3961f4c8f1ab7f}\label{game_controller_8c_ada6217738e08311a4d3961f4c8f1ab7f} 
+\index{gameController.c@{gameController.c}!changeBackground@{changeBackground}}
+\index{changeBackground@{changeBackground}!gameController.c@{gameController.c}}
+\doxysubsubsection{\texorpdfstring{changeBackground()}{changeBackground()}}
+{\footnotesize\ttfamily int change\+Background (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Changes the background of the game. 
+
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success, non-\/zero on failure. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_controller_8c_ada6217738e08311a4d3961f4c8f1ab7f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_controller_8c_ada6217738e08311a4d3961f4c8f1ab7f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game_controller_8c_adc03125dce9a87c28d83611526ea43bf}\label{game_controller_8c_adc03125dce9a87c28d83611526ea43bf} 
+\index{gameController.c@{gameController.c}!changeToHighScore@{changeToHighScore}}
+\index{changeToHighScore@{changeToHighScore}!gameController.c@{gameController.c}}
+\doxysubsubsection{\texorpdfstring{changeToHighScore()}{changeToHighScore()}}
+{\footnotesize\ttfamily int change\+To\+High\+Score (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \texorpdfstring{$\ast$}{*}}]{game\+State,  }\item[{\mbox{\hyperlink{struct_high_score}{High\+Score}}}]{score }\end{DoxyParamCaption})}
+
+
+
+Changes the state and the Background to the Highscore. 
+
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success, non-\/zero on failure. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_controller_8c_adc03125dce9a87c28d83611526ea43bf_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_controller_8c_adc03125dce9a87c28d83611526ea43bf_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game_controller_8c_a00ed09a539771f3a9f9b725597bc7f08}\label{game_controller_8c_a00ed09a539771f3a9f9b725597bc7f08} 
+\index{gameController.c@{gameController.c}!changeToMenu@{changeToMenu}}
+\index{changeToMenu@{changeToMenu}!gameController.c@{gameController.c}}
+\doxysubsubsection{\texorpdfstring{changeToMenu()}{changeToMenu()}}
+{\footnotesize\ttfamily int change\+To\+Menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \texorpdfstring{$\ast$}{*}}]{game\+State,  }\item[{\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}}]{arena }\end{DoxyParamCaption})}
+
+
+
+Changes the game state to the menu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+State} & Pointer to the current game state. \\
+\hline
+{\em arena} & Pointer to the \doxylink{struct_arena}{Arena} structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success, non-\/zero on failure. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_controller_8c_a00ed09a539771f3a9f9b725597bc7f08_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_controller_8c_a00ed09a539771f3a9f9b725597bc7f08_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game_controller_8c_a6c1aa145dc1fba62193e5c9f6b8da784}\label{game_controller_8c_a6c1aa145dc1fba62193e5c9f6b8da784} 
+\index{gameController.c@{gameController.c}!changeToMenuFromScores@{changeToMenuFromScores}}
+\index{changeToMenuFromScores@{changeToMenuFromScores}!gameController.c@{gameController.c}}
+\doxysubsubsection{\texorpdfstring{changeToMenuFromScores()}{changeToMenuFromScores()}}
+{\footnotesize\ttfamily int change\+To\+Menu\+From\+Scores (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \texorpdfstring{$\ast$}{*}}]{game\+State }\end{DoxyParamCaption})}
+
+
+
+Changes the state and the Background to the \doxylink{struct_menu}{Menu}, from the High\+Scores. 
+
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success, non-\/zero on failure. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_controller_8c_a6c1aa145dc1fba62193e5c9f6b8da784_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_controller_8c_a6c1aa145dc1fba62193e5c9f6b8da784_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game_controller_8c_af235f3867aed0ba757c2a5c9c86a23fb}\label{game_controller_8c_af235f3867aed0ba757c2a5c9c86a23fb} 
+\index{gameController.c@{gameController.c}!resetGame@{resetGame}}
+\index{resetGame@{resetGame}!gameController.c@{gameController.c}}
+\doxysubsubsection{\texorpdfstring{resetGame()}{resetGame()}}
+{\footnotesize\ttfamily void reset\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}}]{arena }\end{DoxyParamCaption})}
+
+
+
+Resets the game by reinitializing the arena. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arena} & Pointer to the \doxylink{struct_arena}{Arena} structure to be reset. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{game_controller_8c_af235f3867aed0ba757c2a5c9c86a23fb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_controller_8c_af235f3867aed0ba757c2a5c9c86a23fb_icgraph}
+\end{center}
+\end{figure}

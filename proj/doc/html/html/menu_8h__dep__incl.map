@@ -1,0 +1,48 @@
+<map id="LCOM&#45;main/proj/src/Models/menu.h" name="LCOM&#45;main/proj/src/Models/menu.h">
+<area shape="rect" id="Node000001" title="Defines the Menu structure used for menu management." alt="" coords="786,5,923,48"/>
+<area shape="rect" id="Node000002" href="$views_8h.html" title="This file contains function declarations used to draw various elements of the game." alt="" coords="335,96,473,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="771,47,474,105,473,100,770,42"/>
+<area shape="rect" id="Node000008" href="$main_8c.html" title=" " alt="" coords="525,640,662,683"/>
+<area shape="poly" id="edge28_Node000001_Node000008" title=" " alt="" coords="939,44,1002,66,1062,99,1088,120,1108,145,1122,174,1127,206,1127,482,1123,500,1112,517,1095,533,1073,548,1017,575,948,598,872,617,795,633,663,654,662,649,794,628,871,612,946,593,1015,570,1071,544,1092,529,1108,514,1118,498,1121,481,1121,207,1117,175,1104,148,1084,124,1059,103,999,71,937,49"/>
+<area shape="rect" id="Node000012" href="$kb_controller_8h.html" title="Declares functions for handling keyboard interrupts and controlling game states." alt="" coords="606,459,775,501"/>
+<area shape="poly" id="edge26_Node000001_Node000012" title=" " alt="" coords="856,64,844,181,829,252,806,321,785,362,760,401,712,460,708,457,756,398,781,360,802,319,824,250,839,180,851,63"/>
+<area shape="rect" id="Node000017" href="$mouse_controller_8h.html" title="Declares functions for handling mouse interrupts and controlling game states based on mouse lb clicks..." alt="" coords="867,277,1061,320"/>
+<area shape="poly" id="edge27_Node000001_Node000017" title=" " alt="" coords="871,61,958,276,953,278,866,63"/>
+<area shape="rect" id="Node000003" href="$views_8c.html" title=" " alt="" coords="335,187,473,229"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="407,154,407,186,401,186,401,154"/>
+<area shape="rect" id="Node000004" href="$collision_controller_8h.html" title="Defines functions for handling collisions in the arena." alt="" coords="240,277,443,320"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="357,150,340,168,326,188,321,210,322,234,334,276,329,278,316,235,315,210,322,186,336,164,354,147"/>
+<area shape="poly" id="edge25_Node000002_Node000008" title=" " alt="" coords="320,123,222,135,170,146,120,163,75,186,40,215,27,232,17,252,10,273,8,297,8,481,10,517,19,544,36,567,64,590,101,607,151,618,210,625,274,628,400,631,498,637,525,642,524,647,497,643,400,636,274,634,210,630,150,623,100,612,61,594,33,571,15,547,5,518,3,481,3,297,5,272,12,250,22,229,36,211,73,181,118,158,168,141,221,129,319,118"/>
+<area shape="rect" id="Node000015" href="$game_controller_8h.html" title="Defines functions for controlling the game state." alt="" coords="497,187,684,229"/>
+<area shape="poly" id="edge17_Node000002_Node000015" title=" " alt="" coords="462,143,548,184,546,189,460,148"/>
+<area shape="rect" id="Node000005" href="$bullet_controller_8h.html" title="Defines functions for managing bullets in the arena." alt="" coords="270,368,456,411"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="352,335,360,367,355,368,347,336"/>
+<area shape="rect" id="Node000014" href="$collision_controller_8c.html" title=" " alt="" coords="43,368,245,411"/>
+<area shape="poly" id="edge16_Node000004_Node000014" title=" " alt="" coords="282,329,191,370,189,365,280,324"/>
+<area shape="poly" id="edge9_Node000005_Node000005" title=" " alt="" coords="472,376,480,381,482,390,475,401,457,407,456,402,472,397,477,389,475,385,469,380"/>
+<area shape="rect" id="Node000006" href="$arena_controller_8h.html" title="Defines functions for processing the game arena." alt="" coords="298,549,486,592"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="345,425,332,462,331,482,334,500,349,526,369,547,365,551,345,529,330,502,325,482,327,461,340,424"/>
+<area shape="rect" id="Node000009" href="$bullet_controller_8c.html" title=" " alt="" coords="344,459,531,501"/>
+<area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="392,421,422,457,418,460,388,424"/>
+<area shape="rect" id="Node000010" href="$enemy_controller_8h.html" title="Defines functions and constants for enemy tanks &quot;Intelligent&quot; movement." alt="" coords="75,459,269,501"/>
+<area shape="poly" id="edge10_Node000005_Node000010" title=" " alt="" coords="305,420,218,461,215,456,303,415"/>
+<area shape="poly" id="edge13_Node000005_Node000012" title=" " alt="" coords="455,413,614,455,613,461,453,418"/>
+<area shape="rect" id="Node000007" href="$arena_controller_8c.html" title=" " alt="" coords="298,640,486,683"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="395,608,395,640,389,640,389,608"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="454,596,547,637,545,642,452,601"/>
+<area shape="poly" id="edge11_Node000010_Node000006" title=" " alt="" coords="239,505,341,546,339,551,237,510"/>
+<area shape="rect" id="Node000011" href="$enemy_controller_8c.html" title=" " alt="" coords="75,549,269,592"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="175,517,175,549,169,549,169,517"/>
+<area shape="poly" id="edge15_Node000012_Node000008" title=" " alt="" coords="653,514,636,531,622,551,605,597,597,640,592,639,600,596,618,548,632,528,649,510"/>
+<area shape="rect" id="Node000013" href="$kb_controller_8c.html" title=" " alt="" coords="631,549,801,592"/>
+<area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="703,515,713,548,708,550,698,517"/>
+<area shape="poly" id="edge19_Node000015_Node000004" title=" " alt="" coords="519,237,401,279,399,274,517,232"/>
+<area shape="poly" id="edge18_Node000015_Node000006" title=" " alt="" coords="592,245,578,384,565,455,556,483,545,503,513,532,476,551,473,546,510,527,541,500,551,481,560,454,573,384,586,245"/>
+<area shape="poly" id="edge21_Node000015_Node000012" title=" " alt="" coords="590,245,590,281,596,319,612,360,633,398,675,457,671,460,628,400,607,362,591,321,584,282,584,245"/>
+<area shape="rect" id="Node000016" href="$game_controller_8c.html" title=" " alt="" coords="605,277,792,320"/>
+<area shape="poly" id="edge20_Node000015_Node000016" title=" " alt="" coords="629,237,675,275,672,279,626,241"/>
+<area shape="poly" id="edge22_Node000015_Node000017" title=" " alt="" coords="693,231,877,274,876,279,692,236"/>
+<area shape="poly" id="edge24_Node000017_Node000008" title=" " alt="" coords="920,331,899,349,882,369,866,400,858,429,855,485,854,512,849,539,837,566,815,594,781,620,742,639,702,651,663,658,662,653,700,646,740,634,778,616,811,590,833,563,844,537,849,511,850,485,853,429,861,398,878,367,896,345,916,327"/>
+<area shape="rect" id="Node000018" href="$mouse_controller_8c.html" title=" " alt="" coords="892,368,1087,411"/>
+<area shape="poly" id="edge23_Node000017_Node000018" title=" " alt="" coords="977,334,986,367,981,368,971,336"/>
+</map>

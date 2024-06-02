@@ -1,0 +1,125 @@
+\doxysection{LCOM-\/main/proj/src/\+Models/bullet.c File Reference}
+\hypertarget{bullet_8c}{}\label{bullet_8c}\index{LCOM-\/main/proj/src/Models/bullet.c@{LCOM-\/main/proj/src/Models/bullet.c}}
+{\ttfamily \#include "{}bullet.\+h"{}}\newline
+Include dependency graph for bullet.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bullet_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structbullet}{bullet}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{bullet_8c_aaa22717a020280d880939a5aeec1ce25}{create\+Bullet}} (\mbox{\hyperlink{structposition}{position}} pos, int speed, uint8\+\_\+t origin)
+\begin{DoxyCompactList}\small\item\em Creates a new bullet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structbullet}{bullet}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{bullet_8c_a25c3c0cb94a0b278b6aeabde6bf0fb19}{remove\+Bullet\+From\+Bullets}} (\mbox{\hyperlink{structbullet}{bullet}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}bullets, size\+\_\+t num\+Bullets, size\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Removes a bullet from an array of bullets. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bullet_8c_a1dd78a5d1500f529b5ba32aaf9250815}{freebullet}} (\mbox{\hyperlink{structbullet}{bullet}} \texorpdfstring{$\ast$}{*}b)
+\begin{DoxyCompactList}\small\item\em Frees the memory allocated for a bullet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bullet_8c_a9623fca80ad08b86e687db65f416843f}{create\+Bullet\+Hitbox}} (\mbox{\hyperlink{structbullet}{bullet}} \texorpdfstring{$\ast$}{*}b, \mbox{\hyperlink{struct_hitbox}{Hitbox}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{struct_hitbox}{Hitbox}})
+\begin{DoxyCompactList}\small\item\em Creates a hitbox for a bullet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{bullet_8c_aaa22717a020280d880939a5aeec1ce25}\label{bullet_8c_aaa22717a020280d880939a5aeec1ce25} 
+\index{bullet.c@{bullet.c}!createBullet@{createBullet}}
+\index{createBullet@{createBullet}!bullet.c@{bullet.c}}
+\doxysubsubsection{\texorpdfstring{createBullet()}{createBullet()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structbullet}{bullet}} \texorpdfstring{$\ast$}{*} create\+Bullet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structposition}{position}}}]{pos,  }\item[{int}]{speed,  }\item[{uint8\+\_\+t}]{origin }\end{DoxyParamCaption})}
+
+
+
+Creates a new bullet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & The position of the bullet. \\
+\hline
+{\em speed} & The speed of the bullet. \\
+\hline
+{\em origin} & The origin of the bullet (PLAYER or ENEMY). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the newly created bullet. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bullet_8c_aaa22717a020280d880939a5aeec1ce25_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bullet_8c_a9623fca80ad08b86e687db65f416843f}\label{bullet_8c_a9623fca80ad08b86e687db65f416843f} 
+\index{bullet.c@{bullet.c}!createBulletHitbox@{createBulletHitbox}}
+\index{createBulletHitbox@{createBulletHitbox}!bullet.c@{bullet.c}}
+\doxysubsubsection{\texorpdfstring{createBulletHitbox()}{createBulletHitbox()}}
+{\footnotesize\ttfamily void create\+Bullet\+Hitbox (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structbullet}{bullet}} \texorpdfstring{$\ast$}{*}}]{b,  }\item[{\mbox{\hyperlink{struct_hitbox}{Hitbox}} \texorpdfstring{$\ast$}{*}}]{hitbox }\end{DoxyParamCaption})}
+
+
+
+Creates a hitbox for a bullet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & The bullet for which to create the hitbox. \\
+\hline
+{\em hitbox} & The hitbox to be created. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bullet_8c_a9623fca80ad08b86e687db65f416843f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bullet_8c_a1dd78a5d1500f529b5ba32aaf9250815}\label{bullet_8c_a1dd78a5d1500f529b5ba32aaf9250815} 
+\index{bullet.c@{bullet.c}!freebullet@{freebullet}}
+\index{freebullet@{freebullet}!bullet.c@{bullet.c}}
+\doxysubsubsection{\texorpdfstring{freebullet()}{freebullet()}}
+{\footnotesize\ttfamily void freebullet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structbullet}{bullet}} \texorpdfstring{$\ast$}{*}}]{b }\end{DoxyParamCaption})}
+
+
+
+Frees the memory allocated for a bullet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & The bullet to free. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{bullet_8c_a25c3c0cb94a0b278b6aeabde6bf0fb19}\label{bullet_8c_a25c3c0cb94a0b278b6aeabde6bf0fb19} 
+\index{bullet.c@{bullet.c}!removeBulletFromBullets@{removeBulletFromBullets}}
+\index{removeBulletFromBullets@{removeBulletFromBullets}!bullet.c@{bullet.c}}
+\doxysubsubsection{\texorpdfstring{removeBulletFromBullets()}{removeBulletFromBullets()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structbullet}{bullet}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} remove\+Bullet\+From\+Bullets (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structbullet}{bullet}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{bullets,  }\item[{size\+\_\+t}]{num\+Bullets,  }\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+Removes a bullet from an array of bullets. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bullets} & The array of bullets. \\
+\hline
+{\em num\+Bullets} & The number of bullets in the array. \\
+\hline
+{\em index} & The index of the bullet to remove. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new array of bullets with the specified bullet removed. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bullet_8c_a25c3c0cb94a0b278b6aeabde6bf0fb19_icgraph}
+\end{center}
+\end{figure}

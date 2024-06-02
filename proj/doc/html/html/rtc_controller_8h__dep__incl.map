@@ -1,0 +1,7 @@
+<map id="LCOM&#45;main/proj/src/controllers/rtcController.h" name="LCOM&#45;main/proj/src/controllers/rtcController.h">
+<area shape="rect" id="Node000001" title="Declares functions for handling RTC (Real&#45;Time Clock) operations." alt="" coords="93,5,264,48"/>
+<area shape="rect" id="Node000002" href="$rtc_controller_8c.html" title=" " alt="" coords="5,96,176,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,61,113,98,109,94,146,57"/>
+<area shape="rect" id="Node000003" href="$main_8c.html" title=" " alt="" coords="199,96,337,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="212,57,249,94,245,98,208,61"/>
+</map>

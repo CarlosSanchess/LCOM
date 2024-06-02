@@ -1,0 +1,250 @@
+\doxysection{LCOM-\/main/proj/src/controllers/tank\+Controller.h File Reference}
+\hypertarget{tank_controller_8h}{}\label{tank_controller_8h}\index{LCOM-\/main/proj/src/controllers/tankController.h@{LCOM-\/main/proj/src/controllers/tankController.h}}
+
+
+Defines functions for controlling tank movements and interactions based on the keyboard. W moves frontwards, S moves backwards, A rotates left, D rotates right.  
+
+
+{\ttfamily \#include "{}Models/\+Tank.\+h"{}}\newline
+{\ttfamily \#include "{}Models/arena.\+h"{}}\newline
+Include dependency graph for tank\+Controller.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tank_controller_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tank_controller_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{tank_controller_8h_a105fd9e45b0df2c43744911705165b44}{can\+Move}} (int x, int y, \mbox{\hyperlink{struct_obstacle}{Obstacle}} obstacles\mbox{[}$\,$\mbox{]}, int num\+Obstacles, \mbox{\hyperlink{struct_obstacle}{Obstacle}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}builds, size\+\_\+t num\+Builds)
+\begin{DoxyCompactList}\small\item\em Checks if a tank can move to the specified position. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{tank_controller_8h_a4ced29cc86fef2f4444973a0c1f6e570}{move\+Down}} (\mbox{\hyperlink{structtank}{tank}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structtank}{tank}}, \mbox{\hyperlink{struct_obstacle}{Obstacle}} obstacles\mbox{[}$\,$\mbox{]}, int num\+Obstacles, \mbox{\hyperlink{struct_obstacle}{Obstacle}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}builds, size\+\_\+t num\+Builds)
+\begin{DoxyCompactList}\small\item\em Moves a tank backwards. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{tank_controller_8h_ac785d3d0aceea3cbceec2664e290957e}{move\+UP}} (\mbox{\hyperlink{structtank}{tank}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structtank}{tank}}, \mbox{\hyperlink{struct_obstacle}{Obstacle}} obstacles\mbox{[}$\,$\mbox{]}, int num\+Obstacles, \mbox{\hyperlink{struct_obstacle}{Obstacle}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}builds, size\+\_\+t num\+Builds)
+\begin{DoxyCompactList}\small\item\em Moves a tank frontwards. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{tank_controller_8h_a49a27b15b31a21284f50e3b27fe34720}{move\+Right}} (\mbox{\hyperlink{structtank}{tank}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structtank}{tank}})
+\begin{DoxyCompactList}\small\item\em Rotates the tank to the right. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{tank_controller_8h_a21e61106dc52db3ee60353f0bdffaa63}{move\+Left}} (\mbox{\hyperlink{structtank}{tank}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structtank}{tank}})
+\begin{DoxyCompactList}\small\item\em Rotates the tank to the left. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{tank_controller_8h_ad208780b50a5a06e9d89633dd4506203}{process\+Tank}} (\mbox{\hyperlink{structtank}{tank}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structtank}{tank}}, \mbox{\hyperlink{struct_obstacle}{Obstacle}} obstacles\mbox{[}$\,$\mbox{]}, int num\+Obstacles)
+\begin{DoxyCompactList}\small\item\em Processes the tank\textquotesingle{}s actions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines functions for controlling tank movements and interactions based on the keyboard. W moves frontwards, S moves backwards, A rotates left, D rotates right. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{tank_controller_8h_a105fd9e45b0df2c43744911705165b44}\label{tank_controller_8h_a105fd9e45b0df2c43744911705165b44} 
+\index{tankController.h@{tankController.h}!canMove@{canMove}}
+\index{canMove@{canMove}!tankController.h@{tankController.h}}
+\doxysubsubsection{\texorpdfstring{canMove()}{canMove()}}
+{\footnotesize\ttfamily bool can\+Move (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{\mbox{\hyperlink{struct_obstacle}{Obstacle}}}]{obstacles\mbox{[}$\,$\mbox{]},  }\item[{int}]{num\+Obstacles,  }\item[{\mbox{\hyperlink{struct_obstacle}{Obstacle}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{builds,  }\item[{size\+\_\+t}]{num\+Builds }\end{DoxyParamCaption})}
+
+
+
+Checks if a tank can move to the specified position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate of the new position. \\
+\hline
+{\em y} & Y coordinate of the new position. \\
+\hline
+{\em obstacles} & Array of obstacles. \\
+\hline
+{\em num\+Obstacles} & Number of obstacles. \\
+\hline
+{\em builds} & Array of builds. \\
+\hline
+{\em num\+Builds} & Number of builds. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True if the tank can move to the new position, false otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tank_controller_8h_a105fd9e45b0df2c43744911705165b44_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tank_controller_8h_a4ced29cc86fef2f4444973a0c1f6e570}\label{tank_controller_8h_a4ced29cc86fef2f4444973a0c1f6e570} 
+\index{tankController.h@{tankController.h}!moveDown@{moveDown}}
+\index{moveDown@{moveDown}!tankController.h@{tankController.h}}
+\doxysubsubsection{\texorpdfstring{moveDown()}{moveDown()}}
+{\footnotesize\ttfamily int move\+Down (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtank}{tank}} \texorpdfstring{$\ast$}{*}}]{tank,  }\item[{\mbox{\hyperlink{struct_obstacle}{Obstacle}}}]{obstacles\mbox{[}$\,$\mbox{]},  }\item[{int}]{num\+Obstacles,  }\item[{\mbox{\hyperlink{struct_obstacle}{Obstacle}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{builds,  }\item[{size\+\_\+t}]{num\+Builds }\end{DoxyParamCaption})}
+
+
+
+Moves a tank backwards. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tank} & Pointer to the tank structure. \\
+\hline
+{\em obstacles} & Array of obstacles. \\
+\hline
+{\em num\+Obstacles} & Number of obstacles. \\
+\hline
+{\em builds} & Array of builds. \\
+\hline
+{\em num\+Builds} & Number of builds. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success, non-\/zero on failure. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{tank_controller_8h_a4ced29cc86fef2f4444973a0c1f6e570_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tank_controller_8h_a4ced29cc86fef2f4444973a0c1f6e570_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tank_controller_8h_a21e61106dc52db3ee60353f0bdffaa63}\label{tank_controller_8h_a21e61106dc52db3ee60353f0bdffaa63} 
+\index{tankController.h@{tankController.h}!moveLeft@{moveLeft}}
+\index{moveLeft@{moveLeft}!tankController.h@{tankController.h}}
+\doxysubsubsection{\texorpdfstring{moveLeft()}{moveLeft()}}
+{\footnotesize\ttfamily int move\+Left (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtank}{tank}} \texorpdfstring{$\ast$}{*}}]{tank }\end{DoxyParamCaption})}
+
+
+
+Rotates the tank to the left. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tank} & Pointer to the tank structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success, non-\/zero on failure. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tank_controller_8h_a21e61106dc52db3ee60353f0bdffaa63_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tank_controller_8h_a49a27b15b31a21284f50e3b27fe34720}\label{tank_controller_8h_a49a27b15b31a21284f50e3b27fe34720} 
+\index{tankController.h@{tankController.h}!moveRight@{moveRight}}
+\index{moveRight@{moveRight}!tankController.h@{tankController.h}}
+\doxysubsubsection{\texorpdfstring{moveRight()}{moveRight()}}
+{\footnotesize\ttfamily int move\+Right (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtank}{tank}} \texorpdfstring{$\ast$}{*}}]{tank }\end{DoxyParamCaption})}
+
+
+
+Rotates the tank to the right. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tank} & Pointer to the tank structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success, non-\/zero on failure. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tank_controller_8h_a49a27b15b31a21284f50e3b27fe34720_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tank_controller_8h_ac785d3d0aceea3cbceec2664e290957e}\label{tank_controller_8h_ac785d3d0aceea3cbceec2664e290957e} 
+\index{tankController.h@{tankController.h}!moveUP@{moveUP}}
+\index{moveUP@{moveUP}!tankController.h@{tankController.h}}
+\doxysubsubsection{\texorpdfstring{moveUP()}{moveUP()}}
+{\footnotesize\ttfamily int move\+UP (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtank}{tank}} \texorpdfstring{$\ast$}{*}}]{tank,  }\item[{\mbox{\hyperlink{struct_obstacle}{Obstacle}}}]{obstacles\mbox{[}$\,$\mbox{]},  }\item[{int}]{num\+Obstacles,  }\item[{\mbox{\hyperlink{struct_obstacle}{Obstacle}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{builds,  }\item[{size\+\_\+t}]{num\+Builds }\end{DoxyParamCaption})}
+
+
+
+Moves a tank frontwards. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tank} & Pointer to the tank structure. \\
+\hline
+{\em obstacles} & Array of obstacles. \\
+\hline
+{\em num\+Obstacles} & Number of obstacles. \\
+\hline
+{\em builds} & Array of builds. \\
+\hline
+{\em num\+Builds} & Number of builds. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success, non-\/zero on failure. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{tank_controller_8h_ac785d3d0aceea3cbceec2664e290957e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tank_controller_8h_ac785d3d0aceea3cbceec2664e290957e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tank_controller_8h_ad208780b50a5a06e9d89633dd4506203}\label{tank_controller_8h_ad208780b50a5a06e9d89633dd4506203} 
+\index{tankController.h@{tankController.h}!processTank@{processTank}}
+\index{processTank@{processTank}!tankController.h@{tankController.h}}
+\doxysubsubsection{\texorpdfstring{processTank()}{processTank()}}
+{\footnotesize\ttfamily int process\+Tank (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtank}{tank}} \texorpdfstring{$\ast$}{*}}]{tank,  }\item[{\mbox{\hyperlink{struct_obstacle}{Obstacle}}}]{obstacles\mbox{[}$\,$\mbox{]},  }\item[{int}]{num\+Obstacles }\end{DoxyParamCaption})}
+
+
+
+Processes the tank\textquotesingle{}s actions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tank} & Pointer to the tank structure. \\
+\hline
+{\em obstacles} & Array of obstacles. \\
+\hline
+{\em num\+Obstacles} & Number of obstacles. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 on success, non-\/zero on failure. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tank_controller_8h_ad208780b50a5a06e9d89633dd4506203_icgraph}
+\end{center}
+\end{figure}

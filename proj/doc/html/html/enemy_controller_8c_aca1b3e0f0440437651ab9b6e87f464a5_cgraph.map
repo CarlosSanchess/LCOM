@@ -1,0 +1,9 @@
+<map id="followPlayer" name="followPlayer">
+<area shape="rect" id="Node000001" title="Makes an enemy tank follow the player." alt="" coords="5,31,96,57"/>
+<area shape="rect" id="Node000002" href="$enemy_controller_8c.html#a5eb2eadd15c827a4e1a4f1484ae9b3d0" title="Attempts to move an enemy tank towards a target." alt="" coords="144,31,239,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,41,128,41,128,47,96,47"/>
+<area shape="rect" id="Node000003" href="$enemy_controller_8c.html#a24a22572e3e16181962a139f5eaa0228" title="Checks if an enemy tank can move to a new position." alt="" coords="300,5,413,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="239,34,284,27,285,32,240,39"/>
+<area shape="rect" id="Node000004" href="$enemy_controller_8c.html#a7e678de7062743d885efb2a8c2965a9c" title="Updates the direction of an enemy tank based on an angle rotating it." alt="" coords="287,56,426,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="240,49,272,54,271,59,239,54"/>
+</map>

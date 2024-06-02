@@ -1,0 +1,28 @@
+<map id="read_stat_reg" name="read_stat_reg">
+<area shape="rect" id="Node000001" title="Reads the status register." alt="" coords="828,56,928,83"/>
+<area shape="rect" id="Node000002" href="$kbc_8c.html#ab9e6ed7960d60aa4834f2038247d4536" title="Keyboard interrupt handler." alt="" coords="680,5,740,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="816,53,739,30,741,25,817,48"/>
+<area shape="rect" id="Node000006" href="$mouse_8c.html#a834b6d7efe311484d6da234db333cb97" title="Mouse interrupt handler." alt="" coords="671,56,749,83"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="812,72,749,72,749,67,812,67"/>
+<area shape="rect" id="Node000009" href="$kbc_8c.html#a4822f96183ff9c6373060b217700c1d1" title="Writes a command byte to the specified port." alt="" coords="640,107,780,133"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="817,90,758,109,756,104,816,85"/>
+<area shape="rect" id="Node000003" href="$kb_controller_8c.html#a7c807c44f534a91d6d580c71b35dec38" title="Handles keyboard interrupts and processes game state changes." alt="" coords="458,5,592,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="665,21,592,21,592,16,665,16"/>
+<area shape="rect" id="Node000004" href="$main_8c.html#a58e8be2db2660128e4e6456a9c981fb5" title=" " alt="" coords="170,69,209,96"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="443,21,357,28,311,36,266,47,236,58,211,73,208,68,234,54,264,41,310,30,356,23,443,16"/>
+<area shape="rect" id="Node000005" href="$main_8c.html#a7a72220d8366dd84709e79ce415862e5" title=" " alt="" coords="5,107,114,133"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="155,95,109,109,108,104,154,90"/>
+<area shape="rect" id="Node000007" href="$mouse_controller_8c.html#af9b1810e8b067ad56cc0a459efce9e4e" title="Updates the mouse position based on input." alt="" coords="462,56,588,83"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="656,72,588,72,588,67,656,67"/>
+<area shape="rect" id="Node000008" href="$mouse_controller_8c.html#a59eab8192e96165c0e79d6bd94e762a4" title="Handles mouse interrupts and processes game state changes." alt="" coords="265,56,410,83"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="447,72,410,72,410,67,447,67"/>
+<area shape="poly" id="edge8_Node000008_Node000004" title=" " alt="" coords="249,80,210,84,209,78,249,75"/>
+<area shape="rect" id="Node000010" href="$mouse_8c.html#a1594888614ba7a869289f607a8084aca" title="Writes a command byte to the mouse." alt="" coords="478,107,572,133"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="624,123,572,123,572,117,624,117"/>
+<area shape="rect" id="Node000011" href="$main_8c.html#a8619d3a38415d23a59f3a923502608bb" title=" " alt="" coords="304,107,372,133"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="462,123,372,123,372,117,462,117"/>
+<area shape="rect" id="Node000012" href="$main_8c.html#ada06e65686f854920bbae55688ed5484" title=" " alt="" coords="162,132,217,159"/>
+<area shape="poly" id="edge13_Node000010_Node000012" title=" " alt="" coords="463,139,411,148,304,153,217,150,218,145,304,147,410,143,462,134"/>
+<area shape="poly" id="edge12_Node000011_Node000004" title=" " alt="" coords="288,110,209,90,210,85,289,105"/>
+<area shape="poly" id="edge14_Node000012_Node000005" title=" " alt="" coords="146,140,113,133,114,128,147,134"/>
+</map>

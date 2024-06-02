@@ -1,0 +1,20 @@
+<map id="LCOM&#45;main/proj/src/Models/mouse.h" name="LCOM&#45;main/proj/src/Models/mouse.h">
+<area shape="rect" id="Node000001" title="Defines the MouseInfo structure and includes resources for mouse handling." alt="" coords="273,5,410,48"/>
+<area shape="rect" id="Node000002" href="$_position_8h.html" title="Defines the position structure used to store coordinates and orientation." alt="" coords="5,187,131,213"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="281,51,232,72,183,98,132,138,91,177,87,174,128,134,180,94,229,67,279,46"/>
+<area shape="rect" id="Node000004" href="$video__gr_8h.html" title="Functions and definitions for video graphics mode." alt="" coords="194,96,337,139"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="326,50,295,86,291,83,322,47"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="361,104,476,131"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="361,47,400,90,396,94,357,50"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="501,104,633,131"/>
+<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="395,46,521,95,519,100,393,51"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="129,261,207,288"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="87,212,140,250,137,254,84,216"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="239,141,216,162,196,188,182,217,175,247,170,245,177,216,191,185,212,159,235,137"/>
+<area shape="rect" id="Node000005" href="$graphics__const_8h.html" title="Constants and macros for programming the graphics card." alt="" coords="205,187,326,213"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="260,139,259,171,254,171,255,139"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="349,187,411,213"/>
+<area shape="poly" id="edge8_Node000004_Node000006" title=" " alt="" coords="296,137,351,175,348,180,293,141"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="250,216,198,254,195,250,247,212"/>
+<area shape="poly" id="edge7_Node000005_Node000004" title=" " alt="" coords="269,186,272,154,277,155,275,186"/>
+</map>

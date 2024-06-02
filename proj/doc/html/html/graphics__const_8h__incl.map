@@ -1,0 +1,11 @@
+<map id="LCOM&#45;main/proj/src/dev_interface/devices/graphics_const.h" name="LCOM&#45;main/proj/src/dev_interface/devices/graphics_const.h">
+<area shape="rect" id="Node000001" title="Constants and macros for programming the graphics card." alt="" coords="48,5,195,64"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,187,83,213"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,66,72,113,52,172,47,171,67,111,96,63"/>
+<area shape="rect" id="Node000003" href="$video__gr_8h.html" title="Functions and definitions for video graphics mode." alt="" coords="82,112,161,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="116,64,116,96,110,96,110,64"/>
+<area shape="poly" id="edge4_Node000003_Node000001" title=" " alt="" coords="125,111,128,79,133,80,131,112"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="110,141,70,178,67,174,106,137"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="107,187,168,213"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="127,139,134,171,129,172,122,140"/>
+</map>

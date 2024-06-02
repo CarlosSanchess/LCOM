@@ -1,0 +1,33 @@
+\doxysection{kb\+Controller.\+h}
+\hypertarget{kb_controller_8h_source}{}\label{kb_controller_8h_source}\index{LCOM-\/main/proj/src/controllers/kbController.h@{LCOM-\/main/proj/src/controllers/kbController.h}}
+\mbox{\hyperlink{kb_controller_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ \_\_KBController\_\_}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ \_\_KBController\_\_}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{kbc_8h}{../dev\_interface/devices/timer\_kbc\_mouse/kbc.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{state_8h}{Models/state.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{menu_8h}{Models/menu.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{arena_8h}{Models/arena.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{tank_controller_8h}{controllers/tankController.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{bullet_controller_8h}{controllers/bulletController.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{game_controller_8h}{controllers/gameController.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{serial_port_controller_8h}{controllers/serialPortController.h}}"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{extern}\ uint8\_t\ \mbox{\hyperlink{kb_controller_8h_ac4c81d34a9be02e382c2086d9fb765a9}{scanCode}};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00028\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{kb_controller_8h_a7c807c44f534a91d6d580c71b35dec38}{handleInterruptKBC}}(\mbox{\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}}\ *gameState,\ \mbox{\hyperlink{struct_menu}{Menu}}\ *menuInfo,\ \mbox{\hyperlink{struct_arena}{Arena}}\ *arena,\ \mbox{\hyperlink{serial_port_controller_8h_ad648bc77b7d067f854037055c76de5d6}{MSTATE}}\ *\mbox{\hyperlink{main_8c_aedc5572ef7fe1b8d1353567cd9a9ac54}{mstate}});}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{kb_controller_8h_a49ab70f4325d6326ae082c9829b4b0cd}{handleMenu}}(\mbox{\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}}\ *gameState,\ \mbox{\hyperlink{struct_menu}{Menu}}\ *\mbox{\hyperlink{main_8c_a2ad0f4be462ff63c3c72779e80988d15}{menu}},\ \mbox{\hyperlink{struct_arena}{Arena}}\ *arena);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{kb_controller_8h_a217fce9c35c892d4cfc84827c087f8ba}{handleTank}}(\mbox{\hyperlink{struct_arena}{Arena}}\ *arena);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00054\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{kb_controller_8h_a51dcba88830e36e39c9c614fb4f17014}{handleArena}}(\mbox{\hyperlink{struct_arena}{Arena}}\ *arena);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00062\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{kb_controller_8h_a8f674ccf39d43d1afdab395f72ccd240}{handleScore}}(\mbox{\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}}\ *gameState);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_KBController\_\_}}
+
+\end{DoxyCode}

@@ -1,0 +1,38 @@
+\doxysection{arena.\+h}
+\hypertarget{arena_8h_source}{}\label{arena_8h_source}\index{LCOM-\/main/proj/src/Models/arena.h@{LCOM-\/main/proj/src/Models/arena.h}}
+\mbox{\hyperlink{arena_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ \_\_ARENA\_\_}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ \_\_ARENA\_\_}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_tank_8h}{Tank.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_models_2mouse_8h}{mouse.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{obstacle_8h}{obstacle.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{bomb_8h}{bomb.h}}"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ NUM\_OBSTACLES\ 12\ \ \ }}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ ARENA\_BORDER\ 50\ \ \ \ }}
+\DoxyCodeLine{00027\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{structtank}{tank}}*\ \mbox{\hyperlink{struct_arena_a54eea80944a209ab4b697805edca46ed}{tank}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{struct_enemy_tank}{EnemyTank}}*\ \mbox{\hyperlink{struct_arena_a07804e93277f4c86b9eaa0dab1753a98}{enemyTank}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{struct_mouse_info}{MouseInfo}}*\ \mbox{\hyperlink{struct_arena_a236d9227a97ac3dd869d639808e4135d}{crosshair}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_arena_ad8c7b9b4d92635db584d179575ea16af}{width}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_arena_ad360fafe2494ffacce475b3d1e7a65fc}{height}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{struct_obstacle}{Obstacle}}\ obstacles[\mbox{\hyperlink{arena_8h_a3e091741286365e82b103a0843f52182}{NUM\_OBSTACLES}}];\ }
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{struct_obstacle}{Obstacle}}**\ \mbox{\hyperlink{struct_arena_a74cb02aa3b3a6d50776b4392c6f71021}{builts}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{struct_arena_aba6a072fecbaa5db9ed6e9947f8ed811}{numBuilts}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{structbullet}{bullet}}**\ \mbox{\hyperlink{struct_arena_adc274181a13647eaa4bcc48394733378}{bullets}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{struct_arena_a1f4cb8ab83bb27f8b198e660fd33a91d}{numBullets}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_arena_a691e5e3a2a323016ffce2765679e3f8a}{curr\_score}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_arena_a47c78d2d663f2dbfb74caac41e694dff}{endGame}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{structbomb}{bomb}}\ \mbox{\hyperlink{struct_arena_a118651d9e38088534f254c2ddf2db360}{bomba}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00046\ \}\ \mbox{\hyperlink{struct_arena}{Arena}};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00060\ \mbox{\hyperlink{struct_arena}{Arena}}*\ \mbox{\hyperlink{arena_8h_a44f4a926829c5771ee4483a5179e015b}{createArena}}(\textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height,\ \mbox{\hyperlink{struct_mouse_info}{MouseInfo}}\ *\mbox{\hyperlink{main_8c_a4b7a142226097e18c01a5405d023b2ea}{mouseInfo}});}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00070\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arena_8h_a88d9af0d4df5265659673497c6e9925a}{destroyArena}}(\mbox{\hyperlink{struct_arena}{Arena}}\ *arena);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_ARENA\_\_}}
+
+\end{DoxyCode}

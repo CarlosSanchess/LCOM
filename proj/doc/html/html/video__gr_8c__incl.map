@@ -1,0 +1,14 @@
+<map id="LCOM&#45;main/proj/src/dev_interface/devices/video_gr.c" name="LCOM&#45;main/proj/src/dev_interface/devices/video_gr.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,153,64"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="18,261,95,288"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,65,66,187,61,246,56,246,60,186,73,64"/>
+<area shape="rect" id="Node000003" href="$video__gr_8h.html" title="Functions and definitions for video graphics mode." alt="" coords="114,112,193,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="105,63,135,98,131,101,101,66"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="135,141,108,161,84,188,70,217,63,247,57,246,65,216,79,185,104,157,131,137"/>
+<area shape="rect" id="Node000004" href="$graphics__const_8h.html" title="Constants and macros for programming the graphics card." alt="" coords="94,187,214,213"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="149,139,148,171,142,171,144,139"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="238,187,299,213"/>
+<area shape="poly" id="edge7_Node000003_Node000005" title=" " alt="" coords="175,137,237,176,234,180,172,141"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="138,216,87,254,83,250,135,212"/>
+<area shape="poly" id="edge6_Node000004_Node000003" title=" " alt="" coords="158,186,160,154,165,154,163,186"/>
+</map>

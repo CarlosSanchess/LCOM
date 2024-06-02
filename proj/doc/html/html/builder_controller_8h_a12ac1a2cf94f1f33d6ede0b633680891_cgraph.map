@@ -1,0 +1,5 @@
+<map id="add_obstacleToArena" name="add_obstacleToArena">
+<area shape="rect" id="Node000001" title="Adds an obstacle to the arena." alt="" coords="5,5,152,32"/>
+<area shape="rect" id="Node000002" href="$obstacle_8c.html#ab92af7274090b9e5a37ac328be0c3ae4" title="Creates a new Obstacle." alt="" coords="200,5,309,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,16,184,16,184,21,152,21"/>
+</map>

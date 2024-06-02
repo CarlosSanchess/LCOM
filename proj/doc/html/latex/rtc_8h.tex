@@ -1,0 +1,349 @@
+\doxysection{LCOM-\/main/proj/src/dev\+\_\+interface/devices/rtc.h File Reference}
+\hypertarget{rtc_8h}{}\label{rtc_8h}\index{LCOM-\/main/proj/src/dev\_interface/devices/rtc.h@{LCOM-\/main/proj/src/dev\_interface/devices/rtc.h}}
+
+
+RTC-\/related functions and definitions.  
+
+
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+Include dependency graph for rtc.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{rtc_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{rtc_8h_a8fe83ac76edc595f6b98cd4a4127aed5}{ERROR}}~1
+\begin{DoxyCompactList}\small\item\em Error code value. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{rtc_8h_a4e22feb6ffbc1cda32fadff5c740dc51}{RTC\+\_\+\+IRQ}}~8
+\begin{DoxyCompactList}\small\item\em RTC IRQ line. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{rtc_8h_a710b98232df2c563009e6f8a6cd18220}{RTC\+\_\+\+ADDR\+\_\+\+REG}}~0x70
+\begin{DoxyCompactList}\small\item\em RTC address register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{rtc_8h_a2f258a00c59c3f347c8d2d4a75471ce0}{RTC\+\_\+\+DATA\+\_\+\+REG}}~0x71
+\begin{DoxyCompactList}\small\item\em RTC data register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{rtc_8h_af958cc2046db3b9a355832660a89c732}{RTC\+\_\+\+UPDATE}}~0x0A
+\begin{DoxyCompactList}\small\item\em RTC update in progress register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{rtc_8h_afc6b6f30254fde92718e53118ca3a11b}{RTC\+\_\+\+BINARY}}~0x0B
+\begin{DoxyCompactList}\small\item\em RTC binary mode register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{rtc_8h_a43f6540c6d3a78b930f9adad56cf7fac}{RTC\+\_\+\+SECONDS}}~0x00
+\begin{DoxyCompactList}\small\item\em RTC seconds register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{rtc_8h_aabc0725ac27ea93c913a2a4d7cd51ac7}{RTC\+\_\+\+MINUTES}}~0x02
+\begin{DoxyCompactList}\small\item\em RTC minutes register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{rtc_8h_a4d74cdb9a956c4f1783ad5aff00dc2b8}{RTC\+\_\+\+HOURS}}~0x04
+\begin{DoxyCompactList}\small\item\em RTC hours register. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{rtc_8h_a5171a9c0f54940fe60f7500896afcc86}{rtc\+\_\+subscribe\+\_\+int}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}bit\+\_\+no)
+\begin{DoxyCompactList}\small\item\em Subscribes to RTC interrupts. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rtc_8h_ab8f17bf5280c908c8b199a90fefcc758}{rtc\+\_\+unsubscribe\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes from RTC interrupts. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rtc_8h_a76827856de45c0728d613f90c5f6e009}{rtc\+\_\+read\+\_\+reg}} (uint8\+\_\+t reg, uint8\+\_\+t \texorpdfstring{$\ast$}{*}data)
+\begin{DoxyCompactList}\small\item\em Reads a value from a specified RTC register. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{rtc_8h_a2bd4159dadf258d8e8dd193433c4ce60}{rtc\+\_\+update\+\_\+in\+\_\+progress}} ()
+\begin{DoxyCompactList}\small\item\em Checks if an RTC update is in progress. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{rtc_8h_a2c794c9d296283705c1e6397f4d08ca7}{is\+\_\+rtc\+\_\+binary}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the RTC is in binary mode. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rtc_8h_a019b4e9bb0537430be1f6d7371d03473}{bcd\+\_\+to\+\_\+binary}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}bcd)
+\begin{DoxyCompactList}\small\item\em Converts a BCD value to binary. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rtc_8h_ad023d88dfb321240fc060baa424c7493}{update\+\_\+rtc\+\_\+time}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}seconds, uint8\+\_\+t \texorpdfstring{$\ast$}{*}minutes, uint8\+\_\+t \texorpdfstring{$\ast$}{*}hours)
+\begin{DoxyCompactList}\small\item\em Updates the provided variables with the current RTC time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+RTC-\/related functions and definitions. 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{rtc_8h_a8fe83ac76edc595f6b98cd4a4127aed5}\label{rtc_8h_a8fe83ac76edc595f6b98cd4a4127aed5} 
+\index{rtc.h@{rtc.h}!ERROR@{ERROR}}
+\index{ERROR@{ERROR}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{ERROR}{ERROR}}
+{\footnotesize\ttfamily \#define ERROR~1}
+
+
+
+Error code value. 
+
+\Hypertarget{rtc_8h_a710b98232df2c563009e6f8a6cd18220}\label{rtc_8h_a710b98232df2c563009e6f8a6cd18220} 
+\index{rtc.h@{rtc.h}!RTC\_ADDR\_REG@{RTC\_ADDR\_REG}}
+\index{RTC\_ADDR\_REG@{RTC\_ADDR\_REG}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_ADDR\_REG}{RTC\_ADDR\_REG}}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+ADDR\+\_\+\+REG~0x70}
+
+
+
+RTC address register. 
+
+\Hypertarget{rtc_8h_afc6b6f30254fde92718e53118ca3a11b}\label{rtc_8h_afc6b6f30254fde92718e53118ca3a11b} 
+\index{rtc.h@{rtc.h}!RTC\_BINARY@{RTC\_BINARY}}
+\index{RTC\_BINARY@{RTC\_BINARY}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_BINARY}{RTC\_BINARY}}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+BINARY~0x0B}
+
+
+
+RTC binary mode register. 
+
+\Hypertarget{rtc_8h_a2f258a00c59c3f347c8d2d4a75471ce0}\label{rtc_8h_a2f258a00c59c3f347c8d2d4a75471ce0} 
+\index{rtc.h@{rtc.h}!RTC\_DATA\_REG@{RTC\_DATA\_REG}}
+\index{RTC\_DATA\_REG@{RTC\_DATA\_REG}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_DATA\_REG}{RTC\_DATA\_REG}}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+DATA\+\_\+\+REG~0x71}
+
+
+
+RTC data register. 
+
+\Hypertarget{rtc_8h_a4d74cdb9a956c4f1783ad5aff00dc2b8}\label{rtc_8h_a4d74cdb9a956c4f1783ad5aff00dc2b8} 
+\index{rtc.h@{rtc.h}!RTC\_HOURS@{RTC\_HOURS}}
+\index{RTC\_HOURS@{RTC\_HOURS}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_HOURS}{RTC\_HOURS}}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+HOURS~0x04}
+
+
+
+RTC hours register. 
+
+\Hypertarget{rtc_8h_a4e22feb6ffbc1cda32fadff5c740dc51}\label{rtc_8h_a4e22feb6ffbc1cda32fadff5c740dc51} 
+\index{rtc.h@{rtc.h}!RTC\_IRQ@{RTC\_IRQ}}
+\index{RTC\_IRQ@{RTC\_IRQ}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_IRQ}{RTC\_IRQ}}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+IRQ~8}
+
+
+
+RTC IRQ line. 
+
+\Hypertarget{rtc_8h_aabc0725ac27ea93c913a2a4d7cd51ac7}\label{rtc_8h_aabc0725ac27ea93c913a2a4d7cd51ac7} 
+\index{rtc.h@{rtc.h}!RTC\_MINUTES@{RTC\_MINUTES}}
+\index{RTC\_MINUTES@{RTC\_MINUTES}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_MINUTES}{RTC\_MINUTES}}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+MINUTES~0x02}
+
+
+
+RTC minutes register. 
+
+\Hypertarget{rtc_8h_a43f6540c6d3a78b930f9adad56cf7fac}\label{rtc_8h_a43f6540c6d3a78b930f9adad56cf7fac} 
+\index{rtc.h@{rtc.h}!RTC\_SECONDS@{RTC\_SECONDS}}
+\index{RTC\_SECONDS@{RTC\_SECONDS}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_SECONDS}{RTC\_SECONDS}}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+SECONDS~0x00}
+
+
+
+RTC seconds register. 
+
+\Hypertarget{rtc_8h_af958cc2046db3b9a355832660a89c732}\label{rtc_8h_af958cc2046db3b9a355832660a89c732} 
+\index{rtc.h@{rtc.h}!RTC\_UPDATE@{RTC\_UPDATE}}
+\index{RTC\_UPDATE@{RTC\_UPDATE}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_UPDATE}{RTC\_UPDATE}}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+UPDATE~0x0A}
+
+
+
+RTC update in progress register. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{rtc_8h_a019b4e9bb0537430be1f6d7371d03473}\label{rtc_8h_a019b4e9bb0537430be1f6d7371d03473} 
+\index{rtc.h@{rtc.h}!bcd\_to\_binary@{bcd\_to\_binary}}
+\index{bcd\_to\_binary@{bcd\_to\_binary}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{bcd\_to\_binary()}{bcd\_to\_binary()}}
+{\footnotesize\ttfamily int bcd\+\_\+to\+\_\+binary (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{bcd }\end{DoxyParamCaption})}
+
+
+
+Converts a BCD value to binary. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bcd} & Address of the BCD value to convert (modifies in place). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 on success. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_8h_a019b4e9bb0537430be1f6d7371d03473_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rtc_8h_a2c794c9d296283705c1e6397f4d08ca7}\label{rtc_8h_a2c794c9d296283705c1e6397f4d08ca7} 
+\index{rtc.h@{rtc.h}!is\_rtc\_binary@{is\_rtc\_binary}}
+\index{is\_rtc\_binary@{is\_rtc\_binary}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{is\_rtc\_binary()}{is\_rtc\_binary()}}
+{\footnotesize\ttfamily bool is\+\_\+rtc\+\_\+binary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the RTC is in binary mode. 
+
+\begin{DoxyReturn}{Returns}
+Returns true if in binary mode, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_8h_a2c794c9d296283705c1e6397f4d08ca7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_8h_a2c794c9d296283705c1e6397f4d08ca7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rtc_8h_a76827856de45c0728d613f90c5f6e009}\label{rtc_8h_a76827856de45c0728d613f90c5f6e009} 
+\index{rtc.h@{rtc.h}!rtc\_read\_reg@{rtc\_read\_reg}}
+\index{rtc\_read\_reg@{rtc\_read\_reg}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{rtc\_read\_reg()}{rtc\_read\_reg()}}
+{\footnotesize\ttfamily int rtc\+\_\+read\+\_\+reg (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{reg,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{data }\end{DoxyParamCaption})}
+
+
+
+Reads a value from a specified RTC register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg} & Register to read from. \\
+\hline
+{\em data} & Address of the variable to store the register value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 on failure. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{rtc_8h_a76827856de45c0728d613f90c5f6e009_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_8h_a76827856de45c0728d613f90c5f6e009_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rtc_8h_a5171a9c0f54940fe60f7500896afcc86}\label{rtc_8h_a5171a9c0f54940fe60f7500896afcc86} 
+\index{rtc.h@{rtc.h}!rtc\_subscribe\_int@{rtc\_subscribe\_int}}
+\index{rtc\_subscribe\_int@{rtc\_subscribe\_int}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{rtc\_subscribe\_int()}{rtc\_subscribe\_int()}}
+{\footnotesize\ttfamily int rtc\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{bit\+\_\+no }\end{DoxyParamCaption})}
+
+
+
+Subscribes to RTC interrupts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+\_\+no} & Address of the variable to store the interrupt bit mask. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 on failure. 
+\end{DoxyReturn}
+\Hypertarget{rtc_8h_ab8f17bf5280c908c8b199a90fefcc758}\label{rtc_8h_ab8f17bf5280c908c8b199a90fefcc758} 
+\index{rtc.h@{rtc.h}!rtc\_unsubscribe\_int@{rtc\_unsubscribe\_int}}
+\index{rtc\_unsubscribe\_int@{rtc\_unsubscribe\_int}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{rtc\_unsubscribe\_int()}{rtc\_unsubscribe\_int()}}
+{\footnotesize\ttfamily int rtc\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unsubscribes from RTC interrupts. 
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 on failure. 
+\end{DoxyReturn}
+\Hypertarget{rtc_8h_a2bd4159dadf258d8e8dd193433c4ce60}\label{rtc_8h_a2bd4159dadf258d8e8dd193433c4ce60} 
+\index{rtc.h@{rtc.h}!rtc\_update\_in\_progress@{rtc\_update\_in\_progress}}
+\index{rtc\_update\_in\_progress@{rtc\_update\_in\_progress}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{rtc\_update\_in\_progress()}{rtc\_update\_in\_progress()}}
+{\footnotesize\ttfamily bool rtc\+\_\+update\+\_\+in\+\_\+progress (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if an RTC update is in progress. 
+
+\begin{DoxyReturn}{Returns}
+Returns true if an update is in progress, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_8h_a2bd4159dadf258d8e8dd193433c4ce60_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_8h_a2bd4159dadf258d8e8dd193433c4ce60_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rtc_8h_ad023d88dfb321240fc060baa424c7493}\label{rtc_8h_ad023d88dfb321240fc060baa424c7493} 
+\index{rtc.h@{rtc.h}!update\_rtc\_time@{update\_rtc\_time}}
+\index{update\_rtc\_time@{update\_rtc\_time}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{update\_rtc\_time()}{update\_rtc\_time()}}
+{\footnotesize\ttfamily void update\+\_\+rtc\+\_\+time (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{seconds,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{minutes,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{hours }\end{DoxyParamCaption})}
+
+
+
+Updates the provided variables with the current RTC time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seconds} & Address of the variable to store the current seconds. \\
+\hline
+{\em minutes} & Address of the variable to store the current minutes. \\
+\hline
+{\em hours} & Address of the variable to store the current hours. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_8h_ad023d88dfb321240fc060baa424c7493_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_8h_ad023d88dfb321240fc060baa424c7493_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,15 @@
+<map id="resetGame" name="resetGame">
+<area shape="rect" id="Node000001" title="Resets the game by reinitializing the arena." alt="" coords="5,132,91,159"/>
+<area shape="rect" id="Node000002" href="$tank_8c.html#a2b4d3b1e5c1918d513937a5c9b8f15cf" title="Creates a new enemy tank." alt="" coords="158,5,285,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="56,130,88,87,111,63,137,42,146,37,149,41,140,46,115,66,92,90,60,133"/>
+<area shape="rect" id="Node000003" href="$tank_8c.html#af0f78c94a6562688f7efb448d44e2ffa" title="Creates a new tank." alt="" coords="179,56,264,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="69,129,138,92,163,83,165,88,140,97,72,134"/>
+<area shape="rect" id="Node000004" href="$tank_8c.html#a56f65050438e9382e351d33ab303261e" title="Frees the memory allocated for the enemy tank." alt="" coords="166,107,277,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="91,136,150,128,151,133,91,142"/>
+<area shape="rect" id="Node000005" href="$tank_8c.html#a42aa5c5144bd173a7e2fb159c8c2f72a" title="Frees the memory allocated for the tank." alt="" coords="186,157,257,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="91,149,171,161,170,166,91,154"/>
+<area shape="rect" id="Node000006" href="$obstacle_8c.html#a4fa70a860bafd5124df0bfb4ed1f3517" title="Removes the first obstacle from the array." alt="" coords="174,208,269,235"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="72,157,140,194,160,202,158,207,138,198,69,162"/>
+<area shape="rect" id="Node000007" href="$bullet_8c.html#a25c3c0cb94a0b278b6aeabde6bf0fb19" title="Removes a bullet from an array of bullets." alt="" coords="139,259,304,285"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="60,158,92,201,115,224,140,244,149,249,146,254,137,249,111,228,88,204,56,161"/>
+</map>

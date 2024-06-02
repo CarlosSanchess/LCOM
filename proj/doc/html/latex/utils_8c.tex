@@ -1,0 +1,82 @@
+\doxysection{LCOM-\/main/proj/src/dev\+\_\+interface/devices/utils.c File Reference}
+\hypertarget{utils_8c}{}\label{utils_8c}\index{LCOM-\/main/proj/src/dev\_interface/devices/utils.c@{LCOM-\/main/proj/src/dev\_interface/devices/utils.c}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+Include dependency graph for utils.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{utils_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{utils_8c_a8fe83ac76edc595f6b98cd4a4127aed5}{ERROR}}~1
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{utils_8c_a31ab374573517f8a5ba31c52a49a8606}{util\+\_\+get\+\_\+\+LSB}} (uint16\+\_\+t val, uint8\+\_\+t \texorpdfstring{$\ast$}{*}lsb)
+\item 
+int \mbox{\hyperlink{utils_8c_afc6ca7a9a39943ff1792d206da514a59}{util\+\_\+get\+\_\+\+MSB}} (uint16\+\_\+t val, uint8\+\_\+t \texorpdfstring{$\ast$}{*}msb)
+\item 
+int \mbox{\hyperlink{utils_8c_a2b56f50ba159e9d5115ed1a75eff15d9}{util\+\_\+sys\+\_\+inb}} (int port, uint8\+\_\+t \texorpdfstring{$\ast$}{*}value)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{utils_8c_a8fe83ac76edc595f6b98cd4a4127aed5}\label{utils_8c_a8fe83ac76edc595f6b98cd4a4127aed5} 
+\index{utils.c@{utils.c}!ERROR@{ERROR}}
+\index{ERROR@{ERROR}!utils.c@{utils.c}}
+\doxysubsubsection{\texorpdfstring{ERROR}{ERROR}}
+{\footnotesize\ttfamily \#define ERROR~1}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{utils_8c_a31ab374573517f8a5ba31c52a49a8606}\label{utils_8c_a31ab374573517f8a5ba31c52a49a8606} 
+\index{utils.c@{utils.c}!util\_get\_LSB@{util\_get\_LSB}}
+\index{util\_get\_LSB@{util\_get\_LSB}!utils.c@{utils.c}}
+\doxysubsubsection{\texorpdfstring{util\_get\_LSB()}{util\_get\_LSB()}}
+{\footnotesize\ttfamily int util\+\_\+get\+\_\+\+LSB (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{val,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{lsb }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{utils_8c_a31ab374573517f8a5ba31c52a49a8606_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{utils_8c_afc6ca7a9a39943ff1792d206da514a59}\label{utils_8c_afc6ca7a9a39943ff1792d206da514a59} 
+\index{utils.c@{utils.c}!util\_get\_MSB@{util\_get\_MSB}}
+\index{util\_get\_MSB@{util\_get\_MSB}!utils.c@{utils.c}}
+\doxysubsubsection{\texorpdfstring{util\_get\_MSB()}{util\_get\_MSB()}}
+{\footnotesize\ttfamily int util\+\_\+get\+\_\+\+MSB (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{val,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{msb }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{utils_8c_afc6ca7a9a39943ff1792d206da514a59_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{utils_8c_a2b56f50ba159e9d5115ed1a75eff15d9}\label{utils_8c_a2b56f50ba159e9d5115ed1a75eff15d9} 
+\index{utils.c@{utils.c}!util\_sys\_inb@{util\_sys\_inb}}
+\index{util\_sys\_inb@{util\_sys\_inb}!utils.c@{utils.c}}
+\doxysubsubsection{\texorpdfstring{util\_sys\_inb()}{util\_sys\_inb()}}
+{\footnotesize\ttfamily int util\+\_\+sys\+\_\+inb (\begin{DoxyParamCaption}\item[{int}]{port,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{value }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{utils_8c_a2b56f50ba159e9d5115ed1a75eff15d9_icgraph}
+\end{center}
+\end{figure}

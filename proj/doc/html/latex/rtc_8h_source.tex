@@ -1,0 +1,45 @@
+\doxysection{rtc.\+h}
+\hypertarget{rtc_8h_source}{}\label{rtc_8h_source}\index{LCOM-\/main/proj/src/dev\_interface/devices/rtc.h@{LCOM-\/main/proj/src/dev\_interface/devices/rtc.h}}
+\mbox{\hyperlink{rtc_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ RTC\_H\_}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ RTC\_H\_}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <lcom/lcf.h>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ ERROR\ 1}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ RTC\_IRQ\ 8}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ RTC\_ADDR\_REG\ 0x70}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ RTC\_DATA\_REG\ 0x71}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ RTC\_UPDATE\ 0x0A}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ RTC\_BINARY\ 0x0B}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ RTC\_SECONDS\ 0x00}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ RTC\_MINUTES\ 0x02}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ RTC\_HOURS\ 0x04}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00071\ int\ (\mbox{\hyperlink{rtc_8h_a5171a9c0f54940fe60f7500896afcc86}{rtc\_subscribe\_int}})(uint8\_t\ *bit\_no);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00078\ int\ (\mbox{\hyperlink{rtc_8h_ab8f17bf5280c908c8b199a90fefcc758}{rtc\_unsubscribe\_int}})();}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00087\ int\ (\mbox{\hyperlink{rtc_8h_a76827856de45c0728d613f90c5f6e009}{rtc\_read\_reg}})(uint8\_t\ reg,\ uint8\_t\ *data);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00094\ bool\ (\mbox{\hyperlink{rtc_8h_a2bd4159dadf258d8e8dd193433c4ce60}{rtc\_update\_in\_progress}})();}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00101\ bool\ (\mbox{\hyperlink{rtc_8h_a2c794c9d296283705c1e6397f4d08ca7}{is\_rtc\_binary}})();}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00109\ int\ (\mbox{\hyperlink{rtc_8h_a019b4e9bb0537430be1f6d7371d03473}{bcd\_to\_binary}})(uint8\_t\ *bcd);}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00118\ void\ (\mbox{\hyperlink{rtc_8h_ad023d88dfb321240fc060baa424c7493}{update\_rtc\_time}})(uint8\_t\ *seconds,\ uint8\_t\ *minutes,\ uint8\_t\ *hours);}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ RTC\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

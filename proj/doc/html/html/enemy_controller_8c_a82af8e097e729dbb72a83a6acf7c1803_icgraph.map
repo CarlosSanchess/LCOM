@@ -1,0 +1,17 @@
+<map id="calculateDistance" name="calculateDistance">
+<area shape="rect" id="Node000001" title="Calculates the distance between two points." alt="" coords="857,56,981,83"/>
+<area shape="rect" id="Node000002" href="$enemy_controller_8c.html#a2f7a89fb7d28477bf0bb7960ebc7158c" title="Checks if an enemy tank has reached a waypoint." alt="" coords="618,5,767,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="841,55,755,35,756,30,842,50"/>
+<area shape="rect" id="Node000003" href="$enemy_controller_8c.html#a8b34a10b1a191ff565026352e5aba394" title="Updates the state of an enemy tank." alt="" coords="398,56,528,83"/>
+<area shape="poly" id="edge8_Node000001_Node000003" title=" " alt="" coords="841,72,528,72,528,67,841,67"/>
+<area shape="rect" id="Node000007" href="$enemy_controller_8c.html#ace6678d597fe1f25bb0bab2ee0891e94" title="Moves an enemy tank towards a waypoint with deviation also providing some randomness." alt="" coords="576,107,809,133"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="842,89,756,109,755,103,841,84"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="614,39,527,58,526,53,613,33"/>
+<area shape="rect" id="Node000004" href="$arena_controller_8c.html#a0eaf53413d600619b39e10fd81be10ef" title="Processes the current state of the arena." alt="" coords="249,56,350,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="383,72,351,72,351,67,383,67"/>
+<area shape="rect" id="Node000005" href="$main_8c.html#a58e8be2db2660128e4e6456a9c981fb5" title=" " alt="" coords="162,56,201,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="233,72,202,72,202,67,233,67"/>
+<area shape="rect" id="Node000006" href="$main_8c.html#a7a72220d8366dd84709e79ce415862e5" title=" " alt="" coords="5,56,114,83"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="146,72,114,72,114,67,146,67"/>
+<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="613,105,526,86,527,81,614,100"/>
+</map>

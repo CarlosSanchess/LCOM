@@ -1,0 +1,141 @@
+\doxysection{Arena Struct Reference}
+\hypertarget{struct_arena}{}\label{struct_arena}\index{Arena@{Arena}}
+
+
+Represents the game arena containing all game elements.  
+
+
+
+
+{\ttfamily \#include $<$arena.\+h$>$}
+
+
+
+Collaboration diagram for Arena\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_arena__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtank}{tank}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_arena_a54eea80944a209ab4b697805edca46ed}{tank}}
+\item 
+\mbox{\hyperlink{struct_enemy_tank}{Enemy\+Tank}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_arena_a07804e93277f4c86b9eaa0dab1753a98}{enemy\+Tank}}
+\item 
+\mbox{\hyperlink{struct_mouse_info}{Mouse\+Info}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_arena_a236d9227a97ac3dd869d639808e4135d}{crosshair}}
+\item 
+int \mbox{\hyperlink{struct_arena_ad8c7b9b4d92635db584d179575ea16af}{width}}
+\item 
+int \mbox{\hyperlink{struct_arena_ad360fafe2494ffacce475b3d1e7a65fc}{height}}
+\item 
+\mbox{\hyperlink{struct_obstacle}{Obstacle}} \mbox{\hyperlink{struct_arena_ad9278cfdb3a59274a6da8ec49d1d2507}{obstacles}} \mbox{[}\mbox{\hyperlink{arena_8h_a3e091741286365e82b103a0843f52182}{NUM\+\_\+\+OBSTACLES}}\mbox{]}
+\item 
+\mbox{\hyperlink{struct_obstacle}{Obstacle}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_arena_a74cb02aa3b3a6d50776b4392c6f71021}{builts}}
+\item 
+size\+\_\+t \mbox{\hyperlink{struct_arena_aba6a072fecbaa5db9ed6e9947f8ed811}{num\+Builts}}
+\item 
+\mbox{\hyperlink{structbullet}{bullet}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_arena_adc274181a13647eaa4bcc48394733378}{bullets}}
+\item 
+size\+\_\+t \mbox{\hyperlink{struct_arena_a1f4cb8ab83bb27f8b198e660fd33a91d}{num\+Bullets}}
+\item 
+int \mbox{\hyperlink{struct_arena_a691e5e3a2a323016ffce2765679e3f8a}{curr\+\_\+score}}
+\item 
+bool \mbox{\hyperlink{struct_arena_a47c78d2d663f2dbfb74caac41e694dff}{end\+Game}}
+\item 
+\mbox{\hyperlink{structbomb}{bomb}} \mbox{\hyperlink{struct_arena_a118651d9e38088534f254c2ddf2db360}{bomba}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the game arena containing all game elements. 
+
+This structure holds all the relevant data for the game arena, including tanks, obstacles, bullets, and the current score. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_arena_a118651d9e38088534f254c2ddf2db360}\label{struct_arena_a118651d9e38088534f254c2ddf2db360} 
+\index{Arena@{Arena}!bomba@{bomba}}
+\index{bomba@{bomba}!Arena@{Arena}}
+\doxysubsubsection{\texorpdfstring{bomba}{bomba}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structbomb}{bomb}} Arena\+::bomba}
+
+Bomb information \Hypertarget{struct_arena_a74cb02aa3b3a6d50776b4392c6f71021}\label{struct_arena_a74cb02aa3b3a6d50776b4392c6f71021} 
+\index{Arena@{Arena}!builts@{builts}}
+\index{builts@{builts}!Arena@{Arena}}
+\doxysubsubsection{\texorpdfstring{builts}{builts}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_obstacle}{Obstacle}}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} Arena\+::builts}
+
+Dynamic array of built obstacles \Hypertarget{struct_arena_adc274181a13647eaa4bcc48394733378}\label{struct_arena_adc274181a13647eaa4bcc48394733378} 
+\index{Arena@{Arena}!bullets@{bullets}}
+\index{bullets@{bullets}!Arena@{Arena}}
+\doxysubsubsection{\texorpdfstring{bullets}{bullets}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structbullet}{bullet}}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} Arena\+::bullets}
+
+Dynamic array of bullets \Hypertarget{struct_arena_a236d9227a97ac3dd869d639808e4135d}\label{struct_arena_a236d9227a97ac3dd869d639808e4135d} 
+\index{Arena@{Arena}!crosshair@{crosshair}}
+\index{crosshair@{crosshair}!Arena@{Arena}}
+\doxysubsubsection{\texorpdfstring{crosshair}{crosshair}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_mouse_info}{Mouse\+Info}}\texorpdfstring{$\ast$}{*} Arena\+::crosshair}
+
+Mouse information \Hypertarget{struct_arena_a691e5e3a2a323016ffce2765679e3f8a}\label{struct_arena_a691e5e3a2a323016ffce2765679e3f8a} 
+\index{Arena@{Arena}!curr\_score@{curr\_score}}
+\index{curr\_score@{curr\_score}!Arena@{Arena}}
+\doxysubsubsection{\texorpdfstring{curr\_score}{curr\_score}}
+{\footnotesize\ttfamily int Arena\+::curr\+\_\+score}
+
+Current score of the player \Hypertarget{struct_arena_a47c78d2d663f2dbfb74caac41e694dff}\label{struct_arena_a47c78d2d663f2dbfb74caac41e694dff} 
+\index{Arena@{Arena}!endGame@{endGame}}
+\index{endGame@{endGame}!Arena@{Arena}}
+\doxysubsubsection{\texorpdfstring{endGame}{endGame}}
+{\footnotesize\ttfamily bool Arena\+::end\+Game}
+
+Flag indicating if the game has ended \Hypertarget{struct_arena_a07804e93277f4c86b9eaa0dab1753a98}\label{struct_arena_a07804e93277f4c86b9eaa0dab1753a98} 
+\index{Arena@{Arena}!enemyTank@{enemyTank}}
+\index{enemyTank@{enemyTank}!Arena@{Arena}}
+\doxysubsubsection{\texorpdfstring{enemyTank}{enemyTank}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_enemy_tank}{Enemy\+Tank}}\texorpdfstring{$\ast$}{*} Arena\+::enemy\+Tank}
+
+The enemy tank \Hypertarget{struct_arena_ad360fafe2494ffacce475b3d1e7a65fc}\label{struct_arena_ad360fafe2494ffacce475b3d1e7a65fc} 
+\index{Arena@{Arena}!height@{height}}
+\index{height@{height}!Arena@{Arena}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily int Arena\+::height}
+
+Height of the arena \Hypertarget{struct_arena_aba6a072fecbaa5db9ed6e9947f8ed811}\label{struct_arena_aba6a072fecbaa5db9ed6e9947f8ed811} 
+\index{Arena@{Arena}!numBuilts@{numBuilts}}
+\index{numBuilts@{numBuilts}!Arena@{Arena}}
+\doxysubsubsection{\texorpdfstring{numBuilts}{numBuilts}}
+{\footnotesize\ttfamily size\+\_\+t Arena\+::num\+Builts}
+
+Number of built obstacles \Hypertarget{struct_arena_a1f4cb8ab83bb27f8b198e660fd33a91d}\label{struct_arena_a1f4cb8ab83bb27f8b198e660fd33a91d} 
+\index{Arena@{Arena}!numBullets@{numBullets}}
+\index{numBullets@{numBullets}!Arena@{Arena}}
+\doxysubsubsection{\texorpdfstring{numBullets}{numBullets}}
+{\footnotesize\ttfamily size\+\_\+t Arena\+::num\+Bullets}
+
+Number of bullets \Hypertarget{struct_arena_ad9278cfdb3a59274a6da8ec49d1d2507}\label{struct_arena_ad9278cfdb3a59274a6da8ec49d1d2507} 
+\index{Arena@{Arena}!obstacles@{obstacles}}
+\index{obstacles@{obstacles}!Arena@{Arena}}
+\doxysubsubsection{\texorpdfstring{obstacles}{obstacles}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_obstacle}{Obstacle}} Arena\+::obstacles\mbox{[}\mbox{\hyperlink{arena_8h_a3e091741286365e82b103a0843f52182}{NUM\+\_\+\+OBSTACLES}}\mbox{]}}
+
+Array of static obstacles \Hypertarget{struct_arena_a54eea80944a209ab4b697805edca46ed}\label{struct_arena_a54eea80944a209ab4b697805edca46ed} 
+\index{Arena@{Arena}!tank@{tank}}
+\index{tank@{tank}!Arena@{Arena}}
+\doxysubsubsection{\texorpdfstring{tank}{tank}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtank}{tank}}\texorpdfstring{$\ast$}{*} Arena\+::tank}
+
+The player\textquotesingle{}s tank \Hypertarget{struct_arena_ad8c7b9b4d92635db584d179575ea16af}\label{struct_arena_ad8c7b9b4d92635db584d179575ea16af} 
+\index{Arena@{Arena}!width@{width}}
+\index{width@{width}!Arena@{Arena}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily int Arena\+::width}
+
+Width of the arena 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+LCOM-\/main/proj/src/\+Models/\mbox{\hyperlink{arena_8h}{arena.\+h}}\end{DoxyCompactItemize}

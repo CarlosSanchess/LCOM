@@ -1,0 +1,15 @@
+<map id="LCOM&#45;main/proj/src/dev_interface/devices/serial_port.h" name="LCOM&#45;main/proj/src/dev_interface/devices/serial_port.h">
+<area shape="rect" id="Node000001" title="Header file for serial port communication." alt="" coords="312,5,460,64"/>
+<area shape="rect" id="Node000002" href="$serial_port_controller_8h.html" title="Header file for serial port state management and interrupt handling." alt="" coords="180,120,390,163"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="350,77,306,122,302,118,346,73"/>
+<area shape="rect" id="Node000007" href="$serial__port_8c.html" title=" " alt="" coords="414,112,561,171"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="426,73,462,110,458,113,422,77"/>
+<area shape="rect" id="Node000003" href="$kb_controller_8h.html" title="Declares functions for handling keyboard interrupts and controlling game states." alt="" coords="93,219,263,261"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="253,175,203,220,199,216,249,171"/>
+<area shape="rect" id="Node000006" href="$serial_port_controller_8c.html" title=" " alt="" coords="286,219,497,261"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="320,171,370,216,367,220,317,175"/>
+<area shape="rect" id="Node000004" href="$kb_controller_8c.html" title=" " alt="" coords="5,309,175,352"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="149,274,112,311,108,307,145,271"/>
+<area shape="rect" id="Node000005" href="$main_8c.html" title=" " alt="" coords="199,309,336,352"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="211,270,249,307,245,311,208,274"/>
+</map>

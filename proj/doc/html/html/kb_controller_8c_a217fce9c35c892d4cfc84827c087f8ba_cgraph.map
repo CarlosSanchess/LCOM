@@ -1,0 +1,14 @@
+<map id="handleTank" name="handleTank">
+<area shape="rect" id="Node000001" title="Handles tank movements based on keyboard input." alt="" coords="5,81,93,108"/>
+<area shape="rect" id="Node000002" href="$tank_controller_8c.html#a4ced29cc86fef2f4444973a0c1f6e570" title="Moves a tank backwards." alt="" coords="141,5,224,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="73,78,143,38,145,42,76,83"/>
+<area shape="rect" id="Node000004" href="$tank_controller_8c.html#a21e61106dc52db3ee60353f0bdffaa63" title="Rotates the tank to the left." alt="" coords="146,56,219,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="93,84,130,76,131,82,94,89"/>
+<area shape="rect" id="Node000005" href="$tank_controller_8c.html#a49a27b15b31a21284f50e3b27fe34720" title="Rotates the tank to the right." alt="" coords="142,107,223,133"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="94,100,127,107,126,112,93,106"/>
+<area shape="rect" id="Node000006" href="$tank_controller_8c.html#ac785d3d0aceea3cbceec2664e290957e" title="Moves a tank frontwards." alt="" coords="148,157,217,184"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="76,106,145,147,143,152,73,111"/>
+<area shape="rect" id="Node000003" href="$tank_controller_8c.html#a105fd9e45b0df2c43744911705165b44" title="Checks if a tank can move to the specified position." alt="" coords="272,81,344,108"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="208,30,273,71,270,75,205,35"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="205,154,270,114,273,119,208,159"/>
+</map>

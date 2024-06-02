@@ -1,0 +1,13 @@
+<map id="handleScore" name="handleScore">
+<area shape="rect" id="Node000001" title="Handles HighScore Page interactions based on keyboard input." alt="" coords="5,5,99,32"/>
+<area shape="rect" id="Node000002" href="$game_controller_8c.html#a6c1aa145dc1fba62193e5c9f6b8da784" title="Changes the state and the Background to the Menu, from the HighScores." alt="" coords="147,5,327,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,16,131,16,131,21,99,21"/>
+<area shape="rect" id="Node000003" href="$views_8c.html#a6b5e5ea4778b78a346207b59bc4c3158" title="Draws the menu background." alt="" coords="375,5,527,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="327,16,360,16,360,21,327,21"/>
+<area shape="rect" id="Node000004" href="$video__gr_8c.html#a0ee44da8a7c935a067fae7ca09d8f7f9" title="Draws an XPM image as the background." alt="" coords="575,5,732,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="528,16,560,16,560,21,528,21"/>
+<area shape="rect" id="Node000005" href="$video__gr_8c.html#a5c4e9586406f8d2cf7f2a5db188b6686" title="Draws a pixel at specified coordinates with a given color." alt="" coords="780,5,881,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="732,16,764,16,764,21,732,21"/>
+<area shape="rect" id="Node000006" href="$video__gr_8c.html#a3190e4645454cb66c939eadd3dbad84a" title="Gets the screen width." alt="" coords="929,5,1005,32"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="882,16,913,16,913,21,882,21"/>
+</map>
