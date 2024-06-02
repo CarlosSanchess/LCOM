@@ -20,7 +20,6 @@
 State currentState;
 Menu menu = {0, false, {{840, 557}, {800, 660},{645,755}}}; 
 MouseInfo mouseInfo = {.mousePosition = { 50, 50, 0}, 0, true};
-const char *highscoreFile = "highscore.txt";
 HighScore highScore;
 bool sp_handshake = false;
 
@@ -45,7 +44,6 @@ int run(){
     int ipc_status;
     uint8_t r;
 
-    initHighScore(&highScore);
 
     while(1) { 
       if ((r = driver_receive(ANY, &msg, &ipc_status)) != OK) { 
@@ -113,6 +111,9 @@ int run(){
   
 }
 int safeExit(){
+
+  writeHighScoreToFile(highScore);
+  
   if(kbc_unsubscribe_int() != 0){
     fprintf(stderr, "Failed to unsub kbc interrupts.");
     return 1;
@@ -154,6 +155,7 @@ int setUp(){
   drawMenuBackGround();
   drawMenu(menu,highScore);
   buffer_to_video_mem();
+  readHighScoreFromFile(&highScore);
 
   
   if(write_mouse(ENABLE_DATA_REPORT) != 0){

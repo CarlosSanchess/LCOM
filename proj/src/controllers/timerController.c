@@ -70,7 +70,6 @@ void handleDelayedBomb(Arena* arena){
     if (arena->bomba.active == true) {
         delayBomb++;
         if (delayBomb >= BOMBD) {
-            printf("endgame");
             arena->endGame = true;
             delayBomb = 0; 
         }
